@@ -1,0 +1,513 @@
+:root {
+  --page: #efe9dd;
+  --paper: #fcf9f2;
+  --ink: #1c1917;
+  --muted: #78716c;
+  --grid: rgba(185, 74, 56, 0.3);
+  --grid-edge: rgba(185, 74, 56, 0.55);
+  --accent: #b4432f;
+  --accent-press: #9a3726;
+  --surface: #ffffff;
+  --surface-press: #f3ede2;
+  --border: #d9d0c1;
+  --reveal: rgba(214, 40, 40, 0.42);
+  --wrong: #b91c1c;
+  --close: #b45309;
+  --correct: #15803d;
+
+  --gutter: 16px;
+  --tap: 52px;
+
+  /* Kai (楷) glyphs look like handwriting; system fallbacks until a licensed Kai font is bundled. */
+  --ref-font: 'KaiTi', 'STKaiti', 'Kaiti SC', 'Kaiti TC', 'BiauKai', 'DFKai-SB', 'Noto Serif CJK SC',
+    'Source Han Serif SC', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', serif;
+  --ui-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+
+  color-scheme: light;
+}
+
+:lang(zh-Hant) {
+  --ref-font: 'Kaiti TC', 'BiauKai', 'DFKai-SB', 'KaiTi', 'STKaiti', 'Noto Serif CJK TC', 'Source Han Serif TC',
+    'Microsoft JhengHei', 'PingFang TC', 'Noto Sans CJK TC', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--ui-font);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+/* ── Workspace layout (portrait first) ─────────────────────────────────── */
+
+.workspace {
+  /* svh: sized for the smallest viewport, so browser toolbars showing/hiding never resize the box. */
+  height: 100vh;
+  height: 100svh;
+  max-width: 560px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+  grid-template-areas: 'top' 'prompt' 'stage' 'controls' 'primary';
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+.topbar {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+}
+
+.icon-btn {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.icon-btn:active:not(:disabled) {
+  background: var(--surface-press);
+}
+
+.icon-btn:disabled {
+  opacity: 0.25;
+}
+
+.modes {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(120, 100, 70, 0.12);
+}
+
+.modes__tab {
+  min-height: 42px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.modes__tab[aria-selected='true'] {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(60, 40, 20, 0.15);
+}
+
+.prompt {
+  grid-area: prompt;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 84px;
+  padding: 2px var(--gutter) 12px;
+}
+
+.prompt__main {
+  min-width: 0;
+}
+
+.prompt__pinyin {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.prompt__hanviet {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.prompt__meaning {
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.prompt__extra {
+  min-height: 18px;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.prompt__meta {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.prompt__count {
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.chip {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 12px;
+  font-family: ui-monospace, monospace;
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ── Writing box ───────────────────────────────────────────────────────── */
+
+.stage {
+  grid-area: stage;
+  container-type: size;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  padding: 0 var(--gutter);
+}
+
+.hw-box {
+  position: relative;
+  /* Largest square that fits the stage. No border/padding: the box rect is the input rect. */
+  width: min(100cqw, 100cqh);
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow:
+    0 0 0 1.5px var(--grid-edge),
+    0 8px 24px rgba(60, 40, 20, 0.1);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.hw-box[data-ref='observe'] {
+  cursor: default;
+}
+
+.hw-grid,
+.hw-layer,
+.hw-ref {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hw-grid line {
+  stroke: var(--grid);
+  stroke-width: 1;
+  stroke-dasharray: 6 5;
+  vector-effect: non-scaling-stroke;
+}
+
+.hw-grid .hw-grid__diag {
+  stroke-dasharray: 2 6;
+}
+
+.hw-ref {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ref-font);
+  font-size: 82cqi;
+  line-height: 1;
+  visibility: hidden;
+}
+
+.hw-box[data-ref='observe'] .hw-ref--under {
+  visibility: visible;
+  color: var(--ink);
+}
+
+.hw-box[data-ref='trace'] .hw-ref--under {
+  visibility: visible;
+  color: var(--ink);
+  opacity: 0.16;
+}
+
+.hw-box[data-ref='reveal'] .hw-ref--over {
+  visibility: visible;
+  color: var(--reveal);
+}
+
+/* ── Controls ──────────────────────────────────────────────────────────── */
+
+.controls {
+  grid-area: controls;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  /* Keep buttons well away from the bottom edge of the writing box. */
+  padding: 24px var(--gutter) 10px;
+}
+
+.controls[data-hidden] {
+  visibility: hidden;
+}
+
+.controls--rating {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn:active:not(:disabled) {
+  background: var(--surface-press);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+.btn--wrong {
+  color: var(--wrong);
+  border-color: color-mix(in srgb, var(--wrong) 35%, var(--border));
+}
+
+.btn--close {
+  color: var(--close);
+  border-color: color-mix(in srgb, var(--close) 35%, var(--border));
+}
+
+.btn--correct {
+  color: var(--correct);
+  border-color: color-mix(in srgb, var(--correct) 35%, var(--border));
+}
+
+.primary {
+  grid-area: primary;
+  min-height: 72px;
+  padding: 4px var(--gutter) 16px;
+}
+
+.primary--hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.btn--primary {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.btn--primary:active {
+  background: var(--accent-press);
+}
+
+.toast {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 12px);
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(28, 25, 23, 0.92);
+  color: #fff;
+  font-size: 15px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── Landscape phones: box left, everything else right ─────────────────── */
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .workspace {
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 42%);
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      'stage top'
+      'stage prompt'
+      'stage .'
+      'stage controls'
+      'stage primary';
+  }
+
+  .stage {
+    padding: var(--gutter);
+  }
+
+  .prompt {
+    min-height: 0;
+  }
+
+  .controls {
+    padding-top: 8px;
+  }
+}
+
+/* ── Debug HUD ─────────────────────────────────────────────────────────── */
+
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  max-height: 48svh;
+  overflow: auto;
+  padding: 8px 10px 10px;
+  background: rgba(20, 18, 16, 0.86);
+  color: #e7e5e4;
+  font: 11px/1.45 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  /* Stats never block writing underneath; only the head and controls take input. */
+  pointer-events: none;
+}
+
+.hud__head,
+.hud__controls {
+  pointer-events: auto;
+}
+
+@media (min-width: 960px) {
+  .hud {
+    top: 12px;
+    left: auto;
+    right: 12px;
+    width: 340px;
+    max-height: calc(100vh - 24px);
+    border-radius: 10px;
+  }
+}
+
+.hud__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hud__btn {
+  min-width: 36px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.hud__stats {
+  margin: 4px 0 8px;
+  white-space: pre;
+  overflow-x: auto;
+  font: inherit;
+}
+
+.hud__controls {
+  display: grid;
+  gap: 8px;
+}
+
+.hud__controls[hidden] {
+  display: none;
+}
+
+.hud__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.hud__row legend {
+  float: left;
+  margin-right: 4px;
+  color: #a8a29e;
+}
+
+.hud__row label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hud__slider {
+  display: grid;
+  gap: 2px;
+}
+
+.hud__slider em {
+  font-style: normal;
+  color: #fbbf24;
+}
+
+.hud input[type='range'] {
+  width: 100%;
+}
