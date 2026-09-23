@@ -14,15 +14,13 @@ describe('bundled stroke data', () => {
     },
   )
 
-  it('peek is undefined before loading, the data afterwards; loading happens once', async () => {
+  it('is there synchronously, from the first call (bundled: no loading state), as one object', async () => {
     vi.resetModules() // fresh module state, whatever other tests loaded
     const fresh = await import('./strokeData')
-    expect(fresh.peekStrokeData('永')).toBeUndefined()
-    const pending = fresh.getStrokeData('永')
-    expect(fresh.getStrokeData('永')).toBe(pending)
-    const data = await pending
+    const data = fresh.peekStrokeData('永')
     expect(data).not.toBeNull()
     expect(fresh.peekStrokeData('永')).toBe(data)
+    await expect(fresh.getStrokeData('永')).resolves.toBe(data)
   })
 
   it('a character without data is null, synchronously and asynchronously', async () => {

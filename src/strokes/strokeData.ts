@@ -1,57 +1,46 @@
 import type { SourcePoint, StrokeData } from './types'
 
 /**
- * Stroke-order data bundled with the app, one lazily loaded chunk per character
- * (src/data/strokes/<code point in hex>.json). See src/data/strokes/README.md for source and license.
+ * Stroke-order data bundled with the app (src/data/strokes/<code point in hex>.json; see
+ * src/data/strokes/README.md for source and license — every build ships both under licenses/,
+ * see vite.config.ts).
+ *
+ * Bundled eagerly: the five files are ~14 KB in all, and having them synchronously means a character
+ * never shows an empty box while its data loads, and nothing can fail at runtime. (A lazy import()
+ * would also not recover from a network error: browsers keep a failed dynamic import for the life of
+ * the document. When the set grows, load it with `query: '?url'` + fetch() so a retry refetches.)
  */
-const files = import.meta.glob<unknown>('../data/strokes/*.json', { import: 'default' })
+const files = import.meta.glob<unknown>('../data/strokes/*.json', { eager: true, import: 'default' })
 
-const cache = new Map<string, Promise<StrokeData | null>>()
-const loaded = new Map<string, StrokeData | null>()
+const parsed = new Map<string, StrokeData | null>()
 
 function fileKey(character: string): string {
   const cp = character.codePointAt(0)
   return cp === undefined ? '' : `../data/strokes/${cp.toString(16)}.json`
 }
 
-/** True if stroke data for `character` ships with the app (synchronous; does not load it). */
+/** True if stroke data for `character` ships with the app. */
 export function hasStrokeData(character: string): boolean {
   return fileKey(character) in files
 }
 
 /**
- * Already-loaded data, synchronously: the data, `null` if the character has none (or it is
- * invalid), `undefined` if it has not been loaded yet.
+ * The stroke data for `character`, synchronously: `null` if it has none (or it is invalid).
+ * Validated once per character; the same object is returned every time.
  */
-export function peekStrokeData(character: string): StrokeData | null | undefined {
-  if (!hasStrokeData(character)) return null
-  return loaded.get(character)
+export function peekStrokeData(character: string): StrokeData | null {
+  let data = parsed.get(character)
+  if (data !== undefined) return data
+  const key = fileKey(character)
+  data = key in files ? parseStrokeData(files[key]) : null
+  if (data === null && key in files) console.warn(`[strokes] invalid stroke data for ${character}`)
+  parsed.set(character, data)
+  return data
 }
 
-/** Loads (once) and validates the stroke data for `character`; `null` if there is none. */
+/** Async form of peekStrokeData, for callers written against a loader (the scorer's provider). */
 export function getStrokeData(character: string): Promise<StrokeData | null> {
-  let pending = cache.get(character)
-  if (pending) return pending
-  const load = files[fileKey(character)]
-  if (!load) {
-    loaded.set(character, null)
-    return Promise.resolve(null)
-  }
-  pending = load().then(
-    (json) => {
-      const data = parseStrokeData(json)
-      if (!data) console.warn(`[strokes] invalid stroke data for ${character}`)
-      loaded.set(character, data)
-      return data
-    },
-    (err: unknown) => {
-      // A failed chunk load (offline, stale deploy) must not stick for the whole session.
-      cache.delete(character)
-      throw err
-    },
-  )
-  cache.set(character, pending)
-  return pending
+  return Promise.resolve(peekStrokeData(character))
 }
 
 /** Validates raw JSON; `null` if it is not usable stroke data. */

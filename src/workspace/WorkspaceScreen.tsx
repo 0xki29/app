@@ -5,6 +5,8 @@ import { useCommitCounter } from '../debug/renderStats'
 import { HandwritingCanvas, type ReferenceMode } from '../handwriting/HandwritingCanvas'
 import { HandwritingEngine } from '../handwriting/HandwritingEngine'
 import { referenceProvider, scorer, type Grade } from '../handwriting/scoring'
+import { StrokeAnimator } from '../strokes/StrokeAnimator'
+import { useStrokeData } from '../strokes/useStrokeData'
 import { Controls } from './Controls'
 import { prefersReducedMotion } from './motion'
 import { ResultPanel } from './ResultPanel'
@@ -38,6 +40,7 @@ const debugAvailable = import.meta.env.DEV || params.has('debug')
 export function WorkspaceScreen() {
   useCommitCounter('Workspace')
   const [engine] = useState(() => new HandwritingEngine({ desynchronized: params.get('desync') === '1' }))
+  const [animator] = useState(() => new StrokeAnimator())
   const [index, setIndex] = useState(0)
   const [mode, setMode] = useState<Mode>('observe')
   const [phase, setPhase] = useState<Phase>('writing')
@@ -51,11 +54,24 @@ export function WorkspaceScreen() {
 
   const item = TEST_CHARS[index]
   const count = TEST_CHARS.length
+  const strokeData = useStrokeData(item.char)
 
   // Every character/mode gets a fresh box.
   useEffect(() => {
     engine.reset()
   }, [engine, index, mode])
+
+  useEffect(() => {
+    animator.setData(strokeData)
+  }, [animator, strokeData])
+
+  // Stroke order plays only in observe: from the first stroke whenever observe is entered or shows a
+  // new character (unless the learner paused it; see StrokeAnimator.show). Outside observe the view
+  // is static and detached, so no frames run either way.
+  useEffect(() => {
+    if (mode === 'observe') animator.show()
+    else animator.pause()
+  }, [animator, mode, strokeData])
 
   useEffect(() => {
     engine.setInputEnabled(mode !== 'observe' && phase === 'writing' && !fading)
@@ -179,9 +195,20 @@ export function WorkspaceScreen() {
           </div>
           <div className="prompt__meaning">{item.meaningVi}</div>
           <div className="prompt__extra">
-            {mode === 'recall' && !showChar
-              ? 'Viết chữ này từ trí nhớ'
-              : [script, mode === 'observe' ? item.note : null].filter(Boolean).join(' · ')}
+            {mode === 'recall' && !showChar ? (
+              'Viết chữ này từ trí nhớ'
+            ) : (
+              <>
+                {script}
+                {/* The note is the first thing to go on very short screens (styles.css). */}
+                {mode === 'observe' && item.note && (
+                  <span className="prompt__note">
+                    {script ? ' · ' : ''}
+                    {item.note}
+                  </span>
+                )}
+              </>
+            )}
           </div>
         </div>
         <div className="prompt__meta">
@@ -204,6 +231,8 @@ export function WorkspaceScreen() {
           referenceMode={referenceMode}
           pulse={pulse}
           fading={fading}
+          strokeData={strokeData}
+          animator={animator}
         />
       </main>
 
@@ -220,7 +249,14 @@ export function WorkspaceScreen() {
             onRate={onRate}
           />
         ) : (
-          <Controls engine={engine} mode={mode} scoring={phase === 'scoring'} onPrimary={onPrimary} />
+          <Controls
+            engine={engine}
+            mode={mode}
+            scoring={phase === 'scoring'}
+            onPrimary={onPrimary}
+            animator={animator}
+            strokeGuide={strokeData !== null}
+          />
         )}
       </div>
 

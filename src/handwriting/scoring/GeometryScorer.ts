@@ -149,7 +149,9 @@ export function scoreGeometry(ink: Ink, ref: ReferenceCharacter, mode: ScoringMo
 
   unavailable.strokeOrder = ref.strokes
     ? 'chưa triển khai: cần kiểm chứng với dữ liệu thứ tự nét thật'
-    : 'không có dữ liệu thứ tự nét'
+    : ref.fromStrokeData
+      ? 'có dữ liệu, chưa chấm (chưa hiệu chỉnh)'
+      : 'không có dữ liệu thứ tự nét'
   if (!geom) {
     const why = 'không có dữ liệu hình học của chữ mẫu'
     unavailable.shape = why
@@ -277,6 +279,8 @@ function toBreakdown(total: number, s: Record<ScoreComponent, number | null>): S
 function describeSource(ref: ReferenceCharacter, geom: ReferenceGeometry | null): string {
   const parts: string[] = []
   if (geom) parts.push(geom.source)
-  if (!(ref.strokes && ref.strokes.length > 0) && ref.strokeCount) parts.push('standard stroke count')
+  if (!(ref.strokes && ref.strokes.length > 0) && ref.strokeCount) {
+    parts.push(ref.fromStrokeData ? 'stroke count (stroke data)' : 'standard stroke count')
+  }
   return parts.length > 0 ? parts.join(' + ') : 'none'
 }

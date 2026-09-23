@@ -1,10 +1,14 @@
 import { memo, useEffect, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
+import type { StrokeAnimator } from '../strokes/StrokeAnimator'
+import { StrokeOrderView } from '../strokes/StrokeOrderView'
+import type { StrokeData } from '../strokes/types'
 import type { HandwritingEngine } from './HandwritingEngine'
 import { REFERENCE_FONT_SCALE, referenceFontFamily } from './referenceFont'
 
 /**
- * observe — reference shown solid, for looking (input is disabled by the caller)
+ * observe — reference shown solid, for looking (input is disabled by the caller); with stroke data
+ *           it writes itself stroke by stroke
  * trace   — faint reference under the ink
  * hidden  — no reference (recall)
  * reveal  — translucent reference fading in on top of the ink, for self-assessment
@@ -20,6 +24,13 @@ interface Props {
   pulse?: { key: number; color: string } | null
   /** Fade the ink out (before a rewrite clears it). */
   fading?: boolean
+  /**
+   * Stroke data for `char`: the reference is drawn from it (the same outlines the scorer uses).
+   * `null`: none — the font glyph is shown.
+   */
+  strokeData: StrokeData | null
+  /** Plays the stroke order in observe mode. */
+  animator?: StrokeAnimator | null
 }
 
 /**
@@ -33,6 +44,8 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
   referenceMode,
   pulse,
   fading,
+  strokeData,
+  animator,
 }: Props) {
   useCommitCounter('Canvas')
   const boxRef = useRef<HTMLDivElement>(null)
@@ -64,15 +77,30 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
       aria-label={`Ô viết chữ ${char}`}
     >
       <Grid />
-      <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
-        {char}
-      </div>
+      {strokeData ? (
+        // Keyed by character: fresh stroke elements carry no state from the previous character.
+        <StrokeOrderView
+          key={`under-${char}`}
+          className="hw-ref hw-ref--under"
+          data={strokeData}
+          variant={referenceMode === 'observe' ? 'animate' : 'static'}
+          animator={animator}
+        />
+      ) : (
+        <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
+          {char}
+        </div>
+      )}
       <canvas ref={staticRef} className="hw-layer" />
       <canvas ref={liveRef} className="hw-layer" />
       <canvas ref={tailRef} className="hw-layer" />
-      <div className="hw-ref hw-ref--over" lang={lang} style={refStyle} aria-hidden="true">
-        {char}
-      </div>
+      {strokeData ? (
+        <StrokeOrderView key={`over-${char}`} className="hw-ref hw-ref--over" data={strokeData} variant="static" />
+      ) : (
+        <div className="hw-ref hw-ref--over" lang={lang} style={refStyle} aria-hidden="true">
+          {char}
+        </div>
+      )}
       {pulse && <div key={pulse.key} className="hw-pulse" style={{ color: pulse.color }} aria-hidden="true" />}
     </div>
   )

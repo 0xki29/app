@@ -18,6 +18,12 @@ export interface MedianPath {
   readonly d: string
   /** Length of `d`: the dash length that reveals the whole stroke. */
   readonly length: number
+  /**
+   * Length of the start extension (the line's radius, or 0 for a degenerate median). The round cap
+   * already reaches this far past the dash end, so a sweep that should move the visible front along
+   * the median itself runs the dash end over [0, length − lead] (see StrokeAnimator).
+   */
+  readonly lead: number
 }
 
 /**
@@ -28,7 +34,9 @@ export function medianPath(points: readonly SourcePoint[], width = MEDIAN_STROKE
   const extended = extendStart(points, width / 2)
   const rounded = extended.map(([x, y]) => [round1(x), round1(y)] as const)
   const d = rounded.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x} ${y}`).join(' ')
-  return { d, length: polylineLength(rounded) }
+  const length = polylineLength(rounded)
+  const lead = extended.length > points.length ? Math.min(length, polylineLength(rounded.slice(0, 2))) : 0
+  return { d, length, lead }
 }
 
 /** Prepends a point `by` units before the first point, continuing the first non-degenerate segment. */

@@ -7,6 +7,7 @@ import {
   polylineLength,
   prevStop,
   retime,
+  stopAfter,
   strokeDurationMs,
   strokeNumber,
   wrapTime,
@@ -177,9 +178,11 @@ describe('strokeNumber', () => {
 })
 
 describe('nextStop', () => {
-  it('finishes the stroke being drawn', () => {
-    expect(nextStop(TL, 250)).toBe(400)
-    expect(nextStop(TL, 100)).toBe(400)
+  it('mid-stroke, finishes the stroke being drawn and draws the next one whole', () => {
+    expect(nextStop(TL, 250)).toBe(550)
+    expect(nextStop(TL, 100)).toBe(550)
+    expect(nextStop(TL, 500)).toBe(1600)
+    expect(nextStop(TL, 1100)).toBe(1600)
   })
 
   it('draws the next stroke whole from the lead or a gap', () => {
@@ -192,6 +195,13 @@ describe('nextStop', () => {
   it('stays on the whole character instead of wrapping', () => {
     expect(nextStop(TL, 1600)).toBe(1600)
     expect(nextStop(TL, 1750)).toBe(1600)
+  })
+
+  it('always raises the indicator by one, up to the stroke count', () => {
+    for (let t = 0; t < TL.total; t += 11) {
+      const shown = strokeNumber(frameAt(TL, t))
+      expect(strokeNumber(frameAt(TL, nextStop(TL, t)))).toBe(Math.min(3, shown + 1))
+    }
   })
 
   it('increments the drawn stroke count by exactly one from any resting position', () => {
@@ -235,6 +245,16 @@ describe('prevStop', () => {
 
   it('undoes nextStop from a resting position', () => {
     for (const rest of [0, 400, 550]) expect(prevStop(TL, nextStop(TL, rest))).toBe(rest)
+  })
+})
+
+describe('stopAfter', () => {
+  it('is the end of the given stroke, 0 for none, clamped to the whole character', () => {
+    expect(stopAfter(TL, 0)).toBe(0)
+    expect(stopAfter(TL, 1)).toBe(400)
+    expect(stopAfter(TL, 3)).toBe(1600)
+    expect(stopAfter(TL, 9)).toBe(1600)
+    expect(stopAfter(buildTimeline([], P), 2)).toBe(0)
   })
 })
 

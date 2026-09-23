@@ -1,7 +1,8 @@
 # Stroke-order data
 
 One file per character, named by its Unicode code point in lowercase hex (`5b66.json` = 学).
-Loaded lazily by `src/strokes/strokeData.ts`.
+Bundled with the app by `src/strokes/strokeData.ts`. Every build also ships `ARPHICPL.TXT` and this
+notice under `licenses/` (see `vite.config.ts`).
 
 - **Source:** [hanzi-writer-data](https://github.com/chanind/hanzi-writer-data) 2.0.1, unmodified,
   which is derived from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) (`graphics.txt`).

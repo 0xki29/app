@@ -40,8 +40,8 @@ export class StrokeDataReferenceProvider implements ReferenceProvider {
     try {
       ref = await pending
     } catch (err) {
-      // A failed chunk load (offline, stale deploy) is transient: forget it so the next call
-      // retries, and score this attempt against the font rather than failing it.
+      // The bundled data cannot fail to load, but a loader may: forget the failure so the next
+      // call asks the loader again, and score this attempt against the font rather than failing it.
       if (this.cache.get(character) === pending) this.cache.delete(character)
       console.warn(`[scoring] stroke data for ${character} failed to load; using the font glyph`, err)
       return this.fallback.getReference(character, lang, strokeCount)
@@ -79,5 +79,6 @@ function buildReference(character: string, data: StrokeData): ReferenceCharacter
     character,
     strokeCount: data.strokes.length,
     glyph: { size: GRID_SIZE, data: mask, source: STROKE_DATA_SOURCE },
+    fromStrokeData: true,
   }
 }

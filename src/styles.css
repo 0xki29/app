@@ -2,7 +2,7 @@
   --page: #efe9dd;
   --paper: #fcf9f2;
   --ink: #1c1917;
-  --muted: #78716c;
+  --muted: #625b56;
   --grid: rgba(185, 74, 56, 0.3);
   --grid-edge: rgba(185, 74, 56, 0.55);
   --accent: #b4432f;
@@ -10,7 +10,17 @@
   --surface: #ffffff;
   --surface-press: #f3ede2;
   --border: #d9d0c1;
-  --reveal: rgba(214, 40, 40, 0.42);
+  /* Reveal color as color + alpha: layers of overlapping shapes (stroke outlines) must apply the
+     alpha once, on the group. --reveal is the same color with the alpha applied, for single shapes. */
+  --reveal-solid: rgb(214, 40, 40);
+  --reveal-alpha: 0.42;
+  --reveal: color-mix(in srgb, var(--reveal-solid) calc(var(--reveal-alpha) * 100%), transparent);
+  /* Faint reference: trace mode (font glyph), and the whole character under the stroke-order
+     animation. The stroke-data glyph is thinner than the font fallbacks, so it traces a bit darker. */
+  --ref-faint: 0.16;
+  --ref-trace: 0.22;
+  /* Shared by the mode tabs and the pace switch. */
+  --track: rgba(120, 100, 70, 0.12);
   --wrong: #b91c1c;
   --close: #b45309;
   --correct: #15803d;
@@ -64,7 +74,8 @@ button {
   cursor: pointer;
 }
 
-button:disabled {
+button:disabled,
+button[aria-disabled='true'] {
   cursor: default;
 }
 
@@ -117,7 +128,7 @@ button:disabled {
   grid-auto-columns: 1fr;
   padding: 3px;
   border-radius: 12px;
-  background: rgba(120, 100, 70, 0.12);
+  background: var(--track);
 }
 
 .modes__tab {
@@ -129,7 +140,8 @@ button:disabled {
   color: var(--muted);
 }
 
-.modes__tab[aria-selected='true'] {
+.modes__tab[aria-selected='true'],
+.pace__opt[aria-checked='true'] {
   background: var(--surface);
   color: var(--ink);
   font-weight: 600;
@@ -270,7 +282,11 @@ button:disabled {
 .hw-box[data-ref='trace'] .hw-ref--under {
   visibility: visible;
   color: var(--ink);
-  opacity: 0.16;
+  opacity: var(--ref-faint);
+}
+
+.hw-box[data-ref='trace'] .hw-glyph.hw-ref--under {
+  opacity: var(--ref-trace);
 }
 
 /* Reveal: the reference fades in on top of the user's ink (which stays untouched). */
@@ -352,11 +368,12 @@ button:disabled {
   font-weight: 500;
 }
 
-.btn:active:not(:disabled) {
+.btn:active:not(:disabled, [aria-disabled='true']) {
   background: var(--surface-press);
 }
 
-.btn:disabled {
+.btn:disabled,
+.btn[aria-disabled='true'] {
   opacity: 0.4;
 }
 
@@ -391,6 +408,149 @@ button:disabled {
 .btn--wide {
   width: 100%;
   min-height: 56px;
+}
+
+/* ── Stroke order (Xem): stroke-data glyph and playback controls ───────── */
+
+/* The stroke-data glyph (src/strokes/StrokeOrderView.tsx) is an SVG layer with the same hw-ref
+   classes as the font glyph, so the [data-ref] rules above decide when and how it shows. */
+.hw-glyph {
+  display: block;
+}
+
+.hw-glyph__fill,
+.so-ghost {
+  fill: currentColor;
+}
+
+/* Stroke outlines overlap at joints: the reveal's alpha goes on the group, not on each shape,
+   or every joint would show darker. */
+.hw-glyph.hw-ref--over {
+  color: var(--reveal-solid);
+}
+
+.hw-glyph.hw-ref--over .hw-glyph__fill {
+  opacity: var(--reveal-alpha);
+}
+
+/* The whole character, faint, under the animation (lighter than the stroke-data trace reference:
+   here solid strokes are drawn over it). */
+.so-ghost {
+  opacity: var(--ref-faint);
+}
+
+.so-strokes {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* data-state is written by the StrokeAnimator. Done strokes take the layer color (ink). */
+.so-stroke {
+  stroke: currentColor;
+  transition: stroke 300ms ease-out;
+}
+
+/* Not started: hidden outright — a zero-length dash would still paint a round-cap dot. Already in
+   the accent color, so a stroke starting does not fade in from ink. Strokes never set
+   `visibility: visible`: they must stay hidden whenever the layer is. */
+.so-stroke:not([data-state]),
+.so-stroke[data-state='todo'] {
+  visibility: hidden;
+  stroke: var(--accent);
+}
+
+.so-stroke[data-state='active'] {
+  stroke: var(--accent);
+}
+
+/* End of the loop: the whole character fades out before the box empties (not in reduced motion). */
+.so-stroke[data-state='leaving'] {
+  opacity: 0;
+  transition:
+    stroke 300ms ease-out,
+    opacity 300ms ease-out;
+}
+
+/* Controls: takes the hidden undo/clear row's place in the dock. Fits 248px (landscape phones). */
+.strokebar {
+  display: grid;
+  gap: 8px;
+}
+
+.strokebar__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.strokebar__count {
+  font-size: 15px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.strokebar__count strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Two-way pace switch, styled like the mode tabs (selected look shared with .modes__tab). */
+.pace {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: 3px;
+  border-radius: 10px;
+  background: var(--track);
+}
+
+.pace__opt {
+  min-width: 56px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.strokebar__transport {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.strokebar__btn {
+  padding: 0;
+}
+
+.strokebar__icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.strokebar__icon-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ── Result panel ──────────────────────────────────────────────────────── */
@@ -541,6 +701,12 @@ button:disabled {
   .hw-box[data-fading] .hw-layer {
     transition: none !important;
   }
+
+  /* Strokes appear whole (handled in the animator) and change color at once. */
+  .so-stroke,
+  .so-stroke[data-state='leaving'] {
+    transition: none;
+  }
 }
 
 .toast {
@@ -576,8 +742,51 @@ button:disabled {
     padding: var(--gutter);
   }
 
+  /* Safety net: if the column is still too short, the prompt gives way (clipping its last line)
+     instead of the dock printing over it. */
   .prompt {
     min-height: 0;
+    overflow: hidden;
+    align-items: safe flex-end;
+  }
+
+  .dock {
+    min-height: auto;
+  }
+}
+
+/* Very short landscape (phones with browser bars, ~280-360px tall): a tighter dock. */
+@media (orientation: landscape) and (max-height: 360px) {
+  .prompt {
+    padding-bottom: 8px;
+  }
+
+  .dock {
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+
+  .btn--wide {
+    min-height: 44px;
+  }
+
+  .strokebar {
+    gap: 4px;
+  }
+
+  .strokebar__btn {
+    min-height: 40px;
+  }
+
+  .pace__opt {
+    min-height: 30px;
+  }
+}
+
+/* Below ~340px the note under the prompt gives way to the stroke-order controls. */
+@media (orientation: landscape) and (max-height: 340px) {
+  .prompt__note {
+    display: none;
   }
 }
 

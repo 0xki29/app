@@ -33,6 +33,11 @@ export interface ReferenceCharacter {
   strokes?: ReferenceStroke[]
   /** Standard stroke count, when strokes are not available. */
   strokeCount?: number
+  /**
+   * The glyph and stroke count come from stroke-order data, which is not passed as `strokes` (not
+   * scored yet). Only changes how the debug HUD describes the reference.
+   */
+  fromStrokeData?: boolean
   /** Font glyph raster: shape/position/length without per-stroke data. */
   glyph?: GlyphMask
 }

@@ -51,7 +51,16 @@ describe('StrokeDataReferenceProvider', () => {
     expect(ref.glyph?.data).toEqual(rasterizeOutlines(data, GRID_SIZE))
     // Not yet: `strokes` would switch the scorer to its uncalibrated "full" path.
     expect(ref.strokes).toBeUndefined()
+    expect(ref.fromStrokeData).toBe(true)
     expect(fallback.getReference).not.toHaveBeenCalled()
+  })
+
+  it('the score says where the reference comes from: stroke data, its count, order not scored yet', async () => {
+    const ref = await new StrokeDataReferenceProvider(fakeFallback()).getReference('永', 'zh-Hans', 5)
+    const r = scoreGeometry(tracedInk(DATA.get('永')!), ref, 'trace')
+    expect(r.referenceSource).toBe(`${STROKE_DATA_SOURCE} + stroke count (stroke data)`)
+    expect(r.breakdown.strokeOrder).toBeNull()
+    expect(r.diagnostics.unavailable.strokeOrder).toBe('có dữ liệu, chưa chấm (chưa hiệu chỉnh)')
   })
 
   it('returns the same reference object per character, for any lang, and loads once', async () => {

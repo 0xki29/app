@@ -127,19 +127,20 @@ export function strokeNumber(frame: Frame): number {
 }
 
 /** Resting position with the first `count` strokes drawn: the end of stroke `count`, or 0 (empty box). */
-function stopAfter(timeline: Timeline, count: number): number {
-  return count <= 0 ? 0 : timeline.strokes[Math.min(count, timeline.strokes.length) - 1].end
+export function stopAfter(timeline: Timeline, count: number): number {
+  const n = timeline.strokes.length
+  return count <= 0 || n === 0 ? 0 : timeline.strokes[Math.min(count, n) - 1].end
 }
 
 /**
- * "Next stroke": finish the stroke being drawn, or draw the next one whole. From the whole character
- * it stays there (no wrap-around to an empty box).
+ * "Next stroke": the stroke after the one shown in the indicator (being drawn, or last completed)
+ * ends up whole, so the indicator always goes up by one — mid-stroke too, where the stroke being
+ * drawn is finished along the way. From the whole character it stays there (no wrap-around).
  */
 export function nextStop(timeline: Timeline, t: number): number {
   const n = timeline.strokes.length
   if (n === 0) return 0
-  const frame = frameAt(timeline, t)
-  return stopAfter(timeline, frame.active >= 0 ? frame.active + 1 : Math.min(frame.completed + 1, n))
+  return stopAfter(timeline, Math.min(strokeNumber(frameAt(timeline, t)) + 1, n))
 }
 
 /**
