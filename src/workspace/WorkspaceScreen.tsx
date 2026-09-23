@@ -22,7 +22,7 @@ const debugAvailable = import.meta.env.DEV || params.has('debug')
 
 export function WorkspaceScreen() {
   useCommitCounter('Workspace')
-  const [engine] = useState(() => new HandwritingEngine({ desynchronized: params.get('desync') !== '0' }))
+  const [engine] = useState(() => new HandwritingEngine({ desynchronized: params.get('desync') === '1' }))
   const [index, setIndex] = useState(0)
   const [mode, setMode] = useState<Mode>('observe')
   const [revealed, setRevealed] = useState(false)

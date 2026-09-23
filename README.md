@@ -16,7 +16,9 @@ npm run build            # typecheck + production build
 
 Debug HUD: in dev it is always available via the **HUD** chip (top right of the prompt). In a production
 build, add `?debug` to the URL to show the chip, or `?debug=1` to open the HUD immediately.
-`?desync=0` disables low-latency `desynchronized` canvases (escape hatch if a GPU/driver renders them badly).
+`?desync=1` opts into low-latency `desynchronized` canvases (experimental). It is off by default: on GPU
+compositors such as Chrome on Windows a desynchronized canvas becomes a hardware overlay without alpha,
+and the writing box turns black. Using it for real would need an opaque single-canvas design.
 
 ## How it works
 

@@ -71,7 +71,11 @@ export interface EngineLayers {
 }
 
 export interface EngineOptions {
-  /** Request low-latency `desynchronized` 2D contexts for the live layers. Default true. */
+  /**
+   * Request low-latency `desynchronized` 2D contexts for the live layers. Default false: on GPU
+   * compositors (e.g. Chrome on Windows) a desynchronized canvas becomes a hardware overlay without
+   * alpha, so its transparent pixels render black over the layers below.
+   */
   desynchronized?: boolean
 }
 
@@ -126,7 +130,7 @@ export class HandwritingEngine {
   private oldestPendingTs = 0
 
   constructor(options: EngineOptions = {}) {
-    this.desync = options.desynchronized ?? true
+    this.desync = options.desynchronized ?? false
     this.snapshot = this.makeSnapshot()
   }
 
