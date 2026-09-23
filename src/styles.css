@@ -520,6 +520,44 @@ button[aria-disabled='true'] {
   opacity: 0.35;
 }
 
+/* Review (after scoring): each badge in the verdict of the learner's stroke with that number, above
+   the ink now — the learner's strokes start right where the badges sit and would hide them. */
+.stroke-nums[data-review] {
+  z-index: 1;
+}
+
+.stroke-num:is([data-state='good'], [data-state='off'], [data-state='wrong'], [data-state='missing']) text {
+  fill: #fff;
+}
+
+.stroke-num[data-state='good'] circle {
+  fill: var(--correct);
+  stroke: var(--correct);
+}
+
+.stroke-num[data-state='off'] circle {
+  fill: var(--close);
+  stroke: var(--close);
+}
+
+.stroke-num:is([data-state='wrong'], [data-state='missing']) circle {
+  fill: var(--wrong);
+  stroke: var(--wrong);
+}
+
+/* Reference strokes the learner never wrote. */
+.stroke-missing {
+  fill: var(--wrong);
+  opacity: 0.4;
+}
+
+/* Recall review: the stroke-data reference comes back faint under the ink, as in trace. */
+.hw-box[data-ref='review'] .hw-ref--under {
+  visibility: visible;
+  color: var(--ink);
+  opacity: var(--ref-trace);
+}
+
 /* Controls: takes the hidden undo/clear row's place in the dock. Fits 248px (landscape phones). */
 .strokebar {
   display: grid;
@@ -705,6 +743,43 @@ button[aria-disabled='true'] {
   font-size: 14px;
   line-height: 1.3;
   animation: fade-up 260ms var(--ease-out) 700ms both;
+}
+
+/* Stroke-by-stroke line (src/workspace/strokeFeedback.ts): tallies in the verdict colors, then the
+   issues. Clamped to three lines so a long list cannot push the actions out of the dock. */
+.result__strokes {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.tally {
+  font-weight: 600;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.tally[data-v='good'] {
+  color: var(--correct);
+}
+
+.tally[data-v='off'] {
+  color: var(--close);
+}
+
+.tally[data-v='wrong'] {
+  color: var(--wrong);
+}
+
+.result__issues {
+  color: var(--ink);
+}
+
+.result__prompt {
+  margin-left: 6px;
+  color: var(--muted);
 }
 
 .result__actions {

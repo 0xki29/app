@@ -1,4 +1,4 @@
-import { memo, useEffect, useId, useMemo, useRef } from 'react'
+import { memo, useEffect, useId, useMemo, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import { MEDIAN_STROKE_WIDTH, medianPath } from './medianPath'
 import type { StrokeAnimator } from './StrokeAnimator'
@@ -17,6 +17,7 @@ interface Props {
   /** Drives the 'animate' variant; without one it shows only the faint character. */
   animator?: StrokeAnimator | null
   className?: string
+  style?: CSSProperties
 }
 
 /**
@@ -27,7 +28,7 @@ interface Props {
  * revealed by stroke-dashoffset. The animator writes `data-state` and the offset straight onto the
  * paths; React renders this once per character and variant, never per frame.
  */
-export const StrokeOrderView = memo(function StrokeOrderView({ data, variant, animator, className }: Props) {
+export const StrokeOrderView = memo(function StrokeOrderView({ data, variant, animator, className, style }: Props) {
   useCommitCounter('StrokeView')
   const strokesRef = useRef<SVGGElement>(null)
   // useId output (e.g. «r1» or :r1:) is not safe inside url(#…).
@@ -46,7 +47,7 @@ export const StrokeOrderView = memo(function StrokeOrderView({ data, variant, an
 
   if (!medians) {
     return (
-      <svg className={cls} viewBox={SVG_VIEWBOX} aria-hidden="true">
+      <svg className={cls} style={style} viewBox={SVG_VIEWBOX} aria-hidden="true">
         <g className="hw-glyph__fill" transform={SOURCE_TO_SVG_TRANSFORM}>
           {data.strokes.map((d, i) => (
             <path key={i} d={d} />
@@ -57,7 +58,7 @@ export const StrokeOrderView = memo(function StrokeOrderView({ data, variant, an
   }
 
   return (
-    <svg className={cls} viewBox={SVG_VIEWBOX} aria-hidden="true">
+    <svg className={cls} style={style} viewBox={SVG_VIEWBOX} aria-hidden="true">
       <g transform={SOURCE_TO_SVG_TRANSFORM}>
         <defs>
           {data.strokes.map((d, i) => (

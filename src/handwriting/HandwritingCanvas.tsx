@@ -1,6 +1,7 @@
-import { memo, useEffect, useRef, type CSSProperties } from 'react'
+import { memo, useEffect, useMemo, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import type { StrokeAnimator } from '../strokes/StrokeAnimator'
+import type { StrokeCheck } from '../strokes/strokeCheck'
 import { StrokeNumbers } from '../strokes/StrokeNumbers'
 import { StrokeOrderView } from '../strokes/StrokeOrderView'
 import type { StrokeData } from '../strokes/types'
@@ -12,9 +13,11 @@ import { REFERENCE_FONT_SCALE, referenceFontFamily } from './referenceFont'
  *           it writes itself stroke by stroke
  * trace   — faint reference under the ink; with stroke data, numbered badges give the stroke order
  * hidden  — no reference (recall)
- * reveal  — translucent reference fading in on top of the ink, for self-assessment
+ * reveal  — translucent reference fading in on top of the ink, for self-assessment (font glyph)
+ * review  — recall after scoring, with stroke data: the faint reference under the ink, like trace,
+ *           with the stroke-by-stroke marks
  */
-export type ReferenceMode = 'observe' | 'trace' | 'hidden' | 'reveal'
+export type ReferenceMode = 'observe' | 'trace' | 'hidden' | 'reveal' | 'review'
 
 interface Props {
   engine: HandwritingEngine
@@ -32,6 +35,8 @@ interface Props {
   strokeData: StrokeData | null
   /** Plays the stroke order in observe mode. */
   animator?: StrokeAnimator | null
+  /** After scoring: the stroke-by-stroke verdicts, shown on the stroke-number badges. */
+  review?: StrokeCheck | null
 }
 
 /**
@@ -47,6 +52,7 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
   fading,
   strokeData,
   animator,
+  review,
 }: Props) {
   useCommitCounter('Canvas')
   const boxRef = useRef<HTMLDivElement>(null)
@@ -67,6 +73,19 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
     fontFamily: referenceFontFamily(lang),
     fontSize: `${REFERENCE_FONT_SCALE * 100}cqi`,
   }
+  // Recall review: the reference is drawn over the learner's character, at the size and place they
+  // wrote it — the same alignment the stroke verdicts were judged with.
+  const shift = referenceMode === 'review' ? (review?.referenceToInk ?? null) : null
+  const underStyle = useMemo<CSSProperties | undefined>(
+    () =>
+      shift
+        ? {
+            transformOrigin: '0 0',
+            transform: `translate(${shift.x * 100}%, ${shift.y * 100}%) scale(${shift.scale})`,
+          }
+        : undefined,
+    [shift],
+  )
 
   return (
     <div
@@ -86,15 +105,16 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
           data={strokeData}
           variant={referenceMode === 'observe' ? 'animate' : 'static'}
           animator={animator}
+          style={underStyle}
         />
       ) : (
         <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
           {char}
         </div>
       )}
-      {/* Under the ink, like the reference: the learner's strokes cover the badges, not the reverse. */}
-      {strokeData && referenceMode === 'trace' && (
-        <StrokeNumbers key={`nums-${char}`} data={strokeData} engine={engine} />
+      {/* Under the ink while writing, like the reference; lifted above it in review (styles.css). */}
+      {strokeData && (referenceMode === 'trace' || referenceMode === 'review') && (
+        <StrokeNumbers key={`nums-${char}`} data={strokeData} engine={engine} review={review} />
       )}
       <canvas ref={staticRef} className="hw-layer" />
       <canvas ref={liveRef} className="hw-layer" />

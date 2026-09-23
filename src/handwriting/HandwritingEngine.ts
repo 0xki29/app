@@ -112,6 +112,8 @@ export class HandwritingEngine {
   private readonly desync: boolean
   private settings: EngineSettings = DEFAULT_SETTINGS
   private style: RenderStyle = toStyle(DEFAULT_SETTINGS)
+  /** Per-stroke color overrides for the committed strokes (see setStrokeColors). */
+  private strokeColors: readonly (string | null)[] | null = null
   private inputEnabled = true
   private snapshot: EngineSnapshot
   private readonly listeners = new Set<() => void>()
@@ -167,6 +169,16 @@ export class HandwritingEngine {
     this.endStroke('discard')
     this.model.reset()
     this.afterModelChange()
+  }
+
+  /**
+   * Recolor committed strokes, by index in writing order (null = the normal ink color), e.g. to mark
+   * each stroke right or wrong after scoring. The colors describe this particular ink, so any change
+   * to it (a new stroke, undo, clear, reset) drops them. `null` restores the ink color.
+   */
+  setStrokeColors(colors: readonly (string | null)[] | null): void {
+    this.strokeColors = colors
+    this.redrawStatic()
   }
 
   setInputEnabled(enabled: boolean): void {
@@ -306,8 +318,14 @@ export class HandwritingEngine {
     }
     // Commit: one full-quality draw onto the static layer, in the same task as clearing live,
     // so the swap is invisible.
-    if (reason !== 'discard' && this.model.add(stroke) && ctx && this.cssSize > 0) {
-      this.renderer().drawStroke(ctx.stat, stroke, this.cssSize, this.style)
+    if (reason !== 'discard' && this.model.add(stroke)) {
+      if (this.strokeColors) {
+        // The ink changed: marks for the previous ink no longer apply.
+        this.strokeColors = null
+        this.redrawStatic()
+      } else if (ctx && this.cssSize > 0) {
+        this.renderer().drawStroke(ctx.stat, stroke, this.cssSize, this.style)
+      }
     }
     const s = this.stats
     s.drawing = false
@@ -350,6 +368,7 @@ export class HandwritingEngine {
   }
 
   private afterModelChange(): void {
+    this.strokeColors = null
     this.redrawStatic()
     this.stats.strokeCount = this.model.strokeCount
     this.publish()
@@ -360,7 +379,10 @@ export class HandwritingEngine {
     if (!ctx || this.cssSize === 0) return
     clearCanvas(ctx.stat)
     const r = this.renderer()
-    for (const stroke of this.model.strokes) r.drawStroke(ctx.stat, stroke, this.cssSize, this.style)
+    this.model.strokes.forEach((stroke, i) => {
+      const color = this.strokeColors?.[i]
+      r.drawStroke(ctx.stat, stroke, this.cssSize, color ? { ...this.style, color } : this.style)
+    })
   }
 
   /** Wipe the live layers and redraw the stroke in progress (if any) from scratch next frame. */

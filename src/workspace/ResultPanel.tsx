@@ -1,7 +1,9 @@
 import { useLayoutEffect, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import { GRADE_LABEL, type ScoreResult } from '../handwriting/scoring'
+import type { StrokeCheck } from '../strokes/strokeCheck'
 import { prefersReducedMotion } from './motion'
+import { summarizeStrokes } from './strokeFeedback'
 import type { Mode, Rating } from './WorkspaceScreen'
 
 const COUNT_UP_MS = 650
@@ -10,6 +12,8 @@ interface Props {
   result: ScoreResult
   mode: Mode
   revealed: boolean
+  /** Stroke-by-stroke verdicts (characters with stroke data): replace the generic feedback line. */
+  strokes?: StrokeCheck | null
   onRetry: () => void
   onContinue: () => void
   onReveal: () => void
@@ -27,7 +31,7 @@ const BARS: readonly { key: 'shape' | 'position' | 'length' | 'strokeCount'; lab
  * Compact score panel that takes the controls' place under the box. Mounted once per scoring
  * (keyed by the caller), so its entrance animations play exactly once per result.
  */
-export function ResultPanel({ result, mode, revealed, onRetry, onContinue, onReveal, onRate }: Props) {
+export function ResultPanel({ result, mode, revealed, strokes, onRetry, onContinue, onReveal, onRate }: Props) {
   useCommitCounter('ResultPanel')
   const numRef = useRef<HTMLSpanElement>(null)
   const scored = result.status === 'scored'
@@ -57,6 +61,7 @@ export function ResultPanel({ result, mode, revealed, onRetry, onContinue, onRev
   }, [result, scored])
 
   const bars = BARS.filter((b) => result.breakdown[b.key] !== null)
+  const summary = strokes ? summarizeStrokes(strokes) : null
 
   return (
     <section
@@ -85,9 +90,36 @@ export function ResultPanel({ result, mode, revealed, onRetry, onContinue, onRev
         )}
       </div>
 
-      <p className="result__feedback">
-        {revealed ? 'So sánh chữ của bạn với mẫu, rồi tự đánh giá:' : result.feedback.join(' ')}
-      </p>
+      {summary ? (
+        <p className="result__feedback result__strokes">
+          <span className="tally" data-v="good">
+            {summary.good} đúng
+          </span>
+          {summary.off > 0 && (
+            <span className="tally" data-v="off">
+              {summary.off} lệch
+            </span>
+          )}
+          {summary.wrong > 0 && (
+            <span className="tally" data-v="wrong">
+              {summary.wrong} sai
+            </span>
+          )}
+          {summary.missing > 0 && (
+            <span className="tally" data-v="wrong">
+              {summary.missing} thiếu
+            </span>
+          )}
+          <span className="result__issues">
+            {summary.issues.length > 0 ? summary.issues.join(' · ') : 'Đúng thứ tự, đúng chiều.'}
+          </span>
+          {revealed && <span className="result__prompt">Tự đánh giá:</span>}
+        </p>
+      ) : (
+        <p className="result__feedback">
+          {revealed ? 'So sánh chữ của bạn với mẫu, rồi tự đánh giá:' : result.feedback.join(' ')}
+        </p>
+      )}
 
       {revealed ? (
         <div className="result__actions result__actions--rating">

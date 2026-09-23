@@ -5,6 +5,7 @@ import { useCommitCounter } from '../debug/renderStats'
 import { HandwritingCanvas, type ReferenceMode } from '../handwriting/HandwritingCanvas'
 import { HandwritingEngine } from '../handwriting/HandwritingEngine'
 import { referenceProvider, scorer, type Grade } from '../handwriting/scoring'
+import { checkStrokes, type StrokeCheck } from '../strokes/strokeCheck'
 import { StrokeAnimator } from '../strokes/StrokeAnimator'
 import { useStrokeData } from '../strokes/useStrokeData'
 import { Controls } from './Controls'
@@ -46,6 +47,8 @@ export function WorkspaceScreen() {
   const [phase, setPhase] = useState<Phase>('writing')
   const [fading, setFading] = useState(false)
   const [lastScore, setLastScore] = useState<ScoreDebug | null>(null)
+  /** Stroke-by-stroke verdicts for lastScore (characters with stroke data). */
+  const [strokeCheck, setStrokeCheck] = useState<StrokeCheck | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [hudOpen, setHudOpen] = useState(() => params.get('debug') === '1')
   /** Bumped whenever the box is reset; async scoring and delayed clears check it. */
@@ -100,11 +103,17 @@ export function WorkspaceScreen() {
     setPhase('scoring')
     const t0 = performance.now()
     try {
+      const ink = engine.getInk()
       const reference = await referenceProvider.getReference(item.char, langOf(item), item.strokeCount)
-      const result = await scorer.score(engine.getInk(), reference, mode)
+      const result = await scorer.score(ink, reference, mode)
       if (token !== attempt.current) return
+      const check = strokeData && result.status === 'scored' ? checkStrokes(ink, strokeData, mode) : null
+      // The learner's own strokes take the verdict colors; any new ink or reset drops them.
+      engine.setStrokeColors(check ? verdictColors(check) : null)
       setLastScore((prev) => ({ result, ms: performance.now() - t0, seq: (prev?.seq ?? 0) + 1 }))
-      setPhase('scored')
+      setStrokeCheck(check)
+      // Recall with stroke data shows the reference and the marks at once — nothing left to reveal.
+      setPhase(mode === 'recall' && check ? 'revealed' : 'scored')
     } catch (err) {
       console.error('[scoring]', err)
       if (token === attempt.current) setPhase('writing')
@@ -141,8 +150,17 @@ export function WorkspaceScreen() {
 
   const showResult = phase === 'scored' || phase === 'revealed'
   const result = showResult ? (lastScore?.result ?? null) : null
+  const review = showResult ? strokeCheck : null
   const referenceMode: ReferenceMode =
-    mode === 'observe' ? 'observe' : mode === 'trace' ? 'trace' : phase === 'revealed' ? 'reveal' : 'hidden'
+    mode === 'observe'
+      ? 'observe'
+      : mode === 'trace'
+        ? 'trace'
+        : phase === 'revealed'
+          ? review
+            ? 'review'
+            : 'reveal'
+          : 'hidden'
   const pulse =
     result && lastScore
       ? { key: lastScore.seq, color: result.status === 'scored' ? GRADE_COLOR[result.grade] : 'var(--muted)' }
@@ -233,6 +251,7 @@ export function WorkspaceScreen() {
           fading={fading}
           strokeData={strokeData}
           animator={animator}
+          review={review}
         />
       </main>
 
@@ -243,6 +262,7 @@ export function WorkspaceScreen() {
             result={result}
             mode={mode}
             revealed={phase === 'revealed'}
+            strokes={review}
             onRetry={rewrite}
             onContinue={() => go(index, 'recall')}
             onReveal={() => setPhase('revealed')}
@@ -268,4 +288,12 @@ export function WorkspaceScreen() {
       {hudOpen && <DebugHud engine={engine} score={lastScore} onClose={() => setHudOpen(false)} />}
     </div>
   )
+}
+
+/** The canvas needs concrete colors: the verdict tokens, read from the stylesheet. */
+function verdictColors(check: StrokeCheck): (string | null)[] {
+  const css = getComputedStyle(document.documentElement)
+  const token = (name: string) => css.getPropertyValue(name).trim() || null
+  const color = { good: token('--correct'), off: token('--close'), wrong: token('--wrong') }
+  return check.user.map((u) => color[u.verdict])
 }

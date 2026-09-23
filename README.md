@@ -112,7 +112,24 @@ what the learner watches, traces and is scored on is one shape.
   sitting nearer another stroke's start. Tested on every bundled character: no two badges touch, each
   is nearer its own start than any other, none is centered on ink. The next stroke to write (one past
   the strokes on the canvas) is in the accent color and written ones fade; it counts pen lifts, so a
-  stroke written in two pieces moves the highlight by two, and Undo moves it back. Not shown in Recall.
+  stroke written in two pieces moves the highlight by two, and Undo moves it back. Not shown in Recall
+  while writing.
+- **Stroke-by-stroke review** (`strokeCheck.ts`, after "Chấm điểm" in Trace and Recall). The learner's
+  k-th stroke is judged against the reference's k-th: **good** (mean distance both ways ≤ 0.035 box in
+  Trace, 0.045 in Recall), **off** (≤ 0.075 / 0.09: misplaced, or on the stroke but short/long), or
+  **wrong** (reversed — runs backwards along the stroke by ≥ 30% of it; out of order — it fits another
+  stroke clearly better; not a stroke of the character; extra). Reference strokes never reached are
+  **missing**. Recall first aligns the paired strokes' bounding box to the reference (so missing or
+  extra strokes don't resize the rest), and then draws the faint reference *onto the learner's
+  character* with the inverse transform, so what they see agrees with the verdicts. The learner's own
+  strokes are recolored green/orange/red (`engine.setStrokeColors`, dropped by any change to the ink),
+  the badges take the same colors above the ink, missing strokes are filled red on the reference, and
+  the result panel lists the issues ("Nét 2: ngược chiều · Nét 5: thiếu"). With stroke data Recall
+  shows all this right away (no separate "Hiện mẫu" step), then asks for the self-rating. It is a
+  diagnostic next to the score — the total is unchanged — and, counting pen lifts, a stroke written in
+  two pieces shifts the pairing of everything after it. Thresholds come from synthetic ink
+  (`strokeCheck.test.ts`: faithful, wobbly, shifted, smaller, reversed, swapped, missing, extra, short),
+  not yet from real learners.
 
 **Adding a character:** copy `https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/<char>.json` to
 `src/data/strokes/<code point in lowercase hex>.json` — no code change, the loader and the width test
@@ -234,7 +251,8 @@ src/
     timeline.ts         loop timing, stepping, pace (pure)
     StrokeAnimator.ts   rAF playback controller
     medianPath.ts, StrokeOrderView.tsx, useStrokeData.ts   SVG view + React hook
-    strokeLabels.ts, StrokeNumbers.tsx   stroke-number badges for Trace (placement, view)
+    strokeLabels.ts, StrokeNumbers.tsx   stroke-number badges (placement, view)
+    strokeCheck.ts      stroke-by-stroke verdicts after scoring (pure)
   debug/                DebugHud, React commit counters
   workspace/            WorkspaceScreen, Controls, StrokeControls, ResultPanel
   data/testChars.ts     5 prototype characters (not the content system)
