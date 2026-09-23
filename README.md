@@ -104,6 +104,15 @@ what the learner watches, traces and is scored on is one shape.
   font glyph — static, without stroke controls. When the set grows, load per character by URL
   (`query: '?url'` + `fetch`), not `import()`: browsers keep a failed dynamic import for the life of the
   page, so it could never be retried.
+- **Stroke numbers in Trace** (`StrokeNumbers`, placement in `strokeLabels.ts`). A small numbered badge
+  sits just before where each stroke starts — "behind" the start, opposite the writing direction —
+  under the learner's ink. Placement is pure and cached per character: candidates on rings around the
+  start, rejected if they leave the box or touch another badge, ranked by distance, turn away from
+  "behind", overlap with the reference's ink (the scorer's outline raster + distance transform) and
+  sitting nearer another stroke's start. Tested on every bundled character: no two badges touch, each
+  is nearer its own start than any other, none is centered on ink. The next stroke to write (one past
+  the strokes on the canvas) is in the accent color and written ones fade; it counts pen lifts, so a
+  stroke written in two pieces moves the highlight by two, and Undo moves it back. Not shown in Recall.
 
 **Adding a character:** copy `https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/<char>.json` to
 `src/data/strokes/<code point in lowercase hex>.json` — no code change, the loader and the width test
@@ -225,6 +234,7 @@ src/
     timeline.ts         loop timing, stepping, pace (pure)
     StrokeAnimator.ts   rAF playback controller
     medianPath.ts, StrokeOrderView.tsx, useStrokeData.ts   SVG view + React hook
+    strokeLabels.ts, StrokeNumbers.tsx   stroke-number badges for Trace (placement, view)
   debug/                DebugHud, React commit counters
   workspace/            WorkspaceScreen, Controls, StrokeControls, ResultPanel
   data/testChars.ts     5 prototype characters (not the content system)

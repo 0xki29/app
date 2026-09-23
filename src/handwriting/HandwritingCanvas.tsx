@@ -1,6 +1,7 @@
 import { memo, useEffect, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import type { StrokeAnimator } from '../strokes/StrokeAnimator'
+import { StrokeNumbers } from '../strokes/StrokeNumbers'
 import { StrokeOrderView } from '../strokes/StrokeOrderView'
 import type { StrokeData } from '../strokes/types'
 import type { HandwritingEngine } from './HandwritingEngine'
@@ -9,7 +10,7 @@ import { REFERENCE_FONT_SCALE, referenceFontFamily } from './referenceFont'
 /**
  * observe — reference shown solid, for looking (input is disabled by the caller); with stroke data
  *           it writes itself stroke by stroke
- * trace   — faint reference under the ink
+ * trace   — faint reference under the ink; with stroke data, numbered badges give the stroke order
  * hidden  — no reference (recall)
  * reveal  — translucent reference fading in on top of the ink, for self-assessment
  */
@@ -90,6 +91,10 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
         <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
           {char}
         </div>
+      )}
+      {/* Under the ink, like the reference: the learner's strokes cover the badges, not the reverse. */}
+      {strokeData && referenceMode === 'trace' && (
+        <StrokeNumbers key={`nums-${char}`} data={strokeData} engine={engine} />
       )}
       <canvas ref={staticRef} className="hw-layer" />
       <canvas ref={liveRef} className="hw-layer" />

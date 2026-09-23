@@ -472,6 +472,54 @@ button[aria-disabled='true'] {
     opacity 300ms ease-out;
 }
 
+/* Stroke numbers (Tô theo, src/strokes/StrokeNumbers.tsx): a badge before each stroke's start. The
+   next stroke to write is in the accent color; written ones fade. Sizes are SVG box units (viewBox
+   0 0 100 100), so badges scale with the box: 2.7 ≈ 10 px radius on a 360 px box. */
+.stroke-nums {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.stroke-num circle {
+  fill: var(--paper);
+  stroke: var(--border);
+  stroke-width: 0.3;
+  transition:
+    fill 200ms ease-out,
+    stroke 200ms ease-out;
+}
+
+.stroke-num text {
+  fill: var(--muted);
+  font-family: var(--ui-font);
+  font-size: 3.1px;
+  font-weight: 600;
+  text-anchor: middle;
+  font-variant-numeric: tabular-nums;
+  transition: fill 200ms ease-out;
+}
+
+.stroke-num[data-wide] text {
+  font-size: 2.6px;
+  letter-spacing: -0.1px;
+}
+
+.stroke-num[data-state='next'] circle {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.stroke-num[data-state='next'] text {
+  fill: #fff;
+}
+
+.stroke-num[data-state='done'] {
+  opacity: 0.35;
+}
+
 /* Controls: takes the hidden undo/clear row's place in the dock. Fits 248px (landscape phones). */
 .strokebar {
   display: grid;
@@ -705,6 +753,11 @@ button[aria-disabled='true'] {
   /* Strokes appear whole (handled in the animator) and change color at once. */
   .so-stroke,
   .so-stroke[data-state='leaving'] {
+    transition: none;
+  }
+
+  .stroke-num circle,
+  .stroke-num text {
     transition: none;
   }
 }
