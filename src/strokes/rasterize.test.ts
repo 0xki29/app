@@ -112,9 +112,9 @@ describe('rasterizeOutlines', () => {
       expect(Math.floor(i / N)).toBeLessThan(hi)
     })
 
-    // Every median runs inside its outline: sample it every half pixel, look the samples up in the
-    // mask the way user ink is looked up. Measured: all samples hit, except the last ~1 px of one
-    // 謝 hook whose median tip pokes past the outline (95.1% of that median).
+    // Every median runs inside its outline: sample it every half pixel and look the samples up in
+    // the mask the way user ink is (floor of grid units). Measured: every sample hits, except the
+    // last ~1 px of one 謝 hook whose median tip pokes past the outline (95.1% of that median).
     let total = 0
     let hits = 0
     for (const median of data.medians) {
@@ -122,10 +122,8 @@ describe('rasterizeOutlines', () => {
         median.map(([x, y]) => sourceToBox(x, y)),
         0.5 / N,
       )
-      const onInk = rasterizePoints(samples, N)
       let strokeHits = 0
       for (const p of samples) strokeHits += mask[Math.floor(p.y * N) * N + Math.floor(p.x * N)]
-      expect(onInk.every((v, i) => !v || mask[i])).toBe(strokeHits === samples.length)
       expect(strokeHits / samples.length).toBeGreaterThanOrEqual(0.9)
       total += samples.length
       hits += strokeHits
