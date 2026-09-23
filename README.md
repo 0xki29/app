@@ -20,6 +20,17 @@ build, add `?debug` to the URL to show the chip, or `?debug=1` to open the HUD i
 compositors such as Chrome on Windows a desynchronized canvas becomes a hardware overlay without alpha,
 and the writing box turns black. Using it for real would need an opaque single-canvas design.
 
+## Deploy (GitHub Pages)
+
+Every push to `main` runs `.github/workflows/deploy.yml`: install → unit tests → build → publish `dist/`.
+
+One-time setup on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+The site is then served at `https://<user>.github.io/<repo>/` (assets use relative URLs, so any repo
+name works). Add `?debug=1` to open the HUD on the deployed site.
+
+GitHub Pages is HTTPS, i.e. a secure context — so `getCoalescedEvents()` works on a phone that opens the
+deployed URL directly, no USB forwarding needed.
+
 ## How it works
 
 ```
@@ -67,8 +78,9 @@ tool sends them. Nothing in this list is validated until it has been tried on a 
 
 ## Testing on a real phone (later checkpoint)
 
-1. `npm run dev -- --host` and open the printed `Network:` URL on a phone on the same Wi-Fi.
-2. **Secure context caveat:** `getCoalescedEvents()` / `getPredictedEvents()` are secure-context only.
+1. Easiest: open the deployed GitHub Pages URL on the phone (HTTPS, nothing else to set up).
+   For local builds: `npm run dev -- --host` and open the printed `Network:` URL on the same Wi-Fi.
+2. **Secure context caveat (local only):** `getCoalescedEvents()` / `getPredictedEvents()` are secure-context only.
    Over plain `http://192.168.x.x` they are unavailable (HUD shows `coalesced ✗`) and strokes get fewer
    samples. For a representative test on Android use USB port forwarding so the phone loads
    `http://localhost:5173` (a secure context): enable USB debugging, open `chrome://inspect` on the
