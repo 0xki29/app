@@ -53,6 +53,43 @@ draw of the live layers. On `pointerup` the stroke is added to `InkModel`, drawn
 and the snapshot changes (this is the only moment React hears about it). Undo, clear, resize, DPR change,
 renderer switch and canvas context loss all redraw from the model — never from a bitmap.
 
+## Scoring (heuristic prototype)
+
+"Chấm điểm" in Trace and Recall gives a 0–100 **feedback score from stroke geometry**. It is not
+character recognition, not ML, and not a measure of correctness.
+
+```
+UI ── HandwritingScorer (interface, async) ── GeometryScorer          (today)
+                                          └─ MLHandwritingScorer     (later, same interface)
+   ── ReferenceProvider (interface) ──────── GlyphReferenceProvider  (today: device font glyph)
+                                          └─ stroke-data provider    (later, licensed data)
+```
+
+Swap implementations in `src/handwriting/scoring/index.ts`; tune weights and tolerances in
+`src/handwriting/scoring/config.ts`.
+
+**Reference data today: Partial.** The glyph is typeset offscreen with the same font, size and
+centering as the on-screen reference (not a screenshot) and thresholded into a 128² mask; plus the
+standard stroke count (Unihan kTotalStrokes). There is **no stroke / stroke-order data**, so stroke
+order is never scored (shown as N/A). With real stroke data (`ReferenceCharacter.strokes`) the level
+becomes Full and per-stroke length comparison switches on automatically.
+
+| Component | How | Trace | Recall |
+|---|---|---|---|
+| Shape | Oriented matching of ink vs reference centerline (skeleton), both ways → F-score. Direction must agree within 30°. Recall aligns the ink's bounding box to the reference first. | 40% | 50% |
+| Position | Symmetric mean distance ink ↔ reference, in place | 35% | 25% |
+| Length | Total ink length vs reference centerline length (log ratio) | 15% | 15% |
+| Stroke count | \|user − standard\| / standard | 10% | 10% |
+| Stroke order | — no data — | 0 | 0 |
+
+Weights are renormalized over the components that could be scored. Without any geometric reference
+the scorer returns `insufficient-reference` instead of a number.
+
+Known limitations: font-dependent (KaiTi vs YaHei give slightly different references); stroke
+direction (which end a stroke starts from) is not checked; ink that happens to follow the reference
+structure scores high even if written in the wrong way (e.g. a grid hatched over 國 ≈ 80);
+thresholds are calibrated on synthetic ink, not on real learners.
+
 ## What desktop testing can validate
 
 - Architecture: React isolation (HUD → `commits during last stroke: 0`), engine/React boundary

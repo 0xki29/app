@@ -1,14 +1,24 @@
 import { useEffect, useRef, useState } from 'react'
 import type { EngineStats, HandwritingEngine } from '../handwriting/HandwritingEngine'
 import { detectInputSupport } from '../handwriting/InputController'
+import type { ScoreResult } from '../handwriting/scoring'
 import { useEngineState } from '../handwriting/useEngineState'
 import { commitCounts, totalCommits, useCommitCounter } from './renderStats'
 
 const POLL_MS = 250
 const support = detectInputSupport()
 
+/** Last scoring run, as shown in the HUD. */
+export interface ScoreDebug {
+  result: ScoreResult
+  /** Wall time incl. reference preparation. */
+  ms: number
+  seq: number
+}
+
 interface Props {
   engine: HandwritingEngine
+  score: ScoreDebug | null
   onClose: () => void
 }
 
@@ -16,7 +26,7 @@ interface Props {
  * Debug overlay. Metrics are written straight into a <pre> on a timer — not React state — so the
  * HUD itself adds no React work while a stroke is drawn. Controls re-render only on user change.
  */
-export function DebugHud({ engine, onClose }: Props) {
+export function DebugHud({ engine, score, onClose }: Props) {
   useCommitCounter('DebugHud')
   const { settings } = useEngineState(engine)
   const textRef = useRef<HTMLPreElement>(null)
@@ -54,6 +64,7 @@ export function DebugHud({ engine, onClose }: Props) {
         </span>
       </div>
       <pre ref={textRef} className="hud__stats" />
+      <pre className="hud__stats hud__score">{formatScore(score)}</pre>
       <div className="hud__controls" hidden={!showControls}>
         <fieldset className="hud__row">
           <legend>Renderer</legend>
@@ -147,6 +158,33 @@ function Slider({ label, value, min, max, step, format, onChange }: SliderProps)
       />
     </label>
   )
+}
+
+const LEVEL_LABEL = { full: 'Full', partial: 'Partial', unavailable: 'Unavailable' } as const
+const n = (v: number | null) => (v === null ? 'N/A' : String(v))
+const f2 = (v: number | null) => (v === null ? 'N/A' : v.toFixed(2))
+
+function formatScore(s: ScoreDebug | null): string {
+  if (!s) return 'scoring  — (not scored yet)'
+  const r = s.result
+  const b = r.breakdown
+  const d = r.diagnostics
+  const w = d.weights
+  const missing = Object.entries(d.unavailable).map(([k, why]) => `  ${k}: ${why}`)
+  return [
+    `scoring  #${s.seq} · engine ${r.engine === 'geometry-v1' ? 'Geometry (heuristic)' : r.engine}`,
+    `mode     ${r.mode === 'trace' ? 'Trace' : 'Recall'} · status ${r.status}`,
+    `ref data ${LEVEL_LABEL[r.referenceLevel]}`,
+    ...r.referenceSource.split(' + ').map((part) => `         ${part}`),
+    `Score: ${r.total}  (${r.grade})`,
+    `Shape: ${n(b.shape)} · Position: ${n(b.position)} · Length: ${n(b.length)}`,
+    `Stroke count: ${n(b.strokeCount)} · Stroke order: ${n(b.strokeOrder)}`,
+    `weights  S ${w.shape ?? '–'} · P ${w.position ?? '–'} · L ${w.length ?? '–'} · C ${w.strokeCount ?? '–'}`,
+    `raw      precision ${f2(d.precision)} · coverage ${f2(d.coverage)}`,
+    `         mean dist ${d.meanDistance === null ? 'N/A' : d.meanDistance.toFixed(3)} box · len ratio ${f2(d.lengthRatio)}`,
+    `         strokes ${d.userStrokes} / ${d.referenceStrokes ?? '?'} · ${s.ms.toFixed(1)} ms`,
+    ...(missing.length ? ['not scored:', ...missing] : []),
+  ].join('\n')
 }
 
 function formatStats(s: EngineStats, commitsDuringLastStroke: number | null): string {

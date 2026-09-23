@@ -8,12 +8,15 @@ export interface TestChar {
   pinyin: string
   hanViet: string
   meaningVi: string
+  /** Standard total stroke count (Unicode Unihan kTotalStrokes). */
+  strokeCount: number
   note?: string
 }
 
 export const TEST_CHARS: readonly TestChar[] = [
   {
     char: '永',
+    strokeCount: 5,
     script: 'both',
     pinyin: 'yǒng',
     hanViet: 'vĩnh',
@@ -22,6 +25,7 @@ export const TEST_CHARS: readonly TestChar[] = [
   },
   {
     char: '你',
+    strokeCount: 7,
     script: 'both',
     pinyin: 'nǐ',
     hanViet: 'nhĩ',
@@ -29,6 +33,7 @@ export const TEST_CHARS: readonly TestChar[] = [
   },
   {
     char: '学',
+    strokeCount: 8,
     script: 'simplified',
     counterpart: '學',
     pinyin: 'xué',
@@ -37,6 +42,7 @@ export const TEST_CHARS: readonly TestChar[] = [
   },
   {
     char: '國',
+    strokeCount: 11,
     script: 'traditional',
     counterpart: '国',
     pinyin: 'guó',
@@ -45,6 +51,7 @@ export const TEST_CHARS: readonly TestChar[] = [
   },
   {
     char: '謝',
+    strokeCount: 17,
     script: 'traditional',
     counterpart: '谢',
     pinyin: 'xiè',

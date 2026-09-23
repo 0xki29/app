@@ -1,12 +1,13 @@
-import { memo, useEffect, useRef } from 'react'
+import { memo, useEffect, useRef, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import type { HandwritingEngine } from './HandwritingEngine'
+import { REFERENCE_FONT_SCALE, referenceFontFamily } from './referenceFont'
 
 /**
  * observe — reference shown solid, for looking (input is disabled by the caller)
  * trace   — faint reference under the ink
  * hidden  — no reference (recall)
- * reveal  — translucent reference on top of the ink, for self-assessment
+ * reveal  — translucent reference fading in on top of the ink, for self-assessment
  */
 export type ReferenceMode = 'observe' | 'trace' | 'hidden' | 'reveal'
 
@@ -15,13 +16,24 @@ interface Props {
   char: string
   lang: string
   referenceMode: ReferenceMode
+  /** Changing `key` plays one soft ring around the box in `color` (score feedback). */
+  pulse?: { key: number; color: string } | null
+  /** Fade the ink out (before a rewrite clears it). */
+  fading?: boolean
 }
 
 /**
- * DOM shell for the engine. Mounts once per engine; re-renders only when the character or
- * reference mode changes. Drawing happens entirely inside the engine.
+ * DOM shell for the engine. Mounts once per engine; re-renders only when the character, reference
+ * mode or feedback state changes. Drawing happens entirely inside the engine.
  */
-export const HandwritingCanvas = memo(function HandwritingCanvas({ engine, char, lang, referenceMode }: Props) {
+export const HandwritingCanvas = memo(function HandwritingCanvas({
+  engine,
+  char,
+  lang,
+  referenceMode,
+  pulse,
+  fading,
+}: Props) {
   useCommitCounter('Canvas')
   const boxRef = useRef<HTMLDivElement>(null)
   const staticRef = useRef<HTMLCanvasElement>(null)
@@ -37,18 +49,31 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({ engine, char,
     return engine.attach({ box, staticCanvas, liveCanvas, tailCanvas })
   }, [engine])
 
+  const refStyle: CSSProperties = {
+    fontFamily: referenceFontFamily(lang),
+    fontSize: `${REFERENCE_FONT_SCALE * 100}cqi`,
+  }
+
   return (
-    <div ref={boxRef} className="hw-box" data-ref={referenceMode} role="img" aria-label={`Ô viết chữ ${char}`}>
+    <div
+      ref={boxRef}
+      className="hw-box"
+      data-ref={referenceMode}
+      data-fading={fading || undefined}
+      role="img"
+      aria-label={`Ô viết chữ ${char}`}
+    >
       <Grid />
-      <div className="hw-ref hw-ref--under" lang={lang} aria-hidden="true">
+      <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
         {char}
       </div>
       <canvas ref={staticRef} className="hw-layer" />
       <canvas ref={liveRef} className="hw-layer" />
       <canvas ref={tailRef} className="hw-layer" />
-      <div className="hw-ref hw-ref--over" lang={lang} aria-hidden="true">
+      <div className="hw-ref hw-ref--over" lang={lang} style={refStyle} aria-hidden="true">
         {char}
       </div>
+      {pulse && <div key={pulse.key} className="hw-pulse" style={{ color: pulse.color }} aria-hidden="true" />}
     </div>
   )
 })
