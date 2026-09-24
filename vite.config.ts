@@ -28,6 +28,9 @@ export default defineConfig({
   // Relative asset URLs: the build works at any sub-path (GitHub Pages serves /<repo>/).
   base: './',
   plugins: [react(), strokeDataLicense()],
+  // The bundled dependencies' license notices (React, scheduler, perfect-freehand: MIT), which the
+  // minified bundle does not keep, next to the stroke data's.
+  build: { license: { fileName: 'licenses/third-party.md' } },
   test: {
     environment: 'node',
     include: ['src/**/*.test.ts'],

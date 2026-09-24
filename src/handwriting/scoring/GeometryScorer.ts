@@ -204,8 +204,8 @@ export function scoreGeometry(ink: Ink, ref: ReferenceCharacter, mode: ScoringMo
     const shaped = cfg.alignForShape ? align(raw, boundsOf(raw), geom.bounds, scale) : raw
     const inkDir = concatDirs(samplesPerStroke.map(polylineOrientations))
     const minSim = Math.cos((2 * DIRECTION_TOLERANCE_DEG * Math.PI) / 180)
-    const precision = matchFraction(shaped, inkDir, geom.centerline, geom.centerDir, geom.centerIndex, cfg.precisionTolerance, minSim)
-    const coverage = matchFraction(geom.centerline, geom.centerDir, shaped, inkDir, indexPoints(shaped, n), cfg.coverageTolerance, minSim)
+    const precision = matchFraction(shaped, inkDir, geom.centerline, geom.centerDir, geom.centerIndex, cfg.precisionTolerance, minSim, 'dst')
+    const coverage = matchFraction(geom.centerline, geom.centerDir, shaped, inkDir, indexPoints(shaped, n), cfg.coverageTolerance, minSim, 'src')
     scores.shape = precision + coverage > 0 ? (2 * precision * coverage) / (precision + coverage) : 0
 
     // Length: total ink length vs reference centerline length (scale-normalized when aligned).

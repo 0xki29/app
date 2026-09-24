@@ -11,7 +11,7 @@ import type { StrokeData } from './types'
 interface Props {
   data: StrokeData
   engine: HandwritingEngine
-  /** After scoring: each badge shows how the learner's stroke with that number went. */
+  /** After scoring: each badge shows how the reference stroke with that number went. */
   review?: StrokeCheck | null
 }
 
@@ -27,8 +27,9 @@ type BadgeState = 'todo' | 'next' | 'done' | 'good' | 'off' | 'wrong' | 'missing
  * highlighted and the ones already written fade. It counts pen lifts, so a stroke written in two
  * pieces moves the highlight on by two; undo moves it back.
  *
- * In review (after scoring, Trace or Recall), badge k takes the verdict of the learner's k-th stroke
- * (strokeCheck.ts), and reference strokes the learner never wrote are filled in the "wrong" color.
+ * In review (after scoring, Trace or Recall), badge k takes the verdict of reference stroke k —
+ * whichever learner strokes the check matched to it (strokeCheck.ts) — and reference strokes the
+ * learner never wrote are filled in the "wrong" color.
  *
  * Subscribes to the engine itself, so a committed stroke re-renders only this layer (like Controls),
  * never the canvas.
@@ -39,7 +40,7 @@ export const StrokeNumbers = memo(function StrokeNumbers({ data, engine, review 
   const labels = strokeLabels(data)
 
   const stateOf = (i: number): BadgeState => {
-    if (review) return i < review.user.length ? review.user[i].verdict : 'missing'
+    if (review) return review.reference[i]?.verdict ?? 'missing'
     return i < strokeCount ? 'done' : i === strokeCount ? 'next' : 'todo'
   }
   // Recall review draws the reference where the learner wrote it (see StrokeCheck.referenceToInk);

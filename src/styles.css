@@ -24,11 +24,20 @@
   --wrong: #b91c1c;
   --close: #b45309;
   --correct: #15803d;
+  /* The same verdicts as small text on --page (the dock has no background): darker, for 4.5:1
+     contrast (--wrong already has it). The tokens above stay for ink, fills and large numbers. */
+  --close-text: #9a4a0b;
+  --correct-text: #166534;
 
   --gutter: 16px;
+  /* Between the writing box and the screen's left/right edges. On touch screens the edges belong to
+     the system (back swipe on Android and iOS): a stroke starting there gets cancelled. */
+  --box-gutter: var(--gutter);
   --tap: 52px;
-  /* Fixed height under the box: controls and result panel swap without resizing the box. */
-  --dock-h: 192px;
+  /* Least height under the box, sized for the result panel, so controls and result swap without
+     resizing the box. Taller content (details opened, very small screens) grows it: the box then
+     shrinks rather than being covered. */
+  --dock-h: 200px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* Reference font family/size are set inline from src/handwriting/referenceFont.ts. */
@@ -44,16 +53,8 @@
 }
 
 html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-}
-
-html,
 body {
-  overflow: hidden;
-  overscroll-behavior: none;
+  margin: 0;
 }
 
 body {
@@ -62,9 +63,21 @@ body {
   font-family: var(--ui-font);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
+}
+
+/* A screen that owns the whole viewport (the workspace; src/app/viewportLock.ts): the page never
+   scrolls, bounces or pulls to refresh under a stroke. Other screens scroll normally. */
+html[data-lock],
+html[data-lock] body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+@media (pointer: coarse) {
+  :root {
+    --box-gutter: 28px;
+  }
 }
 
 button {
@@ -79,6 +92,17 @@ button[aria-disabled='true'] {
   cursor: default;
 }
 
+/* Headings the app moves focus to (the prompt, the result): a ring for keyboard users only. */
+:is(.prompt__pinyin, .result__title):focus {
+  outline: none;
+}
+
+:is(.prompt__pinyin, .result__title):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* ── Workspace layout (portrait first) ─────────────────────────────────── */
 
 .workspace {
@@ -88,10 +112,14 @@ button[aria-disabled='true'] {
   max-width: 560px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) var(--dock-h);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
   grid-template-areas: 'top' 'prompt' 'stage' 'dock';
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
+  /* Writing is dragging: no text selection, no iOS callout on a long press. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .topbar {
@@ -163,6 +191,7 @@ button[aria-disabled='true'] {
 }
 
 .prompt__pinyin {
+  margin: 0;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.15;
@@ -175,13 +204,13 @@ button[aria-disabled='true'] {
 }
 
 .prompt__meaning {
-  margin-top: 2px;
+  margin: 2px 0 0;
   font-size: 16px;
 }
 
 .prompt__extra {
   min-height: 18px;
-  margin-top: 2px;
+  margin: 2px 0 0;
   font-size: 13px;
   color: var(--muted);
 }
@@ -222,7 +251,7 @@ button[aria-disabled='true'] {
   display: grid;
   place-items: center;
   min-height: 0;
-  padding: 0 var(--gutter);
+  padding: 0 var(--box-gutter);
 }
 
 .hw-box {
@@ -332,6 +361,35 @@ button[aria-disabled='true'] {
   }
 }
 
+/* The engine got no 2D canvas (HandwritingCanvas): the box says so instead of staying blank. */
+.hw-error {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  background: var(--paper);
+  cursor: default;
+}
+
+.hw-error__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hw-error__text {
+  margin: 0;
+  max-width: 30ch;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
 /* ── Dock: writing controls ⇄ result panel ─────────────────────────────── */
 
 .dock {
@@ -340,7 +398,10 @@ button[aria-disabled='true'] {
   flex-direction: column;
   justify-content: flex-end;
   gap: 10px;
-  min-height: 0;
+  min-height: var(--dock-h);
+  /* Content taller than this (the result's details opened) scrolls inside the result instead of
+     shrinking the box further. */
+  max-height: max(var(--dock-h), 46svh);
   padding: 0 var(--gutter) 14px;
 }
 
@@ -350,7 +411,9 @@ button[aria-disabled='true'] {
   gap: 12px;
 }
 
+/* Observe without stroke data: keeps the row's height so the primary button does not jump. */
 .controls[data-hidden] {
+  min-height: var(--tap);
   visibility: hidden;
 }
 
@@ -366,6 +429,7 @@ button[aria-disabled='true'] {
   background: var(--surface);
   font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .btn:active:not(:disabled, [aria-disabled='true']) {
@@ -375,6 +439,11 @@ button[aria-disabled='true'] {
 .btn:disabled,
 .btn[aria-disabled='true'] {
   opacity: 0.4;
+}
+
+/* Ignoring taps for a moment (Controls: the rest of a double tap on the button it replaced). */
+.btn[data-guard] {
+  opacity: 0.55;
 }
 
 .btn--wrong {
@@ -641,38 +710,48 @@ button[aria-disabled='true'] {
 
 /* ── Result panel ──────────────────────────────────────────────────────── */
 
+/* Top to bottom: headline, what to fix, buttons (src/workspace/ResultPanel.tsx). The buttons are at
+   the bottom, where the writing controls have Undo/Clear — not "Chấm điểm" — so the rest of a
+   double tap never lands on them; they also ignore input, and fade in, for their first 500 ms. */
 .result {
   --tone: var(--muted);
+  --tone-text: var(--muted);
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  animation: fade-up 240ms var(--ease-out) both;
+  gap: 10px;
+  /* Only the details give way when the dock is short (see .dock max-height): the headline and the
+     buttons always show whole. */
+  min-height: 0;
+  animation: fade-up 200ms var(--ease-out) both;
 }
 
-.result[data-grade='excellent'],
-.result[data-grade='good'] {
+.result[data-tone='correct'] {
   --tone: var(--correct);
+  --tone-text: var(--correct-text);
 }
 
-.result[data-grade='fair'] {
+.result[data-tone='close'] {
   --tone: var(--close);
+  --tone-text: var(--close-text);
 }
 
-.result[data-grade='needs-work'] {
+.result[data-tone='wrong'] {
   --tone: var(--wrong);
+  --tone-text: var(--wrong);
 }
 
 .result__head {
+  flex: none;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .result__score {
   display: grid;
   justify-items: center;
-  min-width: 96px;
+  min-width: 76px;
 }
 
 .result__num {
@@ -683,23 +762,138 @@ button[aria-disabled='true'] {
   font-variant-numeric: tabular-nums;
 }
 
-.result__grade {
-  margin-top: 2px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--tone);
-  animation: fade-up 260ms var(--ease-out) 560ms both;
-}
-
 .result__caption {
+  margin-top: 3px;
   font-size: 11px;
   color: var(--muted);
-  animation: fade-in 260ms ease-out 560ms both;
+  white-space: nowrap;
+}
+
+.result__title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.result__grade {
+  display: block;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--tone-text);
+  animation: fade-up 240ms var(--ease-out) 150ms both;
+}
+
+.result__tally {
+  display: block;
+  margin-top: 3px;
+  font-size: 15px;
+  line-height: 1.3;
+  animation: fade-in 240ms ease-out 200ms both;
+}
+
+.result__count {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tally {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tally__sep {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.tally[data-v='off'] {
+  color: var(--close-text);
+}
+
+.tally[data-v='wrong'] {
+  color: var(--wrong);
+}
+
+.result__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+}
+
+.result__body > :not(.result__details) {
+  flex: none;
+}
+
+/* Activation guard where `inert` is not supported (ResultPanel). */
+.result__body[data-guard] {
+  pointer-events: none;
+}
+
+.result__details {
+  min-height: 0;
+  overflow-y: auto;
+  /* The link buttons' hit areas reach 6px past their line; padding keeps them inside the scroll
+     box (no stray scrollbar), and the negative margin keeps the spacing as designed. */
+  margin: -6px 0;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.35;
+  /* Scroll shadows: a shade at an edge the list continues past (the 'scroll' layers), covered by
+     the page color where it does not (the 'local' layers, which move with the content). */
+  background:
+    linear-gradient(var(--page) 40%, transparent) top / 100% 18px no-repeat local,
+    linear-gradient(transparent, var(--page) 60%) bottom / 100% 18px no-repeat local,
+    radial-gradient(farthest-side at 50% 0, rgba(60, 40, 20, 0.22), transparent) top / 100% 9px no-repeat scroll,
+    radial-gradient(farthest-side at 50% 100%, rgba(60, 40, 20, 0.22), transparent) bottom / 100% 9px no-repeat scroll;
+  animation: fade-in 220ms ease-out 250ms both;
+}
+
+.result__issues {
+  margin: 0;
+}
+
+/* A text button inside a line of text, with a hit area taller than the text. */
+.linkbtn {
+  display: inline-block;
+  margin: -6px 0;
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.result__more {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.result__collapse {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-self: end;
+  background: var(--page);
+}
+
+.result__list {
+  margin: 0;
+  padding-left: 18px;
 }
 
 .result__bars {
   display: grid;
-  gap: 5px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 14px;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -709,7 +903,7 @@ button[aria-disabled='true'] {
 
 .result__bars li {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: 66px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
 }
@@ -737,48 +931,14 @@ button[aria-disabled='true'] {
   }
 }
 
-.result__feedback {
-  min-height: 2.6em;
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.3;
-  animation: fade-up 260ms var(--ease-out) 700ms both;
+/* The rating group: its label always shows, above the three buttons. */
+.result__rate {
+  display: grid;
+  gap: 4px;
 }
 
-/* Stroke-by-stroke line (src/workspace/strokeFeedback.ts): tallies in the verdict colors, then the
-   issues. Clamped to three lines so a long list cannot push the actions out of the dock. */
-.result__strokes {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  overflow: hidden;
-}
-
-.tally {
-  font-weight: 600;
-  margin-right: 8px;
-  white-space: nowrap;
-}
-
-.tally[data-v='good'] {
-  color: var(--correct);
-}
-
-.tally[data-v='off'] {
-  color: var(--close);
-}
-
-.tally[data-v='wrong'] {
-  color: var(--wrong);
-}
-
-.result__issues {
-  color: var(--ink);
-}
-
-.result__prompt {
-  margin-left: 6px;
+.result__rate-label {
+  font-size: 13px;
   color: var(--muted);
 }
 
@@ -786,12 +946,21 @@ button[aria-disabled='true'] {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 12px;
-  animation: fade-in 220ms ease-out 780ms both;
 }
 
 .result__actions--rating {
-  grid-template-columns: repeat(3, 1fr);
-  animation-delay: 0ms;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.result__actions--rating .btn {
+  padding: 0 6px;
+}
+
+/* Shown by the time the guard lets them be pressed. */
+.result__rate,
+.result__body > .result__actions {
+  animation: fade-in 200ms ease-out 300ms both;
 }
 
 @keyframes fade-up {
@@ -835,6 +1004,41 @@ button[aria-disabled='true'] {
   .stroke-num text {
     transition: none;
   }
+
+  /* No fade-in to show that the result's buttons cannot be pressed yet (ResultPanel's guard):
+     they are dimmed instead, until the guard lets them be pressed. */
+  .result__body[data-guard] :is(.btn, .linkbtn) {
+    opacity: 0.55;
+  }
+}
+
+/* ── Error pages (src/app) ─────────────────────────────────────────────── */
+
+.error-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: 440px;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 14px;
+  padding: 24px var(--gutter);
+}
+
+.error-page__title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.error-page__text {
+  margin: 0;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.error-page .btn {
+  padding: 0 24px;
 }
 
 .toast {
@@ -867,7 +1071,7 @@ button[aria-disabled='true'] {
   }
 
   .stage {
-    padding: var(--gutter);
+    padding: var(--gutter) var(--box-gutter);
   }
 
   /* Safety net: if the column is still too short, the prompt gives way (clipping its last line)
@@ -878,8 +1082,38 @@ button[aria-disabled='true'] {
     align-items: safe flex-end;
   }
 
+  /* The details opened take the column: the prompt keeps its first line, whole, rather than
+     being clipped through a line of text. */
+  .workspace:has(.result__more) :is(.prompt__meaning, .prompt__extra) {
+    display: none;
+  }
+
+  /* The column above the dock is the topbar and the prompt; the prompt may give way, but the dock
+     leaves room for the topbar and a line of prompt. */
   .dock {
     min-height: auto;
+    max-height: calc(100svh - 104px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  /* The column can be as narrow as 280px: labels stay on one line. */
+  .icon-btn {
+    width: 40px;
+  }
+
+  .modes__tab {
+    padding: 0 2px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .result__actions--rating {
+    gap: 8px;
+  }
+
+  .result__actions--rating .btn {
+    padding: 0 4px;
+    font-size: 15px;
+    white-space: nowrap;
   }
 }
 

@@ -1,9 +1,10 @@
-import { InkModel } from './InkModel'
-import { InputController, type EndReason } from './InputController'
+import { cloneStroke, InkModel } from './InkModel'
+import { InputController } from './InputController'
+import type { DiscardReason } from './inputPolicy'
 import { FreehandRenderer } from './renderers/FreehandRenderer'
 import { QuadRenderer } from './renderers/QuadRenderer'
 import { clearCanvas, type Renderer, type RendererKind, type RenderStyle } from './renderers/Renderer'
-import type { Ink, Point, PointerKind, Stroke } from './types'
+import type { Ink, Point, PointerKind, Stroke, StrokeEnd } from './types'
 
 export interface EngineSettings {
   renderer: RendererKind
@@ -29,16 +30,59 @@ export const DEFAULT_SETTINGS: EngineSettings = {
 export interface EngineSnapshot {
   readonly canUndo: boolean
   readonly strokeCount: number
+  /**
+   * Identifies the current ink: increases on every change to it (a stroke committed, undo, clear,
+   * reset of non-empty ink, setInk) and is never reused. getInk() reports the same number.
+   */
+  readonly inkRevision: number
   readonly inputEnabled: boolean
   readonly settings: EngineSettings
+  /**
+   * attach() could not get a 2D canvas context (e.g. iOS refuses new canvases when canvas memory
+   * runs out): nothing is drawn and no input is taken until an attach succeeds.
+   */
+  readonly canvasError: boolean
 }
+
+/** The committed ink with the revision it was read at (see EngineSnapshot.inkRevision). A deep copy. */
+export interface VersionedInk extends Ink {
+  readonly revision: number
+}
+
+/** A stroke the learner just added to the ink (never one loaded with setInk). */
+export interface StrokeCommit {
+  /** A copy: listeners may keep it. */
+  readonly stroke: Stroke
+  /** Its position in the ink, in writing order. */
+  readonly index: number
+  /** The ink revision that first contains it. */
+  readonly revision: number
+}
+
+/**
+ * start   — a contact began a stroke
+ * end     — the stroke was committed to the ink
+ * discard — the stroke was dropped; a stroke gets either 'end' or 'discard', never both
+ */
+export type StrokePhase = 'start' | 'end' | 'discard'
+
+/** Why a stroke in progress was dropped: not writing (inputPolicy), or the box was reset or reloaded. */
+export type StrokeDiscard = DiscardReason | 'reset'
+
+/** `detail` is the StrokeEnd for 'end', the StrokeDiscard for 'discard', undefined for 'start'. */
+export type StrokePhaseListener = (phase: StrokePhase, detail?: StrokeEnd | StrokeDiscard) => void
 
 /** Mutable instrumentation, read by the debug HUD by polling. Stroke fields cover the current or last stroke. */
 export interface EngineStats {
   drawing: boolean
   pointerType: PointerKind | null
   pressure: number
+  /** A pen has been used on the box (touch is then blocked only briefly, see inputPolicy). */
   penSeen: boolean
+  /** How the last contact ended: kept (StrokeEnd) or dropped (StrokeDiscard). */
+  lastEnd: StrokeEnd | StrokeDiscard | null
+  /** Contacts dropped this session: taps, palms, strokes cut by a reset. */
+  discarded: number
   strokePoints: number
   strokeMoveEvents: number
   /** Raw samples incl. coalesced ones, before de-duplication. */
@@ -79,11 +123,18 @@ export interface EngineOptions {
   desynchronized?: boolean
 }
 
-export type StrokePhase = 'start' | 'end'
-
 const MAX_DPR = 3
 const INK_COLOR = '#1c1917'
 const NO_POINTS: readonly Point[] = []
+/** Event timeStamps above this are already epoch ms (very old engines); others count from timeOrigin. */
+const EPOCH_TIMESTAMP_MIN = 1e12
+
+/** Epoch ms of an event timeStamp. performance.timeOrigin is missing before Safari 15. */
+function epochMs(timeStamp: number): number {
+  if (timeStamp > EPOCH_TIMESTAMP_MIN) return Math.round(timeStamp)
+  const origin = Number.isFinite(performance.timeOrigin) ? performance.timeOrigin : Date.now() - performance.now()
+  return Math.round(origin + timeStamp)
+}
 
 interface Contexts {
   stat: CanvasRenderingContext2D
@@ -115,9 +166,14 @@ export class HandwritingEngine {
   /** Per-stroke color overrides for the committed strokes (see setStrokeColors). */
   private strokeColors: readonly (string | null)[] | null = null
   private inputEnabled = true
+  private canvasError = false
   private snapshot: EngineSnapshot
   private readonly listeners = new Set<() => void>()
-  private readonly strokeListeners = new Set<(phase: StrokePhase) => void>()
+  private readonly strokeListeners = new Set<StrokePhaseListener>()
+  private readonly commitListeners = new Set<(commit: StrokeCommit) => void>()
+  /** Stroke ids: a random per-engine prefix, so ids in saved ink loaded back do not collide. */
+  private readonly idPrefix = Math.floor(Math.random() * 36 ** 6).toString(36).padStart(6, '0')
+  private strokeSeq = 0
 
   private layers: EngineLayers | null = null
   private ctx: Contexts | null = null
@@ -145,14 +201,51 @@ export class HandwritingEngine {
 
   getSnapshot = (): EngineSnapshot => this.snapshot
 
-  /** Stroke lifecycle hook for instrumentation. 'end' fires before the snapshot changes. */
-  onStrokePhase(listener: (phase: StrokePhase) => void): () => void {
+  /**
+   * Stroke lifecycle hook for instrumentation. 'end' and 'discard' fire before the snapshot
+   * changes; see StrokePhaseListener for the detail.
+   */
+  onStrokePhase(listener: StrokePhaseListener): () => void {
     this.strokeListeners.add(listener)
     return () => this.strokeListeners.delete(listener)
   }
 
-  getInk(): Ink {
-    return this.model.toInk()
+  /**
+   * Called once per stroke the learner commits, after the snapshot has changed (so
+   * getSnapshot().inkRevision === commit.revision inside the listener). Not called for ink loaded
+   * with setInk, nor for dropped contacts.
+   */
+  onStrokeCommitted(listener: (commit: StrokeCommit) => void): () => void {
+    this.commitListeners.add(listener)
+    return () => this.commitListeners.delete(listener)
+  }
+
+  /**
+   * A deep copy of the committed ink with its revision. A stroke still being written is not in
+   * it: call flushInput() first to include it.
+   */
+  getInk(): VersionedInk {
+    return { strokes: this.model.toInk().strokes, revision: this.model.revision }
+  }
+
+  /**
+   * Replace the ink (restoring saved work, replay): validated, copied, redrawn and published. Drops
+   * any stroke in progress, the undo history (loading is not an edit to undo) and stroke colors.
+   * Throws a TypeError, changing nothing, if `ink` is invalid (see parseInk).
+   */
+  setInk(ink: Ink): void {
+    this.model.load(ink)
+    this.input?.cancel()
+    this.dropStroke('reset')
+    this.afterModelChange()
+  }
+
+  /**
+   * End the stroke in progress now, synchronously: it is committed (end 'interrupted') or, if it is
+   * only a tap, dropped. Call before reading the ink for scoring, so the ink scored is the ink shown.
+   */
+  flushInput(): void {
+    this.input?.finish()
   }
 
   undo(): void {
@@ -166,7 +259,7 @@ export class HandwritingEngine {
   /** Fresh box for a new character or mode: drops ink, history and any stroke in progress. */
   reset(): void {
     this.input?.cancel()
-    this.endStroke('discard')
+    this.dropStroke('reset')
     this.model.reset()
     this.afterModelChange()
   }
@@ -175,12 +268,18 @@ export class HandwritingEngine {
    * Recolor committed strokes, by index in writing order (null = the normal ink color), e.g. to mark
    * each stroke right or wrong after scoring. The colors describe this particular ink, so any change
    * to it (a new stroke, undo, clear, reset) drops them. `null` restores the ink color.
+   *
+   * Pass the revision of the ink the colors were computed from (getInk().revision): if the ink has
+   * changed since, they are stale and ignored. Returns whether they were applied.
    */
-  setStrokeColors(colors: readonly (string | null)[] | null): void {
-    this.strokeColors = colors
+  setStrokeColors(colors: readonly (string | null)[] | null, revision?: number): boolean {
+    if (revision !== undefined && revision !== this.model.revision) return false
+    this.strokeColors = colors ? colors.slice() : null
     this.redrawStatic()
+    return true
   }
 
+  /** Disabling ends a stroke in progress like flushInput() (end 'interrupted'). */
   setInputEnabled(enabled: boolean): void {
     if (this.inputEnabled === enabled) return
     this.inputEnabled = enabled
@@ -211,13 +310,15 @@ export class HandwritingEngine {
 
   // ── DOM lifecycle ───────────────────────────────────────────────────────────
 
+  /**
+   * Take over the box and its canvases. Never throws for a missing 2D context: the engine then
+   * stays inert (no drawing, no input) and reports snapshot.canvasError until an attach succeeds.
+   */
   attach(layers: EngineLayers): () => void {
     this.detach()
-    const ctx: Contexts = {
-      stat: get2d(layers.staticCanvas, false),
-      live: get2d(layers.liveCanvas, this.desync),
-      tail: get2d(layers.tailCanvas, this.desync),
-    }
+    const ctx = getContexts(layers, this.desync)
+    this.setCanvasError(ctx === null)
+    if (!ctx) return noop
     this.layers = layers
     this.ctx = ctx
 
@@ -225,6 +326,7 @@ export class HandwritingEngine {
       start: this.startStroke,
       move: this.extendStroke,
       end: this.endStroke,
+      discard: this.dropStroke,
     })
     input.enabled = this.inputEnabled
     input.predictionEnabled = this.settings.predicted
@@ -270,7 +372,8 @@ export class HandwritingEngine {
   // ── Stroke pipeline (called synchronously from pointer events) ─────────────
 
   private startStroke = (point: Point, pointerType: PointerKind, timeStamp: number): void => {
-    this.current = { points: [point], pointerType }
+    const id = `${this.idPrefix}-${++this.strokeSeq}`
+    this.current = { points: [point], pointerType, id, startedAt: epochMs(timeStamp) }
     this.predicted = NO_POINTS
     const s = this.stats
     s.drawing = true
@@ -305,20 +408,15 @@ export class HandwritingEngine {
     this.scheduleFrame()
   }
 
-  private endStroke = (reason: EndReason): void => {
-    const stroke = this.current
+  private endStroke = (reason: StrokeEnd): void => {
+    const stroke = this.takeStroke()
     if (!stroke) return
-    this.current = null
-    this.predicted = NO_POINTS
-    this.cancelFrame()
-    const ctx = this.ctx
-    if (ctx) {
-      clearCanvas(ctx.live)
-      clearCanvas(ctx.tail)
-    }
+    stroke.end = reason
     // Commit: one full-quality draw onto the static layer, in the same task as clearing live,
     // so the swap is invisible.
-    if (reason !== 'discard' && this.model.add(stroke)) {
+    const added = this.model.add(stroke)
+    if (added) {
+      const ctx = this.ctx
       if (this.strokeColors) {
         // The ink changed: marks for the previous ink no longer apply.
         this.strokeColors = null
@@ -328,11 +426,45 @@ export class HandwritingEngine {
       }
     }
     const s = this.stats
+    s.lastEnd = reason
+    s.strokeCount = this.model.strokeCount
+    this.emitStroke('end', reason)
+    this.publish()
+    if (added && this.commitListeners.size > 0) {
+      const commit: StrokeCommit = {
+        stroke: cloneStroke(stroke),
+        index: this.model.strokeCount - 1,
+        revision: this.model.revision,
+      }
+      for (const l of this.commitListeners) l(commit)
+    }
+  }
+
+  /** Drop the stroke in progress, if any: nothing reaches the ink. */
+  private dropStroke = (reason: StrokeDiscard): void => {
+    if (!this.takeStroke()) return
+    const s = this.stats
+    s.lastEnd = reason
+    s.discarded++
+    this.emitStroke('discard', reason)
+  }
+
+  /** Take the stroke in progress off the live layers and return it. */
+  private takeStroke(): Stroke | null {
+    const stroke = this.current
+    if (!stroke) return null
+    this.current = null
+    this.predicted = NO_POINTS
+    this.cancelFrame()
+    const ctx = this.ctx
+    if (ctx) {
+      clearCanvas(ctx.live)
+      clearCanvas(ctx.tail)
+    }
+    const s = this.stats
     s.drawing = false
     s.strokeEndMs = performance.now()
-    s.strokeCount = this.model.strokeCount
-    this.emitStroke('end')
-    this.publish()
+    return stroke
   }
 
   private scheduleFrame(): void {
@@ -464,8 +596,10 @@ export class HandwritingEngine {
     return {
       canUndo: this.model.canUndo,
       strokeCount: this.model.strokeCount,
+      inkRevision: this.model.revision,
       inputEnabled: this.inputEnabled,
       settings: this.settings,
+      canvasError: this.canvasError,
     }
   }
 
@@ -475,8 +609,10 @@ export class HandwritingEngine {
     if (
       prev.canUndo === next.canUndo &&
       prev.strokeCount === next.strokeCount &&
+      prev.inkRevision === next.inkRevision &&
       prev.inputEnabled === next.inputEnabled &&
-      prev.settings === next.settings
+      prev.settings === next.settings &&
+      prev.canvasError === next.canvasError
     ) {
       return
     }
@@ -484,15 +620,34 @@ export class HandwritingEngine {
     for (const l of this.listeners) l()
   }
 
-  private emitStroke(phase: StrokePhase): void {
-    for (const l of this.strokeListeners) l(phase)
+  private setCanvasError(failed: boolean): void {
+    if (this.canvasError === failed) return
+    this.canvasError = failed
+    if (failed) console.error('[engine] Canvas 2D is not available')
+    this.publish()
+  }
+
+  private emitStroke(phase: StrokePhase, detail?: StrokeEnd | StrokeDiscard): void {
+    for (const l of this.strokeListeners) l(phase, detail)
   }
 }
 
-function get2d(canvas: HTMLCanvasElement, desynchronized: boolean): CanvasRenderingContext2D {
-  const ctx = canvas.getContext('2d', desynchronized ? { desynchronized: true } : undefined)
-  if (!ctx) throw new Error('Canvas 2D is not available')
-  return ctx
+function noop(): void {}
+
+/** All three contexts, or null if any is unavailable (getContext returns null or throws). */
+function getContexts(layers: EngineLayers, desynchronized: boolean): Contexts | null {
+  const stat = get2d(layers.staticCanvas, false)
+  const live = get2d(layers.liveCanvas, desynchronized)
+  const tail = get2d(layers.tailCanvas, desynchronized)
+  return stat && live && tail ? { stat, live, tail } : null
+}
+
+function get2d(canvas: HTMLCanvasElement, desynchronized: boolean): CanvasRenderingContext2D | null {
+  try {
+    return canvas.getContext('2d', desynchronized ? { desynchronized: true } : undefined)
+  } catch {
+    return null
+  }
 }
 
 function toStyle(s: EngineSettings): RenderStyle {
@@ -505,6 +660,8 @@ function createStats(): EngineStats {
     pointerType: null,
     pressure: 0,
     penSeen: false,
+    lastEnd: null,
+    discarded: 0,
     strokePoints: 0,
     strokeMoveEvents: 0,
     strokeSamples: 0,

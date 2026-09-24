@@ -202,6 +202,7 @@ function formatStats(s: EngineStats, commitsDuringLastStroke: number | null): st
   return [
     `state    ${s.drawing ? 'DRAWING' : 'idle'}  (stroke = current or last)`,
     `pointer  ${s.pointerType ?? '—'}  p=${s.pressure.toFixed(2)}  pen seen: ${s.penSeen ? 'yes' : 'no'}`,
+    `ended    ${s.lastEnd ?? '—'} · dropped ${s.discarded} (taps, palms, resets)`,
     `stroke   ${s.strokePoints} pts · ${s.strokeMoveEvents} ev · ${samplesPerEvent.toFixed(2)} samples/ev`,
     `rate     ${rate(s.strokeMoveEvents)} ev/s · ${rate(s.strokeSamples)} samples/s`,
     `frame    ${s.frames}× · last ${s.lastFrameMs.toFixed(2)} · avg ${avgFrame.toFixed(2)} · max ${s.frameMsMax.toFixed(2)} ms`,

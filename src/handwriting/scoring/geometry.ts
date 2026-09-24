@@ -231,8 +231,9 @@ export const SKELETON_LENGTH_PER_CELL = (4 / Math.PI) * Math.log(1 + Math.SQRT2)
 
 // ── Orientation-aware matching ──────────────────────────────────────────────
 // Directions are undirected (a stroke drawn either way has the same orientation), stored as
-// doubled-angle unit vectors (cos 2θ, sin 2θ): their dot product is cos 2Δθ. (0, 0) = unknown,
-// which matches any direction (e.g. a lone dot).
+// doubled-angle unit vectors (cos 2θ, sin 2θ): their dot product is cos 2Δθ. (0, 0) = no direction.
+// On the reference side (a lone dot, a skeleton junction) that matches ink of any direction; on the
+// ink side (a tap) it matches only such reference points — a tap is no stroke in any direction.
 
 /** Doubled-angle orientation of each point of a resampled polyline, from its neighbours. */
 export function polylineOrientations(pts: readonly Vec[]): Float32Array {
@@ -304,7 +305,8 @@ export function indexPoints(pts: readonly Vec[], n: number): PointIndex {
 
 /**
  * Fraction of `src` points that have a `dst` point within `tol` whose orientation differs by
- * less than the angle encoded in `minSimilarity` (= cos 2Δθ).
+ * less than the angle encoded in `minSimilarity` (= cos 2Δθ). `reference` says which side is the
+ * reference: only its points may lack a direction and still match (see above).
  */
 export function matchFraction(
   src: readonly Vec[],
@@ -314,16 +316,19 @@ export function matchFraction(
   index: PointIndex,
   tol: number,
   minSimilarity: number,
+  reference: 'src' | 'dst',
 ): number {
   if (src.length === 0) return 0
   const n = index.n
   const reach = Math.ceil(tol * n)
   const tol2 = tol * tol
+  const refIsSrc = reference === 'src'
   let matched = 0
   for (let i = 0; i < src.length; i++) {
     const p = src[i]
     const sc = srcDir[i * 2]
     const ss = srcDir[i * 2 + 1]
+    const srcFree = sc === 0 && ss === 0
     const cx = Math.floor(p.x * n)
     const cy = Math.floor(p.y * n)
     let found = false
@@ -338,8 +343,10 @@ export function matchFraction(
           if (ddx * ddx + ddy * ddy > tol2) continue
           const dc = dstDir[j * 2]
           const ds = dstDir[j * 2 + 1]
-          const unknown = (sc === 0 && ss === 0) || (dc === 0 && ds === 0)
-          if (unknown || sc * dc + ss * ds >= minSimilarity) {
+          const dstFree = dc === 0 && ds === 0
+          const refFree = refIsSrc ? srcFree : dstFree
+          const inkFree = refIsSrc ? dstFree : srcFree
+          if (refFree || (!inkFree && sc * dc + ss * ds >= minSimilarity)) {
             found = true
             break
           }

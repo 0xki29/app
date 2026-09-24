@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { Ink, Stroke } from '../types'
 import { GRID_SIZE, MODE_CONFIG, REFERENCE_STROKE_WIDTH } from './config'
 import { gradeFor } from './feedback'
-import { rasterizePolylines } from './geometry'
+import { rasterizePolylines, resample } from './geometry'
 import { GeometryScorer, scoreGeometry } from './GeometryScorer'
 import type { ReferenceCharacter, Vec } from './types'
 
@@ -83,6 +83,20 @@ describe('scoreGeometry', () => {
     const r = scoreGeometry(far, strokeRef(), 'trace')
     expect(r.total).toBeLessThan(35)
     expect(r.breakdown.position).toBeLessThan(30)
+  })
+
+  it('taps have no direction: dotting along the reference earns no shape', () => {
+    // One tap every 0.02 box along every reference stroke: on the reference, but no stroke.
+    const taps = REF_LINES.flatMap((l) =>
+      resample(l, 0.02).map((p): Stroke => ({ points: [{ x: p.x, y: p.y, t: 0, p: 0.5 }], pointerType: 'touch' })),
+    )
+    for (const mode of ['trace', 'recall'] as const) {
+      const r = scoreGeometry(ink(taps), strokeRef(), mode)
+      expect(r.diagnostics.precision).toBe(0)
+      expect(r.diagnostics.coverage).toBe(0)
+      expect(r.breakdown.shape).toBe(0)
+      expect(r.total).toBeLessThan(40)
+    }
   })
 
   it('a wrong stroke count lowers the stroke-count component and the total', () => {

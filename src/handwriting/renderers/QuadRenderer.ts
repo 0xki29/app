@@ -23,7 +23,9 @@ export class QuadRenderer implements Renderer {
     const n = pts.length
     if (n === 0) return
     applyStyle(ctx, style, size)
-    if (n === 1) {
+    // A press held in place ends with its first sample repeated (see inputPolicy.stillPressEnd): a
+    // dot, not a zero-length line, which canvas may prune rather than cap.
+    if (n === 1 || pts.every((p) => p.x === pts[0].x && p.y === pts[0].y)) {
       dot(ctx, pts[0], size, style)
       return
     }

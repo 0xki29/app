@@ -4,7 +4,10 @@ import {
   cellCenters,
   distanceAt,
   distanceTransform,
+  indexPoints,
+  matchFraction,
   polylineLength,
+  polylineOrientations,
   rasterizePolylines,
   resample,
   skeletonize,
@@ -50,6 +53,29 @@ describe('geometry', () => {
       const truth = polylineLength(line)
       expect(Math.abs(estimate - truth) / truth).toBeLessThan(0.15)
     }
+  })
+
+  it('a sample without direction matches only on the reference side', () => {
+    const minSim = Math.cos((60 * Math.PI) / 180)
+    const line = resample([{ x: 0.2, y: 0.5 }, { x: 0.8, y: 0.5 }], 0.01)
+    const lineDir = polylineOrientations(line)
+    const tap = [{ x: 0.5, y: 0.5 }]
+    const tapDir = polylineOrientations(tap)
+    expect([...tapDir]).toEqual([0, 0])
+    const along = resample([{ x: 0.45, y: 0.51 }, { x: 0.55, y: 0.51 }], 0.01)
+    const across = resample([{ x: 0.5, y: 0.45 }, { x: 0.5, y: 0.55 }], 0.01)
+    const at = (pts: { x: number; y: number }[]) => indexPoints(pts, 128)
+
+    // Ink → reference (precision): a tap on a stroke does not run along it; ink along it does.
+    expect(matchFraction(tap, tapDir, line, lineDir, at(line), 0.045, minSim, 'dst')).toBe(0)
+    expect(matchFraction(along, polylineOrientations(along), line, lineDir, at(line), 0.045, minSim, 'dst')).toBe(1)
+    expect(matchFraction(across, polylineOrientations(across), line, lineDir, at(line), 0.045, minSim, 'dst')).toBeLessThan(0.3)
+    // Reference → ink (coverage): a tap covers no part of a stroke.
+    expect(matchFraction(line, lineDir, tap, tapDir, at(tap), 0.045, minSim, 'src')).toBe(0)
+    // A reference point without direction (a lone dot) is matched by ink of any direction, a tap included.
+    expect(matchFraction(tap, tapDir, tap, tapDir, at(tap), 0.045, minSim, 'dst')).toBe(1)
+    expect(matchFraction(across, polylineOrientations(across), tap, tapDir, at(tap), 0.1, minSim, 'dst')).toBe(1)
+    expect(matchFraction(tap, tapDir, across, polylineOrientations(across), at(across), 0.1, minSim, 'src')).toBe(1)
   })
 
   it('alignment scale is clamped', () => {

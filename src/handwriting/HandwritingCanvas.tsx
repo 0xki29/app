@@ -1,10 +1,11 @@
-import { memo, useEffect, useMemo, useRef, type CSSProperties } from 'react'
+import { memo, useCallback, useEffect, useMemo, useRef, useSyncExternalStore, type CSSProperties } from 'react'
 import { useCommitCounter } from '../debug/renderStats'
 import type { StrokeAnimator } from '../strokes/StrokeAnimator'
 import type { StrokeCheck } from '../strokes/strokeCheck'
 import { StrokeNumbers } from '../strokes/StrokeNumbers'
 import { StrokeOrderView } from '../strokes/StrokeOrderView'
 import type { StrokeData } from '../strokes/types'
+import { boxLabel } from '../workspace/promptText'
 import type { HandwritingEngine } from './HandwritingEngine'
 import { REFERENCE_FONT_SCALE, referenceFontFamily } from './referenceFont'
 
@@ -41,7 +42,8 @@ interface Props {
 
 /**
  * DOM shell for the engine. Mounts once per engine; re-renders only when the character, reference
- * mode or feedback state changes. Drawing happens entirely inside the engine.
+ * mode or feedback state changes (or the canvas turns out to be unavailable). Drawing happens
+ * entirely inside the engine.
  */
 export const HandwritingCanvas = memo(function HandwritingCanvas({
   engine,
@@ -59,6 +61,11 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
   const staticRef = useRef<HTMLCanvasElement>(null)
   const liveRef = useRef<HTMLCanvasElement>(null)
   const tailRef = useRef<HTMLCanvasElement>(null)
+  // Only this flag of the engine state: a committed stroke must not re-render the canvas.
+  const canvasError = useSyncExternalStore(
+    engine.subscribe,
+    useCallback(() => engine.getSnapshot().canvasError, [engine]),
+  )
 
   useEffect(() => {
     const box = boxRef.current
@@ -74,7 +81,8 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
     fontSize: `${REFERENCE_FONT_SCALE * 100}cqi`,
   }
   // Recall review: the reference is drawn over the learner's character, at the size and place they
-  // wrote it — the same alignment the stroke verdicts were judged with.
+  // wrote it — the same alignment the stroke verdicts were judged with. Null (Trace, or a Recall
+  // attempt too small to align on): in place.
   const shift = referenceMode === 'review' ? (review?.referenceToInk ?? null) : null
   const underStyle = useMemo<CSSProperties | undefined>(
     () =>
@@ -93,8 +101,9 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
       className="hw-box"
       data-ref={referenceMode}
       data-fading={fading || undefined}
-      role="img"
-      aria-label={`Ô viết chữ ${char}`}
+      // An img's content is not read out, so the notice below would be hidden from screen readers.
+      role={canvasError ? undefined : 'img'}
+      aria-label={canvasError ? undefined : boxLabel(char, referenceMode === 'hidden')}
     >
       <Grid />
       {strokeData ? (
@@ -127,9 +136,26 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
         </div>
       )}
       {pulse && <div key={pulse.key} className="hw-pulse" style={{ color: pulse.color }} aria-hidden="true" />}
+      {canvasError && <CanvasUnavailable />}
     </div>
   )
 })
+
+/**
+ * The engine got no 2D canvas (iOS refuses new canvases once canvas memory runs out): nothing can
+ * be drawn, so say why and what helps, in the box itself.
+ */
+function CanvasUnavailable() {
+  return (
+    <div className="hw-error" role="alert">
+      <p className="hw-error__title">Không vẽ được trong ô viết</p>
+      <p className="hw-error__text">Trình duyệt không cấp bộ nhớ đồ họa. Hãy đóng bớt tab hoặc ứng dụng khác, rồi tải lại trang.</p>
+      <button type="button" className="btn" onClick={() => window.location.reload()}>
+        Tải lại
+      </button>
+    </div>
+  )
+}
 
 /** 米字格 practice grid. */
 function Grid() {
