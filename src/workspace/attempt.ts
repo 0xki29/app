@@ -4,8 +4,8 @@ import type { StrokeEnd } from '../handwriting/types'
 import type { StrokeCheck } from '../strokes/strokeCheck'
 
 /**
- * The practice flow as a pure state machine: which character, which mode, and where the current
- * attempt is. The workspace renders from it and drives the engine from it; nothing here touches
+ * The practice flow as a pure state machine: which item (character), which mode, and where the
+ * current attempt is. The workspace renders from it and drives the engine from it; nothing here touches
  * the DOM, so every transition is unit-tested (attempt.test.ts).
  *
  * An attempt is one go at writing the character in one mode. Going anywhere — another character,
@@ -34,7 +34,7 @@ export interface ScoredAttempt {
 }
 
 export interface PracticeState {
-  /** Position in the character list. */
+  /** Which item: the caller's key for it (a session's turn, a character's code point). */
   index: number
   mode: Mode
   phase: Phase
@@ -43,9 +43,10 @@ export interface PracticeState {
   /** The ink is fading out before a rewrite starts the next attempt. */
   fading: boolean
   /**
-   * Recall: this character's answer has been shown after a recall attempt, and not rated since.
-   * Writing it "from memory" again is then no longer recall, so the learner is told, and the rating
-   * says so.
+   * This attempt started after the character's answer was shown (Recall revealed it earlier and it
+   * has not been rated since). Writing it "from memory" is then no longer recall, so the learner is
+   * told, and the rating is logged as peeked. The reveal that ends a clean recall does not set it:
+   * the answer shown after writing from memory is no peek.
    */
   peeked: boolean
   /** The characters (indices) whose answer Recall has shown and that have not been rated since. */
@@ -60,8 +61,10 @@ export type PracticeAction =
   | { type: 'scored'; attemptId: number; attempt: ScoredAttempt }
   | { type: 'scoreFailed'; attemptId: number }
   | { type: 'reveal' }
-  /** The learner rated the revealed recall: on to `index`, in observe. */
-  | { type: 'rate'; index: number }
+  /** The learner rated the revealed recall: on to `index`, in `mode` (default observe). */
+  | { type: 'rate'; index: number; mode?: Mode }
+  /** Another item from outside (the session's next card): it starts afresh, in `mode`. */
+  | { type: 'item'; index: number; mode: Mode }
   /** "Viết lại": `fade` first fades the ink out (then 'faded' starts the attempt), else at once. */
   | { type: 'rewrite'; fade: boolean }
   | { type: 'faded'; attemptId: number }
@@ -92,8 +95,11 @@ export function practiceReducer(state: PracticeState, action: PracticeAction): P
       if (state.phase !== 'revealed') return state
       // Rated: this character's recall is over, and the next one starts afresh.
       const revealed = state.revealed.filter((i) => i !== state.index)
-      return newAttempt({ ...state, revealed }, action.index, 'observe')
+      return newAttempt({ ...state, revealed }, action.index, action.mode ?? 'observe')
     }
+    case 'item':
+      // Nothing carries over from the last item: no peek, no attempt, no result.
+      return newAttempt({ ...state, revealed: [] }, action.index, action.mode)
     case 'score':
       return canScore(state) ? { ...state, phase: 'scoring' } : state
     case 'scored': {
@@ -123,10 +129,13 @@ export function practiceReducer(state: PracticeState, action: PracticeAction): P
   }
 }
 
-/** The answer is on screen: this character counts as peeked until it is rated, wherever the learner goes. */
+/**
+ * The answer is on screen: any later attempt at this character, until it is rated, starts peeked
+ * (newAttempt), wherever the learner goes. This attempt keeps its own `peeked`.
+ */
 function revealAnswer(state: PracticeState): PracticeState {
   const revealed = state.revealed.includes(state.index) ? state.revealed : [...state.revealed, state.index]
-  return { ...state, phase: 'revealed', peeked: true, revealed }
+  return { ...state, phase: 'revealed', revealed }
 }
 
 function newAttempt(state: PracticeState, index: number, mode: Mode): PracticeState {
@@ -166,10 +175,4 @@ export function referenceView(s: PracticeState): ReferenceMode {
 /** Whether the learner may see which character it is (Recall hides it until the answer is shown). */
 export function showsCharacter(s: PracticeState): boolean {
   return s.mode !== 'recall' || s.phase === 'revealed'
-}
-
-/** Where rating an item leads: the next character, from the start after the last. */
-export function nextIndex(index: number, count: number): { index: number; wrapped: boolean } {
-  const wrapped = index + 1 >= count
-  return { index: wrapped ? 0 : index + 1, wrapped }
 }

@@ -6,7 +6,7 @@ import type { SourcePoint } from './types'
  * median, clipped by the stroke's outline and revealed with stroke-dashoffset. The line must be wide
  * enough to cover the outline's widest part everywhere, or unpainted slivers remain.
  *
- * Measured over the bundled data (medianPath.test.ts): no outline point is farther than 84 units from
+ * Measured over the test fixtures (medianPath.test.ts): no outline point is farther than 84 units from
  * its median (学 stroke 5; 謝 stroke 16 ≈ 83). 200 (radius 100) leaves a margin for characters added
  * later, and is the width hanzi-writer uses over the whole Make Me a Hanzi set. Wider would only make
  * the reveal run further ahead of the brush around hooks and bends.

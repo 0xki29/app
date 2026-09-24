@@ -2,6 +2,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useSyncExternalStore, ty
 import { useCommitCounter } from '../debug/renderStats'
 import type { StrokeAnimator } from '../strokes/StrokeAnimator'
 import type { StrokeCheck } from '../strokes/strokeCheck'
+import type { StrokeStatus } from '../strokes/strokeData'
 import { StrokeNumbers } from '../strokes/StrokeNumbers'
 import { StrokeOrderView } from '../strokes/StrokeOrderView'
 import type { StrokeData } from '../strokes/types'
@@ -31,9 +32,15 @@ interface Props {
   fading?: boolean
   /**
    * Stroke data for `char`: the reference is drawn from it (the same outlines the scorer uses).
-   * `null`: none — the font glyph is shown.
+   * `null`: none — the font glyph is shown, unless it is still loading (strokeStatus).
    */
   strokeData: StrokeData | null
+  /**
+   * Where the stroke data is (useStrokeData). While 'loading' the box shows a spinner instead of a
+   * reference — not the font glyph, which the stroke glyph would replace a moment later. Default:
+   * 'ready' with data, else 'none'.
+   */
+  strokeStatus?: StrokeStatus
   /** Plays the stroke order in observe mode. */
   animator?: StrokeAnimator | null
   /** After scoring: the stroke-by-stroke verdicts, shown on the stroke-number badges. */
@@ -53,6 +60,7 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
   pulse,
   fading,
   strokeData,
+  strokeStatus,
   animator,
   review,
 }: Props) {
@@ -76,6 +84,7 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
     return engine.attach({ box, staticCanvas, liveCanvas, tailCanvas })
   }, [engine])
 
+  const loading = !strokeData && strokeStatus === 'loading'
   const refStyle: CSSProperties = {
     fontFamily: referenceFontFamily(lang),
     fontSize: `${REFERENCE_FONT_SCALE * 100}cqi`,
@@ -101,6 +110,7 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
       className="hw-box"
       data-ref={referenceMode}
       data-fading={fading || undefined}
+      aria-busy={loading || undefined}
       // An img's content is not read out, so the notice below would be hidden from screen readers.
       role={canvasError ? undefined : 'img'}
       aria-label={canvasError ? undefined : boxLabel(char, referenceMode === 'hidden')}
@@ -116,7 +126,7 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
           animator={animator}
           style={underStyle}
         />
-      ) : (
+      ) : loading ? null : (
         <div className="hw-ref hw-ref--under" lang={lang} style={refStyle} aria-hidden="true">
           {char}
         </div>
@@ -130,9 +140,14 @@ export const HandwritingCanvas = memo(function HandwritingCanvas({
       <canvas ref={tailRef} className="hw-layer" />
       {strokeData ? (
         <StrokeOrderView key={`over-${char}`} className="hw-ref hw-ref--over" data={strokeData} variant="static" />
-      ) : (
+      ) : loading ? null : (
         <div className="hw-ref hw-ref--over" lang={lang} style={refStyle} aria-hidden="true">
           {char}
+        </div>
+      )}
+      {loading && referenceMode !== 'hidden' && (
+        <div className="hw-loading" aria-hidden="true">
+          <span className="spinner" />
         </div>
       )}
       {pulse && <div key={pulse.key} className="hw-pulse" style={{ color: pulse.color }} aria-hidden="true" />}
@@ -149,7 +164,7 @@ function CanvasUnavailable() {
   return (
     <div className="hw-error" role="alert">
       <p className="hw-error__title">Không vẽ được trong ô viết</p>
-      <p className="hw-error__text">Trình duyệt không cấp bộ nhớ đồ họa. Hãy đóng bớt tab hoặc ứng dụng khác, rồi tải lại trang.</p>
+      <p className="hw-error__text">Trình duyệt không cấp bộ nhớ đồ hoạ. Hãy đóng bớt tab hoặc ứng dụng khác, rồi tải lại trang.</p>
       <button type="button" className="btn" onClick={() => window.location.reload()}>
         Tải lại
       </button>

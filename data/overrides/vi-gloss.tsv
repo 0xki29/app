@@ -1,0 +1,1300 @@
+# Vietnamese glosses for HSK 1–2 words, and for the few HSK and frequent entries that had no Vietnamese (Chinese notebook dictionary)
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Derived from CC-CEDICT (https://cc-cedict.org, CC BY-SA 4.0) and CVDICT (Vietnamese translation of CC-CEDICT, CC BY-SA 4.0).
+# Drafted by Claude (AI), 2026-09. status "ai-draft" = AI-drafted, awaiting human review ("hiệu đính bởi AI, chờ duyệt");
+# "reviewed" = checked by the project owner ("đã hiệu đính") — only the owner sets it. Changes: CHANGELOG.md.
+# Format: UTF-8 (NFC), LF, tab-separated. Lines starting with "#" are comments.
+# vi: senses separated by "/", near-synonyms inside a sense by "; ", examples as "(vd. 汉字: nghĩa)", classifiers as last sense "Lượng từ: 个 (gè)".
+# 1291 keys (CC-CEDICT key "trad|simp[pinyin]"). A gloss keyed to a form the HSK list names that is now only a variant (複習) follows the tag to the main form (復習); key it to the main form when you can.
+key	vi	source	status
+愛|爱[ai4]	yêu; thương/thích; mê (làm việc gì)/tình yêu; tình cảm/hay; dễ (xảy ra việc gì, vd. 爱哭: hay khóc)	claude-2026-09	ai-draft
+愛好|爱好[ai4 hao4]	sở thích/thích; yêu thích; ham mê (việc gì)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+八|八[ba1]	tám (8)	claude-2026-09	ai-draft
+爸爸|爸爸[ba4 ba5]	bố; ba; cha/Lượng từ: 位 (wèi)	claude-2026-09	ai-draft
+爸|爸[ba4]	bố; ba; cha	claude-2026-09	ai-draft
+吧|吧[ba5]	(trợ từ cuối câu, biểu thị đề nghị, rủ rê, nhờ vả nhẹ nhàng) nhé; đi; thôi; được chứ (vd. 我们走吧: chúng ta đi thôi)/(trợ từ cuối câu, biểu thị phỏng đoán, muốn người nghe xác nhận) … phải không?; chắc là … (vd. 你是学生吧: bạn là học sinh phải không?)	claude-2026-09	ai-draft
+白|白[bai2]	trắng; màu trắng/uổng; phí công (vd. 白跑一趟: đi một chuyến uổng công)/không mất tiền; miễn phí (vd. 白给: cho không)/trơn; không thêm gì (vd. 白开水: nước lọc; 白饭: cơm trắng)	claude-2026-09	ai-draft
+白天|白天[bai2 tian1]	ban ngày/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+百|百[bai3]	trăm; một trăm (100)/(trong từ ghép) nhiều; mọi; đủ loại (vd. 百货: bách hoá)	claude-2026-09	ai-draft
+班|班[ban1]	lớp (học); nhóm; tổ/ca (làm việc)/(lượng từ) chuyến; tốp: dùng cho xe, tàu, máy bay chạy theo giờ hoặc nhóm người (vd. 下一班车: chuyến xe sau)/(quân sự) tiểu đội/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+半|半[ban4]	nửa; một nửa/rưỡi (sau số đếm, vd. 两点半: hai giờ rưỡi)/bán-; nửa chừng; không trọn vẹn	claude-2026-09	ai-draft
+半年|半年[ban4 nian2]	nửa năm; sáu tháng	claude-2026-09	ai-draft
+半天|半天[ban4 tian1]	nửa ngày/một lúc lâu; mãi; hồi lâu/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+幫|帮[bang1]	giúp; giúp đỡ/giùm; hộ (làm việc gì cho ai)/nhóm; đám; bọn (người)/băng nhóm; bang hội; phe	claude-2026-09	ai-draft
+幫忙|帮忙[bang1 mang2]	giúp; giúp đỡ; giúp một tay; làm giúp	claude-2026-09	ai-draft
+包|包[bao1]	túi; túi xách; cặp/gói; bọc; quấn/(lượng từ) gói; bao: dùng cho đồ được đóng gói (vd. 一包烟: một bao thuốc lá)/bao gồm; chứa/lo trọn; bao (hết); nhận khoán (việc gì)/Lượng từ: 个 (gè), 只 (zhī)	claude-2026-09	ai-draft
+包子|包子[bao1 zi5]	bánh bao/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+杯|杯[bei1]	(lượng từ) cốc; ly; chén: dùng cho đồ uống (vd. 一杯茶: một cốc trà)/cốc; ly; chén/cúp (giải thưởng)	claude-2026-09	ai-draft
+杯子|杯子[bei1 zi5]	cốc; ly; chén/Lượng từ: 个 (gè), 只 (zhī)	claude-2026-09	ai-draft
+北|北[bei3]	bắc; phía bắc; phương bắc	claude-2026-09	ai-draft
+北邊|北边[bei3 bian1]	phía bắc; bên phía bắc; phần phía bắc	claude-2026-09	ai-draft
+北京|北京[Bei3 jing1]	Bắc Kinh (thủ đô nước Cộng hoà Nhân dân Trung Hoa)	claude-2026-09	ai-draft
+本|本[ben3]	(lượng từ) quyển; cuốn: dùng cho sách, vở, tạp chí, tài liệu/gốc; rễ; nguồn gốc/vốn; tiền vốn/vốn dĩ; vốn có; lúc đầu/(đặt trước danh từ) … này; của mình (vd. 本人: bản thân tôi; 本月: tháng này)	claude-2026-09	ai-draft
+本子|本子[ben3 zi5]	vở; quyển vở; sổ (ghi chép)/sách/bản; ấn bản/Lượng từ: 本 (běn)	claude-2026-09	ai-draft
+比|比[bi3]	(giới từ so sánh, mẫu A 比 B + tính từ: A … hơn B) hơn (vd. 他比我高: anh ấy cao hơn tôi)/so; so sánh/tỷ số; tỷ lệ (vd. 三比二: ba – hai)/ra hiệu; khoa tay	claude-2026-09	ai-draft
+別|别[bie2]	đừng; chớ (khuyên, cấm ai làm gì)/khác (vd. 别人: người khác)/chia tay; từ biệt; rời xa/ghim; cài; kẹp (bằng ghim, kẹp)	claude-2026-09	ai-draft
+別的|别的[bie2 de5]	khác; cái khác; thứ khác	claude-2026-09	ai-draft
+別人|别人[bie2 ren5]	người khác; những người khác	claude-2026-09	ai-draft
+病|病[bing4]	bệnh; bệnh tật/bị ốm; bị bệnh; ngã bệnh/lỗi; khuyết điểm; tật/Lượng từ: 场 (cháng)	claude-2026-09	ai-draft
+病人|病人[bing4 ren2]	người bệnh; bệnh nhân; người ốm/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+不大|不大[bu4 da4]	không … lắm; không quá (vd. 不大清楚: không rõ lắm)/ít khi; không hay (làm việc gì)	claude-2026-09	ai-draft
+不對|不对[bu4 dui4]	không đúng; sai/không bình thường; không ổn; có vấn đề; lạ	claude-2026-09	ai-draft
+不客氣|不客气[bu4 ke4 qi5]	không có gì; đừng khách sáo (đáp lại lời cảm ơn)/bất lịch sự; thô lỗ; không nể nang	claude-2026-09	ai-draft
+不用|不用[bu4 yong4]	không cần; khỏi (làm việc gì)	claude-2026-09	ai-draft
+不|不[bu4]	(phó từ phủ định, đặt trước động từ, tính từ) không; chẳng/không; không phải (dùng để trả lời phủ định)/(trong từ ghép) bất-; không	claude-2026-09	ai-draft
+菜|菜[cai4]	món ăn; thức ăn/rau; rau xanh/(khẩu ngữ, nói về trình độ, kỹ năng) kém; yếu; non tay/(khẩu ngữ) gu; mẫu người (mình thích, vd. 不是我的菜: không phải gu của tôi)/Lượng từ: 道 (dào), 盘 (pán), 样 (yàng), 棵 (kē)	claude-2026-09	ai-draft
+茶|茶[cha2]	trà; chè; nước trà/cây chè; cây trà/Lượng từ: 杯 (bēi), 壶 (hú)	claude-2026-09	ai-draft
+差|差[cha4]	kém; tồi; dở/thiếu; còn thiếu; kém (vd. 差五分八点: tám giờ kém năm)/khác; chênh lệch/sai; nhầm	claude-2026-09	ai-draft
+常|常[chang2]	thường; hay; thường xuyên/bình thường; thông thường (vd. 常人: người bình thường)/không đổi; cố định; lâu dài	claude-2026-09	ai-draft
+常常|常常[chang2 chang2]	thường; thường xuyên; hay	claude-2026-09	ai-draft
+唱|唱[chang4]	hát/hô to; xướng (tên, số…)/ngâm; tụng	claude-2026-09	ai-draft
+唱歌|唱歌[chang4 ge1]	hát; ca hát	claude-2026-09	ai-draft
+車|车[che1]	xe; xe cộ (ô tô, xe đạp, xe buýt…)/máy; guồng (có bánh quay)/tiện (gia công bằng máy tiện)/Lượng từ: 辆 (liàng)	claude-2026-09	ai-draft
+車票|车票[che1 piao4]	vé xe; vé tàu	claude-2026-09	ai-draft
+車站|车站[che1 zhan4]	nhà ga; ga tàu/bến xe; trạm xe buýt/Lượng từ: 个 (gè), 处 (chù)	claude-2026-09	ai-draft
+吃|吃[chi1]	ăn; uống (thuốc)/ăn (tại đâu, vd. 吃食堂: ăn ở nhà ăn)/chịu; bị (thiệt, thua, sốc…; vd. 吃亏: chịu thiệt)/tiêu diệt; diệt; ăn (quân cờ)	claude-2026-09	ai-draft
+吃飯|吃饭[chi1 fan4]	ăn cơm; ăn; dùng bữa/kiếm sống; sống (nhờ nghề gì)	claude-2026-09	ai-draft
+出|出[chu1]	ra; đi ra; ra ngoài/xảy ra; nảy sinh/sản xuất; làm ra; đưa ra/vượt quá; vượt ra ngoài/(bổ ngữ sau động từ, chỉ hướng ra ngoài hoặc kết quả) ra (vd. 拿出: lấy ra; 看出: nhận ra)/(lượng từ) vở: dùng cho kịch, tuồng, ca kịch (vd. 一出戏: một vở kịch)	claude-2026-09	ai-draft
+出來|出来[chu1 lai2]	ra; đi ra (hướng về phía người nói)/xuất hiện; hiện ra; nảy sinh	claude-2026-09	ai-draft
+出去|出去[chu1 qu4]	ra ngoài; đi ra (rời xa người nói)	claude-2026-09	ai-draft
+穿|穿[chuan1]	mặc (quần áo); đi; mang (giày, tất…)/xuyên qua; đâm thủng/đi qua; băng qua (đường, đường hầm…)/xâu; xỏ (chỉ, chuỗi)/(bổ ngữ sau động từ, chỉ triệt để) thấu; thủng (vd. 看穿: nhìn thấu)	claude-2026-09	ai-draft
+床|床[chuang2]	giường/(lượng từ) cái; chiếc: dùng cho chăn, mền…/Lượng từ: 张 (zhāng)	claude-2026-09	ai-draft
+次|次[ci4]	(lượng từ) lần; lượt: dùng để đếm số lần sự việc xảy ra/tiếp theo; thứ hai; kế (vd. 次日: ngày hôm sau)/thứ yếu; phụ/kém; hạng kém (chất lượng)/thứ tự; trình tự	claude-2026-09	ai-draft
+從|从[cong2]	(giới từ chỉ điểm bắt đầu về nơi chốn, thời gian) từ (vd. 从北京来: đến từ Bắc Kinh)/qua; theo (lối nào, vd. 从这儿走: đi lối này)/(trước từ phủ định) xưa nay; từ trước đến nay (vd. 从不: không bao giờ; 从没: chưa bao giờ)/(trong từ ghép) theo; đi theo; tuân theo; tham gia (việc gì)	claude-2026-09	ai-draft
+錯|错[cuo4]	sai; nhầm/lỗi; chỗ sai/xấu; tồi (thường dùng trong 不错: không tệ, khá tốt)/lỡ; bỏ lỡ (vd. 错过机会: lỡ cơ hội)/xen kẽ; so le	claude-2026-09	ai-draft
+打|打[da3]	đánh; đập; gõ/đánh nhau; đấu/(động từ đa dụng, nghĩa tuỳ tân ngữ) gọi (điện thoại), chơi (bóng), bắt (xe), che (ô), tiêm (thuốc)…/(khẩu ngữ) từ; kể từ	claude-2026-09	ai-draft
+打車|打车[da3 che1]	bắt taxi; gọi taxi/đi nhờ xe; quá giang	claude-2026-09	ai-draft
+打電話|打电话[da3 dian4 hua4]	gọi điện thoại; gọi điện	claude-2026-09	ai-draft
+打開|打开[da3 kai1]	mở; mở ra/bật (đèn, máy, tivi…)	claude-2026-09	ai-draft
+打球|打球[da3 qiu2]	chơi bóng (bóng rổ, bóng bàn, quần vợt…; bóng đá thì dùng 踢球)	claude-2026-09	ai-draft
+大|大[da4]	to; lớn/lớn tuổi hơn; cả (vd. 大姐: chị cả)/rất; mạnh; thoả thích (đặt trước động từ, vd. 大笑: cười to)	claude-2026-09	ai-draft
+大學|大学[da4 xue2]	đại học; trường đại học/Lượng từ: 所 (suǒ)	claude-2026-09	ai-draft
+大學生|大学生[da4 xue2 sheng1]	sinh viên; sinh viên đại học	claude-2026-09	ai-draft
+到|到[dao4]	đến; tới (nơi nào)/đi (đến đâu)/đến; cho đến (nơi chốn, thời điểm, mức độ)/(bổ ngữ sau động từ, chỉ đạt được kết quả) được; thấy; tới (vd. 买到: mua được; 看到: nhìn thấy)/chu đáo; chu toàn	claude-2026-09	ai-draft
+得到|得到[de2 dao4]	được; nhận được; đạt được; có được	claude-2026-09	ai-draft
+地|地[de5]	(trợ từ đặt sau từ ngữ chỉ cách thức, trước động từ hoặc tính từ; thường không dịch, vd. 高兴地说: vui vẻ nói; 慢慢地走: đi chầm chậm)	claude-2026-09	ai-draft
+的|的[de5]	(trợ từ nối định ngữ với danh từ) của (vd. 我的书: sách của tôi; sau tính từ thường không dịch, vd. 好看的衣服: quần áo đẹp)/(trợ từ đặt sau từ ngữ để tạo cụm danh từ) cái …; người …; thứ … (vd. 新的: cái mới; 卖菜的: người bán rau)/(trợ từ cuối câu, nhấn mạnh; hay dùng trong mẫu 是…的 để nhấn mạnh thời gian, nơi chốn, cách thức của việc đã xảy ra, vd. 我是坐飞机来的: tôi đến bằng máy bay)	claude-2026-09	ai-draft
+等|等[deng3]	đợi; chờ; chờ đợi (vd. 等一下: đợi một chút)/đợi đến khi; đến lúc; khi (vd. 等我回来再说: đợi tôi về rồi hãy nói)/(trợ từ đặt sau phần liệt kê, khi liệt kê chưa hết hoặc khi khép lại phần liệt kê) vân vân; v.v.; như (vd. 北京、上海等城市: các thành phố như Bắc Kinh, Thượng Hải)/hạng; bậc; cấp; loại (vd. 一等奖: giải nhất)/bằng; ngang bằng (vd. 平等: bình đẳng)	claude-2026-09	ai-draft
+地|地[di4]	đất; mặt đất; sàn (nhà)/ruộng; đất đai/nơi; chỗ; vùng/Lượng từ: 片 (piàn)	claude-2026-09	ai-draft
+地點|地点[di4 dian3]	địa điểm; nơi; chỗ/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+地方|地方[di4 fang5]	nơi; chỗ; vùng; khu vực/chỗ; điểm; mặt (của sự việc, vd. 不对的地方: chỗ không đúng)/Lượng từ: 个 (gè), 处 (chù)	claude-2026-09	ai-draft
+地上|地上[di4 shang5]	trên mặt đất; trên sàn (nhà)	claude-2026-09	ai-draft
+地圖|地图[di4 tu2]	bản đồ/Lượng từ: 张 (zhāng), 本 (běn)	claude-2026-09	ai-draft
+弟弟|弟弟[di4 di5]	em trai/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+弟|弟[di4]	em trai/em; đàn em (nam giới ít tuổi hơn, vd. 表弟: em họ)	claude-2026-09	ai-draft
+第|第[di4]	(tiền tố chỉ số thứ tự) thứ (vd. 第一: thứ nhất; 第六: thứ sáu)	claude-2026-09	ai-draft
+第二|第二[di4 er4]	thứ hai; thứ nhì (thứ tự)/tiếp theo; sau (vd. 第二天: ngày hôm sau)/thứ yếu; phụ	claude-2026-09	ai-draft
+點|点[dian3]	(sau số đếm) giờ (vd. 三点: ba giờ)/một chút; một ít (vd. 一点儿: một chút; 快点: nhanh lên chút)/(lượng từ) chút; tí: dùng cho lượng nhỏ/gọi (món); chọn/chấm; điểm; vết; nét chấm (trong chữ Hán)/dấu thập phân (vd. 三点五: ba phẩy năm)/điểm; thời điểm; địa điểm/đánh dấu; tích (vào danh sách); điểm (danh)/gật (đầu)/châm; thắp (lửa, đèn)/nhắc đến; nêu ra; gợi ý; ám chỉ/chạm nhẹ; chấm nhẹ; nhỏ (thuốc từng giọt)	claude-2026-09	ai-draft
+電|电[dian4]	điện/sét; chớp/giật (điện); bị điện giật (vd. 电了一下: bị điện giật một cái)/điện báo; cuộc gọi (điện thoại)/gửi điện báo; gọi điện (báo tin)	claude-2026-09	ai-draft
+電話|电话[dian4 hua4]	điện thoại/cuộc gọi điện thoại/số điện thoại/Lượng từ: 部 (bù), 通 (tōng)	claude-2026-09	ai-draft
+電腦|电脑[dian4 nao3]	máy tính; máy vi tính/Lượng từ: 台 (tái)	claude-2026-09	ai-draft
+電視|电视[dian4 shi4]	tivi; truyền hình/Lượng từ: 台 (tái), 部 (bù)	claude-2026-09	ai-draft
+電視機|电视机[dian4 shi4 ji1]	tivi; máy thu hình/Lượng từ: 台 (tái)	claude-2026-09	ai-draft
+電影|电影[dian4 ying3]	phim; phim ảnh; điện ảnh/Lượng từ: 部 (bù), 场 (chǎng)	claude-2026-09	ai-draft
+電影院|电影院[dian4 ying3 yuan4]	rạp chiếu phim; rạp phim/Lượng từ: 家 (jiā), 座 (zuò)	claude-2026-09	ai-draft
+東|东[dong1]	đông; phía đông; phương đông/chủ; chủ nhà (người đãi khách hoặc chủ cho thuê nhà)	claude-2026-09	ai-draft
+東邊|东边[dong1 bian5]	phía đông; bên phía đông; phần phía đông	claude-2026-09	ai-draft
+東西|东西[dong1 xi5]	đồ; đồ vật; đồ đạc; thứ/(chỉ người, mang ý mắng hoặc âu yếm) đồ; thằng; con (vd. 小东西: nhóc con)/Lượng từ: 个 (gè), 件 (jiàn)	claude-2026-09	ai-draft
+動|动[dong4]	động; cử động; nhúc nhích; di chuyển/đụng; chạm; động (vào)/dùng; động đến (vd. 动脑子: động não)/làm cảm động; lay động (cảm xúc)/thay đổi; sửa đổi/(viết tắt của 动词) động từ	claude-2026-09	ai-draft
+動作|动作[dong4 zuo4]	động tác; cử động; hành động/hành động; ra tay (làm việc gì)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+都|都[dou1]	(phó từ chỉ toàn bộ, đặt trước động từ) đều; tất cả; cả (vd. 我们都是学生: chúng tôi đều là học sinh)/(nhấn mạnh, thường trong 连…都) ngay cả; thậm chí; cũng/đã (vd. 都十点了: đã mười giờ rồi)/(dùng với phủ định) hoàn toàn (không); chẳng … chút nào	claude-2026-09	ai-draft
+讀|读[du2]	đọc to; đọc thành tiếng/đọc (sách, báo…)/học; đi học (vd. 读大学: học đại học)/đọc là; phát âm	claude-2026-09	ai-draft
+讀書|读书[du2 shu1]	đọc sách/học; học hành/đi học	claude-2026-09	ai-draft
+對|对[dui4]	đúng; phải; chính xác (vd. 你说得对: bạn nói đúng)/(giới từ chỉ đối tượng) với; đối với; về (vd. 他对我很好: anh ấy rất tốt với tôi; 对这个问题: về vấn đề này)/đối xử; đối đãi (với ai)/hướng về; đối diện; đối mặt (vd. 对着窗户: hướng ra cửa sổ)/(lượng từ) đôi; cặp: dùng cho người, vật đi thành đôi (vd. 一对夫妻: một đôi vợ chồng)/đối chiếu; so; kiểm tra (vd. 对答案: so đáp án)/khớp; chỉnh (cho khớp, vd. 对表: chỉnh đồng hồ)/hợp; vừa (vd. 对胃口: hợp khẩu vị)/đáp; trả lời	claude-2026-09	ai-draft
+對不起|对不起[dui4 bu5 qi3]	xin lỗi/có lỗi với (ai); phụ lòng (ai)	claude-2026-09	ai-draft
+多|多[duo1]	nhiều (vd. 很多人: rất nhiều người)/thừa; dư; quá nhiều (vd. 多了一个: thừa một cái)/(sau số đếm) hơn; mấy (vd. 十多个: hơn mười cái, mười mấy cái; 一年多: hơn một năm)/bao; bao nhiêu; biết bao (hỏi hoặc cảm thán về mức độ, vd. 你多大?: bạn bao nhiêu tuổi?; 多好啊!: tốt biết bao!)/(trong từ ghép) đa-; nhiều (vd. 多媒体: đa phương tiện)	claude-2026-09	ai-draft
+多少|多少[duo1 shao5]	bao nhiêu (hỏi số lượng)/số mấy; số bao nhiêu (hỏi số điện thoại, mã số…)	claude-2026-09	ai-draft
+餓|饿[e4]	đói/bỏ đói (ai); để (ai) đói	claude-2026-09	ai-draft
+兒子|儿子[er2 zi5]	con trai	claude-2026-09	ai-draft
+二|二[er4]	hai (2)/(phương ngữ Bắc Kinh) ngốc; ngớ ngẩn	claude-2026-09	ai-draft
+飯|饭[fan4]	cơm/bữa ăn; bữa cơm/(khẩu ngữ, từ mượn) người hâm mộ/Lượng từ: 碗 (wǎn), 顿 (dùn)	claude-2026-09	ai-draft
+飯店|饭店[fan4 dian4]	nhà hàng; quán ăn/khách sạn/Lượng từ: 家 (jiā), 个 (gè)	claude-2026-09	ai-draft
+房間|房间[fang2 jian1]	phòng; buồng/Lượng từ: 个 (gè), 间 (jiān)	claude-2026-09	ai-draft
+房子|房子[fang2 zi5]	nhà; ngôi nhà/căn hộ/phòng; buồng/Lượng từ: 栋 (dòng), 幢 (zhuàng), 座 (zuò), 套 (tào), 间 (jiān)	claude-2026-09	ai-draft
+放|放[fang4]	đặt; để; bỏ (vào)/thả; buông; thả ra/cho nghỉ; tan (học, làm; vd. 放学: tan học; 放假: được nghỉ)/đốt; bắn (pháo, pháo hoa)/phóng thích; trả tự do	claude-2026-09	ai-draft
+放假|放假[fang4 jia4]	được nghỉ; nghỉ (lễ, tết, hè…)	claude-2026-09	ai-draft
+放學|放学[fang4 xue2]	tan học; tan trường	claude-2026-09	ai-draft
+飛|飞[fei1]	bay	claude-2026-09	ai-draft
+飛機|飞机[fei1 ji1]	máy bay/Lượng từ: 架 (jià)	claude-2026-09	ai-draft
+非常|非常[fei1 chang2]	rất; vô cùng; cực kỳ/khác thường; bất thường; phi thường	claude-2026-09	ai-draft
+分|分[fen1]	phút (đơn vị thời gian, đơn vị đo góc; vd. 五点十分: năm giờ mười phút)/điểm (thi cử, thể thao; vd. 考了九十分: thi được 90 điểm)/xu (đơn vị tiền, bằng 0,01 tệ; vd. 五分钱: năm xu)/chia; tách; chia ra (vd. 分成两半: chia làm đôi)/phân phát; chia; phân (vd. 分东西: chia đồ)/phân biệt (vd. 分清好坏: phân biệt tốt xấu)/phần; phân số (vd. 三分之一: một phần ba)/(trong từ ghép) chi nhánh; phân- (vd. 分公司: công ty chi nhánh)	claude-2026-09	ai-draft
+風|风[feng1]	gió/phong tục; tập quán/phong cách; tác phong; kiểu cách/tin tức; tin đồn/Lượng từ: 阵 (zhèn), 丝 (sī)	claude-2026-09	ai-draft
+乾|干[gan1]	khô; khô ráo/đồ khô; đồ sấy khô (vd. 牛肉干: thịt bò khô)/cạn; hết sạch; rỗng/nuôi; kết nghĩa (vd. 干妈: mẹ nuôi)/uổng; suông; vô ích	claude-2026-09	ai-draft
+乾淨|干净[gan1 jing4]	sạch; sạch sẽ/gọn gàng; ngăn nắp	claude-2026-09	ai-draft
+幹|干[gan4]	làm; làm việc/đảm nhiệm; quản lý/giỏi; tháo vát (vd. 能干: giỏi giang)/thân cây; phần chính (của vật)/cán bộ (trong từ 干部)/(tiếng lóng) khử; giết/(thô tục) quan hệ tình dục; cũng dùng để chửi tục	claude-2026-09	ai-draft
+幹什麼|干什么[gan4 shen2 me5]	làm gì; làm cái gì (vd. 你在干什么?: bạn đang làm gì thế?)	claude-2026-09	ai-draft
+高|高[gao1]	cao/cao (hơn mức bình thường: giá, trình độ, chất lượng…)/to; lớn (tiếng)/(kính ngữ, chỉ người đối diện) cao; quý (vd. 高见: cao kiến)	claude-2026-09	ai-draft
+高興|高兴[gao1 xing4]	vui; vui vẻ; mừng/vui lòng; sẵn lòng (làm việc gì)	claude-2026-09	ai-draft
+告訴|告诉[gao4 su5]	nói (cho ai biết); bảo; báo cho; cho biết	claude-2026-09	ai-draft
+哥哥|哥哥[ge1 ge5]	anh trai; anh/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+哥|哥[ge1]	anh trai; anh	claude-2026-09	ai-draft
+歌|歌[ge1]	bài hát; bài ca/(trong từ ghép) hát; ca/Lượng từ: 首 (shǒu), 支 (zhī)	claude-2026-09	ai-draft
+個|个[ge4]	(lượng từ) cái; chiếc; con; người…: dùng cho danh từ không có lượng từ riêng, là lượng từ thông dụng nhất (vd. 一个人: một người; 三个苹果: ba quả táo)/(trong từ ghép) riêng lẻ; cá nhân (vd. 个人: cá nhân)	claude-2026-09	ai-draft
+給|给[gei3]	cho; đưa; tặng/(giới từ, chỉ người nhận hoặc người được giúp) cho; giùm; hộ (vd. 给他打电话: gọi điện cho anh ấy)/cho; để (cho phép ai làm việc gì, vd. 给我看看: cho tôi xem với)/(dùng như 被, trong câu bị động) bị; được/(dùng như 把, đưa tân ngữ lên trước động từ)/(đặt ngay trước động từ, làm câu mạnh hơn, vd. 我给忘了: tôi quên béng mất)	claude-2026-09	ai-draft
+跟|跟[gen1]	(giới từ) với; cùng (vd. 跟他说: nói với anh ấy)/(liên từ, nối hai danh từ) và/so với (vd. 跟他一样: giống như anh ấy)/theo; đi theo; theo sát/gót (chân, giày)/(phụ nữ) lấy (ai làm chồng); theo (chồng)	claude-2026-09	ai-draft
+工人|工人[gong1 ren2]	công nhân; người lao động/Lượng từ: 个 (gè), 名 (míng)	claude-2026-09	ai-draft
+工作|工作[gong1 zuo4]	làm việc/công việc; việc làm; nhiệm vụ/(máy móc) hoạt động; chạy/Lượng từ: 个 (gè), 份 (fèn), 项 (xiàng)	claude-2026-09	ai-draft
+關|关[guan1]	đóng; khép (cửa…)/tắt (đèn, máy…)/nhốt; giam (người, con vật)/liên quan; dính dáng (đến)/cửa ải; ải	claude-2026-09	ai-draft
+關上|关上[guan1 shang4]	đóng; đóng lại (cửa…)/tắt (đèn, thiết bị điện…)	claude-2026-09	ai-draft
+貴|贵[gui4]	đắt; đắt tiền/quý; quý giá; đáng quý/cao quý; sang (địa vị cao)/(kính ngữ, chỉ người đối diện) quý (vd. 您贵姓: ngài họ gì ạ; 贵国: quý quốc)	claude-2026-09	ai-draft
+國|国[guo2]	nước; quốc gia; đất nước/(thuộc) quốc gia; quốc- (vd. 国歌: quốc ca)	claude-2026-09	ai-draft
+國家|国家[guo2 jia1]	nước; quốc gia; đất nước/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+國外|国外[guo2 wai4]	nước ngoài; ở nước ngoài; hải ngoại	claude-2026-09	ai-draft
+過|过[guo4]	qua; đi qua; băng qua/trải qua; trôi qua; qua (thời gian)/ăn (tết); đón (lễ); tổ chức (sinh nhật)/sống; sinh sống; sống qua ngày/quá; quá mức	claude-2026-09	ai-draft
+還|还[hai2]	vẫn; vẫn còn/còn; thêm; nữa; cũng/còn … hơn; càng (dùng khi so sánh)/khá; tạm được (vd. 还好: cũng ổn)/ngay từ (thời điểm sớm)/thậm chí; ngay cả	claude-2026-09	ai-draft
+還是|还是[hai2 shi5]	(liên từ dùng trong câu hỏi lựa chọn) hay; hay là (vd. 你喝茶还是咖啡: bạn uống trà hay cà phê)/vẫn; vẫn cứ (như trước)/tốt hơn là; nên (vd. 你还是去吧: tốt hơn là bạn nên đi)/vậy mà; thế mà (ngoài dự đoán)	claude-2026-09	ai-draft
+還有|还有[hai2 you3]	còn; vẫn còn; còn có/ngoài ra; còn nữa; thêm vào đó	claude-2026-09	ai-draft
+孩子|孩子[hai2 zi5]	trẻ em; trẻ con; đứa trẻ/con; con cái (của ai)	claude-2026-09	ai-draft
+漢語|汉语[Han4 yu3]	tiếng Hán; tiếng Trung (Quốc); tiếng Hoa/Lượng từ: 门 (mén)	claude-2026-09	ai-draft
+漢字|汉字[han4 zi4]	chữ Hán/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+好|好[hao3]	tốt; hay; giỏi; ổn; khoẻ (vd. 我很好: tôi khoẻ)/hợp; thích hợp; đúng/được; được rồi; ừ (dùng để đồng ý, vd. 好，我们走吧: được, chúng ta đi thôi)/(trước tính từ, dùng để cảm thán) thật; quá; rất (vd. 好冷: lạnh quá)/(trước động từ) dễ (vd. 好找: dễ tìm; 好写: dễ viết)/(trước động từ) … hay; … ngon; … đẹp (vd. 好吃: ngon; 好听: hay; 好看: đẹp, hay)/(sau động từ, chỉ việc đã hoàn thành) xong; xong xuôi (vd. 做好了: làm xong rồi)/(hai người) thân; thân thiết/(sau lời xưng hô) chào (vd. 你好: chào bạn; 老师好: em chào thầy)	claude-2026-09	ai-draft
+好吃|好吃[hao3 chi1]	ngon; ngon miệng	claude-2026-09	ai-draft
+好看|好看[hao3 kan4]	đẹp; xinh; ưa nhìn/hay (phim, sách, chương trình…)/bẽ mặt; mất mặt (vd. 让他好看: làm cho nó bẽ mặt)	claude-2026-09	ai-draft
+好聽|好听[hao3 ting1]	hay; dễ nghe; êm tai	claude-2026-09	ai-draft
+好玩兒|好玩儿[hao3 wan2 r5]	vui; thú vị	claude-2026-09	ai-draft
+號|号[hao4]	ngày (trong tháng; vd. 七号: ngày 7)/số (thứ tự; vd. 237号房间: phòng số 237)/cỡ; loại; kích cỡ (vd. 大号: cỡ lớn; 五号电池: pin tiểu AA)/dấu; ký hiệu (vd. 问号: dấu hỏi)/(lượng từ) người: dùng đếm người hoặc vật được đánh số (vd. 几十号人: mấy chục người)/tên; hiệu (vd. 国号: quốc hiệu; 年号: niên hiệu)/kèn; tiếng kèn hiệu (vd. 起床号: kèn báo thức)	claude-2026-09	ai-draft
+喝|喝[he1]	uống	claude-2026-09	ai-draft
+和|和[he2]	(nối hai danh từ, đại từ) và; với; cùng (với)/(thể thao) hoà; hoà nhau/hài hoà; hoà thuận; ôn hoà/làm hoà; giảng hoà/(toán học) tổng/(trong từ ghép) Nhật Bản (vd. 和服: kimono)	claude-2026-09	ai-draft
+很|很[hen3]	rất; lắm/(đặt trước tính từ trong câu khẳng định, nhiều khi không mang nghĩa nhấn mạnh, chỉ để câu tự nhiên, vd. 我很好: tôi khoẻ)	claude-2026-09	ai-draft
+後|后[hou4]	sau; phía sau; đằng sau/sau (khi); sau đó; về sau/hậu- (tiền tố, vd. 后现代: hậu hiện đại)	claude-2026-09	ai-draft
+後邊|后边[hou4 bian5]	phía sau; đằng sau/phần sau; phần cuối/sau này; về sau	claude-2026-09	ai-draft
+後天|后天[hou4 tian1]	ngày kia; ngày mốt/(có được) sau khi sinh ra; không phải bẩm sinh (trái với 先天)	claude-2026-09	ai-draft
+花|花[hua1]	hoa; bông hoa (vd. 一朵花: một bông hoa)/tiêu; tiêu tốn; mất (tiền, thời gian) (vd. 花钱: tiêu tiền; 花时间: mất thời gian)/hoa văn; có hoa; sặc sỡ; loè loẹt/(khẩu ngữ) trăng hoa; lăng nhăng; háo sắc/Lượng từ: 朵 (duǒ), 支 (zhī), 束 (shù), 把 (bǎ), 盆 (pén), 簇 (cù)	claude-2026-09	ai-draft
+話|话[hua4]	lời; lời nói; câu nói/tiếng; phương ngữ (vd. 上海话: tiếng Thượng Hải)/chuyện; cuộc nói chuyện/Lượng từ: 种 (zhǒng), 席 (xí), 句 (jù), 口 (kǒu), 番 (fān)	claude-2026-09	ai-draft
+壞|坏[huai4]	xấu; tồi; hư (người, việc)/hỏng; bị hỏng; hư (đồ vật, máy móc)/ôi; thiu (thức ăn)/(sau động từ, tính từ) … lắm; … chết đi được (vd. 累坏了: mệt chết đi được)	claude-2026-09	ai-draft
+還|还[huan2]	trả; trả lại (tiền, đồ)/về; trở về (vd. 还乡: về quê)	claude-2026-09	ai-draft
+回|回[hui2]	về; trở về; quay về; quay lại (vd. 回家: về nhà)/(lượng từ) lần; lượt; chuyến: dùng cho số lần xảy ra việc gì (vd. 去过两回: đã đi hai lần)/trả lời; đáp lại; hồi âm (vd. 回信: trả lời thư)/quay (lại); ngoảnh (lại) (vd. 回头: quay đầu lại)/(lượng từ) hồi; chương; màn: dùng cho hồi của tiểu thuyết cổ, màn của vở kịch (vd. 第一回: hồi thứ nhất)	claude-2026-09	ai-draft
+回答|回答[hui2 da2]	trả lời; đáp/câu trả lời; lời đáp	claude-2026-09	ai-draft
+回到|回到[hui2 dao4]	về; trở về; quay lại (nơi nào)	claude-2026-09	ai-draft
+回家|回家[hui2 jia1]	về nhà	claude-2026-09	ai-draft
+回來|回来[hui2 lai5]	về; trở về; quay lại (hướng về phía người nói)	claude-2026-09	ai-draft
+回去|回去[hui2 qu5]	về; trở về; quay về (rời chỗ người nói, về nơi cũ)	claude-2026-09	ai-draft
+會|会[hui4]	biết (làm việc gì, do học mà có được); giỏi; khéo (vd. 我会说汉语: tôi biết nói tiếng Trung; 他很会做饭: anh ấy nấu ăn rất giỏi)/sẽ; chắc sẽ; có thể (phỏng đoán khả năng xảy ra, vd. 明天会下雨: ngày mai sẽ mưa)/họp; gặp; gặp mặt; tụ họp (vd. 会客: tiếp khách)/cuộc họp; buổi họp; hội nghị (vd. 开会: họp)/hội; hiệp hội; đoàn thể (vd. 学生会: hội sinh viên)/(trong từ ghép) một lúc; một lát (vd. 一会儿: một lát)	claude-2026-09	ai-draft
+火車|火车[huo3 che1]	tàu hoả; xe lửa/Lượng từ: 列 (liè), 节 (jié), 班 (bān), 趟 (tàng)	claude-2026-09	ai-draft
+機場|机场[ji1 chang3]	sân bay; phi trường/Lượng từ: 家 (jiā), 处 (chù)	claude-2026-09	ai-draft
+機票|机票[ji1 piao4]	vé máy bay/Lượng từ: 张 (zhāng)	claude-2026-09	ai-draft
+雞蛋|鸡蛋[ji1 dan4]	trứng gà; trứng/Lượng từ: 个 (gè), 打 (dá)	claude-2026-09	ai-draft
+幾|几[ji3]	mấy; bao nhiêu (hỏi số lượng, thường dưới 10, vd. 几岁: mấy tuổi)/vài; mấy (số lượng nhỏ không xác định, vd. 几个人: vài người)	claude-2026-09	ai-draft
+記|记[ji4]	nhớ; ghi nhớ/ghi; ghi lại; ghi chép/dấu; ký hiệu/(lượng từ) cú; cái: dùng cho cú đánh, cú đá, cú sút	claude-2026-09	ai-draft
+記得|记得[ji4 de5]	nhớ; còn nhớ	claude-2026-09	ai-draft
+記住|记住[ji4 zhu5]	nhớ kỹ; ghi nhớ; nhớ lấy/học thuộc	claude-2026-09	ai-draft
+家|家[jia1]	nhà; gia đình (vd. 回家: về nhà; 我家有四口人: nhà tôi có bốn người)/(lượng từ) nhà; hiệu; hãng: dùng cho gia đình, cửa hàng, công ty, nhà hàng (vd. 一家饭馆: một quán ăn)/(hậu tố) nhà …; gia: người chuyên về một lĩnh vực, hoặc một trường phái tư tưởng thời Tiên Tần (vd. 科学家: nhà khoa học; 作家: nhà văn; 画家: hoạ sĩ; 儒家: Nho gia)/(cách nói khiêm tốn, đặt trước từ chỉ người thân lớn tuổi hơn mình) … của tôi (vd. 家父: cha tôi; 家兄: anh trai tôi)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+家裡|家里[jia1 li3]	nhà; ở nhà; trong nhà	claude-2026-09	ai-draft
+家人|家人[jia1 ren2]	người nhà; người trong gia đình/(cũ) người hầu; gia nhân	claude-2026-09	ai-draft
+間|间[jian1]	(lượng từ) gian; căn; phòng: dùng cho phòng, buồng (vd. 一间教室: một phòng học)/giữa; ở giữa (vd. 朋友之间: giữa bạn bè)/trong (một khoảng thời gian hoặc nơi chốn nhất định; vd. 晚间: buổi tối; 田间: ngoài đồng)/phòng; gian (nhà)	claude-2026-09	ai-draft
+見|见[jian4]	thấy; nhìn thấy (cũng đặt sau 看, 听…, vd. 听见: nghe thấy)/gặp; gặp mặt/tiếp (khách); phỏng vấn/ý kiến; quan điểm/tỏ ra; có vẻ; thấy (vd. 见好: có vẻ đỡ; 见效: thấy hiệu quả)	claude-2026-09	ai-draft
+見面|见面[jian4 mian4]	gặp mặt; gặp nhau/Lượng từ: 次 (cì)	claude-2026-09	ai-draft
+教|教[jiao1]	dạy; dạy học; chỉ dạy	claude-2026-09	ai-draft
+叫|叫[jiao4]	tên là; gọi là (vd. 我叫小明: tôi tên là Tiểu Minh)/gọi; kêu (ai)/kêu; la; hét/bảo; sai; khiến (ai làm gì)/gọi (món ăn, xe…)/(trong câu bị động) bị; được (giống 被)	claude-2026-09	ai-draft
+教學樓|教学楼[jiao4 xue2 lou2]	toà nhà dạy học; dãy phòng học; khu giảng đường (trong trường học)	claude-2026-09	ai-draft
+姐姐|姐姐[jie3 jie5]	chị; chị gái/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+姐|姐[jie3]	chị; chị gái	claude-2026-09	ai-draft
+介紹|介绍[jie4 shao4]	giới thiệu (ai với ai)/giới thiệu; trình bày; thuyết trình (về việc gì)/tiến cử; giới thiệu (ai vào công việc…)/lời giới thiệu; phần giới thiệu	claude-2026-09	ai-draft
+今年|今年[jin1 nian2]	năm nay	claude-2026-09	ai-draft
+今天|今天[jin1 tian1]	hôm nay/hiện nay; ngày nay	claude-2026-09	ai-draft
+進|进[jin4]	vào; đi vào/tiến; tiến lên/đưa vào; nhận vào; nhập (vd. 进货: nhập hàng)/dâng; nộp/(lượng từ) dãy; lớp: dùng cho các dãy nhà trong khu nhà kiểu cổ/(toán học) hệ đếm; cơ số (vd. 十进制: hệ thập phân)	claude-2026-09	ai-draft
+進來|进来[jin4 lai2]	vào; đi vào (hướng về phía người nói)	claude-2026-09	ai-draft
+進去|进去[jin4 qu4]	vào; đi vào (rời xa phía người nói)	claude-2026-09	ai-draft
+九|九[jiu3]	chín (9)	claude-2026-09	ai-draft
+就|就[jiu4]	(sau vế điều kiện, giả định) thì; thế thì (vd. 你去我就去: bạn đi thì tôi đi)/ngay; liền; là … ngay (vd. 我马上就来: tôi đến ngay; 一…就…: vừa … là …)/chính (là); đúng (là) (vd. 这就是我家: đây chính là nhà tôi)/chỉ; mỗi (vd. 就他一个人: chỉ mình anh ấy)/những; đến (nhấn mạnh số lượng nhiều)/về; đối với (vấn đề gì)/nhân; tranh thủ (thường đi với 着)/(thức ăn) ăn kèm; nhắm (với)/tới gần; hướng về/bắt tay vào; đảm nhận (công việc)/(mẫu 就…也…) dù … cũng …/(mẫu 不…就…) không … thì là …	claude-2026-09	ai-draft
+覺得|觉得[jue2 de5]	thấy; cảm thấy; nghĩ là; cho rằng/cảm thấy (mệt, khó chịu…)	claude-2026-09	ai-draft
+開|开[kai1]	mở (cửa, hộp, sách…); nở (hoa)/bật (đèn, máy…); cho chạy; lái (xe)/mở; kinh doanh (cửa hàng, công ty)/(tàu, xe) chạy; khởi hành; (quân đội) xuất phát/sôi; đun sôi (vd. 水开了: nước sôi rồi)/viết; kê (đơn thuốc); xuất (hoá đơn, séc)/(bổ ngữ xu hướng) ra; khỏi (vd. 打开: mở ra; 走开: đi chỗ khác)	claude-2026-09	ai-draft
+開車|开车[kai1 che1]	lái xe (ô tô, tàu…)/(tiếng lóng mạng) đăng nội dung người lớn; nói đùa tục tĩu	claude-2026-09	ai-draft
+開會|开会[kai1 hui4]	họp; tổ chức cuộc họp/dự họp; đi họp	claude-2026-09	ai-draft
+開玩笑|开玩笑[kai1 wan2 xiao4]	đùa; nói đùa; đùa giỡn/trêu; trêu chọc (ai)	claude-2026-09	ai-draft
+看|看[kan4]	nhìn; xem/đọc (sách, báo…)/xem (phim, tivi, trận đấu…)/thăm; thăm hỏi (ai)/cho rằng; thấy; coi là; xem như (vd. 我看: theo tôi thấy)/trông nom; chăm sóc/khám; chữa (bệnh)/tuỳ; phụ thuộc vào (vd. 看情况: tuỳ tình hình)/(sau động từ lặp lại) thử (vd. 试试看: thử xem)/coi chừng; cẩn thận (kẻo…)	claude-2026-09	ai-draft
+看病|看病[kan4 bing4]	đi khám bệnh/khám bệnh (bác sĩ khám cho người bệnh)	claude-2026-09	ai-draft
+看到|看到[kan4 dao4]	nhìn thấy; thấy	claude-2026-09	ai-draft
+看見|看见[kan4 jian4]	nhìn thấy; trông thấy; thấy	claude-2026-09	ai-draft
+考|考[kao3]	thi; dự thi; thi vào (trường…)/kiểm tra; sát hạch; đố (ai) (vd. 考考你: đố bạn đấy)/xem xét; kiểm chứng; khảo cứu	claude-2026-09	ai-draft
+考試|考试[kao3 shi4]	thi; dự thi/kỳ thi; cuộc thi; bài thi/Lượng từ: 次 (cì)	claude-2026-09	ai-draft
+渴|渴[ke3]	khát; khát nước	claude-2026-09	ai-draft
+課|课[ke4]	bài; bài học; tiết học; giờ học (vd. 上课: vào học)/môn học; khoá học/Lượng từ: 门 (mén), 堂 (táng), 节 (jié)	claude-2026-09	ai-draft
+課本|课本[ke4 ben3]	sách giáo khoa; sách học/Lượng từ: 本 (běn)	claude-2026-09	ai-draft
+課文|课文[ke4 wen2]	bài khoá; bài đọc (trong sách giáo khoa)/Lượng từ: 篇 (piān)	claude-2026-09	ai-draft
+口|口[kou3]	miệng; mồm/(lượng từ) người; con; cái…: dùng cho người trong gia đình, gia súc, giếng, đại bác… (vd. 三口人: ba người)/(lượng từ) miếng; ngụm; hớp: dùng cho lượng ăn, uống, cắn một lần (vd. 一口水: một ngụm nước)	claude-2026-09	ai-draft
+塊|块[kuai4]	(lượng từ, khẩu ngữ) đồng; tệ: dùng đếm tiền, giống 元 (vd. 十块钱: mười tệ)/(lượng từ) miếng; mẩu; tấm; bánh: dùng cho vải, bánh, xà phòng… (vd. 一块蛋糕: một miếng bánh ngọt)/cục; tảng; miếng	claude-2026-09	ai-draft
+快|快[kuai4]	nhanh; mau/sắp; sắp sửa (vd. 快下雨了: sắp mưa rồi)/nhanh lên; khẩn trương (vd. 快走: đi nhanh lên)/vui; vui vẻ; dễ chịu; sảng khoái (vd. 快乐: vui vẻ)/sắc; bén (dao); nhanh trí; lanh lợi/thẳng thắn; bộc trực/tốc độ; mức nhanh chậm	claude-2026-09	ai-draft
+來|来[lai2]	đến; tới; lại (đây)/(thay cho động từ cụ thể) làm; lấy; cho (vd. 我来吧: để tôi làm; 来一杯咖啡: cho một cốc cà phê)/(bổ ngữ xu hướng, hướng về phía người nói) lại; về (vd. 回来: trở về)/(sau khoảng thời gian) … nay; … qua (vd. 三年来: ba năm nay)/từ … đến nay (vd. 自古以来: từ xưa đến nay)/(trước từ chỉ thời gian) tới; sau (vd. 来年: năm tới)/(giữa hai động từ) để/(sau số tròn) khoảng; chừng (vd. 十来个: khoảng mười cái)/(sau 得 hoặc 不, chỉ có thể hay không thể) hợp; quen; làm được (vd. 谈得来: hợp chuyện; 吃不来: ăn không quen)	claude-2026-09	ai-draft
+來到|来到[lai2 dao4]	đến; tới (nơi nào)	claude-2026-09	ai-draft
+老|老[lao3]	già; cao tuổi (vd. 老人: người già)/cũ; lâu năm; lâu đời; lỗi thời (vd. 老朋友: bạn cũ; 老房子: nhà cũ)/(tiền tố đặt trước họ người để gọi thân mật, hoặc trước số chỉ thứ tự con trong nhà) anh; bác; lão (vd. 老王: anh Vương; 老二: con thứ hai)/(tiền tố không mang nghĩa trong một số từ chỉ người, con vật; thường không dịch, vd. 老师: thầy giáo, cô giáo; 老虎: con hổ)/luôn; cứ; mãi; lúc nào cũng (vd. 他老迟到: anh ấy cứ đến muộn suốt)/rất; lắm (vd. 老远: rất xa)/có kinh nghiệm; lão luyện; thạo (vd. 老手: tay lão luyện)/(tôn kính, đặt sau họ người cao tuổi) cụ (vd. 李老: cụ Lý)/(thịt, rau…) dai; già; quá lửa (vd. 肉炒老了: thịt xào bị dai)	claude-2026-09	ai-draft
+老人|老人[lao3 ren2]	người già; người cao tuổi; cụ già/cha mẹ già; ông bà (trong nhà)	claude-2026-09	ai-draft
+老師|老师[lao3 shi1]	thầy giáo; cô giáo; giáo viên (cũng dùng để gọi: thầy, cô)/Lượng từ: 位 (wèi), 个 (gè)	claude-2026-09	ai-draft
+了|了[le5]	(trợ từ đặt sau động từ, chỉ hành động đã xong) đã; rồi (vd. 我买了一本书: tôi đã mua một cuốn sách)/(trợ từ cuối câu, chỉ sự thay đổi, tình huống mới) … rồi (vd. 下雨了: mưa rồi)/(trợ từ cuối câu, nhấn mạnh lời nói, hay đi với 太, 可; vd. 太好了: tốt quá)	claude-2026-09	ai-draft
+累|累[lei4]	mệt; mệt mỏi/làm (ai) mệt; làm quá sức/làm lụng vất vả	claude-2026-09	ai-draft
+冷|冷[leng3]	lạnh; rét	claude-2026-09	ai-draft
+裡|里[li3]	trong; bên trong; phía trong/(đặt sau danh từ, chỉ nơi chốn) trong… (vd. 房间里: trong phòng)/lớp lót; mặt trong (áo, chăn…)	claude-2026-09	ai-draft
+裏|里[li3]	trong; bên trong; phía trong/(đặt sau danh từ, chỉ nơi chốn) trong… (vd. 房间里: trong phòng)/lớp lót; mặt trong (áo, chăn…)	claude-2026-09	ai-draft
+裡邊|里边[li3 bian5]	bên trong; phía trong; trong	claude-2026-09	ai-draft
+兩|两[liang3]	hai (thường dùng trước lượng từ, vd. 两个人: hai người)/cả hai; hai bên (vd. 两边: hai bên)/vài; mấy (số ít không xác định, vd. 过两天: vài hôm nữa)/lạng (đơn vị khối lượng, bằng 50 gam)	claude-2026-09	ai-draft
+零|零[ling2]	không; số không (0)/linh; lẻ (đặt giữa hai số, vd. 一百零五: một trăm linh năm)/lẻ; vụn; nhỏ lẻ (vd. 零钱: tiền lẻ)/số lẻ; phần lẻ; số dư (phép chia)/héo rụng; tàn	claude-2026-09	ai-draft
+〇|〇[ling2]	số không (0), dùng khi viết số (vd. 二〇二六年: năm 2026)	claude-2026-09	ai-draft
+六|六[liu4]	sáu (6)	claude-2026-09	ai-draft
+樓|楼[lou2]	nhà lầu; toà nhà (nhiều tầng)/tầng; lầu (vd. 三楼: tầng 3)/Lượng từ: 层 (céng), 座 (zuò), 栋 (dòng)	claude-2026-09	ai-draft
+樓上|楼上[lou2 shang4]	tầng trên; trên lầu/(tiếng lóng mạng) người đăng bài ngay phía trên (trong diễn đàn)	claude-2026-09	ai-draft
+樓下|楼下[lou2 xia4]	tầng dưới; dưới lầu	claude-2026-09	ai-draft
+路|路[lu4]	đường; con đường/đường đi; chặng đường; hành trình/tuyến (xe buýt…; vd. 3路车: xe buýt tuyến số 3)/loại; kiểu; hạng (vd. 这路人: loại người này)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+路口|路口[lu4 kou3]	ngã ba; ngã tư; giao lộ	claude-2026-09	ai-draft
+路上|路上[lu4 shang5]	trên đường; ngoài đường/dọc đường; trên đường đi (vd. 在去学校的路上: trên đường đến trường)	claude-2026-09	ai-draft
+媽媽|妈妈[ma1 ma5]	mẹ; má/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+媽|妈[ma1]	mẹ; má	claude-2026-09	ai-draft
+馬路|马路[ma3 lu4]	đường; đường phố; đường cái (cho xe chạy)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+馬上|马上[ma3 shang4]	ngay; ngay lập tức; tức khắc; sắp (vd. 马上就要考试了: sắp thi rồi)	claude-2026-09	ai-draft
+嗎|吗[ma5]	(trợ từ cuối câu, biến câu thành câu hỏi có hay không) … không?; … à? (vd. 你好吗?: bạn khoẻ không?)	claude-2026-09	ai-draft
+買|买[mai3]	mua	claude-2026-09	ai-draft
+慢|慢[man4]	chậm; chậm chạp	claude-2026-09	ai-draft
+忙|忙[mang2]	bận; bận rộn/vội; vội vàng; hối hả	claude-2026-09	ai-draft
+毛|毛[mao2]	(lượng từ, khẩu ngữ) hào: dùng đếm tiền, bằng một phần mười tệ, giống 角 (vd. 五毛钱: năm hào)/lông (người, động vật); lông vũ; lông tơ/len; lông cừu (vd. 毛衣: áo len)/mốc/thô; chưa hoàn thiện; non/cẩu thả; hấp tấp/hoảng; sợ; chột dạ/(tiền) mất giá	claude-2026-09	ai-draft
+沒|没[mei2]	(phó từ phủ định, đặt trước động từ, phủ định việc đã xảy ra) chưa; không (vd. 我没去: tôi đã không đi; 他还没来: anh ấy vẫn chưa đến)/không có (giống 没有, vd. 没钱: không có tiền)	claude-2026-09	ai-draft
+沒關係|没关系[mei2 guan1 xi5]	không sao; không sao đâu; không hề gì (thường đáp lại lời xin lỗi)	claude-2026-09	ai-draft
+沒什麼|没什么[mei2 shen2 me5]	không sao; không có gì; đừng bận tâm/không có gì; không có chi (đáp lại lời cảm ơn)	claude-2026-09	ai-draft
+沒事兒|没事儿[mei2 shi4 r5]	không sao; không có gì; không quan trọng; đừng bận tâm/rảnh; rảnh rỗi; không có việc gì (làm)	claude-2026-09	ai-draft
+沒有|没有[mei2 you3]	không có (vd. 我没有钱: tôi không có tiền)/chưa; không (phủ định việc đã xảy ra, vd. 他还没有来: anh ấy vẫn chưa đến)/(so sánh) không … bằng (vd. 我没有他高: tôi không cao bằng anh ấy)	claude-2026-09	ai-draft
+妹妹|妹妹[mei4 mei5]	em gái/cô gái trẻ (cách gọi thân mật)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+妹|妹[mei4]	em gái	claude-2026-09	ai-draft
+門|门[men2]	cửa; cửa ra vào; cổng/(lượng từ) môn; khẩu…: dùng cho môn học, ngành kỹ thuật, đại bác, súng, họ hàng thông gia (vd. 一门课: một môn học)/cách; mẹo; bí quyết/gia đình; nhà; dòng họ/phái; môn phái; trường phái/loại; hạng; ngành (phân loại sinh vật)/van; công tắc (vd. 电门: công tắc điện)/(hậu tố) vụ bê bối (vd. 水门: vụ Watergate)/Lượng từ: 扇 (shàn)	claude-2026-09	ai-draft
+門口|门口[men2 kou3]	cửa; cửa ra vào; trước cửa; cổng/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+門票|门票[men2 piao4]	vé vào cửa (nhà hát, rạp chiếu phim, công viên…)	claude-2026-09	ai-draft
+們|们[men5]	(hậu tố đặt sau đại từ hoặc danh từ chỉ người, chỉ số nhiều) các; những; chúng (vd. 我们: chúng tôi; 朋友们: các bạn)	claude-2026-09	ai-draft
+米飯|米饭[mi3 fan4]	cơm; cơm trắng	claude-2026-09	ai-draft
+麵包|面包[mian4 bao1]	bánh mì/Lượng từ: 片 (piàn), 块 (kuài)	claude-2026-09	ai-draft
+麵條兒|面条儿[mian4 tiao2 r5]	mì; mì sợi	claude-2026-09	ai-draft
+名字|名字[ming2 zi5]	tên; tên gọi (người hoặc vật)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+明白|明白[ming2 bai5]	hiểu; hiểu rõ; nhận ra/rõ ràng; rõ rệt; dễ hiểu/biết điều; hiểu lẽ phải	claude-2026-09	ai-draft
+明年|明年[ming2 nian2]	năm sau; sang năm; năm tới	claude-2026-09	ai-draft
+明天|明天[ming2 tian1]	ngày mai; mai	claude-2026-09	ai-draft
+拿|拿[na2]	cầm; nắm; xách/lấy; mang; đem (vd. 拿来: mang lại đây)/bắt; tóm; bắt giữ/(dùng như 把, đưa tân ngữ lên trước động từ) lấy…; đem… (vd. 拿他开玩笑: đem anh ấy ra đùa)	claude-2026-09	ai-draft
+哪|哪[na3]	nào (vd. 哪个: cái nào; 哪国人: người nước nào)/sao; làm sao (câu hỏi tu từ, vd. 哪能: làm sao mà được)	claude-2026-09	ai-draft
+哪裡|哪里[na3 li3]	đâu; ở đâu?/đâu đó; chỗ nào đó/bất cứ đâu; ở đâu cũng/đâu có (phủ định, trong câu hỏi tu từ)/(khiêm tốn, đáp lại lời khen) đâu có; quá khen	claude-2026-09	ai-draft
+哪裏|哪里[na3 li3]	đâu; ở đâu?/đâu đó; chỗ nào đó/bất cứ đâu; ở đâu cũng/đâu có (phủ định, trong câu hỏi tu từ)/(khiêm tốn, đáp lại lời khen) đâu có; quá khen	claude-2026-09	ai-draft
+哪兒|哪儿[na3 r5]	đâu; ở đâu?/bất cứ đâu; đâu đó/(câu hỏi tu từ) làm sao …?; sao có thể …?	claude-2026-09	ai-draft
+哪些|哪些[na3 xie1]	những (cái, người) nào?; những gì?; những ai?	claude-2026-09	ai-draft
+那|那[na4]	kia; đó; ấy (vd. 那个人: người kia)/cái đó; việc đó (vd. 那是我的书: đó là sách của tôi)/vậy thì; thế thì (vd. 那我们走吧: vậy thì chúng ta đi thôi)	claude-2026-09	ai-draft
+那邊|那边[na4 bian5]	bên kia; đằng kia; phía đó	claude-2026-09	ai-draft
+那裡|那里[na4 li5]	đó; ở đó; chỗ đó; nơi đó	claude-2026-09	ai-draft
+那裏|那里[na4 li5]	đó; ở đó; chỗ đó; nơi đó	claude-2026-09	ai-draft
+那兒|那儿[na4 r5]	đó; ở đó; chỗ đó	claude-2026-09	ai-draft
+那些|那些[na4 xie1]	những (cái, người) đó; những … kia	claude-2026-09	ai-draft
+奶|奶[nai3]	sữa (vd. 牛奶: sữa bò)/vú; bầu vú/cho bú	claude-2026-09	ai-draft
+奶奶|奶奶[nai3 nai5]	bà nội; bà (cách gọi thân mật)/(kính trọng) bà chủ (nhà)/(khẩu ngữ) vú; ngực/Lượng từ: 位 (wèi)	claude-2026-09	ai-draft
+男|男[nan2]	nam; trai; đàn ông (vd. 男人: đàn ông; 男孩: bé trai)/nam tước (bậc thấp nhất trong năm tước quý tộc)	claude-2026-09	ai-draft
+男孩兒|男孩儿[nan2 hai2 r5]	bé trai; cậu bé; con trai	claude-2026-09	ai-draft
+男朋友|男朋友[nan2 peng2 you5]	bạn trai; người yêu (nam)	claude-2026-09	ai-draft
+男人|男人[nan2 ren2]	đàn ông; người đàn ông; nam giới/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+男生|男生[nan2 sheng1]	nam sinh; học sinh nam; sinh viên nam/con trai; chàng trai (nam thanh niên)	claude-2026-09	ai-draft
+南|南[nan2]	nam; phía nam; hướng nam	claude-2026-09	ai-draft
+南邊|南边[nan2 bian5]	phía nam; phương nam; mặt nam/miền nam; vùng phía nam	claude-2026-09	ai-draft
+難|难[nan2]	khó; khó khăn/khó (làm gì; vd. 难懂: khó hiểu)/không hay; dở; xấu (vd. 难吃: dở, khó ăn; 难看: xấu)/điều khó; khó khăn; vấn đề (khó)	claude-2026-09	ai-draft
+呢|呢[ne5]	(trợ từ cuối câu hỏi, nối với điều vừa nói hoặc với ngữ cảnh) còn … thì sao?; … đâu?; … thế?; … vậy? (vd. 你呢?: còn bạn?; 我的书呢?: sách của tôi đâu?)/(trợ từ cuối câu, chỉ trạng thái, hành động vẫn đang tiếp diễn) đang …; vẫn … (vd. 他在睡觉呢: anh ấy đang ngủ)/(trợ từ giữa câu, tạo chỗ ngừng hoặc nhấn mạnh) thì (vd. 我呢，不想去: tôi thì không muốn đi)	claude-2026-09	ai-draft
+能|能[neng2]	có thể; có khả năng (làm gì)/có lẽ; có thể (sẽ)/năng lực; khả năng/(vật lý) năng lượng	claude-2026-09	ai-draft
+你|你[ni3]	bạn; anh; chị; em… (ngôi thứ hai số ít, cách nói thông thường; lịch sự hơn dùng 您)	claude-2026-09	ai-draft
+你們|你们[ni3 men5]	các bạn; các anh; các chị…; mọi người (ngôi thứ hai số nhiều)	claude-2026-09	ai-draft
+年|年[nian2]	năm (vd. 三年: ba năm; 今年: năm nay)	claude-2026-09	ai-draft
+您|您[nin2]	ông; bà; anh; chị; thầy; cô… (ngôi thứ hai số ít, cách nói lịch sự, kính trọng; thân mật hơn dùng 你)	claude-2026-09	ai-draft
+牛奶|牛奶[niu2 nai3]	sữa bò; sữa/Lượng từ: 瓶 (píng), 杯 (bēi)	claude-2026-09	ai-draft
+女|女[nu:3]	nữ; gái (vd. 女人: phụ nữ; 女孩: bé gái)/phụ nữ; đàn bà/con gái (con của mình)	claude-2026-09	ai-draft
+女兒|女儿[nu:3 er2]	con gái (con của mình)	claude-2026-09	ai-draft
+女孩兒|女孩儿[nu:3 hai2 r5]	bé gái; cô bé; cô gái; con gái	claude-2026-09	ai-draft
+女朋友|女朋友[nu:3 peng2 you5]	bạn gái; người yêu (nữ)	claude-2026-09	ai-draft
+女人|女人[nu:3 ren2]	phụ nữ; đàn bà	claude-2026-09	ai-draft
+女生|女生[nu:3 sheng1]	nữ sinh; học sinh nữ; sinh viên nữ/con gái; bạn nữ; cô gái	claude-2026-09	ai-draft
+旁邊|旁边[pang2 bian1]	bên cạnh; cạnh; kế bên (vd. 学校旁边: bên cạnh trường học)	claude-2026-09	ai-draft
+跑|跑[pao3]	chạy/chạy trốn; bỏ chạy; trốn/chạy đi chạy lại; chạy (việc vặt, công việc)/(khí, chất lỏng) rò; xì; bay hơi/(sau động từ) … đi; … mất (vd. 吓跑: doạ cho chạy mất)	claude-2026-09	ai-draft
+朋友|朋友[peng2 you5]	bạn; bạn bè/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+票|票[piao4]	vé (vd. 车票: vé xe; 电影票: vé xem phim)/phiếu; lá phiếu (bầu cử)/tiền giấy (vd. 钞票: tiền giấy)/(lượng từ, khẩu ngữ) vụ; lô; đám: dùng cho vụ làm ăn, lô hàng, nhóm người (vd. 一票生意: một vụ làm ăn)/Lượng từ: 张 (zhāng)	claude-2026-09	ai-draft
+七|七[qi1]	bảy (7)	claude-2026-09	ai-draft
+起|起[qi3]	dậy; thức dậy; đứng dậy/nổi lên; xuất hiện (vd. 起风了: nổi gió rồi)/nhấc; nâng lên/bắt đầu; khởi xướng; phát động/khởi hành; lên đường/soạn; thảo (văn bản); lập; dựng (vd. 起草: soạn thảo)/từ … trở đi (thời gian, nơi, giá…) (vd. 从今天起: từ hôm nay trở đi)/(sau động từ) … lên; bắt đầu … (vd. 拿起: cầm lên; 想起: nhớ ra)/(lượng từ) vụ: dùng cho sự việc, sự cố (vd. 一起事故: một vụ tai nạn)/(lượng từ) tốp; đợt: dùng cho nhóm người	claude-2026-09	ai-draft
+起床|起床[qi3 chuang2]	thức dậy; ngủ dậy; dậy (ra khỏi giường)	claude-2026-09	ai-draft
+起來|起来[qi3 lai5]	đứng dậy; đứng lên/dậy; thức dậy; ngủ dậy	claude-2026-09	ai-draft
+起來|起来[qi5 lai5]	(sau động từ) … lên (chỉ hướng từ dưới lên, vd. 站起来: đứng lên)/(sau động từ, tính từ) bắt đầu … (và tiếp diễn) (vd. 笑起来: bật cười; 热起来: nóng lên)/(sau động từ cảm nhận như 看, 听) … thấy; xem ra; có vẻ (vd. 看起来: trông có vẻ; 听起来: nghe có vẻ)/(sau động từ, chỉ hành động hoàn thành, gom lại hoặc đạt kết quả) … ra; … lại; … đi (vd. 想起来: nhớ ra; 合起来: gộp lại; 收起来: cất đi)	claude-2026-09	ai-draft
+汽車|汽车[qi4 che1]	ô tô; xe hơi/xe buýt; xe khách (vd. 公共汽车: xe buýt)/Lượng từ: 辆 (liàng)	claude-2026-09	ai-draft
+前|前[qian2]	trước; phía trước; đằng trước (vd. 门前: trước cửa)/trước (khi); … trước (vd. 三天前: ba ngày trước; 吃饭前: trước khi ăn)/(đặt trước số) … đầu; … đầu tiên (vd. 前三名: ba người đứng đầu)/cũ; cựu; trước đây (vd. 前总统: cựu tổng thống)/tiến lên; về phía trước (vd. 向前走: đi về phía trước)/trước Công nguyên (vd. 前293年: năm 293 trước Công nguyên)	claude-2026-09	ai-draft
+前邊|前边[qian2 bian5]	phía trước; đằng trước; ở trước (vd. 学校前边: phía trước trường học)/mặt trước	claude-2026-09	ai-draft
+前天|前天[qian2 tian1]	hôm kia	claude-2026-09	ai-draft
+錢|钱[qian2]	tiền (vd. 多少钱: bao nhiêu tiền?)/(cũ) đồng tiền; tiền xu (vd. 铜钱: tiền đồng)/đồng cân (đơn vị trọng lượng, bằng một phần mười lạng 两)/Lượng từ: 笔 (bǐ)	claude-2026-09	ai-draft
+錢包|钱包[qian2 bao1]	ví; ví tiền; bóp (tiền)	claude-2026-09	ai-draft
+請|请[qing3]	mời (ai làm gì, đến đâu) (vd. 请他来: mời anh ấy đến)/(lời đề nghị lịch sự) xin mời; xin; làm ơn (vd. 请坐: mời ngồi; 请进: mời vào)/mời (ăn uống); đãi; khao (vd. 我请你吃饭: tôi mời bạn ăn cơm)/xin; nhờ; yêu cầu (vd. 请假: xin nghỉ)	claude-2026-09	ai-draft
+請假|请假[qing3 jia4]	xin nghỉ; xin nghỉ phép	claude-2026-09	ai-draft
+請進|请进[qing3 jin4]	mời vào	claude-2026-09	ai-draft
+請問|请问[qing3 wen4]	xin hỏi; cho (tôi) hỏi (lời mở đầu lịch sự khi hỏi)	claude-2026-09	ai-draft
+請坐|请坐[qing3 zuo4]	mời ngồi	claude-2026-09	ai-draft
+球|球[qiu2]	quả bóng; trái banh; quả cầu/hình cầu; vật hình cầu (vd. 雪球: quả cầu tuyết)/địa cầu; quả đất; thiên thể (vd. 地球: trái đất)/môn bóng; trận bóng; trận đấu (vd. 打球: chơi bóng; 看球: xem đấu bóng)/Lượng từ: 个 (gè), 场 (chǎng)	claude-2026-09	ai-draft
+去|去[qu4]	đi; đến (nơi nào) (vd. 去北京: đi Bắc Kinh)/(trước hoặc sau động từ) đi (làm gì) (vd. 去买东西: đi mua đồ)/(bổ ngữ xu hướng, chỉ hướng rời xa người nói) … đi; … sang (vd. 拿去: mang đi; 进去: đi vào (đó); 回去: về)/(sau một số động từ, chỉ sự tách rời, mất đi) … mất; … đi (vd. 失去: mất đi)/(thời gian) trước; vừa qua (vd. 去年: năm ngoái)/bỏ; bỏ đi; loại bỏ; bớt (vd. 去皮: bỏ vỏ)/(nói tránh) mất; qua đời	claude-2026-09	ai-draft
+去年|去年[qu4 nian2]	năm ngoái; năm trước	claude-2026-09	ai-draft
+熱|热[re4]	nóng (thời tiết, đồ vật) (vd. 天气很热: trời rất nóng)/hâm nóng; làm nóng (vd. 热饭: hâm cơm)/nhiệt; hơi nóng; sức nóng/nhiệt tình; nồng nhiệt; sốt sắng	claude-2026-09	ai-draft
+人|人[ren2]	người; con người/Lượng từ: 个 (gè), 位 (wèi), 名 (míng)	claude-2026-09	ai-draft
+認識|认识[ren4 shi5]	quen; quen biết; biết (ai) (vd. 我认识他: tôi quen anh ấy; 认识你很高兴: rất vui được làm quen với bạn)/nhận ra; nhận biết; biết (chữ, đường…) (vd. 认识这个字: biết chữ này)/nhận thức; sự hiểu biết	claude-2026-09	ai-draft
+認真|认真[ren4 zhen1]	nghiêm túc; chăm chỉ; chu đáo; cẩn thận (trong học tập, làm việc)/coi là thật; coi trọng; để bụng	claude-2026-09	ai-draft
+日|日[ri4]	ngày (vd. 五月一日: ngày 1 tháng 5; 每日: mỗi ngày)/mặt trời (vd. 日出: mặt trời mọc)/(trong từ ghép, viết tắt của 日本) Nhật Bản (vd. 日语: tiếng Nhật)/(thô tục) quan hệ tình dục; cũng dùng để chửi tục	claude-2026-09	ai-draft
+日期|日期[ri4 qi1]	ngày tháng; ngày (ghi trên giấy tờ, lịch…) (vd. 出生日期: ngày sinh)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+肉|肉[rou4]	thịt (vd. 猪肉: thịt lợn; thịt heo)/thịt quả; cơm quả; cùi (vd. 果肉: thịt quả)/(khẩu ngữ, quả) nhũn; bở (không giòn)/(khẩu ngữ, người) nhão; lừng khừng; thiếu quyết đoán	claude-2026-09	ai-draft
+三|三[san1]	ba (3)	claude-2026-09	ai-draft
+山|山[shan1]	núi; đồi/Lượng từ: 座 (zuò)	claude-2026-09	ai-draft
+商場|商场[shang1 chang3]	trung tâm mua sắm; trung tâm thương mại; cửa hàng bách hoá/thương trường; giới kinh doanh/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+商店|商店[shang1 dian4]	cửa hàng; cửa hiệu; tiệm/Lượng từ: 家 (jiā), 个 (gè)	claude-2026-09	ai-draft
+上|上[shang4]	trên; phía trên; bên trên/(sau danh từ) trên; ở trên; trong (vd. 桌子上: trên bàn; 书上: trong sách)/trước (vd. 上星期: tuần trước; 上次: lần trước)/(phần) đầu; thứ nhất (trong nhiều phần) (vd. 上册: tập một)/lên; đi lên; trèo lên; lên (xe, tàu…) (vd. 上楼: lên lầu; 上车: lên xe)/đi (học); lên lớp (vd. 上课: lên lớp; 上大学: học đại học)/(sau động từ) … lên; … lại (vd. 爬上: trèo lên; 关上: đóng lại)	claude-2026-09	ai-draft
+上班|上班[shang4 ban1]	đi làm; vào làm (ở cơ quan, công ty) (vd. 八点上班: 8 giờ vào làm)/trực; làm ca	claude-2026-09	ai-draft
+上邊|上边[shang4 bian5]	phía trên; bên trên; ở trên/mặt trên; phần trên; lề trên/(trong bài, lời nói) ở trên; đã nói ở trên/cấp trên	claude-2026-09	ai-draft
+上車|上车[shang4 che1]	lên xe; lên tàu (xe buýt, tàu hoả, ô tô…)	claude-2026-09	ai-draft
+上次|上次[shang4 ci4]	lần trước	claude-2026-09	ai-draft
+上課|上课[shang4 ke4]	vào học; lên lớp; đi học (vd. 八点上课: 8 giờ vào học)/(giáo viên) lên lớp; dạy học; đứng lớp	claude-2026-09	ai-draft
+上網|上网[shang4 wang3]	lên mạng; vào mạng; truy cập mạng/(tài liệu…) được đưa lên mạng; được đăng lên mạng	claude-2026-09	ai-draft
+上午|上午[shang4 wu3]	buổi sáng; sáng (khoảng từ sáng sớm đến trước 12 giờ trưa)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+上學|上学[shang4 xue2]	đi học; đến trường/theo học (ở trường)	claude-2026-09	ai-draft
+少|少[shao3]	ít; ít hơn (vd. 人很少: rất ít người)/thiếu; không đủ; thiếu mất (vd. 还少一个人: còn thiếu một người)/bớt; thôi; đừng (làm gì nữa) (vd. 少说两句: bớt nói vài câu)/ít khi; hiếm khi (vd. 很少去: ít khi đi)	claude-2026-09	ai-draft
+誰|谁[shei2]	ai; người nào (vd. 他是谁: anh ấy là ai?)/(không dùng để hỏi) ai; bất cứ ai (vd. 谁都知道: ai cũng biết)	claude-2026-09	ai-draft
+身上|身上[shen1 shang5]	trên người; trên cơ thể/(mang) theo người; trong người (vd. 身上没带钱: không mang tiền theo người)/ở (ai); nơi (ai) (vd. 希望在你们身上: hy vọng ở các bạn)	claude-2026-09	ai-draft
+身體|身体[shen1 ti3]	cơ thể; thân thể; thân hình/sức khoẻ (vd. 你身体好吗: bạn có khoẻ không?)	claude-2026-09	ai-draft
+什麼|什么[shen2 me5]	gì; cái gì (để hỏi) (vd. 这是什么: đây là cái gì?)/(không dùng để hỏi) gì đó; cái gì đó; bất cứ cái gì (vd. 什么都行: cái gì cũng được)	claude-2026-09	ai-draft
+生病|生病[sheng1 bing4]	bị ốm; bị bệnh; đổ bệnh	claude-2026-09	ai-draft
+生氣|生气[sheng1 qi4]	tức giận; giận; nổi giận; bực mình/sức sống; sinh khí	claude-2026-09	ai-draft
+生日|生日[sheng1 ri4]	sinh nhật; ngày sinh/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+十|十[shi2]	mười (10)	claude-2026-09	ai-draft
+時候|时候[shi2 hou5]	lúc; khi; hồi (vd. 吃饭的时候: lúc ăn cơm; 什么时候: khi nào; 小时候: hồi nhỏ)/thời gian; khoảng thời gian	claude-2026-09	ai-draft
+時間|时间[shi2 jian1]	thời gian; khoảng thời gian (vd. 没有时间: không có thời gian)/thời điểm; giờ; lúc (vd. 出发时间: giờ xuất phát)	claude-2026-09	ai-draft
+事|事[shi4]	việc; chuyện; sự việc; vấn đề (vd. 有事: có việc; 没事: không sao)/công việc; việc làm (vd. 做事: làm việc)/Lượng từ: 件 (jiàn), 桩 (zhuāng), 回 (huí)	claude-2026-09	ai-draft
+試|试[shi4]	thử (vd. 试一下: thử một chút; 试衣服: thử quần áo)/thí nghiệm; thử nghiệm/thi; kỳ thi; bài kiểm tra (vd. 口试: thi vấn đáp)	claude-2026-09	ai-draft
+是|是[shi4]	là (nối với danh từ, cụm danh từ, vd. 我是学生: tôi là học sinh; trước tính từ thường không dùng 是, vd. 我很忙: tôi bận)/đúng; phải; đúng vậy (vd. 是的: đúng vậy)/(đáp lại mệnh lệnh, lễ phép) vâng; dạ; rõ/(nhấn mạnh) đúng là; quả thật (vd. 他是很忙: anh ấy đúng là rất bận)	claude-2026-09	ai-draft
+是不是|是不是[shi4 bu5 shi4]	(đặt trước phần muốn hỏi) có phải … không (vd. 你是不是学生: bạn có phải là học sinh không?)/(đặt cuối câu để hỏi xác nhận) … phải không? (vd. 你累了，是不是: bạn mệt rồi, phải không?)	claude-2026-09	ai-draft
+手|手[shou3]	tay; bàn tay/người (làm việc gì, giỏi việc gì) (vd. 歌手: ca sĩ; 选手: tuyển thủ; 高手: cao thủ)/tự tay; chính tay (vd. 手写: viết tay)/(trong từ ghép) cầm tay; tiện tay (vd. 手机: điện thoại di động; 手册: sổ tay)/(lượng từ) tay; ngón: dùng cho tay nghề, kỹ năng (vd. 露一手: trổ tài; 写一手好字: viết chữ đẹp)/Lượng từ: 双 (shuāng), 只 (zhī)	claude-2026-09	ai-draft
+手機|手机[shou3 ji1]	điện thoại di động; di động; điện thoại/Lượng từ: 部 (bù), 台 (tái)	claude-2026-09	ai-draft
+書|书[shu1]	sách; quyển sách/thư; thư từ (vd. 家书: thư nhà)/văn bản; giấy tờ (vd. 证书: giấy chứng nhận)/(văn viết) viết; chữ viết (vd. 书法: thư pháp)/Lượng từ: 本 (běn), 册 (cè), 部 (bù)	claude-2026-09	ai-draft
+書包|书包[shu1 bao1]	cặp sách; cặp (đi học); ba lô đi học/Lượng từ: 个 (gè), 只 (zhī)	claude-2026-09	ai-draft
+書店|书店[shu1 dian4]	hiệu sách; nhà sách/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+樹|树[shu4]	cây; cây cối/trồng (cây); vun trồng/dựng; lập; xây dựng (vd. 树立: dựng nên; xây dựng)/Lượng từ: 棵 (kē)	claude-2026-09	ai-draft
+水|水[shui3]	nước (vd. 喝水: uống nước)/sông (đặt sau tên, vd. 汉水: sông Hán)/bơi (trong 会水: biết bơi; 水性: khả năng bơi)/(khẩu ngữ) dởm; kém chất lượng; ít nội dung/(lượng từ) nước; lần: dùng cho số lần giặt quần áo (vd. 洗了两水: đã giặt hai nước)	claude-2026-09	ai-draft
+水果|水果[shui3 guo3]	trái cây; hoa quả/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+睡|睡[shui4]	ngủ/nằm; nằm xuống	claude-2026-09	ai-draft
+睡覺|睡觉[shui4 jiao4]	ngủ; đi ngủ	claude-2026-09	ai-draft
+說|说[shuo1]	nói; nói chuyện; kể (vd. 说汉语: nói tiếng Trung)/giải thích; nói rõ; bình luận/mắng; trách; phê bình (vd. 妈妈说了他一顿: mẹ mắng nó một trận)/(trong từ ghép) thuyết; học thuyết (vd. 学说: học thuyết)	claude-2026-09	ai-draft
+說話|说话[shuo1 hua4]	nói; nói chuyện (vd. 别说话: đừng nói chuyện)/buôn chuyện; bàn tán; dị nghị/lời nói; lời	claude-2026-09	ai-draft
+四|四[si4]	bốn (4)	claude-2026-09	ai-draft
+送|送[song4]	tặng; biếu; cho (vd. 送礼物: tặng quà)/đưa (ai); tiễn (vd. 送你回家: đưa bạn về nhà; 送朋友: tiễn bạn)/gửi; giao; chuyển (vd. 送外卖: giao đồ ăn)	claude-2026-09	ai-draft
+歲|岁[sui4]	(lượng từ) tuổi: dùng để nói tuổi (vd. 你几岁: em mấy tuổi?; 二十岁: hai mươi tuổi)/năm (vd. 岁月: năm tháng)	claude-2026-09	ai-draft
+他|他[ta1]	anh ấy; ông ấy; cậu ấy; nó… (ngôi thứ ba số ít, thường chỉ nam)/(đặt trước danh từ) … của anh ấy (vd. 他妈妈: mẹ anh ấy)/(trong từ ghép) khác (vd. 他人: người khác; 他日: ngày khác)	claude-2026-09	ai-draft
+他們|他们[ta1 men5]	họ; bọn họ; các anh ấy (có thể gồm cả nam lẫn nữ)	claude-2026-09	ai-draft
+她|她[ta1]	cô ấy; chị ấy; bà ấy; em ấy… (ngôi thứ ba số ít, chỉ nữ)	claude-2026-09	ai-draft
+她們|她们[ta1 men5]	họ; các cô ấy; các chị ấy (chỉ nữ)	claude-2026-09	ai-draft
+太|太[tai4]	quá; quá mức (vd. 太贵了: đắt quá)/rất; lắm; cực kỳ (vd. 太好了: tốt quá; 不太好: không tốt lắm)/(trong từ ghép) cao nhất; lớn nhất (vd. 太空: vũ trụ; 太子: thái tử)	claude-2026-09	ai-draft
+天|天[tian1]	ngày (vd. 今天: hôm nay; 三天: ba ngày, đứng ngay sau số, không dùng 个)/trời; bầu trời (vd. 天黑了: trời tối rồi)/ông trời; trời (vd. 天哪: trời ơi!)	claude-2026-09	ai-draft
+天氣|天气[tian1 qi4]	thời tiết; trời (vd. 今天天气很好: hôm nay trời đẹp)	claude-2026-09	ai-draft
+聽|听[ting1]	nghe; lắng nghe (vd. 听音乐: nghe nhạc)/nghe theo; vâng lời (vd. 听话: nghe lời)/(lượng từ) lon: dùng cho đồ uống đóng lon (vd. 一听啤酒: một lon bia)/lon; hộp thiếc/(văn viết) để mặc; mặc kệ (vd. 听其自然: để mặc tự nhiên)	claude-2026-09	ai-draft
+聽到|听到[ting1 dao4]	nghe thấy; nghe được	claude-2026-09	ai-draft
+聽見|听见[ting1 jian4]	nghe thấy; nghe được	claude-2026-09	ai-draft
+聽寫|听写[ting1 xie3]	nghe viết; viết chính tả/bài nghe viết; bài chính tả	claude-2026-09	ai-draft
+同學|同学[tong2 xue2]	bạn học; bạn cùng lớp (thầy cô cũng dùng để gọi học sinh, vd. 同学们好: chào các em)/học cùng trường; học cùng lớp/Lượng từ: 位 (wèi), 个 (gè)	claude-2026-09	ai-draft
+圖書館|图书馆[tu2 shu1 guan3]	thư viện/Lượng từ: 家 (jiā), 个 (gè)	claude-2026-09	ai-draft
+外|外[wai4]	ngoài; bên ngoài; phía ngoài (vd. 门外: ngoài cửa)/nước ngoài; ngoại (vd. 外国: nước ngoài; 外语: ngoại ngữ)/ngoài ra; thêm vào (vd. 此外: ngoài ra)	claude-2026-09	ai-draft
+外邊|外边[wai4 bian5]	bên ngoài; phía ngoài; ở ngoài (vd. 在外边等: đợi ở ngoài)/mặt ngoài; bề mặt ngoài/nơi khác (không phải nhà mình, quê mình); nước ngoài (vd. 在外边工作: làm việc xa nhà)	claude-2026-09	ai-draft
+外國|外国[wai4 guo2]	nước ngoài; ngoại quốc (vd. 外国人: người nước ngoài)	claude-2026-09	ai-draft
+外語|外语[wai4 yu3]	ngoại ngữ; tiếng nước ngoài/Lượng từ: 门 (mén)	claude-2026-09	ai-draft
+玩兒|玩儿[wan2 r5]	chơi; vui chơi; chơi đùa/đi chơi; tụ tập chơi (với bạn bè) (vd. 来我家玩儿: đến nhà mình chơi)	claude-2026-09	ai-draft
+晚|晚[wan3]	muộn; trễ (vd. 来晚了: đến muộn rồi)/buổi tối; tối; đêm (vd. 今晚: tối nay)	claude-2026-09	ai-draft
+晚飯|晚饭[wan3 fan4]	bữa tối; cơm tối/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì), 餐 (cān)	claude-2026-09	ai-draft
+晚上|晚上[wan3 shang5]	buổi tối; tối; đêm; vào buổi tối (vd. 今天晚上: tối nay)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+網上|网上[wang3 shang4]	trên mạng; qua mạng; trực tuyến (vd. 网上购物: mua sắm trên mạng)	claude-2026-09	ai-draft
+網友|网友[wang3 you3]	bạn qua mạng; bạn quen trên mạng/cư dân mạng; người dùng mạng	claude-2026-09	ai-draft
+忘|忘[wang4]	quên; quên mất/bỏ sót; sao nhãng; lơ là	claude-2026-09	ai-draft
+忘記|忘记[wang4 ji4]	quên; quên mất	claude-2026-09	ai-draft
+問|问[wen4]	hỏi; hỏi thăm (vd. 问路: hỏi đường; 问问题: đặt câu hỏi; 问好: hỏi thăm, gửi lời chào)	claude-2026-09	ai-draft
+我|我[wo3]	tôi; mình; tớ… (ngôi thứ nhất số ít; tuỳ vai vế có thể nói anh, chị, em, con…)/(đặt trước danh từ) … của tôi; … tôi (vd. 我妈妈: mẹ tôi)	claude-2026-09	ai-draft
+我們|我们[wo3 men5]	chúng tôi; chúng ta; chúng mình (có thể gồm hoặc không gồm người nghe)/(đặt trước danh từ) … của chúng tôi (vd. 我们学校: trường chúng tôi)	claude-2026-09	ai-draft
+五|五[wu3]	năm (5)	claude-2026-09	ai-draft
+午飯|午饭[wu3 fan4]	bữa trưa; cơm trưa/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì), 餐 (cān)	claude-2026-09	ai-draft
+西|西[xi1]	tây; phía tây; hướng tây/(trong từ ghép) Tây; phương Tây (vd. 西餐: món Âu; 西医: Tây y)	claude-2026-09	ai-draft
+西邊|西边[xi1 bian1]	phía tây; bên phía tây; phần phía tây	claude-2026-09	ai-draft
+洗|洗[xi3]	rửa; giặt; tắm; gội (vd. 洗手: rửa tay; 洗衣服: giặt quần áo; 洗澡: tắm)/rửa (ảnh); in (ảnh)/xáo; tráo (bài…) (vd. 洗牌: xáo bài)/xoá (băng ghi âm, ghi hình)	claude-2026-09	ai-draft
+洗手間|洗手间[xi3 shou3 jian1]	nhà vệ sinh; phòng vệ sinh	claude-2026-09	ai-draft
+喜歡|喜欢[xi3 huan5]	thích; ưa; mến (vd. 喜欢吃苹果: thích ăn táo)/vui; vui mừng/hay; có xu hướng (vd. 这种花喜欢阳光: loại hoa này ưa nắng)	claude-2026-09	ai-draft
+下|下[xia4]	dưới; phía dưới; bên dưới (vd. 桌子下面: dưới bàn; 楼下: tầng dưới)/xuống; đi xuống (vd. 下楼: xuống lầu; 下车: xuống xe; 坐下: ngồi xuống; 下雨: trời mưa)/sau; tới; tiếp theo (vd. 下个月: tháng sau; 下次: lần sau)/(lượng từ) cái; lần; lượt: dùng đếm số lần một động tác (vd. 敲了三下: gõ ba cái; 等一下: đợi một chút)/(phần) sau; thứ hai (trong hai phần) (vd. 下册: tập hai; 下半年: nửa cuối năm)/thấp; kém; cấp dưới (vd. 下级: cấp dưới)/giảm; hạ xuống/đưa ra; hạ (quyết tâm, kết luận…) (vd. 下决心: hạ quyết tâm; 下结论: kết luận)	claude-2026-09	ai-draft
+下班|下班[xia4 ban1]	tan làm; tan ca; hết giờ làm/chuyến sau (tàu, xe…)	claude-2026-09	ai-draft
+下邊|下边[xia4 bian5]	phía dưới; bên dưới; ở dưới/mặt dưới	claude-2026-09	ai-draft
+下車|下车[xia4 che1]	xuống xe; xuống tàu (xe buýt, tàu hoả, ô tô…)	claude-2026-09	ai-draft
+下次|下次[xia4 ci4]	lần sau; lần tới	claude-2026-09	ai-draft
+下課|下课[xia4 ke4]	tan học; hết giờ học; hết tiết/(nghĩa bóng, nhất là huấn luyện viên thể thao) bị cách chức; bị sa thải	claude-2026-09	ai-draft
+下午|下午[xia4 wu3]	buổi chiều; chiều (vd. 下午三点: ba giờ chiều)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+下雨|下雨[xia4 yu3]	mưa; trời mưa	claude-2026-09	ai-draft
+先|先[xian1]	trước; trước tiên; trước hết (vd. 你先走: bạn đi trước)/lúc đầu; ban đầu; trước kia/(làm gì) trước đã; tạm (vd. 先这样吧: tạm thế đã)/(tiền tố, nói về người thân lớn tuổi hơn mình đã mất) … quá cố của tôi (vd. 先父: người cha quá cố của tôi)	claude-2026-09	ai-draft
+先生|先生[xian1 sheng5]	ông; ngài; anh (cách gọi lịch sự với nam giới, vd. 王先生: ông Vương)/chồng (vd. 我先生: chồng tôi)/thầy giáo; thầy (cách gọi cũ, tôn trọng)/(phương ngữ) bác sĩ; thầy thuốc/Lượng từ: 位 (wèi)	claude-2026-09	ai-draft
+現在|现在[xian4 zai4]	bây giờ; hiện nay; hiện tại; lúc này	claude-2026-09	ai-draft
+想|想[xiang3]	muốn; mong (vd. 我想喝水: tôi muốn uống nước)/nghĩ; suy nghĩ (vd. 想一想: nghĩ một chút)/nghĩ ra; tìm (cách) (vd. 想办法: nghĩ cách)/nghĩ (rằng); cho (rằng) (vd. 我想他会来: tôi nghĩ anh ấy sẽ đến)/nhớ (ai, nơi nào) (vd. 想家: nhớ nhà)	claude-2026-09	ai-draft
+小|小[xiao3]	nhỏ; bé; ít (về kích thước, số lượng, mức độ) (vd. 小狗: chó con; 声音小: tiếng nhỏ)/trẻ; nhỏ tuổi; út (vd. 他比我小: cậu ấy ít tuổi hơn tôi; 小儿子: con trai út)/(đặt trước họ, gọi thân mật người trẻ hoặc ít tuổi hơn mình) cậu; cô; em (vd. 小王: cậu Vương, em Vương)	claude-2026-09	ai-draft
+小孩兒|小孩儿[xiao3 hai2 r5]	trẻ con; trẻ em; đứa trẻ; con nít/con; con cái (vd. 你有小孩儿吗: anh có con chưa?)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+小姐|小姐[xiao3 jie5]	cô (cách gọi lịch sự với phụ nữ trẻ, vd. 王小姐: cô Vương)/cô gái trẻ; tiểu thư/(tiếng lóng) gái bán hoa/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+小朋友|小朋友[xiao3 peng2 you3]	(người lớn gọi trẻ em) bé; cháu; các em (vd. 小朋友们好: chào các bé)/trẻ em; trẻ con; thiếu nhi/(Đài Loan) con (của ai)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+小時|小时[xiao3 shi2]	giờ; tiếng (đồng hồ) (khoảng thời gian 60 phút, vd. 两个小时: hai tiếng)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+小學|小学[xiao3 xue2]	trường tiểu học; tiểu học; trường cấp một	claude-2026-09	ai-draft
+小學生|小学生[xiao3 xue2 sheng1]	học sinh tiểu học/(nghĩa bóng) người mới học; người mới vào nghề/Lượng từ: 个 (gè), 名 (míng)	claude-2026-09	ai-draft
+笑|笑[xiao4]	cười; mỉm cười/cười nhạo; chê cười (vd. 别笑我: đừng cười tôi)	claude-2026-09	ai-draft
+寫|写[xie3]	viết (vd. 写字: viết chữ; 写信: viết thư)	claude-2026-09	ai-draft
+謝謝|谢谢[xie4 xie5]	cảm ơn; cám ơn	claude-2026-09	ai-draft
+新|新[xin1]	mới (vd. 新书: sách mới)/vừa mới; mới (làm gì) (vd. 新来的同学: bạn học mới đến)	claude-2026-09	ai-draft
+新年|新年[xin1 nian2]	năm mới (vd. 新年快乐: chúc mừng năm mới)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+星期|星期[xing1 qi1]	tuần; tuần lễ (vd. 一个星期: một tuần)/(đứng trước số 1–6, chỉ ngày trong tuần) thứ … (vd. 星期一: thứ Hai; 星期二: thứ Ba; 星期几: thứ mấy?)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+星期日|星期日[Xing1 qi1 ri4]	Chủ nhật (hơi trang trọng hơn 星期天)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+星期天|星期天[Xing1 qi1 tian1]	Chủ nhật (thường dùng trong khẩu ngữ)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+行|行[xing2]	được; ổn; được rồi (vd. 行吗: được không?; 不行: không được)/giỏi; cừ; có năng lực (vd. 你真行: bạn giỏi thật)/đi; đi lại; chuyến đi (vd. 步行: đi bộ; 旅行: du lịch)/làm; thực hiện; tiến hành (vd. 实行: thực hiện)/hành vi; việc làm (vd. 言行: lời nói và việc làm)/lưu hành; thông dụng (vd. 流行: thịnh hành)	claude-2026-09	ai-draft
+休息|休息[xiu1 xi5]	nghỉ; nghỉ ngơi (vd. 休息一下: nghỉ một lát; 明天休息: mai được nghỉ)	claude-2026-09	ai-draft
+學|学[xue2]	học; học tập (vd. 学汉语: học tiếng Trung)/bắt chước; học theo (vd. 学猫叫: bắt chước tiếng mèo kêu)/(hậu tố) -học; môn học; ngành học; học vấn (vd. 数学: toán học; 化学: hoá học)/(trong từ ghép) trường học (vd. 小学: trường tiểu học; 上学: đi học)	claude-2026-09	ai-draft
+學生|学生[xue2 sheng5]	học sinh; sinh viên; học trò	claude-2026-09	ai-draft
+學習|学习[xue2 xi2]	học; học tập (vd. 学习汉语: học tiếng Trung; 向他学习: học tập theo anh ấy)	claude-2026-09	ai-draft
+學校|学校[xue2 xiao4]	trường; trường học/Lượng từ: 所 (suǒ)	claude-2026-09	ai-draft
+學院|学院[xue2 yuan4]	học viện; trường cao đẳng; trường đại học (chuyên ngành, vd. 北京电影学院: Học viện Điện ảnh Bắc Kinh)/khoa; viện (trực thuộc trường đại học, vd. 文学院: khoa Văn)/Lượng từ: 所 (suǒ)	claude-2026-09	ai-draft
+要|要[yao4]	muốn; cần; đòi; xin (vd. 我要一杯咖啡: tôi muốn một cốc cà phê)/sẽ; sắp; sắp sửa (vd. 要下雨了: sắp mưa rồi)/phải; cần phải; nên (vd. 你要多喝水: bạn nên uống nhiều nước)/mất; tốn (thời gian, tiền; vd. 坐车要一个小时: đi xe mất một tiếng)/nếu; nếu như (giống 要是)/quan trọng; chủ yếu (trong từ ghép, vd. 重要: quan trọng)	claude-2026-09	ai-draft
+爺爺|爷爷[ye2 ye5]	ông nội; ông (cách gọi thân mật)	claude-2026-09	ai-draft
+也|也[ye3]	cũng (vd. 我也是学生: tôi cũng là học sinh)/(trong câu phủ định) cũng không; cũng chẳng (vd. 我也不知道: tôi cũng không biết)/(nhấn mạnh trường hợp cực đoan, bất ngờ) ngay cả … cũng; đến … cũng (vd. 一个人也没有: không có lấy một người)	claude-2026-09	ai-draft
+頁|页[ye4]	(lượng từ) trang: dùng cho trang sách, vở, tài liệu (vd. 第十页: trang 10)/trang; tờ (giấy)	claude-2026-09	ai-draft
+一|一[yi1]	một (1) (vd. 一本书: một quyển sách)/cả; toàn; suốt (vd. 一生: suốt đời; 一身汗: mồ hôi đầy người)/hễ … là …; vừa … đã … (mẫu 一…就…, vd. 一看就懂: vừa nhìn là hiểu)	claude-2026-09	ai-draft
+衣服|衣服[yi1 fu5]	quần áo; áo quần; áo/Lượng từ: 件 (jiàn), 套 (tào)	claude-2026-09	ai-draft
+醫生|医生[yi1 sheng1]	bác sĩ; thầy thuốc/Lượng từ: 位 (wèi), 名 (míng), 个 (gè)	claude-2026-09	ai-draft
+醫院|医院[yi1 yuan4]	bệnh viện/Lượng từ: 所 (suǒ), 家 (jiā), 座 (zuò)	claude-2026-09	ai-draft
+一半|一半[yi1 ban4]	một nửa; nửa (vd. 一半的学生: một nửa số học sinh)	claude-2026-09	ai-draft
+一會兒|一会儿[yi1 hui4 r5]	một lát; một lúc; một chốc (vd. 等一会儿: đợi một lát)/lát nữa; chốc nữa; một lát sau (vd. 我一会儿就来: lát nữa tôi đến ngay)/(mẫu 一会儿…一会儿…) lúc thì … lúc thì … (vd. 一会儿哭一会儿笑: lúc khóc lúc cười)	claude-2026-09	ai-draft
+一塊兒|一块儿[yi1 kuai4 r5]	cùng; cùng nhau (vd. 我们一块儿去吧: chúng ta cùng đi nhé)/cùng một chỗ; cùng một nơi (vd. 住在一块儿: sống cùng một chỗ)/một miếng; một mẩu; một cục/(khẩu ngữ) một đồng; một tệ	claude-2026-09	ai-draft
+一下兒|一下儿[yi1 xia4 r5]	(đặt sau động từ, chỉ làm qua, làm thử trong thời gian ngắn, làm câu nói nhẹ nhàng hơn) một chút; một lát; thử (vd. 看一下儿: xem một chút; 等一下儿: đợi một lát)/một lần; một cái (vd. 敲了一下儿门: gõ cửa một cái)/bỗng chốc; ngay lập tức (vd. 一下儿就明白了: hiểu ngay)	claude-2026-09	ai-draft
+一樣|一样[yi1 yang4]	giống; giống nhau; như nhau (vd. 我们俩一样高: hai chúng tôi cao như nhau)/giống như; như (mẫu 跟…一样, 像…一样, vd. 像花一样: như bông hoa)	claude-2026-09	ai-draft
+一邊|一边[yi1 bian1]	(mẫu 一边…一边…) vừa … vừa … (vd. 一边吃饭一边看电视: vừa ăn cơm vừa xem tivi)/một bên; một phía; bên cạnh (vd. 站在一边: đứng sang một bên)/một mặt … mặt khác …	claude-2026-09	ai-draft
+一點兒|一点儿[yi1 dian3 r5]	một chút; một ít; một tí (vd. 喝一点儿水: uống một chút nước)/(sau tính từ) … hơn một chút (vd. 便宜一点儿: rẻ hơn một chút)/(mẫu 一点儿也不…) chẳng … chút nào (vd. 一点儿也不累: chẳng mệt chút nào)	claude-2026-09	ai-draft
+一起|一起[yi1 qi3]	cùng; cùng nhau (vd. 我们一起去: chúng ta cùng đi)/cùng một chỗ; cùng một nơi (vd. 住在一起: sống chung)/tổng cộng; cả thảy/một vụ; một việc (tai nạn, án mạng, tranh chấp…; vd. 一起车祸: một vụ tai nạn xe)	claude-2026-09	ai-draft
+一些|一些[yi1 xie1]	một số; một vài; một ít (vd. 一些人: một số người)/(sau tính từ) … hơn một chút (vd. 好一些: khá hơn một chút)	claude-2026-09	ai-draft
+用|用[yong4]	dùng; sử dụng (vd. 用电脑: dùng máy tính)/bằng; dùng (giới từ; vd. 用筷子吃饭: ăn cơm bằng đũa; 用汉语说: nói bằng tiếng Trung)/cần; phải (thường dùng trong câu phủ định hoặc câu hỏi, vd. 不用了: không cần đâu)/công dụng; tác dụng; ích lợi (vd. 有什么用?: có tác dụng gì?)/chi phí; khoản tiêu (trong từ ghép, vd. 费用: chi phí)/(lịch sự) dùng (thay cho ăn, uống; vd. 请用茶: mời dùng trà)	claude-2026-09	ai-draft
+有|有[you3]	có (sở hữu, vd. 我有一个哥哥: tôi có một anh trai)/có (chỉ sự tồn tại ở đâu đó, vd. 桌子上有一本书: trên bàn có một quyển sách)/có …; mang tính … (trong từ ghép, vd. 有名: nổi tiếng; 有意: cố ý)	claude-2026-09	ai-draft
+有的|有的[you3 de5]	có (người, cái…); một số (vd. 有的人喜欢喝茶，有的人喜欢喝咖啡: có người thích uống trà, có người thích uống cà phê)	claude-2026-09	ai-draft
+有名|有名[you3 ming2]	nổi tiếng; có tiếng; nổi danh	claude-2026-09	ai-draft
+有時候|有时候[you3 shi2 hou5]	đôi khi; có khi; có lúc; thỉnh thoảng	claude-2026-09	ai-draft
+有時|有时[you3 shi2]	đôi khi; có khi; có lúc; thỉnh thoảng	claude-2026-09	ai-draft
+有些|有些[you3 xie1]	một số; một vài; có (người, cái…) (vd. 有些人: một số người)/hơi; có phần; hơi hơi (vd. 有些累: hơi mệt)	claude-2026-09	ai-draft
+有一些|有一些[you3 yi1 xie1]	một số; một vài; một ít (vd. 有一些问题: có một số vấn đề)/hơi; có phần (vd. 有一些冷: hơi lạnh)	claude-2026-09	ai-draft
+有用|有用[you3 yong4]	có ích; hữu ích; dùng được	claude-2026-09	ai-draft
+右|右[you4]	phải; bên phải; phía tay phải (vd. 向右拐: rẽ phải)/(chính trị) cánh hữu; hữu khuynh	claude-2026-09	ai-draft
+右邊|右边[you4 bian5]	bên phải; phía bên phải; phía tay phải	claude-2026-09	ai-draft
+雨|雨[yu3]	mưa; cơn mưa/Lượng từ: 阵 (zhèn), 场 (cháng)	claude-2026-09	ai-draft
+元|元[yuan2]	(lượng từ) đồng; tệ: đơn vị tiền, nhất là nhân dân tệ (vd. 十元: mười tệ)/đầu; đầu tiên; thứ nhất (trong từ ghép, vd. 元旦: Tết Dương lịch)/gốc; cơ bản (trong từ ghép, vd. 元素: nguyên tố)/thành phần; bộ phận (trong từ ghép)	claude-2026-09	ai-draft
+遠|远[yuan3]	xa; xa xôi (vd. 离这儿很远: cách đây rất xa)/(trong so sánh) … hơn nhiều; xa (vd. 远远超过: vượt xa)	claude-2026-09	ai-draft
+月|月[yue4]	tháng (vd. 一月: tháng 1; 三个月: ba tháng)/mặt trăng; trăng/hằng tháng; hàng tháng (vd. 月票: vé tháng)/Lượng từ: 个 (gè), 轮 (lún)	claude-2026-09	ai-draft
+再|再[zai4]	lại; nữa; một lần nữa (việc sẽ làm, chưa xảy ra, vd. 再说一遍: nói lại một lần nữa)/thêm; nữa; tiếp (vd. 不能再等了: không thể đợi thêm nữa)/rồi mới; sau đó mới (vd. 吃完饭再走: ăn cơm xong rồi hẵng đi)/(trước tính từ) hơn; thêm (vd. 再大一点: to hơn chút nữa)/(mẫu 再…也…) dù … đến mấy cũng … (vd. 再忙也要吃饭: bận mấy cũng phải ăn cơm)/ngoài ra; hơn nữa (dẫn thêm ý, vd. 再说: vả lại)	claude-2026-09	ai-draft
+再見|再见[zai4 jian4]	tạm biệt; hẹn gặp lại	claude-2026-09	ai-draft
+在|在[zai4]	ở; tại (vd. 我在家: tôi ở nhà; 在北京工作: làm việc ở Bắc Kinh)/đang (đặt trước động từ, chỉ hành động đang diễn ra, vd. 他在看书: anh ấy đang đọc sách)/có mặt; có ở đó (vd. 王老师在吗?: thầy Vương có ở đây không?)/còn; còn sống; vẫn tồn tại (vd. 他爷爷还在: ông nội anh ấy vẫn còn sống)	claude-2026-09	ai-draft
+在家|在家[zai4 jia1]	ở nhà; có nhà (vd. 他不在家: anh ấy không có nhà)/có mặt (ở cơ quan, không đi công tác)/(Phật giáo) tại gia; không xuất gia	claude-2026-09	ai-draft
+早|早[zao3]	sớm (vd. 他来得很早: anh ấy đến rất sớm)/chào buổi sáng! (vd. 老师早!: chào thầy ạ!)/buổi sáng (vd. 早饭: bữa sáng)/từ lâu; đã … từ lâu (vd. 我早知道了: tôi biết từ lâu rồi)	claude-2026-09	ai-draft
+早飯|早饭[zao3 fan4]	bữa sáng; bữa điểm tâm/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì), 餐 (cān)	claude-2026-09	ai-draft
+早上|早上[zao3 shang5]	buổi sáng; sáng sớm (vd. 早上好: chào buổi sáng)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+怎麼|怎么[zen3 me5]	thế nào; như thế nào; làm sao (hỏi cách thức, vd. 这个字怎么写?: chữ này viết thế nào?)/sao; tại sao; sao lại (hỏi lý do, tỏ ý ngạc nhiên, vd. 你怎么没来?: sao bạn không đến?)/sao; làm sao (hỏi tình trạng, vd. 你怎么了?: bạn làm sao thế?)	claude-2026-09	ai-draft
+站|站[zhan4]	đứng (vd. 站起来: đứng dậy)/ga; bến; trạm (vd. 火车站: ga tàu hoả; 公交车站: bến xe buýt; 还有两站: còn hai bến nữa)/dừng; dừng lại (vd. 站住: đứng lại)/trạm; điểm (chi nhánh, cơ sở dịch vụ) (vd. 服务站: trạm dịch vụ)/trang web (vd. 网站: trang web)	claude-2026-09	ai-draft
+找|找[zhao3]	tìm; tìm kiếm; kiếm (vd. 找工作: tìm việc; 找到: tìm thấy)/tìm (ai); đến gặp (ai) (vd. 我找王老师: tôi tìm thầy Vương)/trả lại; thối (tiền thừa, vd. 找你十块: trả lại bạn mười tệ)	claude-2026-09	ai-draft
+找到|找到[zhao3 dao4]	tìm thấy; tìm ra; tìm được	claude-2026-09	ai-draft
+這|这[zhe4]	đây; cái này (vd. 这是我的书: đây là sách của tôi)/này (đặt trước lượng từ hoặc danh từ, vd. 这个人: người này; 这本书: quyển sách này)	claude-2026-09	ai-draft
+這邊|这边[zhe4 bian1]	bên này; phía này/đây; ở đây; chỗ này	claude-2026-09	ai-draft
+這裡|这里[zhe4 li3]	đây; ở đây; chỗ này; nơi này	claude-2026-09	ai-draft
+這兒|这儿[zhe4 r5]	(khẩu ngữ) đây; ở đây; chỗ này	claude-2026-09	ai-draft
+這些|这些[zhe4 xie1]	những … này; những cái này; những người này (vd. 这些书: những quyển sách này)	claude-2026-09	ai-draft
+著|着[zhe5]	(trợ từ đặt sau động từ, chỉ trạng thái kéo dài hoặc hành động đang tiếp diễn; nhiều khi không dịch) đang (vd. 门开着: cửa đang mở; 他穿着红衣服: anh ấy mặc áo đỏ; 坐着看书: ngồi đọc sách)	claude-2026-09	ai-draft
+真|真[zhen1]	thật; thật là; quả thật (nhấn mạnh, vd. 今天真冷: hôm nay lạnh thật)/thật; thực; chân thật (không phải giả, vd. 真话: lời nói thật)	claude-2026-09	ai-draft
+真的|真的[zhen1 de5]	thật; thật sự (vd. 真的吗?: thật không?; 我真的不知道: tôi thật sự không biết)/thật (không phải giả, vd. 这是真的: cái này là thật)	claude-2026-09	ai-draft
+正|正[zheng4]	đang; đúng lúc (đặt trước động từ, vd. 我正吃饭呢: tôi đang ăn cơm)/đúng; chính; vừa đúng (vd. 正好: vừa đúng; 正是: chính là)/thẳng; ngay ngắn; ngay thẳng (vd. 坐正: ngồi ngay ngắn)/chính (không phải phụ, vd. 正门: cửa chính)/sửa; sửa cho đúng (vd. 改正: sửa chữa)/(toán học) dương (vd. 正数: số dương)	claude-2026-09	ai-draft
+正在|正在[zheng4 zai4]	đang (đặt trước động từ, chỉ hành động đang diễn ra, vd. 我正在吃饭: tôi đang ăn cơm)	claude-2026-09	ai-draft
+知道|知道[zhi1 dao4]	biết (vd. 我不知道: tôi không biết)/biết được; hay tin; nhận ra (việc gì)	claude-2026-09	ai-draft
+知識|知识[zhi1 shi5]	kiến thức; tri thức; hiểu biết/(thuộc) giới trí thức (vd. 知识分子: người trí thức)/Lượng từ: 门 (mén)	claude-2026-09	ai-draft
+中|中[zhong1]	trong; ở giữa; trong số (vd. 心中: trong lòng; 学生中: trong số học sinh)/giữa; chính giữa; trung tâm (vd. 中间: ở giữa)/trong khi; đang (làm gì, vd. 学习中: đang học)/(phương ngữ) được; ổn; được đấy	claude-2026-09	ai-draft
+中國|中国[Zhong1 guo2]	Trung Quốc	claude-2026-09	ai-draft
+中間|中间[zhong1 jian1]	giữa; ở giữa; chính giữa (vd. 两个人中间: giữa hai người)/trong; trong số (vd. 我们中间: trong số chúng ta)/giữa chừng; trong khoảng thời gian đó	claude-2026-09	ai-draft
+中文|中文[Zhong1 wen2]	tiếng Trung; tiếng Trung Quốc; tiếng Hoa (cả tiếng nói và chữ viết)	claude-2026-09	ai-draft
+中午|中午[zhong1 wu3]	buổi trưa; trưa (vd. 中午十二点: 12 giờ trưa)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+中學|中学[zhong1 xue2]	trường trung học (gồm cấp hai và cấp ba ở Trung Quốc)/Lượng từ: 所 (suǒ), 个 (gè)	claude-2026-09	ai-draft
+中學生|中学生[zhong1 xue2 sheng1]	học sinh trung học (học sinh cấp hai, cấp ba)	claude-2026-09	ai-draft
+重|重[zhong4]	nặng (vd. 这个箱子很重: cái thùng này rất nặng)/nặng; nghiêm trọng (vd. 病得很重: bệnh rất nặng)/coi trọng; chú trọng (vd. 重男轻女: trọng nam khinh nữ)	claude-2026-09	ai-draft
+重要|重要[zhong4 yao4]	quan trọng; hệ trọng; chủ chốt	claude-2026-09	ai-draft
+住|住[zhu4]	ở; sống; cư trú (vd. 我住在河内: tôi sống ở Hà Nội)/ở lại; ở trọ; nghỉ lại (vd. 住酒店: ở khách sạn)/dừng; ngừng; tạnh (vd. 雨住了: mưa tạnh rồi)/(bổ ngữ kết quả, chỉ sự chắc chắn, giữ lại được) chặt; chắc; lại (vd. 记住: nhớ kỹ; 站住: đứng lại)	claude-2026-09	ai-draft
+準備|准备[zhun3 bei4]	chuẩn bị; sửa soạn (vd. 准备考试: chuẩn bị thi)/định; dự định; sắp (làm gì, vd. 我准备明年去中国: tôi định sang năm đi Trung Quốc)/sự chuẩn bị (vd. 做好准备: chuẩn bị sẵn sàng)	claude-2026-09	ai-draft
+桌子|桌子[zhuo1 zi5]	bàn; cái bàn; bàn học; bàn làm việc/Lượng từ: 张 (zhāng)	claude-2026-09	ai-draft
+字|字[zi4]	chữ; chữ Hán (vd. 汉字: chữ Hán; 写字: viết chữ)/chữ cái; ký tự; ký hiệu (vd. 字母: chữ cái)/từ; chữ (vd. 这个字是什么意思?: chữ này nghĩa là gì?)/tên tự (tên chữ đặt cho nam giới thời xưa khi đến tuổi trưởng thành)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+子|子[zi5]	(hậu tố tạo danh từ, đọc thanh nhẹ, không mang nghĩa riêng, thường không dịch; vd. 桌子: cái bàn; 椅子: cái ghế; 孩子: đứa trẻ)	claude-2026-09	ai-draft
+走|走[zou3]	đi; đi bộ (vd. 走路: đi bộ)/đi; rời đi; ra về (vd. 我先走了: tôi đi trước đây)/(sau động từ) đi; mất (vd. 拿走: lấy đi)/(xe cộ, máy móc, đồng hồ) chạy; chuyển động (vd. 表不走了: đồng hồ không chạy nữa)/đi qua; đi theo (lối nào; vd. 走这条路: đi đường này)/đi thăm; lui tới (vd. 走亲戚: đi thăm họ hàng)/(nói tránh) mất; qua đời/lệch; mất; sai (hình dạng, mùi vị, ý nghĩa; vd. 走样: biến dạng)	claude-2026-09	ai-draft
+走路|走路[zou3 lu4]	đi bộ; đi (vd. 走路去学校: đi bộ đến trường)/rời đi; ra đi/(khẩu ngữ) cút; biến đi/(khẩu ngữ) nghỉ việc; thôi việc (bị đuổi hoặc tự xin nghỉ)	claude-2026-09	ai-draft
+最|最[zui4]	nhất (đặt trước tính từ hoặc động từ, vd. 最好: tốt nhất; 最喜欢: thích nhất)/cái nhất; số một (sau 之, vd. 世界之最: nhất thế giới)	claude-2026-09	ai-draft
+最好|最好[zui4 hao3]	tốt nhất; hay nhất (vd. 最好的朋友: người bạn tốt nhất)/tốt nhất là; nên (vd. 你最好早点儿睡: tốt nhất là bạn nên ngủ sớm)	claude-2026-09	ai-draft
+最後|最后[zui4 hou4]	cuối cùng; sau cùng; chót (vd. 最后一天: ngày cuối cùng)/cuối cùng; rốt cuộc (vd. 最后他还是来了: cuối cùng anh ấy vẫn đến)	claude-2026-09	ai-draft
+昨天|昨天[zuo2 tian1]	hôm qua	claude-2026-09	ai-draft
+左|左[zuo3]	trái; bên trái; phía tay trái (vd. 向左拐: rẽ trái)/(chính trị) cánh tả; tả khuynh/sai; lệch; trái ngược; khác (vd. 意见相左: ý kiến trái ngược nhau)	claude-2026-09	ai-draft
+左邊|左边[zuo3 bian5]	bên trái; phía bên trái; phía tay trái (vd. 在我左边: ở bên trái tôi)	claude-2026-09	ai-draft
+坐|坐[zuo4]	ngồi (vd. 请坐: mời ngồi)/đi; ngồi (xe, tàu, máy bay…; vd. 坐飞机: đi máy bay; 坐车: đi xe)	claude-2026-09	ai-draft
+坐下|坐下[zuo4 xia5]	ngồi xuống	claude-2026-09	ai-draft
+做|做[zuo4]	làm (vd. 做作业: làm bài tập; 做饭: nấu cơm; 做生日: làm sinh nhật)/làm ra; chế tạo; may (vd. 做衣服: may quần áo)/làm; trở thành (vd. 做老师: làm giáo viên; 做朋友: làm bạn)/dùng làm (vd. 这个房间做教室: căn phòng này dùng làm lớp học)/viết; sáng tác (vd. 做诗: làm thơ)/làm ra vẻ; làm bộ (có dáng vẻ, thái độ gì)	claude-2026-09	ai-draft
+啊|啊[a5]	(trợ từ cuối câu, biểu thị khẳng định, tán thành, đồng ý, làm lời nói tự nhiên, mềm mại hơn) nhé; đấy; chứ; nhỉ (vd. 好啊: được đấy; 是啊: đúng thế)/(trợ từ cuối câu hỏi, câu cảm thán, làm giọng nhẹ nhàng hoặc tăng cảm xúc) thế; quá (vd. 你去哪儿啊?: bạn đi đâu thế?; 多美啊!: đẹp quá!)	claude-2026-09	ai-draft
+愛情|爱情[ai4 qing2]	tình yêu (nam nữ); ái tình/Lượng từ: 份 (fèn)	claude-2026-09	ai-draft
+愛人|爱人[ai4 ren5]	vợ; chồng (cách gọi ở Trung Quốc đại lục, vd. 我爱人: vợ tôi hoặc chồng tôi)/người yêu (cách dùng ngoài Trung Quốc đại lục)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+安靜|安静[an1 jing4]	yên tĩnh; yên lặng (vd. 请安静: xin giữ trật tự)/bình yên; yên ổn; thanh thản/điềm tĩnh; trầm lặng (tính người)	claude-2026-09	ai-draft
+安全|安全[an1 quan2]	an toàn (vd. 注意安全: chú ý an toàn)/sự an toàn; an ninh	claude-2026-09	ai-draft
+白色|白色[bai2 se4]	màu trắng; trắng/(chính trị, nghĩa bóng) phản cách mạng; chống cộng (vd. 白色恐怖: khủng bố trắng)	claude-2026-09	ai-draft
+班長|班长[ban1 zhang3]	lớp trưởng/tổ trưởng; trưởng nhóm/(quân sự) tiểu đội trưởng/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+辦|办[ban4]	làm; lo; giải quyết (việc gì; vd. 办事: làm việc; 怎么办?: làm thế nào đây?)/làm (thủ tục, giấy tờ; vd. 办护照: làm hộ chiếu)/tổ chức (sự kiện; vd. 办晚会: tổ chức dạ hội)/mở; thành lập; điều hành (trường học, công ty…; vd. 办学校: mở trường)/(pháp luật) xử lý; điều tra; truy tố (vụ án, nghi phạm)/(trong từ ghép) văn phòng; phòng (viết tắt của 办公室, vd. 招办: phòng tuyển sinh)	claude-2026-09	ai-draft
+辦法|办法[ban4 fa3]	cách; cách làm; biện pháp; phương pháp (vd. 没有办法: hết cách rồi)/Lượng từ: 个 (gè), 条 (tiáo)	claude-2026-09	ai-draft
+辦公室|办公室[ban4 gong1 shi4]	văn phòng; phòng làm việc/Lượng từ: 间 (jiān)	claude-2026-09	ai-draft
+半夜|半夜[ban4 ye4]	nửa đêm; đêm khuya (vd. 半夜十二点: mười hai giờ đêm)	claude-2026-09	ai-draft
+幫助|帮助[bang1 zhu4]	giúp; giúp đỡ (vd. 帮助别人: giúp đỡ người khác)/sự giúp đỡ; sự hỗ trợ (vd. 谢谢你的帮助: cảm ơn sự giúp đỡ của bạn)	claude-2026-09	ai-draft
+飽|饱[bao3]	no; ăn no (vd. 我吃饱了: tôi no rồi)/thoả mãn; thoả thích; đầy đủ	claude-2026-09	ai-draft
+報名|报名[bao4 ming2]	đăng ký; ghi tên; ghi danh (tham gia hoạt động, dự thi, vào học, nhập ngũ…; vd. 报名参加比赛: đăng ký tham gia cuộc thi)	claude-2026-09	ai-draft
+報紙|报纸[bao4 zhi3]	báo; tờ báo; báo giấy/giấy in báo/Lượng từ: 份 (fèn), 期 (qī), 张 (zhāng)	claude-2026-09	ai-draft
+北方|北方[bei3 fang1]	phía bắc; phương bắc; hướng bắc/miền Bắc; phương Bắc (của một nước, nhất là Trung Quốc; vd. 北方人: người miền Bắc)	claude-2026-09	ai-draft
+背|背[bei4]	học thuộc lòng; đọc thuộc (vd. 背课文: học thuộc bài khoá; 背生词: học thuộc từ mới)/lưng (người); mặt sau; mu (vd. 手背: mu bàn tay)/quay lưng (lại); ngoảnh lưng/giấu; giấu giếm; làm sau lưng (ai; vd. 背着他: giấu anh ấy)/nặng tai; lãng tai/(tiếng lóng) xui; xui xẻo; đen đủi	claude-2026-09	ai-draft
+比如|比如[bi3 ru2]	ví dụ; ví dụ như; chẳng hạn (như)	claude-2026-09	ai-draft
+比如說|比如说[bi3 ru2 shuo1]	ví dụ; ví dụ như; chẳng hạn như	claude-2026-09	ai-draft
+筆|笔[bi3]	bút; cây bút (bút bi, bút chì, bút lông…)/nét; nét bút (chữ Hán, thư pháp, hội hoạ; cũng dùng làm lượng từ đếm nét, vd. 这个字有几笔?: chữ này có mấy nét?)/(lượng từ) khoản; món: dùng cho khoản tiền, giao dịch, vụ làm ăn (vd. 一笔钱: một khoản tiền)/lối viết; văn phong; bút pháp/(văn viết) viết (bằng bút)/Lượng từ: 支 (zhī), 枝 (zhī)	claude-2026-09	ai-draft
+筆記|笔记[bi3 ji4]	bài ghi; phần ghi chép (vd. 记笔记: ghi bài; ghi chép)/ghi lại; ghi chép (việc gì)/bút ký (thể loại văn gồm những bài ghi chép ngắn)/Lượng từ: 本 (běn)	claude-2026-09	ai-draft
+筆記本|笔记本[bi3 ji4 ben3]	sổ tay; sổ ghi chép; vở/máy tính xách tay (viết tắt của 笔记本电脑)/Lượng từ: 本 (běn)	claude-2026-09	ai-draft
+必須|必须[bi4 xu1]	phải; nhất định phải; bắt buộc phải (vd. 你必须去: bạn nhất định phải đi)	claude-2026-09	ai-draft
+邊|边[bian1]	bên; phía (vd. 这边: bên này; 左边: bên trái)/(mẫu 边…边…) vừa … vừa … (vd. 边走边说: vừa đi vừa nói)/cạnh; mép; rìa; lề (vd. 桌子边: mép bàn)/biên giới; ranh giới; đường biên/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+變|变[bian4]	thay đổi; biến đổi; đổi khác (vd. 天气变了: thời tiết thay đổi rồi)/trở nên; trở thành (vd. 变冷了: trở lạnh rồi)/biến; biến hoá (thành cái khác)/biến cố; cuộc nổi loạn; binh biến	claude-2026-09	ai-draft
+變成|变成[bian4 cheng2]	biến thành; trở thành; hoá thành (vd. 水变成了冰: nước biến thành băng)	claude-2026-09	ai-draft
+遍|遍[bian4]	(lượng từ) lần; lượt: dùng cho một lần làm trọn vẹn từ đầu đến cuối (vd. 再说一遍: nói lại một lần nữa; 看了三遍: xem ba lần)/khắp; khắp nơi (vd. 走遍全国: đi khắp cả nước)	claude-2026-09	ai-draft
+表|表[biao3]	bảng; biểu (vd. 时间表: thời gian biểu; 课表: thời khoá biểu)/tờ khai; mẫu đơn; phiếu (vd. 填表: điền tờ khai)/(họ hàng qua bên nữ, tức con của cô, cậu, dì) họ (vd. 表哥: anh họ; 表妹: em gái họ)/tỏ; bày tỏ; biểu thị (vd. 表态: bày tỏ thái độ)/đồng hồ đo; công tơ (vd. 电表: đồng hồ điện)/bề ngoài; mặt ngoài (vd. 表面: bề mặt)	claude-2026-09	ai-draft
+錶|表[biao3]	đồng hồ (đeo tay, bỏ túi; vd. 手表: đồng hồ đeo tay)/đồng hồ đo; máy đo; công tơ	claude-2026-09	ai-draft
+表示|表示[biao3 shi4]	bày tỏ; biểu thị; tỏ ý (vd. 表示感谢: bày tỏ lòng cảm ơn)/biểu thị; có nghĩa là; cho thấy (vd. 红灯表示停: đèn đỏ có nghĩa là dừng lại)/sự bày tỏ; sự biểu hiện; thái độ	claude-2026-09	ai-draft
+不錯|不错[bu4 cuo4]	không tệ; khá tốt; khá; được đấy (vd. 你的汉语不错: tiếng Trung của bạn khá tốt)/đúng; không sai (vd. 不错，就是他: đúng, chính là anh ấy)	claude-2026-09	ai-draft
+不但|不但[bu4 dan4]	không những; không chỉ (mẫu 不但…而且…: không những … mà còn …, vd. 他不但会说汉语，而且会写汉字: anh ấy không những biết nói tiếng Trung mà còn biết viết chữ Hán)	claude-2026-09	ai-draft
+不夠|不够[bu4 gou4]	không đủ; thiếu (vd. 钱不够: không đủ tiền)/chưa đủ; chưa đạt (mức cần có; vd. 不够好: chưa đủ tốt)	claude-2026-09	ai-draft
+不過|不过[bu4 guo4]	nhưng; nhưng mà; có điều; tuy nhiên (vd. 这件衣服很好看，不过太贵了: cái áo này đẹp nhưng đắt quá)/chỉ; chỉ là; chẳng qua (là) (vd. 他不过是个孩子: nó chẳng qua chỉ là một đứa trẻ)/(sau tính từ, mẫu 再…不过) … nhất; không gì … bằng (vd. 再好不过: không gì tốt bằng)	claude-2026-09	ai-draft
+不要|不要[bu4 yao4]	đừng; không được (khuyên, cấm; vd. 不要说话: đừng nói chuyện)/không muốn; không cần (vd. 我不要这个: tôi không cần cái này)	claude-2026-09	ai-draft
+不好意思|不好意思[bu4 hao3 yi4 si5]	xin lỗi; ngại quá (khi làm phiền, gây bất tiện cho ai; vd. 不好意思，我来晚了: xin lỗi, tôi đến muộn)/ngại; ngượng; xấu hổ; ngại ngùng (vd. 他不好意思说: anh ấy ngại không dám nói)	claude-2026-09	ai-draft
+不久|不久[bu4 jiu3]	không lâu (sau); chẳng bao lâu; ít lâu sau (vd. 不久以后: không lâu sau đó)/sắp; sớm; chẳng mấy chốc (vd. 他不久就要回国了: anh ấy sắp về nước rồi)	claude-2026-09	ai-draft
+不滿|不满[bu4 man3]	bất mãn; không hài lòng; bực bội (vd. 对工作不满: không hài lòng với công việc)/(trước số lượng) chưa đầy; chưa đủ; dưới (vd. 不满十八岁: chưa đủ 18 tuổi)	claude-2026-09	ai-draft
+不如|不如[bu4 ru2]	không bằng; kém; thua (vd. 我不如他: tôi không bằng anh ấy)/chi bằng; tốt hơn là (vd. 不如我们走路去吧: chi bằng chúng ta đi bộ đi)	claude-2026-09	ai-draft
+不少|不少[bu4 shao3]	không ít; nhiều; khá nhiều (vd. 不少人: nhiều người)	claude-2026-09	ai-draft
+不同|不同[bu4 tong2]	khác; khác nhau; không giống nhau (vd. 不同的国家: các nước khác nhau)	claude-2026-09	ai-draft
+不行|不行[bu4 xing2]	không được; không thể được (từ chối, không đồng ý; vd. 不行，你不能去: không được, bạn không được đi)/kém; dở; không giỏi (vd. 我的汉语不行: tiếng Trung của tôi kém lắm)/không được việc; không ăn thua; không xong (vd. 这个办法不行: cách này không ăn thua)	claude-2026-09	ai-draft
+不一定|不一定[bu4 yi1 ding4]	chưa chắc; không chắc; không nhất thiết (vd. 他不一定来: chưa chắc anh ấy đến)	claude-2026-09	ai-draft
+部分|部分[bu4 fen5]	phần; bộ phận; một phần (vd. 第一部分: phần thứ nhất; 大部分: phần lớn)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+才|才[cai2]	mới (việc xảy ra muộn hơn dự kiến hoặc chỉ khi có điều kiện, vd. 他十点才来: mười giờ anh ấy mới đến; 做完作业才能玩: làm xong bài tập mới được chơi)/vừa mới; mới (vd. 我才到: tôi vừa mới đến)/chỉ; mới có (trước số lượng, vd. 才五块钱: chỉ có năm tệ)/(nhấn mạnh) mới; mới là; mới đúng (vd. 这才好呢: thế mới tốt chứ; 我才不去呢: tôi còn lâu mới đi)/tài; tài năng; tài cán/người tài; nhân tài (vd. 人才: nhân tài)	claude-2026-09	ai-draft
+菜單|菜单[cai4 dan1]	thực đơn/(máy tính, điện thoại) trình đơn/Lượng từ: 份 (fèn), 张 (zhāng)	claude-2026-09	ai-draft
+參觀|参观[can1 guan1]	tham quan; đi thăm; đi xem (bảo tàng, nhà máy, trường học…; vd. 参观博物馆: tham quan bảo tàng)	claude-2026-09	ai-draft
+參加|参加[can1 jia1]	tham gia; tham dự; dự (vd. 参加会议: dự họp; 参加比赛: tham gia cuộc thi)/gia nhập; vào (tổ chức, đoàn thể)	claude-2026-09	ai-draft
+草|草[cao3]	cỏ (vd. 草地: bãi cỏ)/rơm; rạ/nháp; bản nháp; bản thảo (vd. 草稿: bản nháp)/cẩu thả; ẩu; qua loa; sơ sài (vd. 字写得太草: chữ viết ngoáy quá)/Lượng từ: 棵 (kē), 撮 (zuǒ), 株 (zhū), 根 (gēn)	claude-2026-09	ai-draft
+草地|草地[cao3 di4]	bãi cỏ; thảm cỏ; sân cỏ/đồng cỏ/Lượng từ: 片 (piàn)	claude-2026-09	ai-draft
+層|层[ceng2]	(lượng từ) tầng; lớp: dùng cho tầng nhà, lớp chồng lên nhau hoặc phủ trên bề mặt (vd. 三层楼: toà nhà ba tầng; 一层灰: một lớp bụi)/tầng; lầu (vd. 我住在五层: tôi ở tầng năm)/lớp; tầng (vd. 大气层: tầng khí quyển)/chồng lên nhau; chồng chất; lớp lớp	claude-2026-09	ai-draft
+查|查[cha2]	tra; tra cứu; tìm (thông tin; vd. 查词典: tra từ điển; 查资料: tìm tài liệu)/kiểm tra; soát; khám xét (vd. 查票: soát vé)/điều tra; tìm hiểu; nghiên cứu (vd. 查原因: tìm nguyên nhân)	claude-2026-09	ai-draft
+差不多|差不多[cha4 bu5 duo1]	gần như; gần; suýt soát; xấp xỉ (vd. 差不多十点了: gần mười giờ rồi)/gần giống nhau; na ná; chẳng khác mấy (vd. 这两个颜色差不多: hai màu này gần giống nhau)/tàm tạm; tạm được; kha khá	claude-2026-09	ai-draft
+長|长[chang2]	dài (vd. 这条路很长: con đường này rất dài)/chiều dài; độ dài (vd. 长三米: dài ba mét)/sở trường; điểm mạnh (vd. 特长: sở trường)/giỏi; giỏi về (vd. 他长于写作: anh ấy giỏi viết lách)	claude-2026-09	ai-draft
+常見|常见[chang2 jian4]	thường gặp; thường thấy; phổ biến (vd. 常见问题: những câu hỏi thường gặp)	claude-2026-09	ai-draft
+常用|常用[chang2 yong4]	thường dùng; hay dùng; thông dụng (vd. 常用字: chữ thường dùng)	claude-2026-09	ai-draft
+場|场[chang3]	(lượng từ) trận; buổi; suất: dùng cho trận đấu, buổi biểu diễn, suất chiếu phim, kỳ thi (vd. 一场比赛: một trận đấu; 一场电影: một suất phim)/nơi; bãi; sân; trường (địa điểm rộng dùng cho mục đích nhất định; vd. 操场: sân tập; 停车场: bãi đỗ xe)/sân khấu; sàn diễn/cảnh; màn (trong vở kịch; vd. 第二场: cảnh hai)	claude-2026-09	ai-draft
+超過|超过[chao1 guo4]	vượt quá; quá; hơn (một mức nào đó; vd. 不超过十分钟: không quá mười phút)/vượt qua; vượt lên; vượt xa (vd. 超过前面的车: vượt xe phía trước)	claude-2026-09	ai-draft
+超市|超市[chao1 shi4]	siêu thị (viết tắt của 超级市场)/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+車輛|车辆[che1 liang4]	xe cộ; phương tiện giao thông (vd. 过往车辆: xe cộ qua lại)	claude-2026-09	ai-draft
+稱|称[cheng1]	gọi; gọi là; xưng (vd. 人们称他为老师: mọi người gọi ông ấy là thầy)/cân (vd. 称行李: cân hành lý)/tên gọi; danh xưng (vd. 简称: tên gọi tắt)/nói; tuyên bố (vd. 声称: tuyên bố)/khen; ca ngợi (vd. 称赞: khen ngợi)	claude-2026-09	ai-draft
+成|成[cheng2]	trở thành; thành; biến thành (vd. 他们成了好朋友: họ trở thành bạn tốt của nhau)/(sau động từ, chỉ kết quả biến đổi) thành; sang (vd. 翻译成汉语: dịch sang tiếng Trung; 变成: biến thành)/thành công; xong; hoàn thành (vd. 事情办成了: việc đã làm xong)/(khẩu ngữ, tỏ ý đồng ý) được; ổn (vd. 成!: được!)/một phần mười; mười phần trăm (vd. 八成: tám phần mười)	claude-2026-09	ai-draft
+成績|成绩[cheng2 ji4]	điểm; kết quả học tập (vd. 考试成绩: điểm thi)/thành tích; thành quả/Lượng từ: 项 (xiàng), 个 (gè)	claude-2026-09	ai-draft
+成為|成为[cheng2 wei2]	trở thành; thành (vd. 成为医生: trở thành bác sĩ)	claude-2026-09	ai-draft
+重複|重复[chong2 fu4]	lặp lại; nhắc lại (vd. 请重复一遍: xin nhắc lại một lần)/trùng lặp; trùng	claude-2026-09	ai-draft
+重新|重新[chong2 xin1]	lại; lại từ đầu; một lần nữa (vd. 重新开始: bắt đầu lại; 重新写: viết lại)	claude-2026-09	ai-draft
+出發|出发[chu1 fa1]	xuất phát; khởi hành; lên đường (vd. 我们明天出发: ngày mai chúng ta lên đường)	claude-2026-09	ai-draft
+出國|出国[chu1 guo2]	ra nước ngoài; đi nước ngoài; xuất ngoại	claude-2026-09	ai-draft
+出口|出口[chu1 kou3]	lối ra; cửa ra/xuất khẩu/nói ra; mở miệng (vd. 出口伤人: buông lời làm tổn thương người khác)/(tàu thuyền) rời cảng/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+出門|出门[chu1 men2]	ra ngoài; ra khỏi nhà (vd. 我出门了: tôi ra ngoài đây)/đi xa; xa nhà/(con gái) đi lấy chồng; xuất giá	claude-2026-09	ai-draft
+出生|出生[chu1 sheng1]	sinh ra; ra đời (vd. 我出生在北京: tôi sinh ra ở Bắc Kinh)	claude-2026-09	ai-draft
+出現|出现[chu1 xian4]	xuất hiện; hiện ra; nảy sinh (vấn đề, tình huống…)	claude-2026-09	ai-draft
+出院|出院[chu1 yuan4]	xuất viện; ra viện	claude-2026-09	ai-draft
+出租|出租[chu1 zu1]	cho thuê (vd. 房屋出租: cho thuê nhà)	claude-2026-09	ai-draft
+出租車|出租车[chu1 zu1 che1]	xe taxi; tắc xi (vd. 坐出租车: đi taxi)/(Đài Loan) xe cho thuê; xe thuê	claude-2026-09	ai-draft
+船|船[chuan2]	thuyền; tàu; tàu thuỷ/Lượng từ: 条 (tiáo), 艘 (sōu), 只 (zhī)	claude-2026-09	ai-draft
+吹|吹[chui1]	thổi (vd. 吹蜡烛: thổi nến; 风吹: gió thổi)/thổi (nhạc cụ hơi, vd. 吹笛子: thổi sáo)/khoác lác; nói phét; ba hoa/(khẩu ngữ) hỏng; đổ bể; tan vỡ (công việc, chuyện tình…, vd. 他们俩吹了: hai người họ chia tay rồi)	claude-2026-09	ai-draft
+春節|春节[Chun1 jie2]	Tết Nguyên Đán; Tết âm lịch (lễ hội mùa xuân của Trung Quốc)	claude-2026-09	ai-draft
+春天|春天[chun1 tian1]	mùa xuân/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+詞|词[ci2]	từ; từ ngữ (vd. 生词: từ mới)/lời; lời nói; lời bài hát (vd. 歌词: lời bài hát)/từ (thể thơ trữ tình, thịnh hành đời Tống)/Lượng từ: 首 (shǒu)	claude-2026-09	ai-draft
+詞典|词典[ci2 dian3]	từ điển (vd. 查词典: tra từ điển)/Lượng từ: 本 (běn), 部 (bù)	claude-2026-09	ai-draft
+詞語|词语[ci2 yu3]	từ ngữ; từ (gọi chung từ và cụm từ ngắn)/thuật ngữ; cách diễn đạt	claude-2026-09	ai-draft
+從小|从小[cong2 xiao3]	từ nhỏ; từ bé (vd. 他从小就喜欢画画: anh ấy thích vẽ từ nhỏ)	claude-2026-09	ai-draft
+答應|答应[da1 ying5]	đồng ý; nhận lời; hứa (vd. 他答应帮我: anh ấy nhận lời giúp tôi)/thưa; đáp lời; lên tiếng (khi được gọi)	claude-2026-09	ai-draft
+打工|打工[da3 gong1]	làm thuê; làm việc tạm thời; làm thời vụ/(học sinh, sinh viên) làm thêm; đi làm thêm (ngoài giờ học hoặc dịp nghỉ)	claude-2026-09	ai-draft
+打算|打算[da3 suan4]	định; dự định; tính (làm việc gì) (vd. 我打算明年去中国: tôi định sang năm đi Trung Quốc)/dự định; kế hoạch; ý định/tính toán (thiệt hơn)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+打印|打印[da3 yin4]	in; in ra (bằng máy in, vd. 打印文件: in tài liệu)/đóng dấu	claude-2026-09	ai-draft
+大部分|大部分[da4 bu4 fen5]	phần lớn; đa số; hầu hết (vd. 大部分学生: phần lớn học sinh)	claude-2026-09	ai-draft
+大大|大大[da4 da4]	rất nhiều; hết sức; đáng kể (vd. 大大提高: nâng cao đáng kể)/(phương ngữ) bố; cha/(phương ngữ) bác; chú	claude-2026-09	ai-draft
+大多數|大多数[da4 duo1 shu4]	đại đa số; phần lớn; hầu hết	claude-2026-09	ai-draft
+大海|大海[da4 hai3]	biển; biển cả; đại dương	claude-2026-09	ai-draft
+大家|大家[da4 jia1]	mọi người; tất cả mọi người (vd. 大家好: chào mọi người)/bậc thầy; chuyên gia lớn (trong một lĩnh vực, vd. 书法大家: bậc thầy thư pháp)/gia đình danh giá; danh gia vọng tộc	claude-2026-09	ai-draft
+大量|大量[da4 liang4]	số lượng lớn; rất nhiều; hàng loạt (vd. 大量的时间: rất nhiều thời gian)/rộng lượng; độ lượng	claude-2026-09	ai-draft
+大門|大门[da4 men2]	cổng; cổng chính; cửa chính; cửa lớn	claude-2026-09	ai-draft
+大人|大人[da4 ren5]	người lớn (vd. 大人和孩子: người lớn và trẻ em)/(cũ) đại nhân; ngài (cách xưng hô tôn kính với bề trên)	claude-2026-09	ai-draft
+大聲|大声[da4 sheng1]	to; lớn tiếng; nói to (vd. 大声说: nói to)/giọng to; tiếng to	claude-2026-09	ai-draft
+大小|大小[da4 xiao3]	kích cỡ; kích thước; cỡ (vd. 大小合适: vừa cỡ)/lớn và nhỏ; to nhỏ/người lớn và trẻ con; lớn bé (cả nhà)/trên dưới; tôn ti (vd. 没大没小: không biết trên dưới)	claude-2026-09	ai-draft
+大衣|大衣[da4 yi1]	áo khoác dài; áo măng tô; áo choàng/Lượng từ: 件 (jiàn)	claude-2026-09	ai-draft
+大自然|大自然[da4 zi4 ran2]	thiên nhiên; tự nhiên; giới tự nhiên	claude-2026-09	ai-draft
+帶|带[dai4]	mang; đem; cầm theo; mang theo người (vd. 带伞: mang ô)/dẫn; dắt; đưa (ai đi đâu, vd. 带孩子去公园: dẫn con đi công viên)/trông; chăm; nuôi (trẻ con, vd. 带孩子: trông con)/có; kèm theo; mang (đặc điểm gì, vd. 面带笑容: nét mặt tươi cười)/dải; đai; băng; dây (vd. 皮带: thắt lưng da; 鞋带: dây giày)/vùng; khu vực; miền (vd. 这一带: vùng này)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+帶來|带来[dai4 lai2]	mang đến; đem đến (vd. 带来礼物: mang quà đến)/mang lại; đem lại; gây ra (vd. 带来好处: mang lại lợi ích)	claude-2026-09	ai-draft
+單位|单位[dan1 wei4]	cơ quan; nơi làm việc; đơn vị công tác (vd. 你在哪个单位工作?: bạn làm ở cơ quan nào?)/đơn vị (đo lường, vd. 米是长度单位: mét là đơn vị đo chiều dài)/đơn vị (tổ chức, tập thể)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+但|但[dan4]	nhưng; nhưng mà; song; tuy nhiên/(văn viết) chỉ; chỉ cần (vd. 但愿: chỉ mong)	claude-2026-09	ai-draft
+但是|但是[dan4 shi4]	nhưng; nhưng mà; tuy nhiên (vd. 我很想去，但是没有时间: tôi rất muốn đi nhưng không có thời gian)	claude-2026-09	ai-draft
+蛋|蛋[dan4]	trứng (vd. 鸡蛋: trứng gà)/vật hình quả trứng; vật hình bầu dục/Lượng từ: 个 (gè), 打 (dá)	claude-2026-09	ai-draft
+當|当[dang1]	làm; đảm nhiệm; giữ chức (vd. 当老师: làm giáo viên)/khi; lúc; trong lúc (mẫu 当…的时候: khi …)/ngay tại; ngay lúc (vd. 当面: trước mặt; 当场: ngay tại chỗ)/nên; phải (vd. 应当: nên)/chịu; gánh vác; đương đầu (vd. 敢作敢当: dám làm dám chịu)/cai quản; chủ trì (vd. 当家: làm chủ gia đình)/ngang nhau; tương xứng (vd. 门当户对: môn đăng hộ đối)	claude-2026-09	ai-draft
+當時|当时[dang1 shi2]	lúc đó; khi ấy; hồi đó; vào thời điểm đó	claude-2026-09	ai-draft
+倒|倒[dao3]	ngã; đổ; sập; nằm ra (vd. 摔倒: ngã)/đóng cửa; phá sản; thất bại (cửa hàng, công ty…, vd. 倒闭: phá sản)/lật đổ (vd. 打倒: đả đảo)/đổi; chuyển (tàu, xe, vd. 倒两次车: đổi xe hai lần)/xoay; dời; xê dịch (chỗ)/buôn đi bán lại kiếm lời (vd. 倒卖: buôn đi bán lại)	claude-2026-09	ai-draft
+到處|到处[dao4 chu4]	khắp nơi; mọi nơi; đâu đâu cũng	claude-2026-09	ai-draft
+倒|倒[dao4]	rót; đổ; trút (vd. 倒水: rót nước; 倒垃圾: đổ rác)/ngược; lộn ngược; đảo ngược (vd. 倒过来: lật ngược lại)/lùi; đi lùi (vd. 倒着走: đi lùi)/(phó từ, biểu thị trái với dự đoán) lại; ngược lại; thế mà (vd. 这件衣服倒不贵: cái áo này lại không đắt)	claude-2026-09	ai-draft
+道|道[dao4]	(lượng từ) con; tia; vệt; cánh; câu; món…: dùng cho vật dài hẹp (sông, vết nứt, tia sáng…), cửa, tường; câu hỏi, bài tập; mệnh lệnh; món ăn; bước trong quy trình (vd. 一道题: một câu hỏi; 一道菜: một món ăn; 一道光: một tia sáng)/đường; con đường (vd. 人行道: vỉa hè)/lẽ; đạo lý; nguyên tắc; cách (vd. 道理: đạo lý)/nói (dẫn lời nói trực tiếp, thường gặp trong truyện, vd. 他笑道: anh ấy cười nói)/bày tỏ; nói lời (lịch sự, vd. 道谢: cảm ơn; 道歉: xin lỗi)/nghề; kỹ năng; thuật (vd. 茶道: trà đạo)/Đạo (trong Đạo giáo)/Lượng từ: 条 (tiáo), 股 (gǔ)	claude-2026-09	ai-draft
+道理|道理[dao4 li5]	lý lẽ; lẽ phải; đạo lý (vd. 有道理: có lý)/lý do; căn cứ/nguyên lý; nguyên tắc/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+道路|道路[dao4 lu4]	đường; đường sá; con đường/lối đi; con đường (nghĩa bóng, vd. 成功的道路: con đường thành công)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+得|得[de2]	được; có được; đạt được; giành được (vd. 得第一名: được giải nhất)/mắc; bị (bệnh, vd. 得了感冒: bị cảm)/được; được phép (vd. 不得: không được)/(khẩu ngữ) xong; được rồi (vd. 饭得了: cơm xong rồi)/thích hợp; đúng mực (vd. 得体: thích hợp)/đắc ý; hài lòng (vd. 得意: đắc ý)	claude-2026-09	ai-draft
+得出|得出[de2 chu1]	rút ra; đi đến (kết luận); thu được (kết quả) (vd. 得出结论: rút ra kết luận)	claude-2026-09	ai-draft
+的話|的话[de5 hua4]	(trợ từ đặt cuối mệnh đề điều kiện) nếu …; nếu … thì (vd. 明天下雨的话，我就不去了: nếu mai trời mưa thì tôi không đi nữa)	claude-2026-09	ai-draft
+得|得[de5]	(trợ từ đặt sau động từ hoặc tính từ, nối với bổ ngữ chỉ mức độ, kết quả; thường không dịch, vd. 说得很好: nói rất hay; 跑得很快: chạy rất nhanh)/(trợ từ nối bổ ngữ chỉ khả năng) … được (vd. 看得见: nhìn thấy được; 听得懂: nghe hiểu được)	claude-2026-09	ai-draft
+燈|灯[deng1]	đèn; đèn lồng (vd. 开灯: bật đèn; 红绿灯: đèn giao thông)/Lượng từ: 盏 (zhǎn)	claude-2026-09	ai-draft
+等到|等到[deng3 dao4]	đợi đến; chờ đến (khi) (vd. 等到明年: đợi đến sang năm)/đến khi; khi mà (việc gì đã xong, sẵn sàng, vd. 等到他来，我们已经吃完了: đến khi anh ấy tới thì chúng tôi đã ăn xong rồi)	claude-2026-09	ai-draft
+等於|等于[deng3 yu2]	bằng (vd. 一加一等于二: một cộng một bằng hai)/tương đương với; chẳng khác gì; coi như (vd. 你不去就等于放弃: bạn không đi thì coi như bỏ cuộc)	claude-2026-09	ai-draft
+低|低[di1]	thấp; ở dưới (vị trí, mức độ, giọng nói, giá cả…, vd. 价格低: giá thấp)/cúi (đầu); rủ xuống; nghiêng xuống (vd. 低头: cúi đầu)	claude-2026-09	ai-draft
+地球|地球[di4 qiu2]	Trái Đất; địa cầu	claude-2026-09	ai-draft
+地鐵|地铁[di4 tie3]	tàu điện ngầm (vd. 坐地铁: đi tàu điện ngầm)/đường sắt ngầm; hệ thống tàu điện ngầm	claude-2026-09	ai-draft
+地鐵站|地铁站[di4 tie3 zhan4]	ga tàu điện ngầm	claude-2026-09	ai-draft
+點頭|点头[dian3 tou2]	gật đầu (chào hỏi hoặc tỏ ý đồng ý, vd. 他点了点头: anh ấy gật đầu)	claude-2026-09	ai-draft
+店|店[dian4]	cửa hàng; tiệm; quán (vd. 书店: hiệu sách)/quán trọ; nhà trọ (kiểu cũ)/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+掉|掉[diao4]	rơi; rớt; rụng (vd. 书掉在地上: sách rơi xuống đất; 掉头发: rụng tóc)/mất; đánh mất; thất lạc (vd. 钱包掉了: mất ví rồi)/(đặt sau động từ, chỉ sự hoàn thành, loại bỏ) mất; đi; hết (vd. 吃掉: ăn hết; 忘掉: quên mất; 扔掉: vứt đi)/tụt lại; rớt lại (phía sau, vd. 掉队: tụt lại sau)/giảm; sụt (giá, cân nặng…)/quay; đổi; hoán đổi (vd. 掉头: quay đầu; 掉换: đổi cho nhau)	claude-2026-09	ai-draft
+東北|东北[dong1 bei3]	đông bắc; phía đông bắc; hướng đông bắc	claude-2026-09	ai-draft
+東方|东方[dong1 fang1]	phía đông; phương đông; hướng đông	claude-2026-09	ai-draft
+東南|东南[dong1 nan2]	đông nam; phía đông nam; hướng đông nam	claude-2026-09	ai-draft
+冬天|冬天[dong1 tian1]	mùa đông	claude-2026-09	ai-draft
+懂|懂[dong3]	hiểu; hiểu được; biết (vd. 听懂: nghe hiểu; 我不懂: tôi không hiểu)	claude-2026-09	ai-draft
+懂得|懂得[dong3 de5]	hiểu; biết; hiểu được (vd. 懂得道理: hiểu lẽ phải)	claude-2026-09	ai-draft
+動物|动物[dong4 wu4]	động vật; con vật; thú vật	claude-2026-09	ai-draft
+動物園|动物园[dong4 wu4 yuan2]	vườn thú; sở thú; vườn bách thú	claude-2026-09	ai-draft
+讀音|读音[du2 yin1]	cách đọc; âm đọc; cách phát âm (vd. 这个字的读音: cách đọc của chữ này)	claude-2026-09	ai-draft
+度|度[du4]	độ (đơn vị đo nhiệt độ, góc…, vd. 三十度: ba mươi độ)/mức độ; chừng mực; giới hạn; thước đo (vd. 程度: mức độ)/(lượng từ) lần; lượt; đợt: dùng cho sự kiện, sự việc lặp lại (vd. 一年一度: mỗi năm một lần)/trải qua; qua; sống qua (thời gian, vd. 度假: đi nghỉ)/số (điện); ki-lô-oát giờ (vd. 一度电: một số điện)	claude-2026-09	ai-draft
+短|短[duan3]	ngắn; ngắn gọn (vd. 短头发: tóc ngắn; 时间很短: thời gian rất ngắn)/thiếu; còn thiếu (vd. 还短十块钱: còn thiếu mười tệ)/điểm yếu; khuyết điểm; sở đoản (vd. 取长补短: lấy cái hay bù cái dở)	claude-2026-09	ai-draft
+短信|短信[duan3 xin4]	tin nhắn (điện thoại); tin nhắn SMS (vd. 发短信: gửi tin nhắn)	claude-2026-09	ai-draft
+段|段[duan4]	(lượng từ) đoạn; khúc; quãng; khoảng: dùng cho một phần của vật dài (dây, đường…), khoảng thời gian, đoạn văn, câu chuyện (vd. 一段路: một đoạn đường; 一段时间: một khoảng thời gian)/đoạn (văn); phần; khúc/giai đoạn (của một quá trình)	claude-2026-09	ai-draft
+隊|队[dui4]	đội; nhóm (vd. 足球队: đội bóng đá)/hàng; hàng người (vd. 排队: xếp hàng)/(quân sự) đội; phân đội/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+隊長|队长[dui4 zhang3]	đội trưởng; trưởng nhóm; thủ quân (đội thể thao)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+對話|对话[dui4 hua4]	đối thoại; cuộc hội thoại; cuộc trò chuyện/nói chuyện; đối thoại (với ai)	claude-2026-09	ai-draft
+對面|对面[dui4 mian4]	đối diện; phía đối diện; bên kia (đường…) (vd. 学校对面: đối diện trường học)/ngay phía trước; trước mặt/mặt đối mặt; trực tiếp	claude-2026-09	ai-draft
+多久|多久[duo1 jiu3]	bao lâu (vd. 你学了多久?: bạn học bao lâu rồi?)/(trong câu phủ định) (không) lâu (vd. 没多久: chẳng bao lâu)	claude-2026-09	ai-draft
+多麼|多么[duo1 me5]	(dùng trong câu cảm thán) biết bao; thật là; làm sao (vd. 多么美啊!: đẹp biết bao!)/dù … đến đâu; bất kể … thế nào (vd. 不管多么困难: dù khó khăn đến đâu)/(trong câu hỏi) bao nhiêu; đến mức nào	claude-2026-09	ai-draft
+多數|多数[duo1 shu4]	đa số; phần lớn; số đông	claude-2026-09	ai-draft
+多雲|多云[duo1 yun2]	nhiều mây; có mây (thời tiết)	claude-2026-09	ai-draft
+而且|而且[er2 qie3]	(liên từ, thường đi với 不但, 不仅) mà còn (mẫu 不但…而且…: không những … mà còn …)/(liên từ bổ sung ý) hơn nữa; vả lại; thêm vào đó (vd. 这个菜很便宜，而且很好吃: món này rẻ, hơn nữa lại ngon)	claude-2026-09	ai-draft
+發|发[fa1]	gửi; gửi đi (vd. 发短信: gửi tin nhắn)/phát; phân phát; ban hành (vd. 发工资: phát lương)/phát ra; toả ra (âm thanh, ánh sáng…, vd. 发光: phát sáng; 发出声音: phát ra tiếng)/bộc lộ; nổi (cảm xúc, vd. 发脾气: nổi cáu)/phát triển; nảy nở (vd. 发芽: nảy mầm)/phát tài; làm giàu (vd. 发财: phát tài)/(lượng từ) phát; viên: dùng cho đạn (vd. 一发子弹: một viên đạn)	claude-2026-09	ai-draft
+發現|发现[fa1 xian4]	nhận ra; phát hiện; để ý thấy (vd. 我发现他不在: tôi nhận ra anh ấy không có ở đây)/phát hiện ra; tìm ra; khám phá/sự phát hiện; phát kiến	claude-2026-09	ai-draft
+飯館|饭馆[fan4 guan3]	quán ăn; quán cơm; nhà hàng/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+方便|方便[fang1 bian4]	tiện; thuận tiện; tiện lợi; thích hợp (vd. 交通很方便: giao thông rất thuận tiện; 现在说话方便吗?: bây giờ nói chuyện có tiện không?)/tạo điều kiện; giúp thuận lợi (cho ai)/(nói tránh) đi vệ sinh (vd. 我去方便一下: tôi đi vệ sinh một chút)/có tiền dư dả; rủng rỉnh (vd. 手头不方便: đang kẹt tiền)	claude-2026-09	ai-draft
+方便麵|方便面[fang1 bian4 mian4]	mì ăn liền; mì tôm	claude-2026-09	ai-draft
+方法|方法[fang1 fa3]	phương pháp; cách; cách thức (vd. 学习方法: phương pháp học)	claude-2026-09	ai-draft
+方面|方面[fang1 mian4]	mặt; phương diện; khía cạnh; lĩnh vực (vd. 在学习方面: về mặt học tập)/phía; bên (vd. 有关方面: các bên liên quan)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+方向|方向[fang1 xiang4]	hướng; phương hướng; chiều (vd. 走错方向了: đi nhầm hướng rồi)/định hướng; hướng đi	claude-2026-09	ai-draft
+放下|放下[fang4 xia4]	đặt xuống; để xuống; bỏ xuống (vd. 放下书包: đặt cặp sách xuống)/buông bỏ; gác lại; từ bỏ (vd. 放下工作: gác công việc lại)/hạ xuống (rèm…)	claude-2026-09	ai-draft
+放心|放心[fang4 xin1]	yên tâm; an tâm; yên lòng; nhẹ nhõm (vd. 你放心吧: bạn cứ yên tâm đi)	claude-2026-09	ai-draft
+分開|分开[fen1 kai1]	tách ra; chia ra; tách riêng (vd. 把它们分开: tách chúng ra)/chia tay; xa nhau; rời xa (vd. 我们分开了: chúng tôi đã chia tay)	claude-2026-09	ai-draft
+分數|分数[fen1 shu4]	điểm; điểm số (thi cử, vd. 考试分数: điểm thi)/(toán học) phân số	claude-2026-09	ai-draft
+分鐘|分钟[fen1 zhong1]	phút (chỉ khoảng thời gian, vd. 等十分钟: đợi mười phút; khi nói giờ thì dùng 分, vd. 八点十分: tám giờ mười phút)	claude-2026-09	ai-draft
+份|份[fen4]	(lượng từ) phần; suất; tờ; bản; món: dùng cho quà tặng, báo, tạp chí, giấy tờ, báo cáo, hợp đồng… (vd. 一份报纸: một tờ báo; 一份礼物: một món quà; 一份工作: một công việc)/phần; phần chia (cách viết khác của 分 fèn)	claude-2026-09	ai-draft
+封|封[feng1]	(lượng từ) bức; lá: dùng cho thư từ và vật được niêm phong (vd. 一封信: một bức thư)/niêm phong; bịt kín; dán kín (vd. 封口: dán kín miệng)/phong; ban (tước hiệu, chức tước, vd. 封王: phong vương)	claude-2026-09	ai-draft
+服務|服务[fu2 wu4]	phục vụ (vd. 为人民服务: phục vụ nhân dân)/dịch vụ; sự phục vụ (vd. 服务很好: phục vụ rất tốt)/Lượng từ: 项 (xiàng)	claude-2026-09	ai-draft
+複習|复习[fu4 xi2]	ôn tập; ôn bài; ôn lại (vd. 复习生词: ôn từ mới)	claude-2026-09	ai-draft
+該|该[gai1]	nên; phải; cần (vd. 你该睡觉了: đến giờ bạn phải đi ngủ rồi)/đến lượt (ai làm gì, vd. 该你了: đến lượt bạn rồi)/chắc là; hẳn là; có lẽ (vd. 他该到了: chắc anh ấy đến nơi rồi)/đáng; đáng đời (vd. 活该: đáng đời)/nợ (vd. 我该你十块钱: tôi nợ bạn mười tệ)/(văn viết) … đó; … này; … nói trên (vd. 该公司: công ty này)	claude-2026-09	ai-draft
+改|改[gai3]	thay đổi; đổi; sửa đổi (vd. 改时间: đổi giờ)/sửa; sửa chữa (lỗi sai, vd. 改错: sửa lỗi)/biến đổi; cải tạo	claude-2026-09	ai-draft
+改變|改变[gai3 bian4]	thay đổi; biến đổi; làm thay đổi (vd. 改变主意: thay đổi ý định)/sự thay đổi	claude-2026-09	ai-draft
+乾杯|干杯[gan1 bei1]	nâng ly; cạn ly; cạn chén (chúc mừng)/(lời chúc khi nâng ly) cạn ly!; chúc sức khoẻ!	claude-2026-09	ai-draft
+感到|感到[gan3 dao4]	cảm thấy; thấy; nhận thấy (vd. 感到高兴: cảm thấy vui)	claude-2026-09	ai-draft
+感動|感动[gan3 dong4]	cảm động; xúc động (vd. 我很感动: tôi rất cảm động)/làm cảm động; làm xúc động (ai, vd. 他的话感动了大家: lời anh ấy làm mọi người cảm động)	claude-2026-09	ai-draft
+感覺|感觉[gan3 jue2]	cảm thấy; thấy (vd. 我感觉有点冷: tôi thấy hơi lạnh)/cảm giác; cảm nhận; ấn tượng	claude-2026-09	ai-draft
+感謝|感谢[gan3 xie4]	cảm ơn; biết ơn; cảm tạ (vd. 感谢你的帮助: cảm ơn sự giúp đỡ của bạn)	claude-2026-09	ai-draft
+幹活兒|干活儿[gan4 huo2 r5]	làm việc; làm lụng; làm việc chân tay (vd. 在地里干活儿: làm việc ngoài đồng)	claude-2026-09	ai-draft
+剛|刚[gang1]	vừa; vừa mới; mới (vd. 我刚到: tôi vừa mới đến)/vừa; vừa vặn; vừa đúng (vd. 刚好: vừa đúng)/vừa đủ; chỉ vừa (vd. 刚及格: vừa đủ điểm đạt)/(văn viết) cứng; rắn; mạnh mẽ (vd. 刚强: kiên cường)	claude-2026-09	ai-draft
+剛才|刚才[gang1 cai2]	vừa nãy; vừa rồi; lúc nãy (vd. 你刚才去哪儿了?: vừa nãy bạn đi đâu thế?)	claude-2026-09	ai-draft
+剛剛|刚刚[gang1 gang5]	vừa mới; mới vừa; vừa nãy (vd. 他刚刚走: anh ấy vừa mới đi)	claude-2026-09	ai-draft
+高級|高级[gao1 ji2]	cao cấp; chất lượng cao; sang (vd. 高级饭店: nhà hàng cao cấp)/trình độ cao; nâng cao (vd. 高级班: lớp nâng cao)/cấp cao; cấp bậc cao (chức vụ)	claude-2026-09	ai-draft
+高中|高中[gao1 zhong1]	trường trung học phổ thông; cấp ba (tương đương lớp 10–12; viết tắt của 高级中学)	claude-2026-09	ai-draft
+個子|个子[ge4 zi5]	vóc người; dáng người; chiều cao (của người, vd. 他个子很高: anh ấy cao)/cỡ; kích thước (đồ vật)	claude-2026-09	ai-draft
+更|更[geng4]	càng; hơn; càng … hơn; còn … hơn (vd. 更好: tốt hơn; 今天比昨天更冷: hôm nay còn lạnh hơn hôm qua)/thêm; hơn nữa (vd. 更进一步: tiến thêm một bước)	claude-2026-09	ai-draft
+公共汽車|公共汽车[gong1 gong4 qi4 che1]	xe buýt (vd. 坐公共汽车: đi xe buýt)/Lượng từ: 辆 (liàng), 班 (bān)	claude-2026-09	ai-draft
+公交車|公交车[gong1 jiao1 che1]	xe buýt; xe buýt nội thành/phương tiện giao thông công cộng/Lượng từ: 辆 (liàng)	claude-2026-09	ai-draft
+公斤|公斤[gong1 jin1]	ki-lô-gam (kg); cân; ký (vd. 两公斤苹果: hai cân táo)	claude-2026-09	ai-draft
+公里|公里[gong1 li3]	ki-lô-mét (km); cây số (vd. 十公里: mười cây số)	claude-2026-09	ai-draft
+公路|公路[gong1 lu4]	đường quốc lộ; đường cái; đường ô tô (vd. 高速公路: đường cao tốc)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+公平|公平[gong1 ping2]	công bằng; không thiên vị (vd. 这不公平: thế này không công bằng)	claude-2026-09	ai-draft
+公司|公司[gong1 si1]	công ty; hãng (vd. 在公司工作: làm việc ở công ty)/Lượng từ: 家 (jiā)	claude-2026-09	ai-draft
+公園|公园[gong1 yuan2]	công viên (vd. 去公园散步: đi dạo công viên)/Lượng từ: 座 (zuò)	claude-2026-09	ai-draft
+狗|狗[gou3]	chó; con chó/Lượng từ: 只 (zhī), 条 (tiáo)	claude-2026-09	ai-draft
+夠|够[gou4]	đủ (vd. 钱不够: không đủ tiền)/(đến mức) chán; ngán; quá đủ (vd. 我受够了: tôi chịu đủ rồi)/(khẩu ngữ, đặt trước tính từ) thật; khá; rất (vd. 今天够冷的: hôm nay lạnh thật)/với; với tới (vd. 够不着: với không tới)	claude-2026-09	ai-draft
+故事|故事[gu4 shi5]	câu chuyện; chuyện; truyện (vd. 讲故事: kể chuyện)	claude-2026-09	ai-draft
+故意|故意[gu4 yi4]	cố ý; cố tình; có chủ ý (vd. 他不是故意的: anh ấy không cố ý đâu)	claude-2026-09	ai-draft
+顧客|顾客[gu4 ke4]	khách hàng; khách (mua hàng)/Lượng từ: 位 (wèi)	claude-2026-09	ai-draft
+關機|关机[guan1 ji1]	tắt máy (điện thoại, máy tính…, vd. 手机关机了: điện thoại tắt máy rồi)/đóng máy; quay xong phim	claude-2026-09	ai-draft
+關心|关心[guan1 xin1]	quan tâm; quan tâm đến; để tâm đến (ai, việc gì) (vd. 谢谢你的关心: cảm ơn sự quan tâm của bạn)	claude-2026-09	ai-draft
+觀點|观点[guan1 dian3]	quan điểm; góc nhìn; lập trường/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+廣場|广场[guang3 chang3]	quảng trường (vd. 天安门广场: quảng trường Thiên An Môn)	claude-2026-09	ai-draft
+廣告|广告[guang3 gao4]	quảng cáo; mẩu quảng cáo; tờ quảng cáo (vd. 电视广告: quảng cáo trên tivi)/quảng cáo; làm quảng cáo (động từ)/Lượng từ: 项 (xiàng)	claude-2026-09	ai-draft
+國際|国际[guo2 ji4]	quốc tế (vd. 国际关系: quan hệ quốc tế; 国际学生: sinh viên quốc tế)	claude-2026-09	ai-draft
+過來|过来[guo4 lai2]	lại đây; đến đây; sang đây (hướng về phía người nói, vd. 你过来一下: bạn lại đây một chút; 走过来: đi lại đây)/xoay xở được; lo xuể; lo liệu được (thường dùng 忙得过来, 忙不过来, vd. 忙不过来: bận quá lo không xuể)	claude-2026-09	ai-draft
+過年|过年[guo4 nian2]	ăn Tết; đón Tết (Tết Nguyên Đán)	claude-2026-09	ai-draft
+過去|过去[guo4 qu4]	trước đây; ngày trước; hồi trước; quá khứ (vd. 过去我不会说汉语: trước đây tôi không biết nói tiếng Trung)/đi qua; đi sang; đi ngang qua (hướng rời xa người nói, vd. 我过去看看: tôi sang đó xem thử)/(thời gian) trôi qua; qua	claude-2026-09	ai-draft
+過|过[guo5]	(trợ từ đặt sau động từ, chỉ việc đã từng xảy ra, đã từng trải qua) đã từng; từng (vd. 我去过北京: tôi đã từng đến Bắc Kinh; 我没吃过: tôi chưa ăn bao giờ)/(trợ từ đặt sau động từ, chỉ việc đã làm xong) xong (vd. 吃过饭再走: ăn cơm xong rồi hãy đi)	claude-2026-09	ai-draft
+海|海[hai3]	biển; biển cả (vd. 大海: biển cả)/(nghĩa bóng) biển (người, vật); vô số; rất nhiều (vd. 人海: biển người)/Lượng từ: 个 (gè), 片 (piàn)	claude-2026-09	ai-draft
+海邊|海边[hai3 bian1]	bờ biển; bãi biển; ven biển (vd. 去海边玩: đi biển chơi)	claude-2026-09	ai-draft
+喊|喊[han3]	kêu; gọi to; hét; la (vd. 大声喊: hét to)/gọi (ai) (vd. 妈妈喊你吃饭: mẹ gọi bạn ăn cơm)	claude-2026-09	ai-draft
+好處|好处[hao3 chu5]	lợi ích; điều tốt; cái lợi; ưu điểm (vd. 运动对身体有好处: vận động có lợi cho sức khoẻ)/lợi lộc; mối lợi (được hưởng) (vd. 得到好处: được lợi)	claude-2026-09	ai-draft
+好多|好多[hao3 duo1]	nhiều; rất nhiều; bao nhiêu là (vd. 好多人: rất nhiều người)/khá hơn nhiều; đỡ nhiều (thường là 好多了, vd. 我的病好多了: bệnh của tôi đỡ nhiều rồi)	claude-2026-09	ai-draft
+好久|好久[hao3 jiu3]	lâu lắm; rất lâu; bao lâu nay (vd. 好久不见: lâu lắm rồi không gặp)	claude-2026-09	ai-draft
+好人|好人[hao3 ren2]	người tốt/người khoẻ mạnh; người không ốm đau/người dĩ hoà vi quý; người ba phải (sợ mất lòng ai, bỏ qua cả nguyên tắc)	claude-2026-09	ai-draft
+好事|好事[hao3 shi4]	việc tốt; chuyện tốt; điều hay (cũng dùng mỉa mai: việc hay ho gớm)/việc thiện; việc làm phúc/chuyện vui; dịp vui	claude-2026-09	ai-draft
+好像|好像[hao3 xiang4]	hình như; dường như; có vẻ (vd. 他好像病了: hình như anh ấy bị ốm)/giống như; như thể; cứ như là (vd. 好像在做梦: cứ như đang nằm mơ)	claude-2026-09	ai-draft
+合適|合适[he2 shi4]	thích hợp; phù hợp; hợp; vừa; vừa vặn (vd. 这双鞋很合适: đôi giày này rất vừa)	claude-2026-09	ai-draft
+河|河[he2]	sông (vd. 一条河: một con sông)/(trong từ ghép) sông Hoàng Hà (vd. 河北: Hà Bắc)/(trong từ ghép) Ngân Hà; sông Ngân (vd. 银河: dải Ngân Hà)/Lượng từ: 条 (tiáo), 道 (dào)	claude-2026-09	ai-draft
+黑|黑[hei1]	đen; màu đen/tối; tối tăm (vd. 天黑了: trời tối rồi)/mờ ám; bất chính; phi pháp; lén lút; nham hiểm (vd. 黑市: chợ đen)/(khẩu ngữ) bôi nhọ; nói xấu (ai)/(khẩu ngữ) ém; giấu nhẹm (cái gì)/(khẩu ngữ, tin học) xâm nhập trái phép (máy tính, trang web)	claude-2026-09	ai-draft
+黑板|黑板[hei1 ban3]	bảng đen; bảng (trong lớp học)/Lượng từ: 块 (kuài), 个 (gè)	claude-2026-09	ai-draft
+黑色|黑色[hei1 se4]	màu đen; đen	claude-2026-09	ai-draft
+紅|红[hong2]	đỏ; màu đỏ/nổi tiếng; nổi đình nổi đám; được ưa chuộng (vd. 走红: nổi tiếng; 网红: người nổi tiếng trên mạng)/(chính trị) cách mạng; đỏ (vd. 红军: Hồng quân)/(trong từ ghép) tiền thưởng; tiền lãi được chia (vd. 分红: chia lãi)	claude-2026-09	ai-draft
+紅色|红色[hong2 se4]	màu đỏ; đỏ/(chính trị) cách mạng; đỏ (vd. 红色政权: chính quyền cách mạng)	claude-2026-09	ai-draft
+後來|后来[hou4 lai2]	sau đó; về sau; rồi sau (chỉ dùng cho việc đã xảy ra; nói về tương lai thì dùng 以后, vd. 后来他去了北京: sau đó anh ấy đã đi Bắc Kinh)/(người) đến sau; mới đến (vd. 后来人: người đến sau; thế hệ sau)	claude-2026-09	ai-draft
+忽然|忽然[hu1 ran2]	bỗng nhiên; đột nhiên; bỗng dưng; chợt (vd. 忽然下雨了: bỗng nhiên trời mưa)	claude-2026-09	ai-draft
+湖|湖[hu2]	hồ (vd. 西湖: Tây Hồ)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+護照|护照[hu4 zhao4]	hộ chiếu/Lượng từ: 本 (běn), 个 (gè)	claude-2026-09	ai-draft
+花園|花园[hua1 yuan2]	vườn hoa; vườn; khu vườn cảnh; công viên (vd. 后花园: vườn sau nhà)/Lượng từ: 个 (gè), 座 (zuò)	claude-2026-09	ai-draft
+畫|画[hua4]	vẽ (vd. 画画儿: vẽ tranh; 画地图: vẽ bản đồ)/tranh; bức tranh; bức vẽ/vạch; kẻ (đường) (vd. 画线: kẻ đường)/nét (của chữ Hán) (vd. 笔画: nét bút)/Lượng từ: 幅 (fú), 张 (zhāng)	claude-2026-09	ai-draft
+畫家|画家[hua4 jia1]	hoạ sĩ; người vẽ tranh/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+畫兒|画儿[hua4 r5]	tranh; bức tranh; bức vẽ; hình vẽ (vd. 一张画儿: một bức tranh)	claude-2026-09	ai-draft
+壞處|坏处[huai4 chu5]	tác hại; cái hại; điều bất lợi; mặt xấu (trái nghĩa với 好处, vd. 抽烟有很多坏处: hút thuốc có nhiều tác hại)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+壞人|坏人[huai4 ren2]	người xấu; kẻ xấu; kẻ ác; kẻ gian	claude-2026-09	ai-draft
+歡迎|欢迎[huan1 ying2]	chào mừng; hoan nghênh; đón chào; tiếp đón (ai, việc gì) (vd. 欢迎你来越南: chào mừng bạn đến Việt Nam)/chào mừng!; hoan nghênh! (lời chào đón, vd. 欢迎光临: xin kính chào quý khách)	claude-2026-09	ai-draft
+換|换[huan4]	thay; đổi (cái này bằng cái khác) (vd. 换衣服: thay quần áo; 换工作: đổi việc)/đổi; trao đổi (lấy cái khác) (vd. 我用书换你的笔: tôi lấy sách đổi bút của bạn)/đổi (tiền) (vd. 换钱: đổi tiền)/chuyển; đổi sang (vd. 换车: đổi xe, chuyển tuyến)	claude-2026-09	ai-draft
+黃|黄[huang2]	vàng; màu vàng/(nội dung) đồi truỵ; khiêu dâm (vd. 黄色网站: trang web đồi truỵ)/(khẩu ngữ) đổ bể; hỏng; thất bại (việc gì) (vd. 这事黄了: việc này đổ bể rồi)	claude-2026-09	ai-draft
+黃色|黄色[huang2 se4]	màu vàng; vàng/đồi truỵ; khiêu dâm; dung tục (vd. 黄色电影: phim đồi truỵ)	claude-2026-09	ai-draft
+回國|回国[hui2 guo2]	về nước; trở về nước (mình)	claude-2026-09	ai-draft
+活動|活动[huo2 dong4]	hoạt động; sự kiện; phong trào; chiến dịch (vd. 课外活动: hoạt động ngoại khoá)/vận động; cử động; đi lại (cho giãn gân cốt) (vd. 活动活动身体: vận động cơ thể một chút)/lung lay; lỏng (răng, ốc vít…)/linh hoạt; di động; lưu động (vd. 活动资金: vốn lưu động)/chạy chọt; vận động (nhờ quan hệ, quà cáp, đút lót)/Lượng từ: 个 (gè), 项 (xiàng)	claude-2026-09	ai-draft
+或|或[huo4]	hoặc; hay (là) (vd. 你或我: bạn hoặc tôi)/(văn viết) có lẽ; có thể; biết đâu (vd. 或许: có lẽ)	claude-2026-09	ai-draft
+或者|或者[huo4 zhe3]	hoặc; hoặc là; hay là (dùng trong câu trần thuật; câu hỏi lựa chọn thường dùng 还是, vd. 今天或者明天: hôm nay hoặc ngày mai)/có lẽ; có thể; biết đâu	claude-2026-09	ai-draft
+機會|机会[ji1 hui4]	cơ hội; dịp; thời cơ (vd. 这是一个好机会: đây là một cơ hội tốt)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+雞|鸡[ji1]	gà; con gà (vd. 鸡肉: thịt gà; 鸡蛋: trứng gà)/(tiếng lóng) gái mại dâm/Lượng từ: 只 (zhī)	claude-2026-09	ai-draft
+級|级[ji2]	cấp; bậc; hạng; trình độ (vd. 一级: cấp 1)/khối lớp; khoá (học sinh cùng năm vào trường) (vd. 我们是同一级的: chúng tôi cùng khoá)/(lượng từ) bậc; cấp: dùng cho bậc thang, cấp độ (vd. 十级台阶: mười bậc thềm; 八级风: gió cấp 8)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+急|急[ji2]	gấp; khẩn cấp; cấp bách (vd. 急事: việc gấp)/vội; vội vàng; gấp gáp; nhanh; xiết (vd. 急着走: vội đi; 水流很急: nước chảy rất xiết)/sốt ruột; lo lắng; nóng lòng (vd. 别急: đừng sốt ruột)/làm (ai) sốt ruột; làm (ai) lo (vd. 急死我了: làm tôi sốt ruột chết đi được)	claude-2026-09	ai-draft
+計劃|计划[ji4 hua4]	kế hoạch; dự án; chương trình (vd. 学习计划: kế hoạch học tập)/lên kế hoạch; dự định; trù tính (vd. 我计划明年去中国: tôi dự định năm sau đi Trung Quốc)/Lượng từ: 个 (gè), 项 (xiàng)	claude-2026-09	ai-draft
+計算機|计算机[ji4 suan4 ji1]	máy tính; máy vi tính/(Đài Loan) máy tính bỏ túi; máy tính cầm tay/Lượng từ: 台 (tái)	claude-2026-09	ai-draft
+加|加[jia1]	thêm; cho thêm; bổ sung (vd. 加糖: cho thêm đường; 加微信: kết bạn WeChat)/cộng (vd. 二加三等于五: hai cộng ba bằng năm)/tăng; tăng thêm (vd. 加工资: tăng lương)/(đặt trước động từ hai âm tiết, thường sau 不, 大, 稍…, chỉ hành động tác động lên điều đã nhắc đến; thường không dịch, vd. 稍加改良: cải tiến đôi chút; 大加赞扬: hết lời khen ngợi)	claude-2026-09	ai-draft
+加油|加油[jia1 you2]	cố lên!; cố gắng thêm; cổ vũ; động viên (ai) (vd. 中国队，加油!: đội Trung Quốc, cố lên!)/đổ xăng; tiếp nhiên liệu; châm dầu (vd. 加油站: trạm xăng)/tăng tốc; nhấn ga	claude-2026-09	ai-draft
+科學家|科学家[ke1 xue2 jia1]	nhà khoa học/Lượng từ: 位 (wèi), 个 (gè)	claude-2026-09	ai-draft
+家庭|家庭[jia1 ting2]	gia đình; hộ gia đình (vd. 家庭作业: bài tập về nhà)/Lượng từ: 个 (gè), 户 (hù)	claude-2026-09	ai-draft
+家長|家长[jia1 zhang3]	phụ huynh; cha mẹ hoặc người giám hộ (của trẻ) (vd. 家长会: buổi họp phụ huynh)/chủ hộ; chủ gia đình; gia trưởng	claude-2026-09	ai-draft
+假|假[jia3]	giả; giả mạo; không thật; nhân tạo (vd. 假钱: tiền giả; 假牙: răng giả)/(văn viết, trong từ ghép) mượn; nhờ vào (vd. 假借: mượn)/(văn viết, trong từ ghép) nếu; giả sử (vd. 假如: nếu như)	claude-2026-09	ai-draft
+假期|假期[jia4 qi1]	kỳ nghỉ; ngày nghỉ; thời gian nghỉ (nghỉ lễ, nghỉ hè…)	claude-2026-09	ai-draft
+檢查|检查[jian3 cha2]	kiểm tra; xem xét; soát (vd. 检查作业: kiểm tra bài tập)/khám (bệnh) (vd. 检查身体: khám sức khoẻ)/sự kiểm tra; cuộc kiểm tra/Lượng từ: 次 (cì)	claude-2026-09	ai-draft
+見到|见到[jian4 dao4]	gặp; gặp được; thấy; nhìn thấy (vd. 很高兴见到你: rất vui được gặp bạn)	claude-2026-09	ai-draft
+件|件[jian4]	(lượng từ) chiếc; cái; việc; món: dùng cho áo (áo sơ mi, áo khoác…), sự việc, đồ vật, hành lý, quà (vd. 一件衣服: một chiếc áo; 一件事: một việc)/món; thứ; linh kiện; bộ phận (vd. 零件: linh kiện)	claude-2026-09	ai-draft
+健康|健康[jian4 kang1]	khoẻ mạnh; khoẻ; lành mạnh (vd. 健康的生活: lối sống lành mạnh)/sức khoẻ (vd. 祝你身体健康: chúc bạn mạnh khoẻ)	claude-2026-09	ai-draft
+講|讲[jiang3]	nói; kể (vd. 讲故事: kể chuyện; 讲汉语: nói tiếng Trung)/giảng; giải thích (vd. 老师讲课: thầy giáo giảng bài)/chú trọng; coi trọng; cầu kỳ (về việc gì) (vd. 讲卫生: giữ vệ sinh)/thương lượng; mặc cả (vd. 讲价: mặc cả)/về mặt; xét về (vd. 讲技术，他不如你: về kỹ thuật thì anh ấy không bằng bạn)/bài giảng; bài nói	claude-2026-09	ai-draft
+講話|讲话[jiang3 hua4]	nói; nói chuyện (vd. 上课不要讲话: trong giờ học đừng nói chuyện)/phát biểu (trước đông người)/bài phát biểu; bài nói chuyện/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+交|交[jiao1]	nộp; giao; đưa (cho ai) (vd. 交作业: nộp bài tập; 交钱: nộp tiền)/kết (bạn); làm quen; giao du (vd. 交朋友: kết bạn)/(đường) giao nhau; cắt nhau (vd. 两条线相交: hai đường cắt nhau)	claude-2026-09	ai-draft
+交給|交给[jiao1 gei3]	giao cho; đưa cho; nộp cho (ai) (vd. 把这本书交给老师: đưa quyển sách này cho thầy giáo)	claude-2026-09	ai-draft
+交朋友|交朋友[jiao1 peng2 you5]	kết bạn; làm bạn (với ai)/(phương ngữ) yêu đương; hẹn hò (với ai)	claude-2026-09	ai-draft
+交通|交通[jiao1 tong1]	giao thông; đi lại (vd. 交通很方便: đi lại rất thuận tiện)/vận tải; vận chuyển/thông tin liên lạc/liên lạc viên; giao liên/thông nhau; nối liền nhau	claude-2026-09	ai-draft
+角|角[jiao3]	(lượng từ) hào: đơn vị tiền, bằng một phần mười đồng nhân dân tệ (vd. 五角: năm hào)/góc (vd. 墙角: góc tường; 三角形: hình tam giác)/sừng; gạc (vd. 牛角: sừng bò)/có hình sừng; vật hình sừng/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+角度|角度[jiao3 du4]	góc; độ lớn của góc/(nghĩa bóng) góc độ; góc nhìn; quan điểm (vd. 换个角度想: nghĩ theo góc độ khác)	claude-2026-09	ai-draft
+餃子|饺子[jiao3 zi5]	sủi cảo; bánh chẻo; bánh xếp (vỏ bột mì có nhân, luộc, hấp hoặc áp chảo)/Lượng từ: 个 (gè), 只 (zhī)	claude-2026-09	ai-draft
+腳|脚[jiao3]	bàn chân; chân (vd. 脚疼: đau chân)/chân (của đồ vật, con vật); chân đế; phần dưới cùng (vd. 桌脚: chân bàn; 山脚: chân núi)/(lượng từ) cú; cái: dùng cho cú đá (vd. 踢了一脚: đá một cú)/Lượng từ: 双 (shuāng), 只 (zhī)	claude-2026-09	ai-draft
+叫作|叫作[jiao4 zuo4]	gọi là; được gọi là; tên là (vd. 这种花叫作牡丹: loài hoa này gọi là mẫu đơn)	claude-2026-09	ai-draft
+教師|教师[jiao4 shi1]	giáo viên; thầy giáo; cô giáo/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+教室|教室[jiao4 shi4]	phòng học; lớp học/Lượng từ: 间 (jiān)	claude-2026-09	ai-draft
+教學|教学[jiao4 xue2]	dạy học; giảng dạy; việc dạy và học (vd. 汉语教学: dạy tiếng Trung)/Lượng từ: 次 (cì)	claude-2026-09	ai-draft
+教育|教育[jiao4 yu4]	giáo dục; nền giáo dục (vd. 高等教育: giáo dục đại học)/dạy dỗ; dạy bảo; giáo dục (ai) (vd. 教育孩子: dạy dỗ con cái)	claude-2026-09	ai-draft
+接|接[jie1]	đón; đón tiếp (ai) (vd. 去机场接朋友: ra sân bay đón bạn)/nhận; nghe (điện thoại) (vd. 接电话: nghe điện thoại)/bắt; đỡ; hứng (vd. 接球: bắt bóng)/nối; nối liền; nối dài; kết nối (vd. 接电线: nối dây điện)/nhận ca; đổi ca; tiếp quản; thay (ai) (vd. 接班: nhận ca)	claude-2026-09	ai-draft
+接到|接到[jie1 dao4]	nhận được (thư, điện thoại, thông báo…) (vd. 接到一封信: nhận được một lá thư)	claude-2026-09	ai-draft
+接受|接受[jie1 shou4]	nhận; tiếp nhận; chấp nhận (đề nghị, lời mời, lời phê bình, hình phạt…) (vd. 接受邀请: nhận lời mời)/chịu; đồng ý; ưng thuận	claude-2026-09	ai-draft
+接下來|接下来[jie1 xia4 lai2]	tiếp theo; sau đây; kế đến (vd. 接下来我们学习第三课: tiếp theo chúng ta học bài 3)/nhận lấy; nhận (việc gì) (vd. 这个工作我接下来了: việc này tôi nhận rồi)	claude-2026-09	ai-draft
+接著|接着[jie1 zhe5]	tiếp; tiếp tục (làm gì) (vd. 你接着说: bạn nói tiếp đi)/tiếp theo; sau đó; rồi; tiếp đó (vd. 接着又下雨了: sau đó trời lại mưa)/bắt lấy; đỡ lấy (vd. 接着!: bắt lấy!)	claude-2026-09	ai-draft
+街|街[jie1]	phố; đường phố; con phố (vd. 逛街: dạo phố)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+節|节[jie2]	(lượng từ) tiết; toa; đoạn: dùng cho tiết học, toa tàu, đoạn, đốt… (vd. 一节课: một tiết học; 三节车厢: ba toa tàu)/ngày lễ; ngày tết (vd. 春节: Tết Nguyên Đán)/đốt; khớp; mắt (tre, xương…)/đoạn; phần; mục (vd. 章节: chương mục)/tiết kiệm (vd. 节约: tiết kiệm)/tiết khí (24 tiết trong năm theo lịch truyền thống Trung Quốc)	claude-2026-09	ai-draft
+節目|节目[jie2 mu4]	chương trình (truyền hình, phát thanh) (vd. 电视节目: chương trình truyền hình)/tiết mục (văn nghệ) (vd. 表演节目: biểu diễn tiết mục)/việc định làm; hoạt động dự định (vd. 今晚有什么节目?: tối nay có dự định gì không?)/Lượng từ: 个 (gè), 场 (chǎng), 项 (xiàng), 台 (tái), 套 (tào), 档 (dàng)	claude-2026-09	ai-draft
+節日|节日[jie2 ri4]	ngày lễ; ngày tết; lễ hội (vd. 节日快乐: chúc mừng ngày lễ)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+結果|结果[jie2 guo3]	kết quả; hậu quả; kết cục (vd. 考试结果: kết quả thi)/kết quả là; rốt cuộc; cuối cùng (vd. 结果他没来: rốt cuộc anh ấy không đến)/(cũ) giết; khử; kết liễu (ai)	claude-2026-09	ai-draft
+借|借[jie4]	mượn; vay (vd. 借书: mượn sách; 借钱: vay tiền)/cho mượn; cho vay (thường dùng 借给, 借出, vd. 借给他一本书: cho anh ấy mượn một quyển sách)/nhờ; mượn; dựa vào; nhân (dịp) (đôi khi dùng 借着, vd. 借这个机会: nhân dịp này)	claude-2026-09	ai-draft
+斤|斤[jin1]	(lượng từ) cân Trung Quốc: đơn vị khối lượng, ở Trung Quốc đại lục bằng 500 g (nửa ki-lô-gam), khác với một cân (1 kg) trong tiếng Việt ngày nay; ở Đài Loan bằng 600 g, ở Hồng Kông, Malaysia, Singapore khoảng 604 g (vd. 两斤苹果: 1 kg táo)	claude-2026-09	ai-draft
+今後|今后[jin1 hou4]	từ nay về sau; sau này; từ nay trở đi; trong tương lai	claude-2026-09	ai-draft
+進入|进入[jin4 ru4]	vào; đi vào; tiến vào (vd. 进入房间: vào phòng)/bước vào; gia nhập (giai đoạn, tổ chức…) (vd. 进入新阶段: bước vào giai đoạn mới)	claude-2026-09	ai-draft
+進行|进行[jin4 xing2]	tiến hành; thực hiện (điều tra, thảo luận, thi đấu…) (vd. 进行讨论: tiến hành thảo luận)/đang diễn ra; diễn ra (quá trình, sự việc) (vd. 比赛正在进行: trận đấu đang diễn ra)/(quân sự) hành quân; tiến lên (vd. 进行曲: hành khúc)	claude-2026-09	ai-draft
+近|近[jin4]	gần (không gian, thời gian) (vd. 我家离学校很近: nhà tôi cách trường rất gần)/gần; xấp xỉ; khoảng chừng (con số) (vd. 近百人: gần một trăm người)	claude-2026-09	ai-draft
+經常|经常[jing1 chang2]	thường; thường xuyên; hay (vd. 他经常迟到: anh ấy hay đến muộn)/thường ngày; hằng ngày; thường lệ	claude-2026-09	ai-draft
+經過|经过[jing1 guo4]	đi qua; đi ngang qua (nơi nào) (vd. 我每天经过这个公园: ngày nào tôi cũng đi qua công viên này)/trải qua; qua; thông qua (vd. 经过努力: nhờ nỗ lực)/quá trình; diễn biến (sự việc) (vd. 事情的经过: diễn biến sự việc)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+經理|经理[jing1 li3]	giám đốc; quản lý; người quản lý/Lượng từ: 个 (gè), 位 (wèi), 名 (míng)	claude-2026-09	ai-draft
+酒|酒[jiu3]	rượu (nhất là rượu gạo); đồ uống có cồn (vd. 喝酒: uống rượu; 啤酒: bia)/Lượng từ: 杯 (bēi), 瓶 (píng), 罐 (guàn), 桶 (tǒng), 缸 (gāng)	claude-2026-09	ai-draft
+酒店|酒店[jiu3 dian4]	khách sạn (vd. 五星级酒店: khách sạn năm sao)/quán rượu; tiệm rượu/nhà hàng; tiệm ăn/(Đài Loan) hộp đêm có tiếp viên nữ	claude-2026-09	ai-draft
+就要|就要[jiu4 yao4]	sắp; sắp sửa; sắp … rồi (thường có 了 ở cuối câu, vd. 火车就要开了: tàu sắp chạy rồi)	claude-2026-09	ai-draft
+舉|举[ju3]	giơ; giơ lên; nâng; nhấc lên (vd. 举手: giơ tay)/nêu; đưa ra; kể ra (ví dụ, sự việc) (vd. 举个例子: nêu một ví dụ)/bầu; bầu chọn; tiến cử (vd. 选举: bầu cử)/hành động; cử chỉ; việc làm (vd. 一举两得: một công đôi việc)	claude-2026-09	ai-draft
+舉手|举手[ju3 shou3]	giơ tay (để phát biểu, biểu quyết, ra hiệu…)	claude-2026-09	ai-draft
+舉行|举行[ju3 xing2]	tổ chức; cử hành (cuộc họp, buổi lễ, cuộc thi…) (vd. 举行婚礼: tổ chức đám cưới)	claude-2026-09	ai-draft
+句|句[ju4]	(lượng từ) câu: dùng cho câu nói, câu văn, câu thơ (vd. 一句话: một câu nói)/câu; câu văn; mệnh đề; cụm từ	claude-2026-09	ai-draft
+句子|句子[ju4 zi5]	câu; câu văn (vd. 这个句子很长: câu này rất dài)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+卡|卡[ka3]	thẻ (vd. 银行卡: thẻ ngân hàng)/chặn; chặn lại; kẹt; mắc/(khẩu ngữ, máy tính, mạng) chậm; giật; đơ/calo (viết tắt của 卡路里)/(trong từ ghép) xe tải (vd. 卡车: xe tải)/(trong từ ghép) băng cát-xét (vd. 卡带: băng cát-xét)/Lượng từ: 张 (zhāng), 片 (piàn)	claude-2026-09	ai-draft
+開機|开机[kai1 ji1]	bật máy; khởi động máy (máy tính, điện thoại…)/nổ máy; khởi động động cơ/khởi quay; bấm máy (phim, phim truyền hình)	claude-2026-09	ai-draft
+開心|开心[kai1 xin1]	vui; vui vẻ; vui mừng; vui thích (vd. 今天我很开心: hôm nay tôi rất vui)/trêu; trêu chọc; đùa (ai) (vd. 别拿我开心: đừng lấy tôi ra làm trò đùa)	claude-2026-09	ai-draft
+開學|开学[kai1 xue2]	khai giảng; vào năm học mới; bắt đầu học kỳ mới (vd. 九月一号开学: ngày 1 tháng 9 khai giảng)/(học sinh) bắt đầu đi học; vào học	claude-2026-09	ai-draft
+看法|看法[kan4 fa3]	cách nhìn; quan điểm; ý kiến; cách nghĩ (vd. 你有什么看法?: bạn có ý kiến gì?)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+考生|考生[kao3 sheng1]	thí sinh; người dự thi; người đăng ký dự thi	claude-2026-09	ai-draft
+靠|靠[kao4]	dựa; tựa (vào) (vd. 靠在墙上: dựa vào tường)/dựa vào; nhờ vào; trông cậy vào (vd. 靠自己: dựa vào bản thân)/gần; sát; ghé vào; cập (bờ) (vd. 靠窗的座位: chỗ ngồi cạnh cửa sổ)/tin cậy; đáng tin (vd. 可靠: đáng tin cậy)/(thô tục, tiếng chửi thề) mẹ kiếp!; chết tiệt!	claude-2026-09	ai-draft
+科|科[ke1]	khoa; phòng; ban (trong bệnh viện, cơ quan) (vd. 内科: khoa nội)/ngành; môn (học); lĩnh vực (vd. 文科: các môn xã hội; 理科: các môn tự nhiên)/(sinh học) họ (vd. 猫科: họ mèo)/(văn viết) xử (phạt); đánh (thuế); phạt (ai) (vd. 科以罚款: phạt tiền)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+科學|科学[ke1 xue2]	khoa học; tri thức khoa học (vd. 自然科学: khoa học tự nhiên)/(có tính) khoa học; hợp lý (vd. 这个方法不科学: cách này không khoa học)/Lượng từ: 门 (mén), 个 (gè), 种 (zhǒng)	claude-2026-09	ai-draft
+可愛|可爱[ke3 ai4]	dễ thương; đáng yêu; đáng mến (vd. 这个孩子很可爱: đứa bé này rất dễ thương)	claude-2026-09	ai-draft
+可能|可能[ke3 neng2]	có thể; có lẽ; chắc là (vd. 他可能不来了: có lẽ anh ấy không đến nữa)/có thể xảy ra; khả thi (vd. 这是不可能的: điều này là không thể)/khả năng; sự có thể; xác suất (vd. 有这个可能: có khả năng đó)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+可怕|可怕[ke3 pa4]	đáng sợ; kinh khủng; khủng khiếp; ghê gớm; đáng gờm (vd. 这个电影很可怕: bộ phim này rất đáng sợ)	claude-2026-09	ai-draft
+可是|可是[ke3 shi4]	nhưng; nhưng mà; thế nhưng; song (vd. 我想去，可是没有时间: tôi muốn đi nhưng không có thời gian)/(nhấn mạnh) thật là; quả thật; đúng là (vd. 这可是好东西: đây đúng là đồ tốt)	claude-2026-09	ai-draft
+可以|可以[ke3 yi3]	có thể (vd. 我们可以坐地铁去: chúng ta có thể đi tàu điện ngầm)/được; được phép (xin phép, cho phép) (vd. 我可以进来吗?: tôi vào được không?; 这里不可以抽烟: ở đây không được hút thuốc)/(khẩu ngữ) khá; tạm được; không tồi (vd. 他的汉语还可以: tiếng Trung của anh ấy cũng tạm được)	claude-2026-09	ai-draft
+克|克[ke4]	(lượng từ) gam: đơn vị khối lượng (vd. 五百克: 500 gam)/khắc phục; vượt qua; chế ngự; kiềm chế (vd. 克服困难: khắc phục khó khăn)/(văn viết) có thể; làm nổi	claude-2026-09	ai-draft
+刻|刻[ke4]	(lượng từ) khắc: mười lăm phút, một phần tư giờ (vd. 三点一刻: ba giờ mười lăm)/khắc; chạm; chạm khắc (vd. 刻字: khắc chữ)/lúc; khoảnh khắc; chốc lát (vd. 此刻: lúc này; 立刻: lập tức)/khắc nghiệt; hà khắc; cay nghiệt	claude-2026-09	ai-draft
+客人|客人[ke4 ren2]	khách; khách khứa; khách đến thăm (vd. 家里来客人了: nhà có khách)/khách hàng (ở cửa hàng, khách sạn…)/Lượng từ: 位 (wèi), 个 (gè)	claude-2026-09	ai-draft
+課堂|课堂[ke4 tang2]	lớp học; phòng học (vd. 课堂上: trong lớp)/giờ học; buổi học; tiết học/Lượng từ: 间 (jiān)	claude-2026-09	ai-draft
+空氣|空气[kong1 qi4]	không khí (vd. 新鲜空气: không khí trong lành)/bầu không khí (vd. 空气很紧张: bầu không khí rất căng thẳng)	claude-2026-09	ai-draft
+哭|哭[ku1]	khóc (vd. 别哭了: đừng khóc nữa)	claude-2026-09	ai-draft
+快餐|快餐[kuai4 can1]	đồ ăn nhanh; thức ăn nhanh; bữa ăn nhanh; đồ ăn nhẹ (vd. 快餐店: cửa hàng đồ ăn nhanh)	claude-2026-09	ai-draft
+快點兒|快点儿[kuai4 dian3 r5]	nhanh lên!; mau lên!; nhanh hơn một chút (vd. 快点儿走吧: đi nhanh lên nào)	claude-2026-09	ai-draft
+快樂|快乐[kuai4 le4]	vui vẻ; vui; hạnh phúc (vd. 生日快乐: chúc mừng sinh nhật)	claude-2026-09	ai-draft
+快要|快要[kuai4 yao4]	sắp; sắp sửa; gần (làm gì, xảy ra) (thường có 了 ở cuối câu, vd. 快要下雨了: sắp mưa rồi)	claude-2026-09	ai-draft
+筷子|筷子[kuai4 zi5]	đũa (vd. 一双筷子: một đôi đũa)/Lượng từ: 双 (shuāng), 对 (duì), 根 (gēn), 把 (bǎ)	claude-2026-09	ai-draft
+拉|拉[la1]	kéo; lôi; kéo lê (vd. 拉门: kéo cửa; 拉窗帘: kéo rèm)/kéo (đàn); chơi (nhạc cụ có vĩ) (vd. 拉小提琴: kéo vĩ cầm)/(trong từ ghép) tán gẫu; nói chuyện phiếm (vd. 拉家常: chuyện trò việc nhà)/(khẩu ngữ) đi ngoài; đi đại tiện (vd. 拉肚子: tiêu chảy)	claude-2026-09	ai-draft
+來自|来自[lai2 zi4]	đến từ (nơi nào) (vd. 我来自越南: tôi đến từ Việt Nam)/(trong tiêu đề email) người gửi; từ	claude-2026-09	ai-draft
+藍|蓝[lan2]	xanh lam; xanh da trời; xanh dương (vd. 蓝天: trời xanh)/(thực vật) cây chàm (dùng để nhuộm)	claude-2026-09	ai-draft
+藍色|蓝色[lan2 se4]	màu xanh lam; màu xanh da trời; màu xanh dương	claude-2026-09	ai-draft
+籃球|篮球[lan2 qiu2]	bóng rổ; quả bóng rổ (vd. 打篮球: chơi bóng rổ)/Lượng từ: 个 (gè), 只 (zhī)	claude-2026-09	ai-draft
+老年|老年[lao3 nian2]	tuổi già; lúc về già; tuổi xế chiều/(người) cao tuổi; già (vd. 老年人: người cao tuổi)	claude-2026-09	ai-draft
+老朋友|老朋友[lao3 peng2 you5]	bạn cũ; bạn lâu năm/(tiếng lóng, nói tránh) kinh nguyệt; đến tháng	claude-2026-09	ai-draft
+老是|老是[lao3 shi5]	luôn; cứ; hay; lúc nào cũng (thường mang ý phàn nàn, vd. 他老是迟到: anh ấy lúc nào cũng đến muộn)	claude-2026-09	ai-draft
+離|离[li2]	(giới từ chỉ khoảng cách về không gian hoặc thời gian) cách (vd. 我家离学校很近: nhà tôi cách trường rất gần; 离春节还有三天: còn ba ngày nữa là đến Tết)/rời; rời khỏi; xa; lìa (vd. 离家: xa nhà)/thiếu; không có; tách khỏi (thường dùng 离不开, vd. 离不开你: không thể thiếu bạn)	claude-2026-09	ai-draft
+離開|离开[li2 kai1]	rời; rời khỏi; rời đi; rời xa (vd. 离开北京: rời Bắc Kinh)	claude-2026-09	ai-draft
+禮物|礼物[li3 wu4]	quà; món quà; quà tặng; lễ vật (vd. 生日礼物: quà sinh nhật)/Lượng từ: 个 (gè), 件 (jiàn), 份 (fèn)	claude-2026-09	ai-draft
+裡頭|里头[li3 tou5]	bên trong; phía trong; trong (vd. 房子里头: bên trong ngôi nhà)	claude-2026-09	ai-draft
+理想|理想[li3 xiang3]	lý tưởng; ước mơ; hoài bão (vd. 你的理想是什么?: ước mơ của bạn là gì?)/lý tưởng; hoàn hảo; như ý (vd. 理想的工作: công việc lý tưởng)	claude-2026-09	ai-draft
+例如|例如[li4 ru2]	ví dụ; chẳng hạn; ví dụ như; như là	claude-2026-09	ai-draft
+例子|例子[li4 zi5]	ví dụ; thí dụ (vd. 举个例子: nêu một ví dụ)/trường hợp (cụ thể)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+臉|脸[lian3]	mặt; khuôn mặt; gương mặt (vd. 洗脸: rửa mặt)/Lượng từ: 张 (zhāng), 个 (gè)	claude-2026-09	ai-draft
+練|练[lian4]	luyện tập; tập; luyện (vd. 练汉字: luyện viết chữ Hán)/rèn luyện; huấn luyện; trau dồi (kỹ năng)	claude-2026-09	ai-draft
+練習|练习[lian4 xi2]	luyện tập; tập; thực hành (vd. 练习口语: luyện nói)/bài tập (vd. 做练习: làm bài tập)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+涼|凉[liang2]	mát; mát mẻ (vd. 凉风: gió mát)/lạnh; nguội (vd. 凉水: nước lạnh; 饭凉了: cơm nguội rồi)	claude-2026-09	ai-draft
+涼快|凉快[liang2 kuai5]	mát; mát mẻ; mát dịu (thời tiết, chỗ ở…) (vd. 今天很凉快: hôm nay trời mát)/hóng mát; cho mát người (vd. 到外面凉快凉快: ra ngoài hóng mát chút)	claude-2026-09	ai-draft
+亮|亮[liang4]	sáng; sáng sủa (vd. 天亮了: trời sáng rồi)/chiếu sáng; sáng lên; loé lên (vd. 灯亮了: đèn sáng rồi)/(giọng, tiếng) to và rõ; vang/đưa ra; giơ ra (giấy tờ…); công khai (quan điểm…) (vd. 亮出证件: xuất trình giấy tờ)	claude-2026-09	ai-draft
+輛|辆[liang4]	(lượng từ) chiếc; cái: dùng cho xe cộ (vd. 一辆车: một chiếc xe; 两辆自行车: hai chiếc xe đạp)	claude-2026-09	ai-draft
+零下|零下[ling2 xia4]	dưới không độ; âm (nhiệt độ) (vd. 零下五度: âm năm độ)	claude-2026-09	ai-draft
+留|留[liu2]	ở lại; lưu lại (vd. 留在北京: ở lại Bắc Kinh)/để lại (lời nhắn…) (vd. 留言: để lại lời nhắn)/giữ lại; giữ; dành (vd. 给我留个座位: giữ cho tôi một chỗ)/lưu giữ; bảo tồn	claude-2026-09	ai-draft
+留下|留下[liu2 xia4]	để lại (vd. 留下电话号码: để lại số điện thoại; 留下印象: để lại ấn tượng)/ở lại (vd. 他留下了: anh ấy ở lại)/giữ lại; giữ (ai) lại, không cho đi	claude-2026-09	ai-draft
+留學生|留学生[liu2 xue2 sheng1]	du học sinh; lưu học sinh; sinh viên nước ngoài (người đi học ở nước ngoài, hoặc người nước ngoài đang học ở Trung Quốc)/người đi du học về (nước)	claude-2026-09	ai-draft
+流|流[liu2]	chảy (vd. 流汗: chảy mồ hôi; 流眼泪: chảy nước mắt)/lan truyền; lưu truyền; lưu thông/trôi; trôi dạt/dòng (nước hoặc thứ giống dòng nước) (vd. 河流: dòng sông; 人流: dòng người)/hạng; loại; bậc (vd. 一流: hạng nhất)	claude-2026-09	ai-draft
+流利|流利[liu2 li4]	lưu loát; trôi chảy (vd. 他的汉语说得很流利: anh ấy nói tiếng Trung rất lưu loát)	claude-2026-09	ai-draft
+流行|流行[liu2 xing2]	thịnh hành; phổ biến; hợp mốt; đang mốt (quần áo, bài hát…) (vd. 流行歌曲: bài hát thịnh hành)/lây lan; lan tràn (bệnh truyền nhiễm…)	claude-2026-09	ai-draft
+路邊|路边[lu4 bian1]	lề đường; ven đường; bên đường (vd. 在路边等: đợi bên đường)	claude-2026-09	ai-draft
+旅客|旅客[lu:3 ke4]	hành khách; lữ khách; khách đi đường/du khách; khách du lịch	claude-2026-09	ai-draft
+旅行|旅行[lu:3 xing2]	đi du lịch; du lịch; đi chơi xa (vd. 去北京旅行: đi du lịch Bắc Kinh)/chuyến đi; chuyến du lịch/Lượng từ: 趟 (tàng), 次 (cì)	claude-2026-09	ai-draft
+旅遊|旅游[lu:3 you2]	đi du lịch; du lịch (vd. 去中国旅游: đi du lịch Trung Quốc)/chuyến du lịch; chuyến đi/(ngành) du lịch (vd. 旅游业: ngành du lịch)	claude-2026-09	ai-draft
+綠|绿[lu:4]	xanh lá; xanh lục; màu xanh lá cây (vd. 绿灯: đèn xanh; 绿茶: trà xanh)/(tiếng lóng) cắm sừng (vợ, chồng, người yêu)	claude-2026-09	ai-draft
+綠色|绿色[lu:4 se4]	màu xanh lá; màu xanh lục; xanh lá cây/(nghĩa bóng) xanh; sạch; thân thiện với môi trường (vd. 绿色食品: thực phẩm sạch)	claude-2026-09	ai-draft
+賣|卖[mai4]	bán (vd. 卖东西: bán hàng)/bán đứng; phản bội (vd. 卖国: bán nước)/ra sức; dốc sức (không tiếc công sức) (vd. 卖力: ra sức)/khoe; phô trương (vd. 卖弄: khoe khoang)	claude-2026-09	ai-draft
+滿|满[man3]	đầy; đầy ắp; chật kín (vd. 教室里坐满了人: phòng học ngồi kín người)/rót đầy; làm đầy (vd. 满上: rót đầy)/đủ; tròn (đạt tới mức hạn định) (vd. 满十八岁: đủ 18 tuổi)/hoàn toàn; rất; khá (vd. 满好: khá tốt)/hài lòng; thoả mãn (vd. 不满: bất mãn)	claude-2026-09	ai-draft
+滿意|满意[man3 yi4]	hài lòng; vừa lòng; vừa ý (vd. 我对这个房间很满意: tôi rất hài lòng với căn phòng này)	claude-2026-09	ai-draft
+貓|猫[mao1]	mèo; con mèo/Lượng từ: 只 (zhī)	claude-2026-09	ai-draft
+米|米[mi3]	gạo (vd. 大米: gạo; 米饭: cơm)/(lượng từ) mét: đơn vị đo chiều dài (vd. 一百米: một trăm mét)	claude-2026-09	ai-draft
+面|面[mian4]	phía; bên; mặt (vd. 前面: phía trước; 外面: bên ngoài)/mặt; bề mặt; mặt trên (vd. 桌面: mặt bàn)/mặt; khuôn mặt (thường trong từ ghép, vd. 见面: gặp mặt)/phương diện; mặt; khía cạnh (vd. 方面: phương diện)/(lượng từ) tấm; lá; chiếc: dùng cho vật có mặt phẳng như gương, cờ, trống (vd. 一面镜子: một tấm gương; 一面旗子: một lá cờ)	claude-2026-09	ai-draft
+麵|面[mian4]	mì; mì sợi (vd. 吃面: ăn mì)/bột; bột mì (vd. 面粉: bột mì)/(thức ăn) bở; mềm (không giòn)	claude-2026-09	ai-draft
+面前|面前[mian4 qian2]	trước mặt; phía trước; trước (ai, cái gì) (vd. 在大家面前: trước mặt mọi người)	claude-2026-09	ai-draft
+名|名[ming2]	tên; tên gọi (vd. 名字: tên)/(lượng từ) người: dùng cho người, trang trọng hơn 个, hay gặp trong văn viết, thông báo (vd. 三名学生: ba học sinh)/hạng; thứ hạng (vd. 第一名: hạng nhất)/nổi tiếng; có tiếng (vd. 名人: người nổi tiếng)/(viết tắt) danh từ (từ loại)	claude-2026-09	ai-draft
+名稱|名称[ming2 cheng1]	tên; tên gọi (của sự vật, tổ chức…) (vd. 公司名称: tên công ty)	claude-2026-09	ai-draft
+名單|名单[ming2 dan1]	danh sách (tên) (vd. 学生名单: danh sách học sinh)	claude-2026-09	ai-draft
+明星|明星[ming2 xing1]	ngôi sao; minh tinh; người nổi tiếng (vd. 电影明星: ngôi sao điện ảnh)	claude-2026-09	ai-draft
+目的|目的[mu4 di4]	mục đích; mục tiêu (vd. 学习的目的: mục đích học tập)	claude-2026-09	ai-draft
+拿出|拿出[na2 chu1]	lấy ra; rút ra; đưa ra (vd. 从包里拿出一本书: lấy trong túi ra một quyển sách)/bỏ ra; cung cấp (tiền, sức…)/đưa ra; nêu ra (phương án, chứng cứ…)	claude-2026-09	ai-draft
+拿到|拿到[na2 dao4]	lấy được; nhận được; có được (vd. 拿到毕业证: nhận được bằng tốt nghiệp)	claude-2026-09	ai-draft
+那會兒|那会儿[na4 hui4 r5]	lúc đó; hồi đó; khi ấy (trong quá khứ hoặc tương lai) (vd. 那会儿我还是学生: hồi đó tôi còn là học sinh)	claude-2026-09	ai-draft
+那麼|那么[na4 me5]	như thế; như vậy; thế (vd. 别那么说: đừng nói như thế; 那么大: to thế)/(đặt trước số lượng) khoảng; chừng/vậy thì; thế thì; nếu vậy	claude-2026-09	ai-draft
+那時候|那时候[na4 shi2 hou5]	lúc đó; khi đó; hồi ấy	claude-2026-09	ai-draft
+那時|那时[na4 shi2]	lúc đó; khi đó; hồi ấy; thời đó	claude-2026-09	ai-draft
+那樣|那样[na4 yang4]	như thế; như vậy; kiểu đó; loại đó (vd. 那样的人: người như thế; 别那样做: đừng làm như vậy)	claude-2026-09	ai-draft
+南方|南方[nan2 fang1]	phía nam; phương nam/miền Nam (Trung Quốc, thường chỉ vùng phía nam sông Trường Giang)	claude-2026-09	ai-draft
+難過|难过[nan2 guo4]	buồn; buồn bã; đau lòng (vd. 别难过: đừng buồn)/khó chịu; mệt (trong người)/(cuộc sống) khó khăn; chật vật (vd. 日子难过: sống khó khăn)	claude-2026-09	ai-draft
+難看|难看[nan2 kan4]	xấu; xấu xí; khó coi	claude-2026-09	ai-draft
+難受|难受[nan2 shou4]	khó chịu; mệt; không khoẻ (trong người) (vd. 我头疼，很难受: tôi đau đầu, khó chịu lắm)/đau đớn; khổ sở; khó chịu đựng (cả thể xác lẫn tinh thần, vd. 心里难受: trong lòng buồn bực)	claude-2026-09	ai-draft
+難題|难题[nan2 ti2]	vấn đề khó; bài toán khó; câu hỏi hóc búa; nan đề	claude-2026-09	ai-draft
+難聽|难听[nan2 ting1]	khó nghe; chói tai; nghe dở (vd. 这首歌很难听: bài hát này nghe dở tệ)/(lời nói) thô tục; khó nghe; xúc phạm (vd. 说话难听: ăn nói khó nghe)/(chuyện) mang tiếng; mất mặt	claude-2026-09	ai-draft
+能夠|能够[neng2 gou4]	có thể; có khả năng; làm được (vd. 能够参加: có thể tham gia)	claude-2026-09	ai-draft
+年級|年级[nian2 ji2]	lớp; khối lớp; năm (học) (vd. 一年级: lớp một; 大学三年级: năm ba đại học)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+年輕|年轻[nian2 qing1]	trẻ; trẻ tuổi (vd. 年轻人: người trẻ)	claude-2026-09	ai-draft
+鳥|鸟[niao3]	chim; con chim/Lượng từ: 只 (zhī), 群 (qún)	claude-2026-09	ai-draft
+弄|弄[nong4]	làm (vd. 弄饭: nấu cơm)/làm cho (thành ra thế nào) (vd. 弄坏: làm hỏng; 弄脏: làm bẩn; 弄清楚: làm cho rõ)/lo liệu; xoay xở; kiếm (vd. 弄点儿吃的: kiếm chút gì ăn)/sửa; sửa chữa (vd. 电脑弄好了: máy tính sửa xong rồi)/nghịch; mân mê; đùa nghịch (vd. 别弄了: đừng nghịch nữa)	claude-2026-09	ai-draft
+努力|努力[nu3 li4]	cố gắng; nỗ lực; ra sức (vd. 努力学习: cố gắng học tập)/chăm chỉ; cần cù; siêng năng	claude-2026-09	ai-draft
+爬|爬[pa2]	bò (vd. 孩子会爬了: đứa bé biết bò rồi)/leo; trèo (vd. 爬山: leo núi; 爬树: trèo cây)/dậy; ngồi dậy; bò dậy (vd. 爬起来: bò dậy)	claude-2026-09	ai-draft
+爬山|爬山[pa2 shan1]	leo núi; đi bộ đường núi (vd. 周末去爬山: cuối tuần đi leo núi)	claude-2026-09	ai-draft
+怕|怕[pa4]	sợ; e sợ; ngại (vd. 我怕狗: tôi sợ chó)/lo; sợ (rằng) (vd. 我怕他不来: tôi sợ anh ấy không đến)/chịu không nổi; kỵ (vd. 怕冷: sợ lạnh)/có lẽ; e là; sợ là (vd. 怕是要下雨了: e là sắp mưa)	claude-2026-09	ai-draft
+排|排[pai2]	xếp; sắp xếp (theo thứ tự); xếp hàng (vd. 排队: xếp hàng)/hàng; dãy (vd. 第一排: hàng đầu tiên)/(lượng từ) hàng; dãy: dùng cho người hoặc vật xếp thành hàng (vd. 一排椅子: một dãy ghế)/tập; tập dượt; diễn tập (vd. 排练: tập dượt)/loại bỏ; bài trừ; thải ra; xả (vd. 排水: thoát nước)/(trong từ ghép) bít tết; cốt lết; sườn (vd. 牛排: bít tết bò)/(quân sự) trung đội	claude-2026-09	ai-draft
+排隊|排队[pai2 dui4]	xếp hàng (vd. 请排队: xin vui lòng xếp hàng)	claude-2026-09	ai-draft
+排球|排球[pai2 qiu2]	bóng chuyền (môn thể thao hoặc quả bóng) (vd. 打排球: chơi bóng chuyền)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+碰|碰[peng4]	chạm; đụng (vd. 别碰我: đừng chạm vào tôi)/gặp; bắt gặp; gặp phải (vd. 碰到问题: gặp vấn đề)/va; va phải; đụng phải (vd. 头碰到门上: đầu va vào cửa)	claude-2026-09	ai-draft
+碰到|碰到[peng4 dao4]	gặp; tình cờ gặp; bắt gặp (vd. 在街上碰到老师: gặp thầy giáo ngoài phố)/gặp phải (khó khăn, vấn đề…)/chạm vào; va vào; đụng phải	claude-2026-09	ai-draft
+碰見|碰见[peng4 jian4]	tình cờ gặp; bắt gặp; chạm mặt (vd. 我在超市碰见了他: tôi tình cờ gặp anh ấy ở siêu thị)	claude-2026-09	ai-draft
+篇|篇[pian1]	(lượng từ) bài; thiên; chương: dùng cho bài viết, bài văn, bài báo (vd. 一篇文章: một bài văn)/bài viết; tác phẩm viết; thiên (vd. 长篇小说: tiểu thuyết dài)/tờ; trang (giấy)	claude-2026-09	ai-draft
+便宜|便宜[pian2 yi5]	rẻ; giá rẻ (vd. 这件衣服很便宜: bộ quần áo này rất rẻ)/món lợi nhỏ; cái lợi (vd. 占便宜: được lợi; lợi dụng)/bỏ qua cho; tha nhẹ cho (ai) (vd. 便宜你了: lần này tha cho cậu đấy)	claude-2026-09	ai-draft
+片|片[pian4]	miếng; lát; mảnh (mỏng) (vd. 面包片: lát bánh mì; 雪片: bông tuyết)/(lượng từ) lát; miếng; viên; tấm: dùng cho vật mỏng như bánh mì, thuốc viên, lá cây (vd. 一片面包: một lát bánh mì; 两片药: hai viên thuốc)/(lượng từ) vùng; dải; bãi: dùng cho đất đai, mặt nước (vd. 一片草地: một bãi cỏ)/(lượng từ, chỉ đi với 一) cả một; tấm; bầu: dùng cho cảnh tượng, bầu không khí, âm thanh, tình cảm (vd. 一片好心: một tấm lòng tốt)/phim; phim truyền hình (thường trong từ ghép, vd. 动画片: phim hoạt hình)/(lượng từ) đĩa; bộ: dùng cho đĩa CD, DVD, phim/thái mỏng; lạng mỏng/một phần; không đầy đủ; phiến diện (vd. 片面: phiến diện)	claude-2026-09	ai-draft
+漂亮|漂亮[piao4 liang5]	đẹp; xinh; xinh đẹp (vd. 漂亮的姑娘: cô gái xinh đẹp)/(làm việc) đẹp; hay; xuất sắc (vd. 干得漂亮: làm tốt lắm)	claude-2026-09	ai-draft
+平|平[ping2]	bằng; phẳng; bằng phẳng (vd. 桌面很平: mặt bàn rất phẳng)/san bằng; làm cho phẳng/ngang; bằng nhau; công bằng (vd. 平等: bình đẳng; 公平: công bằng)/hoà (thi đấu) (vd. 两队打平了: hai đội hoà nhau)/bình thường; thường; trung bình (vd. 平时: ngày thường)/yên; yên bình; bình tĩnh (vd. 平安: bình an)/(khẩu ngữ) mét vuông (vd. 一百平的房子: căn nhà 100 mét vuông)	claude-2026-09	ai-draft
+平安|平安[ping2 an1]	bình an; an toàn; yên ổn; không có chuyện gì (vd. 一路平安: thượng lộ bình an)	claude-2026-09	ai-draft
+平常|平常[ping2 chang2]	bình thường; thông thường; không có gì đặc biệt (vd. 很平常的事: chuyện rất bình thường)/ngày thường; thường ngày; thường thường (vd. 我平常七点起床: ngày thường tôi dậy lúc 7 giờ)	claude-2026-09	ai-draft
+平等|平等[ping2 deng3]	bình đẳng; ngang nhau (vd. 男女平等: nam nữ bình đẳng)/sự bình đẳng	claude-2026-09	ai-draft
+平時|平时[ping2 shi2]	ngày thường; lúc bình thường; thường ngày (vd. 平时我很少看电视: ngày thường tôi ít xem tivi)/thời bình (lúc không có chiến tranh)	claude-2026-09	ai-draft
+瓶|瓶[ping2]	chai; lọ; bình (vd. 花瓶: bình hoa)/(lượng từ) chai; lọ; bình: dùng cho đồ đựng trong chai, như rượu, nước, bia (vd. 一瓶水: một chai nước)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+瓶子|瓶子[ping2 zi5]	chai; lọ; bình/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+普通|普通[pu3 tong1]	bình thường; thông thường; phổ thông (vd. 普通人: người bình thường)	claude-2026-09	ai-draft
+普通話|普通话[pu3 tong1 hua4]	tiếng Phổ thông (tiếng Trung tiêu chuẩn, tiếng Quan thoại chuẩn) (vd. 说普通话: nói tiếng Phổ thông)	claude-2026-09	ai-draft
+其他|其他[qi2 ta1]	khác; (những người, cái) khác (vd. 其他人: những người khác)/cái khác; điều khác; phần còn lại (vd. 还有其他的吗?: còn gì khác không?)	claude-2026-09	ai-draft
+其中|其中[qi2 zhong1]	trong đó; trong số đó (vd. 其中一个: một trong số đó)	claude-2026-09	ai-draft
+騎|骑[qi2]	đi (xe đạp, xe máy); cưỡi (ngựa…) (vd. 骑自行车: đi xe đạp; 骑马: cưỡi ngựa)/ngồi dạng chân lên; ngồi cưỡi lên	claude-2026-09	ai-draft
+騎車|骑车[qi2 che1]	đi xe đạp; đạp xe; đi xe máy (vd. 骑车上班: đi xe đạp đi làm)	claude-2026-09	ai-draft
+起飛|起飞[qi3 fei1]	cất cánh (máy bay, tên lửa) (vd. 飞机起飞了: máy bay cất cánh rồi)/(nghĩa bóng) cất cánh; phát triển nhanh (kinh tế, doanh nghiệp…)	claude-2026-09	ai-draft
+氣|气[qi4]	khí; hơi; không khí (vd. 空气: không khí; 天然气: khí thiên nhiên)/tức; giận; tức giận (vd. 生气: tức giận)/chọc tức; làm (ai) tức (vd. 别气我了: đừng chọc tức tôi nữa)/mùi (vd. 香气: mùi thơm)/thời tiết (vd. 天气: thời tiết)/khí (sinh lực, trong Đông y, võ thuật)	claude-2026-09	ai-draft
+氣溫|气温[qi4 wen1]	nhiệt độ (không khí) (vd. 今天气温很高: hôm nay nhiệt độ rất cao)	claude-2026-09	ai-draft
+千|千[qian1]	nghìn; ngàn (1000) (vd. 三千: ba nghìn)	claude-2026-09	ai-draft
+千克|千克[qian1 ke4]	ki-lô-gam (kg); cân; ký (vd. 两千克: hai ki-lô-gam)	claude-2026-09	ai-draft
+前年|前年[qian2 nian2]	năm kia (hai năm trước)	claude-2026-09	ai-draft
+牆|墙[qiang2]	tường; bức tường (vd. 墙上挂着一幅画: trên tường treo một bức tranh)/Lượng từ: 面 (miàn), 堵 (dǔ)	claude-2026-09	ai-draft
+青年|青年[qing1 nian2]	thanh niên; người trẻ tuổi; giới trẻ (vd. 青年人: người trẻ)/tuổi trẻ; tuổi thanh xuân	claude-2026-09	ai-draft
+青少年|青少年[qing1 shao4 nian2]	thanh thiếu niên; thiếu niên; lứa tuổi mới lớn (vd. 青少年时期: thời thanh thiếu niên)	claude-2026-09	ai-draft
+輕|轻[qing1]	nhẹ (trọng lượng) (vd. 这个包很轻: cái túi này rất nhẹ)/nhẹ nhàng; khẽ; nhẹ tay (vd. 轻点儿: nhẹ tay thôi)/nhẹ; ít; không nghiêm trọng (vd. 病很轻: bệnh nhẹ; 年纪轻: tuổi còn trẻ)/dễ; thoải mái; nhẹ nhõm (vd. 轻松: nhẹ nhõm)/coi nhẹ; xem thường (vd. 轻视: coi thường)/khinh suất; nông nổi; tuỳ tiện (vd. 轻信: dễ tin)/(ngữ âm) đọc nhẹ; không nhấn (vd. 轻声: thanh nhẹ)	claude-2026-09	ai-draft
+清楚|清楚[qing1 chu5]	rõ; rõ ràng; rành mạch (vd. 听清楚: nghe rõ; 写得很清楚: viết rất rõ ràng)/hiểu rõ; biết rõ; nắm rõ (vd. 我不清楚: tôi không rõ)	claude-2026-09	ai-draft
+晴|晴[qing2]	(trời) nắng; quang; quang đãng; tạnh ráo (vd. 天晴了: trời nắng rồi)	claude-2026-09	ai-draft
+晴天|晴天[qing2 tian1]	trời nắng; trời quang (đãng); ngày nắng (vd. 明天是晴天: ngày mai trời nắng)	claude-2026-09	ai-draft
+請客|请客[qing3 ke4]	mời (ăn, uống…); bao; đãi; khao (vd. 今天我请客: hôm nay tôi mời)/mời khách; đãi tiệc; chiêu đãi khách	claude-2026-09	ai-draft
+請求|请求[qing3 qiu2]	đề nghị; yêu cầu; thỉnh cầu (vd. 请求帮助: đề nghị giúp đỡ)/lời đề nghị; yêu cầu; lời thỉnh cầu (vd. 他答应了我的请求: anh ấy đồng ý đề nghị của tôi)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+秋天|秋天[qiu1 tian1]	mùa thu/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+求|求[qiu2]	xin; nhờ; cầu xin; van nài (vd. 求你帮帮我: xin anh giúp tôi)/tìm; tìm kiếm; theo đuổi (vd. 求职: tìm việc)/đòi hỏi; yêu cầu (vd. 要求: yêu cầu)	claude-2026-09	ai-draft
+球場|球场[qiu2 chang3]	sân bóng; sân thể thao (bóng đá, bóng rổ, quần vợt, gôn…); sân vận động (vd. 足球场: sân bóng đá)/Lượng từ: 个 (gè), 处 (chù)	claude-2026-09	ai-draft
+球隊|球队[qiu2 dui4]	đội bóng; đội tuyển (bóng đá, bóng rổ, bóng chuyền…) (vd. 你喜欢哪个球队?: bạn thích đội bóng nào?)	claude-2026-09	ai-draft
+球鞋|球鞋[qiu2 xie2]	giày thể thao; giày chơi bóng	claude-2026-09	ai-draft
+取|取[qu3]	lấy; nhận; rút (vd. 取钱: rút tiền; 取行李: lấy hành lý)/chọn; lựa chọn; tuyển (vd. 取名: đặt tên)	claude-2026-09	ai-draft
+取得|取得[qu3 de2]	đạt được; giành được; có được; thu được (vd. 取得好成绩: đạt thành tích tốt; 取得联系: liên lạc được)	claude-2026-09	ai-draft
+全|全[quan2]	toàn; cả; toàn bộ; toàn thể (vd. 全班: cả lớp; 全世界: toàn thế giới)/đều; hết thảy; hoàn toàn (vd. 大家全来了: mọi người đến đủ cả rồi; 全对: đúng hết)/đầy đủ; trọn vẹn; đủ (vd. 东西买全了: đồ mua đủ rồi)	claude-2026-09	ai-draft
+全部|全部[quan2 bu4]	toàn bộ; tất cả; hết thảy (vd. 全部完成: hoàn thành toàn bộ)	claude-2026-09	ai-draft
+全國|全国[quan2 guo2]	cả nước; toàn quốc; trên toàn quốc (vd. 全国各地: khắp nơi trong cả nước)	claude-2026-09	ai-draft
+全家|全家[quan2 jia1]	cả nhà; cả gia đình (vd. 全家人: cả nhà)	claude-2026-09	ai-draft
+全年|全年[quan2 nian2]	cả năm; suốt năm; quanh năm	claude-2026-09	ai-draft
+全身|全身[quan2 shen1]	toàn thân; khắp người; cả người (vd. 全身都湿了: cả người ướt hết)	claude-2026-09	ai-draft
+全體|全体[quan2 ti3]	toàn thể; tất cả (mọi người); cả (vd. 全体同学: toàn thể các bạn học)	claude-2026-09	ai-draft
+然後|然后[ran2 hou4]	sau đó; rồi; tiếp đó (vd. 先吃饭，然后去看电影: ăn cơm trước, sau đó đi xem phim)	claude-2026-09	ai-draft
+讓|让[rang4]	để; cho; cho phép (vd. 让我看看: để tôi xem nào; 不让进: không cho vào)/bảo; bắt (ai làm gì) (vd. 妈妈让我去买菜: mẹ bảo tôi đi chợ)/khiến; làm cho (ai cảm thấy thế nào) (vd. 这让我很高兴: điều này làm tôi rất vui)/nhường; nhượng (vd. 让座: nhường chỗ)/(giới từ chỉ người thực hiện trong câu bị động, giống 被) bị; được (vd. 我的自行车让人偷了: xe đạp của tôi bị người ta lấy trộm rồi)	claude-2026-09	ai-draft
+熱情|热情[re4 qing2]	nhiệt tình; niềm nở; nồng hậu (vd. 他对人很热情: anh ấy rất niềm nở với mọi người)/nhiệt huyết; lòng nhiệt tình; sự say mê (vd. 工作热情: nhiệt huyết trong công việc)	claude-2026-09	ai-draft
+人口|人口[ren2 kou3]	dân số (vd. 中国人口很多: dân số Trung Quốc rất đông)/số người (trong nhà); nhân khẩu (vd. 家里人口: số người trong nhà)	claude-2026-09	ai-draft
+人們|人们[ren2 men5]	mọi người; người ta; con người (nói chung)	claude-2026-09	ai-draft
+人數|人数[ren2 shu4]	số người (vd. 参加人数: số người tham gia)	claude-2026-09	ai-draft
+認為|认为[ren4 wei2]	cho rằng; nghĩ rằng; cho là; thấy (rằng) (vd. 我认为他是对的: tôi cho rằng anh ấy đúng)	claude-2026-09	ai-draft
+日報|日报[ri4 bao4]	nhật báo; báo ra hằng ngày (vd. 人民日报: Nhân dân Nhật báo)	claude-2026-09	ai-draft
+日子|日子[ri4 zi5]	ngày; ngày tháng (vd. 好日子: ngày lành; 定日子: chọn ngày)/thời gian; dạo; những ngày (vd. 这些日子: dạo này)/cuộc sống; đời sống (vd. 过日子: sống qua ngày; 日子越来越好: cuộc sống ngày càng tốt)	claude-2026-09	ai-draft
+如果|如果[ru2 guo3]	nếu; nếu như; giả sử; trong trường hợp (vd. 如果明天下雨，我就不去: nếu mai trời mưa thì tôi không đi)	claude-2026-09	ai-draft
+入口|入口[ru4 kou3]	lối vào; cửa vào (vd. 地铁入口: lối vào tàu điện ngầm)/nhập khẩu (hàng hoá)	claude-2026-09	ai-draft
+商量|商量[shang1 liang5]	bàn bạc; thương lượng; trao đổi; hỏi ý kiến (vd. 我们商量一下: chúng ta bàn bạc một chút)	claude-2026-09	ai-draft
+商人|商人[shang1 ren2]	thương nhân; nhà buôn; người buôn bán; doanh nhân	claude-2026-09	ai-draft
+上周|上周[shang4 zhou1]	tuần trước	claude-2026-09	ai-draft
+少數|少数[shao3 shu4]	số ít; một số ít (vd. 少数人: số ít người)/thiểu số (vd. 少数民族: dân tộc thiểu số)	claude-2026-09	ai-draft
+少年|少年[shao4 nian2]	tuổi thiếu niên; thời niên thiếu/thiếu niên; cậu bé; chàng trai trẻ	claude-2026-09	ai-draft
+身邊|身边[shen1 bian1]	bên cạnh; bên mình; cạnh (ai) (vd. 他坐在我身边: anh ấy ngồi bên cạnh tôi)/(mang) theo người; sẵn trong người (vd. 身边没带钱: trong người không mang tiền)	claude-2026-09	ai-draft
+什麼樣|什么样[shen2 me5 yang4]	thế nào; như thế nào; kiểu gì; loại gì (vd. 他是什么样的人?: anh ấy là người như thế nào?)	claude-2026-09	ai-draft
+生|生[sheng1]	sinh; đẻ; sinh ra; ra đời (vd. 生孩子: sinh con; 我生在北京: tôi sinh ra ở Bắc Kinh)/mọc; nảy sinh; phát sinh; bị (bệnh) (vd. 生病: bị ốm; 生气: tức giận)/sống; còn sống; sự sống; đời (vd. 生死: sống chết; 一生: cả đời)/sống; chưa chín; chưa qua chế biến (vd. 生肉: thịt sống)/lạ; không quen; chưa thạo (vd. 生词: từ mới; 生人: người lạ)/(trong từ ghép) người học; người (làm nghề gì) (vd. 学生: học sinh; 医生: bác sĩ)/nhóm; đốt (lửa) (vd. 生火: nhóm lửa)	claude-2026-09	ai-draft
+生詞|生词[sheng1 ci2]	từ mới (trong bài học) (vd. 生词表: bảng từ mới)/từ lạ; từ chưa học/Lượng từ: 组 (zǔ), 个 (gè)	claude-2026-09	ai-draft
+生活|生活[sheng1 huo2]	cuộc sống; đời sống; sinh hoạt (vd. 大学生活: cuộc sống đại học)/sống; sinh sống (vd. 他在北京生活: anh ấy sống ở Bắc Kinh)/sinh kế; kế sinh nhai	claude-2026-09	ai-draft
+聲音|声音[sheng1 yin1]	âm thanh; tiếng; tiếng động (vd. 什么声音?: tiếng gì thế?)/giọng; giọng nói (vd. 她的声音很好听: giọng cô ấy rất hay)	claude-2026-09	ai-draft
+省|省[sheng3]	tiết kiệm; tằn tiện; đỡ (tốn) (vd. 省钱: tiết kiệm tiền; 省时间: đỡ tốn thời gian)/tỉnh (đơn vị hành chính) (vd. 广东省: tỉnh Quảng Đông)/bớt; bỏ bớt; lược bỏ (vd. 省略: lược bỏ)	claude-2026-09	ai-draft
+十分|十分[shi2 fen1]	rất; hết sức; vô cùng; hoàn toàn (vd. 十分高兴: rất vui; 十分满意: hoàn toàn hài lòng)	claude-2026-09	ai-draft
+實際|实际[shi2 ji4]	thực tế; hiện thực; thực tiễn (vd. 理论联系实际: lý luận gắn với thực tiễn)/thực tế; thiết thực; sát thực tế (vd. 这个计划不太实际: kế hoạch này không thực tế lắm)/thực; thật; thực sự (vd. 实际情况: tình hình thực tế)	claude-2026-09	ai-draft
+實習|实习[shi2 xi2]	thực tập (vd. 去医院实习: đi thực tập ở bệnh viện)/kỳ thực tập; đợt thực tập; chỗ thực tập (vd. 找实习: tìm chỗ thực tập)/thực hành	claude-2026-09	ai-draft
+實現|实现[shi2 xian4]	thực hiện (được); biến thành hiện thực; đạt được (vd. 实现梦想: biến ước mơ thành hiện thực)	claude-2026-09	ai-draft
+實在|实在[shi2 zai4]	thật sự; thật là; quả thật; đúng là (vd. 实在对不起: thật sự xin lỗi; 我实在太累了: tôi thật sự mệt quá)/thật; có thật; thực tế (vd. 实在的东西: cái có thật)/thật thà; chân thật; đáng tin cậy (vd. 他为人很实在: anh ấy rất thật thà)	claude-2026-09	ai-draft
+食物|食物[shi2 wu4]	thức ăn; đồ ăn; thực phẩm (vd. 健康食物: thực phẩm lành mạnh)	claude-2026-09	ai-draft
+使用|使用[shi3 yong4]	sử dụng; dùng; áp dụng (vd. 使用电脑: sử dụng máy tính)	claude-2026-09	ai-draft
+市|市[shi4]	thành phố (đơn vị hành chính) (vd. 北京市: thành phố Bắc Kinh; 市中心: trung tâm thành phố)/chợ; thị trường (vd. 夜市: chợ đêm)	claude-2026-09	ai-draft
+市長|市长[shi4 zhang3]	thị trưởng (người đứng đầu thành phố)	claude-2026-09	ai-draft
+事情|事情[shi4 qing5]	việc; sự việc; chuyện; công việc (vd. 我有事情要做: tôi có việc phải làm)/Lượng từ: 件 (jiàn), 桩 (zhuāng)	claude-2026-09	ai-draft
+收|收[shou1]	nhận; nhận lấy (vd. 收下礼物: nhận quà; 收信: nhận thư)/thu; thu gom (tiền, phí, bài vở…) (vd. 收钱: thu tiền; 收作业: thu bài tập)/cất; cất đi; dọn; thu dọn (vd. 收衣服: cất quần áo vào)/kìm lại; thu lại; dừng; kết thúc (vd. 收工: nghỉ tay, xong việc)/(ghi sau tên người nhận trên phong bì) kính gửi; gửi (vd. 王先生收: kính gửi ông Vương)	claude-2026-09	ai-draft
+收到|收到[shou1 dao4]	nhận được (vd. 收到信: nhận được thư; 收到礼物: nhận được quà)	claude-2026-09	ai-draft
+收入|收入[shou1 ru4]	thu nhập; khoản thu; doanh thu (vd. 月收入: thu nhập hằng tháng; 收入很高: thu nhập rất cao)/thu vào; thu về/Lượng từ: 笔 (bǐ), 个 (gè)	claude-2026-09	ai-draft
+手錶|手表[shou3 biao3]	đồng hồ đeo tay (vd. 戴手表: đeo đồng hồ)/Lượng từ: 块 (kuài), 只 (zhī), 个 (gè)	claude-2026-09	ai-draft
+受到|受到[shou4 dao4]	được; nhận được (khen ngợi, giáo dục, đón tiếp…) (vd. 受到欢迎: được hoan nghênh; 受到表扬: được khen)/bị; chịu (phê bình, trừng phạt, ảnh hưởng…) (vd. 受到批评: bị phê bình; 受到影响: bị ảnh hưởng)	claude-2026-09	ai-draft
+舒服|舒服[shu1 fu5]	dễ chịu; thoải mái; sướng (vd. 这张床很舒服: chiếc giường này nằm rất thoải mái)/khoẻ; thấy khoẻ trong người (hay dùng 不舒服: khó chịu, thấy không khoẻ, vd. 我有点儿不舒服: tôi thấy hơi mệt trong người)	claude-2026-09	ai-draft
+熟|熟[shu2]	chín; chín muồi (quả, hạt) (vd. 苹果熟了: táo chín rồi)/chín (thức ăn đã nấu chín) (vd. 饭熟了: cơm chín rồi)/quen; quen thuộc; quen biết (vd. 我跟他很熟: tôi với anh ấy rất quen nhau; 路不熟: không thạo đường)/thạo; thành thạo; thông thạo (vd. 熟练: thành thạo)/(giấc ngủ) say; sâu (vd. 睡熟了: ngủ say rồi)	claude-2026-09	ai-draft
+數|数[shu3]	đếm (vd. 数钱: đếm tiền; 数一数: đếm thử)/được coi là (nhất); phải kể đến (vd. 全班数他最高: cả lớp cậu ấy cao nhất)/kể ra; liệt kê	claude-2026-09	ai-draft
+數字|数字[shu4 zi4]	chữ số; con số; số (vd. 阿拉伯数字: chữ số Ả Rập)/số liệu; số lượng (vd. 这个数字不对: con số này không đúng)/(điện tử) kỹ thuật số; số (vd. 数字电视: truyền hình kỹ thuật số)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+水平|水平[shui3 ping2]	trình độ; mức; mức độ (vd. 汉语水平: trình độ tiếng Trung; 生活水平: mức sống)/nằm ngang; ngang bằng (vd. 水平线: đường nằm ngang)	claude-2026-09	ai-draft
+順利|顺利[shun4 li4]	thuận lợi; suôn sẻ; trôi chảy (vd. 一切都很顺利: mọi việc đều suôn sẻ; 祝你考试顺利: chúc bạn thi cử thuận lợi)	claude-2026-09	ai-draft
+說明|说明[shuo1 ming2]	giải thích; nói rõ; thuyết minh (vd. 说明原因: giải thích lý do)/cho thấy; chứng tỏ (vd. 这说明他很努力: điều này cho thấy anh ấy rất chăm chỉ)/lời giải thích; lời thuyết minh; bản hướng dẫn; chú thích (vd. 说明书: sách hướng dẫn sử dụng)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+司機|司机[si1 ji1]	tài xế; lái xe; người lái xe (vd. 公共汽车司机: tài xế xe buýt)	claude-2026-09	ai-draft
+送給|送给[song4 gei3]	tặng; biếu; tặng cho (ai) (vd. 这本书送给你: cuốn sách này tặng bạn)/gửi cho; đưa cho (ai)	claude-2026-09	ai-draft
+算|算[suan4]	tính; tính toán (vd. 算账: tính tiền; 算一算: tính thử)/coi như; được coi là; xem như (vd. 今天不算冷: hôm nay chưa gọi là lạnh; 他算是我的老师: ông ấy coi như là thầy tôi)/tính cả; tính vào (vd. 算上我，一共五个人: tính cả tôi, tổng cộng năm người)/được tính; có giá trị; có hiệu lực (vd. 说话算话: nói lời giữ lời; 这次不算: lần này không tính)	claude-2026-09	ai-draft
+雖然|虽然[sui1 ran2]	(liên từ, mở đầu vế nhượng bộ; vế sau thường có 但是, 可是) tuy; tuy rằng; mặc dù (vd. 虽然很累，但是很高兴: tuy mệt nhưng rất vui)	claude-2026-09	ai-draft
+隨便|随便[sui2 bian4]	tuỳ; tuỳ ý; tuỳ thích; sao cũng được (vd. 随便坐: cứ ngồi tự nhiên; 吃什么?随便: ăn gì? gì cũng được)/tuỳ tiện; bừa bãi; cẩu thả (vd. 别随便说: đừng nói bừa)/xuề xoà; thoải mái; không câu nệ (vd. 穿得很随便: ăn mặc xuề xoà)/bất kỳ; bất cứ; ngẫu nhiên (vd. 随便哪天都行: ngày nào cũng được)	claude-2026-09	ai-draft
+隨時|随时[sui2 shi2]	bất cứ lúc nào; lúc nào cũng (vd. 有问题随时问我: có gì thắc mắc cứ hỏi tôi bất cứ lúc nào)/kịp thời; khi cần (vd. 随时调整: điều chỉnh kịp thời khi cần)	claude-2026-09	ai-draft
+所以|所以[suo3 yi3]	(liên từ, nêu kết quả; vế trước thường có 因为) vì vậy; cho nên; nên (vd. 因为下雨，所以我没去: vì trời mưa nên tôi không đi)/(văn viết, thường trong 之所以…是因为…) sở dĩ; lý do (vd. 我之所以来，是因为想见你: sở dĩ tôi đến là vì muốn gặp bạn)	claude-2026-09	ai-draft
+所有|所有[suo3 you3]	tất cả; mọi; hết thảy (vd. 所有的人: tất cả mọi người)/sở hữu; có; thuộc về (vd. 所有权: quyền sở hữu)	claude-2026-09	ai-draft
+它|它[ta1]	(đại từ chỉ vật hoặc con vật, không dùng cho người) nó (vd. 我有一只猫，它很可爱: tôi có một con mèo, nó rất đáng yêu)	claude-2026-09	ai-draft
+它們|它们[ta1 men5]	(đại từ chỉ nhiều vật hoặc con vật, không dùng cho người) chúng; chúng nó (vd. 我有两只狗，它们都很聪明: tôi có hai con chó, chúng đều rất khôn)	claude-2026-09	ai-draft
+太太|太太[tai4 tai5]	vợ (vd. 我太太: vợ tôi)/bà; phu nhân (cách gọi phụ nữ đã có chồng, thường kèm họ chồng, vd. 王太太: bà Vương)/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+太陽|太阳[tai4 yang5]	mặt trời (vd. 太阳出来了: mặt trời mọc rồi)/ánh nắng; nắng; ánh mặt trời (vd. 晒太阳: phơi nắng)/(viết tắt của 太阳穴) thái dương (hai bên trán)	claude-2026-09	ai-draft
+態度|态度[tai4 du5]	thái độ (vd. 工作态度: thái độ làm việc; 服务态度很好: thái độ phục vụ rất tốt)/cử chỉ; dáng vẻ; tác phong/cách nhìn nhận; lập trường; cách tiếp cận (đối với việc gì)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+討論|讨论[tao3 lun4]	thảo luận; bàn bạc; bàn luận (vd. 讨论问题: thảo luận vấn đề)	claude-2026-09	ai-draft
+套|套[tao4]	(lượng từ) bộ; căn: dùng cho những thứ thành bộ như quần áo, sách, đồ dùng, căn hộ (vd. 一套衣服: một bộ quần áo; 一套房子: một căn nhà)/bao; vỏ; áo bọc (vd. 手套: găng tay; 被套: vỏ chăn)/trùm; bọc; lồng vào; chồng lên (vd. 套上外衣: khoác áo ngoài vào)/rập khuôn; bắt chước; áp dụng máy móc (vd. 套公式: áp công thức)/lối; kiểu; bài bản quen dùng (vd. 老一套: lối cũ)/vòng dây; thòng lọng/gạ; moi; khéo léo dò lấy (thông tin, lời nói) (vd. 套他的话: moi lời anh ta)	claude-2026-09	ai-draft
+特別|特别[te4 bie2]	đặc biệt; khác thường (vd. 他很特别: anh ấy rất đặc biệt)/rất; cực kỳ; hết sức (vd. 特别好: rất tốt; 特别喜欢: cực kỳ thích)/riêng; dành riêng; cất công (vd. 这是特别为你做的: cái này làm riêng cho bạn)/(thường đi với 是) nhất là; đặc biệt là (vd. 我喜欢水果，特别是苹果: tôi thích hoa quả, nhất là táo)	claude-2026-09	ai-draft
+特點|特点[te4 dian3]	đặc điểm; nét riêng; điểm đặc trưng (vd. 汉字的特点: đặc điểm của chữ Hán)	claude-2026-09	ai-draft
+疼|疼[teng2]	đau; nhức (vd. 头疼: đau đầu; 肚子疼: đau bụng)/thương; yêu thương; cưng chiều (vd. 奶奶最疼我: bà thương tôi nhất)	claude-2026-09	ai-draft
+提|提[ti2]	xách; cầm (đồ có quai, thõng xuống tay) (vd. 提行李: xách hành lý)/nâng lên; đưa lên; nâng cao (vd. 提高: nâng cao)/nêu ra; đưa ra (ý kiến, vấn đề) (vd. 提意见: góp ý; 提问题: đặt câu hỏi)/nhắc đến; nói đến (vd. 别提了: đừng nhắc nữa)/nét hất (nét viết từ dưới lên, trong chữ Hán)	claude-2026-09	ai-draft
+提出|提出[ti2 chu1]	đưa ra; nêu ra; đề ra; đề xuất (ý kiến, vấn đề, yêu cầu…) (vd. 提出问题: nêu ra vấn đề; 提出建议: đưa ra đề nghị)/rút (tiền mặt)	claude-2026-09	ai-draft
+提到|提到[ti2 dao4]	nhắc đến; nói đến; đề cập đến (vd. 他提到了你: anh ấy có nhắc đến bạn)	claude-2026-09	ai-draft
+提高|提高[ti2 gao1]	nâng cao; tăng; nâng (vd. 提高水平: nâng cao trình độ; 提高速度: tăng tốc độ)/cải thiện; tiến bộ (vd. 他的汉语提高了很多: tiếng Trung của anh ấy tiến bộ nhiều)	claude-2026-09	ai-draft
+題|题[ti2]	đề; câu hỏi; bài (tập, thi) (vd. 这道题很难: câu này rất khó; 考题: đề thi)/đề tài; chủ đề; đầu đề (vd. 题目: đầu đề; 话题: chủ đề câu chuyện)/đề (chữ, thơ); viết lên (vd. 题字: đề chữ)/Lượng từ: 个 (gè), 道 (dào)	claude-2026-09	ai-draft
+體育|体育[ti3 yu4]	thể thao (vd. 体育运动: hoạt động thể thao)/thể dục; giáo dục thể chất (môn học) (vd. 体育课: giờ thể dục)	claude-2026-09	ai-draft
+體育場|体育场[ti3 yu4 chang3]	sân vận động/Lượng từ: 个 (gè), 座 (zuò)	claude-2026-09	ai-draft
+體育館|体育馆[ti3 yu4 guan3]	nhà thi đấu; nhà thể thao (trong nhà); phòng tập thể dục/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+天上|天上[tian1 shang4]	trên trời; bầu trời; trời (vd. 天上有很多星星: trên trời có rất nhiều sao)	claude-2026-09	ai-draft
+條|条[tiao2]	(lượng từ) con; cái; chiếc; sợi…: dùng cho vật dài, hẹp như sông, đường, cá, quần, váy, dây, khăn (vd. 一条河: một con sông; 一条鱼: một con cá; 一条裤子: một cái quần)/(lượng từ) điều; mục; tin: dùng cho điều khoản, tin tức (vd. 一条新闻: một tin tức)/dải; sợi; thanh; mảnh (vật dài, hẹp) (vd. 面条: sợi mì; 纸条: mẩu giấy)/điều; khoản; mục (trong luật, hiệp ước) (vd. 第一条: điều 1)	claude-2026-09	ai-draft
+條件|条件[tiao2 jian4]	điều kiện; hoàn cảnh; tình trạng; yếu tố (vd. 生活条件: điều kiện sống; 身体条件: thể trạng)/yêu cầu; điều kiện (đặt ra); tiêu chuẩn (vd. 提出条件: đưa ra điều kiện)/điều khoản (của hợp đồng, thoả thuận)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+聽講|听讲[ting1 jiang3]	nghe giảng; nghe bài giảng; nghe nói chuyện (vd. 上课要认真听讲: trong giờ học phải chăm chú nghe giảng)	claude-2026-09	ai-draft
+聽說|听说[ting1 shuo1]	nghe nói; nghe người ta nói; nghe đồn (vd. 听说他病了: nghe nói anh ấy bị ốm)/nghe và nói (kỹ năng ngôn ngữ) (vd. 听说读写: nghe, nói, đọc, viết)	claude-2026-09	ai-draft
+停|停[ting2]	dừng; ngừng; tạnh (vd. 停下来: dừng lại; 雨停了: mưa tạnh rồi)/đỗ; đậu (xe) (vd. 车停在门口: xe đỗ ở cửa)	claude-2026-09	ai-draft
+停車|停车[ting2 che1]	dừng xe; đỗ xe; đậu xe (vd. 这里不能停车: ở đây không được đỗ xe)/(máy móc) ngừng chạy; chết máy	claude-2026-09	ai-draft
+停車場|停车场[ting2 che1 chang3]	bãi đỗ xe; bãi đậu xe; bãi giữ xe	claude-2026-09	ai-draft
+挺|挺[ting3]	(khẩu ngữ) khá; rất; lắm (vd. 挺好的: khá tốt; 挺好吃: ngon lắm)/thẳng; ưỡn thẳng; đứng thẳng (vd. 挺直腰: ưỡn thẳng lưng)/ưỡn ra; vươn ra (bộ phận cơ thể) (vd. 挺胸: ưỡn ngực)/gắng gượng; cố chịu đựng (vd. 挺过去: gượng qua được)/ủng hộ; bênh vực; đứng về phía (ai)/(lượng từ) khẩu: dùng cho súng máy	claude-2026-09	ai-draft
+挺好|挺好[ting3 hao3]	khá tốt; rất tốt; tốt lắm; ổn (vd. 我挺好的: tôi khá ổn)	claude-2026-09	ai-draft
+通|通[tong1]	thông; thông suốt; đi qua được (vd. 路不通: đường không đi qua được; 电话打不通: gọi điện không được)/nối; thông với; dẫn tới (vd. 这条路通北京: con đường này dẫn tới Bắc Kinh)/liên lạc; giao tiếp; báo cho biết (vd. 通电话: nói chuyện điện thoại)/hiểu; hiểu rõ; thông thạo (vd. 精通: tinh thông)/khơi thông; thông (cống, ống) (vd. 通下水道: thông cống)/(hậu tố) người thạo; người rành (vd. 中国通: người rành về Trung Quốc)/(lượng từ) cuộc; bức: dùng cho cuộc gọi, bức thư, điện báo (vd. 一通电话: một cuộc điện thoại)	claude-2026-09	ai-draft
+通過|通过[tong1 guo4]	(giới từ) qua; thông qua; bằng cách; nhờ (vd. 通过朋友认识他: quen anh ấy qua bạn bè)/đi qua; vượt qua (vd. 火车通过大桥: tàu hoả chạy qua cầu)/đỗ; qua (kỳ thi, kiểm tra) (vd. 通过考试: thi đỗ)/thông qua (nghị quyết, luật) (vd. 通过法律: thông qua luật)	claude-2026-09	ai-draft
+通知|通知[tong1 zhi1]	thông báo; báo (cho ai biết) (vd. 通知大家: báo cho mọi người biết)/thông báo; giấy báo; bản thông báo (vd. 发通知: ra thông báo)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+同時|同时[tong2 shi2]	cùng lúc; đồng thời (vd. 我们同时到了: chúng tôi đến cùng lúc; 这个方法简单，同时也很有效: cách này đơn giản, đồng thời cũng rất hiệu quả)	claude-2026-09	ai-draft
+同事|同事[tong2 shi4]	đồng nghiệp; người cùng làm (vd. 他是我的同事: anh ấy là đồng nghiệp của tôi)	claude-2026-09	ai-draft
+同樣|同样[tong2 yang4]	giống nhau; như nhau; cùng một (vd. 同样的问题: cùng một vấn đề)/cũng vậy; tương tự; cũng (vd. 你同样可以试试: bạn cũng có thể thử)	claude-2026-09	ai-draft
+頭|头[tou2]	đầu (vd. 头疼: đau đầu; 点头: gật đầu)/tóc; kiểu tóc (vd. 剪头: cắt tóc)/đầu; đầu mút; điểm đầu hoặc điểm cuối (vd. 从头到尾: từ đầu đến cuối)/(trước số từ, lượng từ) đầu tiên; … đầu; hàng đầu (vd. 头一次: lần đầu tiên; 头三天: ba ngày đầu)/mẩu; mẩu thừa (vd. 烟头: mẩu thuốc lá)/người đứng đầu; sếp; thủ lĩnh (vd. 头儿: sếp)/phía; bên; mặt (vd. 两头: hai bên, hai đầu)/(lượng từ) con: dùng cho gia súc như bò, lợn, lừa (vd. 一头牛: một con bò)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+頭|头[tou5]	(hậu tố tạo danh từ, đọc thanh nhẹ, không mang nghĩa riêng, thường không dịch; vd. 木头: gỗ; 石头: đá; 里头: bên trong; 念头: ý nghĩ)	claude-2026-09	ai-draft
+頭髮|头发[tou2 fa5]	tóc (vd. 长头发: tóc dài; 剪头发: cắt tóc)	claude-2026-09	ai-draft
+圖片|图片[tu2 pian4]	hình ảnh; ảnh; tranh ảnh (vd. 看图片: xem ảnh)/Lượng từ: 张 (zhāng)	claude-2026-09	ai-draft
+推|推[tui1]	đẩy (vd. 推门: đẩy cửa; 推车: đẩy xe)/thúc đẩy; đẩy mạnh; mở rộng (vd. 推广: phổ biến, mở rộng)/từ chối; khước từ; thoái thác; đùn đẩy (trách nhiệm) (vd. 推掉邀请: từ chối lời mời; 推卸责任: đùn đẩy trách nhiệm)/lùi lại; hoãn; dời (vd. 往后推两天: lùi lại hai ngày)/đề cử; bầu; tiến cử (vd. 推他当班长: bầu cậu ấy làm lớp trưởng)/húi; cắt (tóc bằng tông-đơ) (vd. 推头: húi tóc)/xoa bóp; đấm bóp (vd. 推拿: xoa bóp)	claude-2026-09	ai-draft
+腿|腿[tui3]	chân; cẳng chân (vd. 腿疼: đau chân; 桌子腿: chân bàn)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+外地|外地[wai4 di4]	nơi khác; tỉnh khác; địa phương khác (ngoài nơi mình đang ở) (vd. 外地人: người nơi khác)	claude-2026-09	ai-draft
+外賣|外卖[wai4 mai4]	đồ ăn mang đi; đồ ăn giao tận nơi (vd. 点外卖: gọi đồ ăn giao tận nơi)/(nhà hàng) bán đồ ăn mang đi; giao đồ ăn tận nhà; dịch vụ đồ ăn mang đi	claude-2026-09	ai-draft
+完|完[wan2]	hết; xong; kết thúc (vd. 电影完了: phim hết rồi)/(sau động từ, chỉ kết quả) xong; hết (vd. 做完作业: làm xong bài tập; 吃完饭: ăn cơm xong; 钱花完了: tiền tiêu hết rồi)/trọn vẹn; đầy đủ; toàn vẹn (vd. 完好: nguyên vẹn)	claude-2026-09	ai-draft
+完成|完成[wan2 cheng2]	hoàn thành; làm xong (vd. 完成任务: hoàn thành nhiệm vụ; 完成作业: làm xong bài tập)	claude-2026-09	ai-draft
+完全|完全[wan2 quan2]	hoàn toàn; hẳn (vd. 我完全同意: tôi hoàn toàn đồng ý; 完全不懂: hoàn toàn không hiểu)/đầy đủ; trọn vẹn; toàn vẹn (vd. 不完全: không đầy đủ)	claude-2026-09	ai-draft
+晚安|晚安[wan3 an1]	chúc ngủ ngon (nói khi chia tay buổi tối hoặc trước khi đi ngủ; gặp nhau buổi tối thì chào 晚上好)	claude-2026-09	ai-draft
+晚報|晚报[wan3 bao4]	báo chiều; báo buổi tối (cũng dùng trong tên báo, vd. 北京晚报: báo chiều Bắc Kinh)	claude-2026-09	ai-draft
+晚餐|晚餐[wan3 can1]	bữa tối; cơm tối/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì)	claude-2026-09	ai-draft
+晚會|晚会[wan3 hui4]	dạ hội; buổi liên hoan tối; đêm văn nghệ (vd. 新年晚会: đêm liên hoan mừng năm mới)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+碗|碗[wan3]	bát; chén (vd. 一碗饭: một bát cơm; 洗碗: rửa bát)/Lượng từ: 只 (zhī), 个 (gè)	claude-2026-09	ai-draft
+萬|万[wan4]	mười nghìn; vạn (10.000) (vd. 一万: mười nghìn; 十万: một trăm nghìn)/rất nhiều; muôn; vạn (vd. 万事如意: vạn sự như ý)	claude-2026-09	ai-draft
+網|网[wang3]	lưới (vd. 渔网: lưới đánh cá)/mạng; mạng lưới (vd. 上网: lên mạng; 交通网: mạng lưới giao thông)/đánh lưới; bắt bằng lưới	claude-2026-09	ai-draft
+網球|网球[wang3 qiu2]	quần vợt (vd. 打网球: chơi quần vợt)/quả bóng quần vợt/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+網站|网站[wang3 zhan4]	trang web; trang mạng (vd. 这个网站很有用: trang web này rất hữu ích)	claude-2026-09	ai-draft
+往|往[wang3]	(giới từ) về phía; hướng về; đi về (vd. 往前走: đi về phía trước; 往左拐: rẽ trái)/đi; đến (vd. 来往: qua lại)/(tàu, xe) chạy đi; đi (vd. 开往北京的火车: tàu chạy đi Bắc Kinh)/đã qua; trước đây (vd. 往年: những năm trước; 以往: trước đây)	claude-2026-09	ai-draft
+為|为[wei4]	(giới từ, chỉ người được hưởng) cho; vì (ai) (vd. 为你高兴: mừng cho bạn; 为人民服务: phục vụ nhân dân)/(giới từ, chỉ nguyên nhân) vì; do; bởi (vd. 为这件事生气: giận vì chuyện này)/(giới từ, chỉ mục đích) để; nhằm (vd. 为学好汉语而努力: cố gắng để học giỏi tiếng Trung)	claude-2026-09	ai-draft
+為什麼|为什么[wei4 shen2 me5]	tại sao; vì sao; sao (hỏi lý do) (vd. 你为什么不来?: sao bạn không đến?)	claude-2026-09	ai-draft
+位|位[wei4]	(lượng từ) vị; người: dùng cho người, mang ý lịch sự, kính trọng (vd. 一位老师: một thầy giáo; 几位?: mấy vị ạ?)/vị trí; chỗ; địa vị (vd. 位置: vị trí; 地位: địa vị)/chỗ ngồi (vd. 座位: chỗ ngồi)	claude-2026-09	ai-draft
+味道|味道[wei4 dao5]	vị; mùi vị; hương vị (vd. 味道很好: vị rất ngon)/(nghĩa bóng) cảm giác; hương vị; nét (vd. 有点儿春天的味道: có chút hương vị mùa xuân)/(nghĩa bóng) thú vị; hứng thú/(phương ngữ) mùi (vd. 什么味道?: mùi gì thế?)	claude-2026-09	ai-draft
+喂|喂[wei4]	(thán từ, dùng để gọi) này; ê; a lô (khi gọi, nghe điện thoại) (vd. 喂，你好!: a lô, xin chào!)/cho ăn; bón (con vật, em bé, người ốm) (vd. 喂猫: cho mèo ăn)	claude-2026-09	ai-draft
+溫度|温度[wen1 du4]	nhiệt độ (vd. 今天温度很高: hôm nay nhiệt độ rất cao)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+聞|闻[wen2]	ngửi (vd. 闻一闻: ngửi thử; 好闻: thơm)/(văn viết) nghe; nghe thấy (vd. 百闻不如一见: trăm nghe không bằng một thấy)/tin; tin tức (vd. 新闻: tin tức)/nổi tiếng; có tiếng; danh tiếng (vd. 闻名: nổi tiếng)	claude-2026-09	ai-draft
+問路|问路[wen4 lu4]	hỏi đường (vd. 向别人问路: hỏi đường người khác)	claude-2026-09	ai-draft
+問題|问题[wen4 ti2]	câu hỏi (vd. 回答问题: trả lời câu hỏi)/vấn đề; chuyện; trục trặc (vd. 没问题: không vấn đề gì; 电脑出问题了: máy tính bị trục trặc rồi)/đề tài; chủ đề/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+午餐|午餐[wu3 can1]	bữa trưa; cơm trưa/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì)	claude-2026-09	ai-draft
+午睡|午睡[wu3 shui4]	ngủ trưa (vd. 我每天都午睡: ngày nào tôi cũng ngủ trưa)/giấc ngủ trưa	claude-2026-09	ai-draft
+西北|西北[xi1 bei3]	tây bắc; phía tây bắc	claude-2026-09	ai-draft
+西餐|西餐[xi1 can1]	món Tây; đồ ăn Tây; cơm Tây (vd. 吃西餐: ăn đồ Tây)/Lượng từ: 份 (fèn), 顿 (dùn)	claude-2026-09	ai-draft
+西方|西方[Xi1 fang1]	phương Tây; các nước phương Tây (vd. 西方国家: các nước phương Tây)	claude-2026-09	ai-draft
+西南|西南[xi1 nan2]	tây nam; phía tây nam	claude-2026-09	ai-draft
+西醫|西医[xi1 yi1]	Tây y; y học phương Tây/bác sĩ Tây y	claude-2026-09	ai-draft
+習慣|习惯[xi2 guan4]	thói quen; tập quán; phong tục (vd. 好习惯: thói quen tốt; 生活习惯: thói quen sinh hoạt)/quen; quen với (vd. 我已经习惯了: tôi đã quen rồi)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+洗衣機|洗衣机[xi3 yi1 ji1]	máy giặt/Lượng từ: 台 (tái)	claude-2026-09	ai-draft
+洗澡|洗澡[xi3 zao3]	tắm; tắm rửa (tắm bồn hoặc tắm vòi sen) (vd. 我去洗澡: tôi đi tắm)	claude-2026-09	ai-draft
+下雪|下雪[xia4 xue3]	tuyết rơi; có tuyết (vd. 外面下雪了: bên ngoài tuyết rơi rồi)	claude-2026-09	ai-draft
+下週|下周[xia4 zhou1]	tuần sau; tuần tới	claude-2026-09	ai-draft
+夏天|夏天[xia4 tian1]	mùa hè; mùa hạ/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+相同|相同[xiang1 tong2]	giống nhau; giống hệt; như nhau (vd. 我们的爱好相同: sở thích của chúng tôi giống nhau)	claude-2026-09	ai-draft
+相信|相信[xiang1 xin4]	tin; tin tưởng; tin rằng (vd. 我相信你: tôi tin bạn)	claude-2026-09	ai-draft
+響|响[xiang3]	kêu; reo; vang lên (vd. 电话响了: điện thoại reo rồi)/to; vang (âm thanh) (vd. 声音很响: tiếng rất to)/tiếng; tiếng động; tiếng vang (vd. 响声: tiếng động)/(lượng từ) tiếng: dùng cho tiếng động, tiếng nổ	claude-2026-09	ai-draft
+想到|想到[xiang3 dao4]	nghĩ đến; nghĩ ra; nhớ đến (vd. 我想到一个办法: tôi nghĩ ra một cách)/ngờ; lường trước (hay dùng 没想到: không ngờ, vd. 没想到他会来: không ngờ anh ấy lại đến)	claude-2026-09	ai-draft
+想法|想法[xiang3 fa3]	cách nghĩ; ý nghĩ; ý kiến; suy nghĩ (vd. 你有什么想法?: bạn có suy nghĩ gì?)/nghĩ cách; tìm cách (làm việc gì)	claude-2026-09	ai-draft
+想起|想起[xiang3 qi3]	nhớ ra; nhớ lại; nhớ đến; chợt nghĩ đến (vd. 我想起来了: tôi nhớ ra rồi)	claude-2026-09	ai-draft
+向|向[xiang4]	(giới từ) về phía; hướng về; với (vd. 向前走: đi về phía trước; 向他学习: học hỏi anh ấy)/hướng về; quay về (vd. 这间房子向南: căn phòng này quay về hướng nam)/hướng; phương hướng (vd. 方向: phương hướng)/đứng về phía; bênh (ai) (vd. 他总是向着妹妹: nó lúc nào cũng bênh em gái)/(văn viết) trước đây; xưa nay; luôn luôn (vd. 向来: xưa nay)/(hậu tố) dành cho…; hướng đến… (vd. 儿童向: dành cho trẻ em)	claude-2026-09	ai-draft
+相機|相机[xiang4 ji1]	máy ảnh; máy chụp hình (viết tắt của 照相机) (vd. 数码相机: máy ảnh kỹ thuật số)/(văn viết) nhân dịp thuận lợi; tuỳ cơ (vd. 相机行事: tuỳ cơ ứng biến)	claude-2026-09	ai-draft
+像|像[xiang4]	giống; giống như (vd. 他很像他爸爸: cậu ấy rất giống bố)/hình như; trông như; như thể (vd. 像要下雨了: hình như sắp mưa)/như; chẳng hạn như (khi nêu ví dụ) (vd. 像北京、上海这样的大城市: những thành phố lớn như Bắc Kinh, Thượng Hải)/tượng; chân dung; hình; ảnh; hình dáng (vd. 画像: chân dung; 图像: hình ảnh)	claude-2026-09	ai-draft
+小聲|小声[xiao3 sheng1]	nhỏ tiếng; khẽ; nói nhỏ; thì thầm (vd. 请小声说话: xin nói nhỏ thôi)	claude-2026-09	ai-draft
+小時候|小时候[xiao3 shi2 hou5]	hồi nhỏ; lúc nhỏ; thời thơ ấu (vd. 我小时候住在北京: hồi nhỏ tôi sống ở Bắc Kinh)	claude-2026-09	ai-draft
+小說|小说[xiao3 shuo1]	tiểu thuyết; truyện; truyện hư cấu (vd. 看小说: đọc tiểu thuyết; 短篇小说: truyện ngắn)/Lượng từ: 本 (běn), 部 (bù)	claude-2026-09	ai-draft
+小心|小心[xiao3 xin1]	cẩn thận; chú ý; coi chừng (vd. 小心点儿: cẩn thận chút; 小心车: coi chừng xe)	claude-2026-09	ai-draft
+小組|小组[xiao3 zu3]	nhóm; tổ (vd. 学习小组: nhóm học tập)	claude-2026-09	ai-draft
+校園|校园[xiao4 yuan2]	sân trường; khuôn viên trường (vd. 校园生活: đời sống học đường)	claude-2026-09	ai-draft
+校長|校长[xiao4 zhang3]	hiệu trưởng (trường học, đại học)/Lượng từ: 个 (gè), 位 (wèi), 名 (míng)	claude-2026-09	ai-draft
+笑話|笑话[xiao4 hua5]	chuyện cười; truyện cười; câu nói đùa (vd. 讲笑话: kể chuyện cười)/cười nhạo; chê cười; chế giễu (ai) (vd. 别笑话我: đừng cười nhạo tôi)/trò cười; chuyện nực cười; lố bịch (vd. 闹笑话: làm trò cười)	claude-2026-09	ai-draft
+笑話兒|笑话儿[xiao4 hua5 r5]	chuyện cười; câu nói đùa (cách nói có âm 儿 của 笑话, vd. 说个笑话儿: kể một chuyện cười)	claude-2026-09	ai-draft
+鞋|鞋[xie2]	giày; giày dép (vd. 一双鞋: một đôi giày; 穿鞋: đi giày)/Lượng từ: 双 (shuāng), 只 (zhī)	claude-2026-09	ai-draft
+心裡|心里[xin1 li5]	trong lòng; trong bụng; trong đầu (vd. 心里很高兴: trong lòng rất vui; 心里想: nghĩ thầm)/trong ngực; ngực	claude-2026-09	ai-draft
+心情|心情[xin1 qing2]	tâm trạng; tâm tình (vd. 心情很好: tâm trạng rất tốt; 没心情: không có tâm trạng)	claude-2026-09	ai-draft
+心中|心中[xin1 zhong1]	trong lòng; trong tâm trí; trong suy nghĩ (vd. 心中有数: trong lòng đã biết rõ)/điểm giữa; tâm; trung tâm	claude-2026-09	ai-draft
+新聞|新闻[xin1 wen2]	tin tức; tin; thời sự (vd. 看新闻: xem thời sự; 一条新闻: một tin)/Lượng từ: 条 (tiáo)	claude-2026-09	ai-draft
+信|信[xin4]	thư; lá thư; thư từ (vd. 写信: viết thư; 一封信: một lá thư)/tin; tin tưởng; tin là (vd. 我不信: tôi không tin)/tin theo; theo (đạo) (vd. 信佛: theo đạo Phật)/thành thật; đáng tin; chữ tín; lòng tin (vd. 守信: giữ chữ tín; 自信: tự tin)/(văn viết) tuỳ ý; bất chợt (vd. 信步: dạo bước tuỳ ý)/Lượng từ: 封 (fēng)	claude-2026-09	ai-draft
+信號|信号[xin4 hao4]	tín hiệu; sóng (điện thoại) (vd. 手机没有信号: điện thoại không có sóng)	claude-2026-09	ai-draft
+信息|信息[xin4 xi1]	thông tin; tin tức (vd. 查信息: tra thông tin)/tin nhắn (vd. 发信息: gửi tin nhắn)	claude-2026-09	ai-draft
+信心|信心[xin4 xin1]	lòng tin; niềm tin; sự tự tin (vào ai, việc gì) (vd. 我对你有信心: tôi tin ở bạn; 没有信心: không tự tin)	claude-2026-09	ai-draft
+信用卡|信用卡[xin4 yong4 ka3]	thẻ tín dụng	claude-2026-09	ai-draft
+星星|星星[xing1 xing5]	ngôi sao; sao (trên trời) (vd. 天上有很多星星: trên trời có rất nhiều sao)	claude-2026-09	ai-draft
+行動|行动[xing2 dong4]	hành động; ra tay; làm (vd. 马上行动: hành động ngay)/hành động; việc làm; chiến dịch (vd. 军事行动: chiến dịch quân sự)/đi lại; di chuyển (vd. 行动不便: đi lại bất tiện)/di động (vd. 行动电话: điện thoại di động)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+行人|行人[xing2 ren2]	người đi đường; người đi bộ; khách bộ hành; người qua đường (vd. 行人很多: người đi đường rất đông)	claude-2026-09	ai-draft
+行為|行为[xing2 wei2]	hành vi; hành động; cách cư xử; việc làm (vd. 这种行为不对: hành vi như vậy là sai)	claude-2026-09	ai-draft
+姓|姓[xing4]	họ (vd. 中国人的姓: họ của người Trung Quốc)/mang họ; họ là … (vd. 我姓王: tôi họ Vương; 您贵姓?: ông họ gì ạ?)	claude-2026-09	ai-draft
+姓名|姓名[xing4 ming2]	họ tên; họ và tên (vd. 请写上你的姓名: xin ghi họ tên của bạn)	claude-2026-09	ai-draft
+休假|休假[xiu1 jia4]	nghỉ phép; đi nghỉ; nghỉ lễ (vd. 我下周休假: tuần sau tôi nghỉ phép)	claude-2026-09	ai-draft
+許多|许多[xu3 duo1]	nhiều; rất nhiều; lắm (vd. 许多人: rất nhiều người)	claude-2026-09	ai-draft
+選|选[xuan3]	chọn; lựa; lựa chọn (vd. 选一个: chọn một cái)/bầu; bầu chọn; tuyển (vd. 选班长: bầu lớp trưởng)	claude-2026-09	ai-draft
+學期|学期[xue2 qi1]	học kỳ (vd. 这个学期: học kỳ này; 下学期: học kỳ sau)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+雪|雪[xue3]	tuyết (vd. 下雪: tuyết rơi)/(văn viết) rửa (nhục, hận) (vd. 雪耻: rửa nhục)/Lượng từ: 场 (cháng)	claude-2026-09	ai-draft
+顏色|颜色[yan2 se4]	màu; màu sắc (vd. 你喜欢什么颜色?: bạn thích màu gì?)/sắc mặt; nét mặt; vẻ mặt; dung mạo/chất màu; phẩm màu; thuốc nhuộm	claude-2026-09	ai-draft
+眼|眼[yan3]	mắt (vd. 左眼: mắt trái)/cái nhìn; cái liếc (thường dùng với 一, vd. 看一眼: nhìn một cái)/lỗ; lỗ nhỏ (vd. 针眼: lỗ kim)/chỗ then chốt; điểm mấu chốt (trong từ ghép, vd. 节骨眼: thời điểm then chốt)/(lượng từ) cái; miệng: dùng cho giếng, hang đất để ở (vd. 一眼井: một miệng giếng)/Lượng từ: 只 (zhī), 双 (shuāng)	claude-2026-09	ai-draft
+眼睛|眼睛[yan3 jing5]	mắt; con mắt (vd. 大眼睛: mắt to)/Lượng từ: 只 (zhī), 双 (shuāng)	claude-2026-09	ai-draft
+養|养[yang3]	nuôi (con vật, thú cưng) (vd. 养猫: nuôi mèo; 养鸡: nuôi gà)/trồng; chăm (hoa, cây cảnh) (vd. 养花: trồng hoa)/nuôi; nuôi nấng; nuôi dạy (con cái) (vd. 养孩子: nuôi con)/nuôi (gia đình); chu cấp; cấp dưỡng (vd. 养家: nuôi gia đình)/dưỡng; tĩnh dưỡng; bồi bổ (sức khoẻ) (vd. 养病: dưỡng bệnh)/sinh; đẻ (vd. 她养了一个儿子: cô ấy sinh được một cậu con trai)	claude-2026-09	ai-draft
+樣子|样子[yang4 zi5]	dáng vẻ; vẻ ngoài; hình dáng (vd. 他高兴的样子: vẻ vui mừng của anh ấy; 看样子要下雨: trông có vẻ sắp mưa)/kiểu; kiểu dáng; mẫu (vd. 这双鞋的样子很好看: kiểu đôi giày này rất đẹp)/bộ dạng; điệu bộ; vẻ (vd. 装出生气的样子: làm ra vẻ tức giận)	claude-2026-09	ai-draft
+要求|要求[yao1 qiu2]	yêu cầu; đòi hỏi; đòi (quyền lợi…) (vd. 老师要求我们每天练习: thầy giáo yêu cầu chúng tôi luyện tập mỗi ngày)/lời yêu cầu; sự đòi hỏi (vd. 提出要求: đưa ra yêu cầu)/Lượng từ: 点 (diǎn)	claude-2026-09	ai-draft
+藥|药[yao4]	thuốc; thuốc men (vd. 吃药: uống thuốc)/chất dùng cho mục đích riêng (thuốc nổ, thuốc độc, thuốc trừ sâu…) (vd. 火药: thuốc súng; 农药: thuốc trừ sâu)/đầu độc; đánh bả (bằng thuốc độc) (vd. 药老鼠: đánh bả chuột)/Lượng từ: 种 (zhǒng), 服 (fù), 味 (wèi)	claude-2026-09	ai-draft
+藥店|药店[yao4 dian4]	hiệu thuốc; nhà thuốc; tiệm thuốc	claude-2026-09	ai-draft
+藥片|药片[yao4 pian4]	viên thuốc; thuốc viên; thuốc dạng viên nén/Lượng từ: 片 (piàn)	claude-2026-09	ai-draft
+藥水|药水[yao4 shui3]	thuốc nước; thuốc dạng lỏng (vd. 眼药水: thuốc nhỏ mắt)/nước bôi; dung dịch thoa ngoài da	claude-2026-09	ai-draft
+也許|也许[ye3 xu3]	có lẽ; có thể; biết đâu (vd. 他也许不来了: có lẽ anh ấy không đến nữa)	claude-2026-09	ai-draft
+夜|夜[ye4]	đêm; ban đêm (vd. 半夜: nửa đêm; 今夜: đêm nay)	claude-2026-09	ai-draft
+夜裡|夜里[ye4 li5]	ban đêm; trong đêm; vào ban đêm (vd. 昨天夜里下雨了: đêm qua trời mưa)	claude-2026-09	ai-draft
+一部分|一部分[yi1 bu4 fen5]	một phần; một bộ phận; một số (vd. 一部分学生: một số học sinh; 这只是一部分: đây chỉ là một phần)	claude-2026-09	ai-draft
+一定|一定[yi1 ding4]	chắc chắn; nhất định; nhất thiết (vd. 我一定来: tôi nhất định sẽ đến; 你一定要小心: bạn nhất định phải cẩn thận)/cố định; đã định sẵn (vd. 一定的规则: quy tắc đã định)/(đặt trước danh từ) nhất định; ở mức nào đó (vd. 一定程度: mức độ nhất định; 有一定的困难: có những khó khăn nhất định)	claude-2026-09	ai-draft
+一共|一共[yi1 gong4]	tổng cộng; cả thảy; tất cả (vd. 一共多少钱?: tổng cộng bao nhiêu tiền?)	claude-2026-09	ai-draft
+一路平安|一路平安[yi1 lu4 ping2 an1]	(lời chúc người đi xa) thượng lộ bình an; lên đường bình an; đi đường bình yên	claude-2026-09	ai-draft
+一路順風|一路顺风[yi1 lu4 shun4 feng1]	(lời chúc người đi xa) thượng lộ bình an; lên đường thuận lợi; thuận buồm xuôi gió	claude-2026-09	ai-draft
+已經|已经[yi3 jing1]	đã; đã … rồi (vd. 他已经走了: anh ấy đã đi rồi; 已经十点了: đã mười giờ rồi)	claude-2026-09	ai-draft
+以後|以后[yi3 hou4]	sau này; về sau; trong tương lai (vd. 以后我想当老师: sau này tôi muốn làm giáo viên)/(đặt sau từ chỉ thời điểm, sự việc) sau; sau khi (vd. 下课以后: sau khi tan học; 三天以后: ba ngày sau)	claude-2026-09	ai-draft
+以前|以前[yi3 qian2]	trước đây; trước kia; ngày trước (vd. 以前我住在河内: trước đây tôi sống ở Hà Nội)/(đặt sau từ chỉ thời điểm, sự việc) trước; trước khi (vd. 睡觉以前: trước khi đi ngủ; 三年以前: ba năm trước)	claude-2026-09	ai-draft
+以上|以上[yi3 shang4]	trở lên; trên (bằng hoặc hơn mức đó) (vd. 十八岁以上: từ 18 tuổi trở lên)/(những điều) trên đây; nói trên (vd. 以上几点: mấy điểm trên đây)/(dùng khi kết thúc bài nói, báo cáo) xin hết; trên đây là toàn bộ	claude-2026-09	ai-draft
+以外|以外[yi3 wai4]	ngoài; ngoài … ra; trừ (vd. 除了他以外: ngoài anh ấy ra)/bên ngoài; ngoài (phạm vi, giới hạn nào đó) (vd. 一百米以外: ngoài một trăm mét)	claude-2026-09	ai-draft
+以為|以为[yi3 wei2]	tưởng; tưởng là; cứ ngỡ (thường là nghĩ sai) (vd. 我以为你走了: tôi cứ tưởng bạn đi rồi)/cho rằng; nghĩ rằng (vd. 我以为这个办法很好: tôi cho rằng cách này rất tốt)	claude-2026-09	ai-draft
+以下|以下[yi3 xia4]	trở xuống; dưới (bằng hoặc thấp hơn mức đó) (vd. 六岁以下的儿童: trẻ em từ 6 tuổi trở xuống)/sau đây; dưới đây (vd. 以下是我的意见: sau đây là ý kiến của tôi)	claude-2026-09	ai-draft
+椅子|椅子[yi3 zi5]	ghế; cái ghế (ghế có tựa) (vd. 坐在椅子上: ngồi trên ghế)/Lượng từ: 把 (bǎ), 张 (zhāng)	claude-2026-09	ai-draft
+一般|一般[yi1 ban1]	bình thường; thông thường; phổ thông (vd. 一般人: người bình thường)/thường; thường thì; nói chung (vd. 我一般七点起床: tôi thường dậy lúc bảy giờ)/tàm tạm; bình thường thôi (không hay lắm) (vd. 这个电影很一般: bộ phim này bình thường thôi)/(mẫu 跟…一般) giống; như nhau; bằng (vd. 跟哥哥一般高: cao bằng anh trai)	claude-2026-09	ai-draft
+一點點|一点点[yi1 dian3 dian3]	một chút; một tí; một ít; chút xíu (vd. 我会说一点点汉语: tôi biết nói một chút tiếng Trung)	claude-2026-09	ai-draft
+一生|一生[yi1 sheng1]	cả đời; suốt đời; một đời (vd. 他一生都在教书: cả đời ông ấy dạy học)	claude-2026-09	ai-draft
+一直|一直[yi1 zhi2]	thẳng; thẳng một mạch (vd. 一直走: đi thẳng)/luôn; luôn luôn; suốt; mãi (liên tục không đổi) (vd. 他一直在等你: anh ấy vẫn luôn đợi bạn; 从早上一直到晚上: từ sáng mãi đến tối)	claude-2026-09	ai-draft
+億|亿[yi4]	một trăm triệu (100.000.000) (vd. 一亿: một trăm triệu; 十亿: một tỷ)	claude-2026-09	ai-draft
+意見|意见[yi4 jian4]	ý kiến; quan điểm (vd. 你有什么意见?: bạn có ý kiến gì không?)/góp ý; kiến nghị; đề xuất (vd. 提意见: góp ý)/ý kiến phản đối; sự bất mãn; phàn nàn (vd. 我对他有意见: tôi không hài lòng về anh ấy)/Lượng từ: 点 (diǎn), 条 (tiáo)	claude-2026-09	ai-draft
+意思|意思[yi4 si5]	nghĩa; ý nghĩa (vd. 这个字是什么意思?: chữ này nghĩa là gì?)/ý; ý kiến; ý định; mong muốn (vd. 我的意思是…: ý tôi là…)/hứng thú; sự thú vị (vd. 有意思: thú vị; 没意思: chán)/chút quà; chút lòng thành (vd. 这是我的一点意思: đây là chút lòng thành của tôi)/biếu chút quà; tỏ chút lòng (vd. 意思意思: gọi là chút lòng)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+因為|因为[yin1 wei4]	vì; bởi vì; do; tại vì (vd. 因为下雨，所以我没去: vì trời mưa nên tôi không đi)	claude-2026-09	ai-draft
+陰|阴[yin1]	(trời) âm u; u ám; nhiều mây (vd. 天阴了: trời âm u rồi)/râm; bóng râm; chỗ khuất nắng/âm (đối lập với dương trong thuyết âm dương)/ngầm; kín; ngấm ngầm; mờ ám (vd. 阴谋: âm mưu)/mặt trăng (vd. 阴历: âm lịch)/(điện) âm (vd. 阴极: cực âm)	claude-2026-09	ai-draft
+陰天|阴天[yin1 tian1]	trời âm u; trời nhiều mây; ngày trời râm (vd. 今天是阴天: hôm nay trời âm u)	claude-2026-09	ai-draft
+音節|音节[yin1 jie2]	âm tiết (vd. 汉语里一个汉字是一个音节: trong tiếng Trung mỗi chữ Hán là một âm tiết)	claude-2026-09	ai-draft
+音樂|音乐[yin1 yue4]	âm nhạc; nhạc (vd. 听音乐: nghe nhạc)/Lượng từ: 张 (zhāng), 曲 (qǔ), 段 (duàn)	claude-2026-09	ai-draft
+音樂會|音乐会[yin1 yue4 hui4]	buổi hoà nhạc; buổi biểu diễn âm nhạc; đêm nhạc (vd. 去听音乐会: đi nghe hoà nhạc)/Lượng từ: 场 (chǎng)	claude-2026-09	ai-draft
+銀行|银行[yin2 hang2]	ngân hàng (vd. 去银行取钱: đi ngân hàng rút tiền)/Lượng từ: 家 (jiā), 个 (gè)	claude-2026-09	ai-draft
+銀行卡|银行卡[yin2 hang2 ka3]	thẻ ngân hàng; thẻ ATM (vd. 用银行卡付钱: trả tiền bằng thẻ ngân hàng)	claude-2026-09	ai-draft
+應該|应该[ying1 gai1]	nên; cần; phải (vd. 你应该多休息: bạn nên nghỉ ngơi nhiều hơn)/chắc là; hẳn là (phỏng đoán) (vd. 他应该到了: chắc anh ấy đến rồi)	claude-2026-09	ai-draft
+英文|英文[Ying1 wen2]	tiếng Anh; Anh văn (vd. 英文报纸: báo tiếng Anh)	claude-2026-09	ai-draft
+英語|英语[Ying1 yu3]	tiếng Anh; Anh ngữ (vd. 说英语: nói tiếng Anh)	claude-2026-09	ai-draft
+影片|影片[ying3 pian4]	phim; bộ phim; phim điện ảnh (vd. 一部好影片: một bộ phim hay)/(Đài Loan) video; đoạn video/Lượng từ: 部 (bù)	claude-2026-09	ai-draft
+影響|影响[ying3 xiang3]	ảnh hưởng; tác động (vd. 父母的影响: ảnh hưởng của cha mẹ)/ảnh hưởng đến; tác động đến (thường theo hướng xấu) (vd. 影响健康: ảnh hưởng đến sức khoẻ)/làm phiền; quấy rầy (vd. 别影响别人学习: đừng làm phiền người khác học)/Lượng từ: 股 (gǔ)	claude-2026-09	ai-draft
+永遠|永远[yong3 yuan3]	mãi mãi; vĩnh viễn; mãi (vd. 我永远记得你: tôi sẽ mãi nhớ bạn)/muôn đời; vĩnh cửu	claude-2026-09	ai-draft
+油|油[you2]	dầu (vd. 油灯: đèn dầu; 石油: dầu mỏ)/mỡ; chất béo; dầu mỡ (vd. 猪油: mỡ lợn)/xăng dầu; nhiên liệu (vd. 加油站: cây xăng; trạm xăng)/(món ăn) nhiều dầu mỡ; béo ngậy; bóng nhờn (vd. 这个菜太油了: món này nhiều dầu mỡ quá)/(người) trơn tru; khéo mồm; láu cá (vd. 油嘴滑舌: miệng lưỡi trơn tru)/quét dầu; sơn; đánh véc-ni	claude-2026-09	ai-draft
+遊客|游客[you2 ke4]	du khách; khách du lịch; khách tham quan (vd. 很多游客来北京: nhiều du khách đến Bắc Kinh)/(mạng, trò chơi trực tuyến) khách; người dùng khách (không đăng ký tài khoản) (vd. 游客登录: đăng nhập với tư cách khách)	claude-2026-09	ai-draft
+友好|友好[you3 hao3]	thân thiện; hữu hảo; hữu nghị (vd. 他对人很友好: anh ấy rất thân thiện với mọi người; 友好关系: quan hệ hữu nghị)/(văn viết) bạn thân; bạn bè thân thiết	claude-2026-09	ai-draft
+有空兒|有空儿[you3 kong4 r5]	có thời gian rảnh; rảnh; rảnh rỗi (vd. 你明天有空儿吗?: mai bạn có rảnh không?)	claude-2026-09	ai-draft
+有人|有人[you3 ren2]	có người; có ai đó (vd. 有人找你: có người tìm bạn; 有人吗?: có ai không?)/có người; một số người (vd. 有人说…: có người nói…)/(nhà vệ sinh, chỗ ngồi…) có người rồi; đang có người (vd. 这儿有人吗?: chỗ này có ai ngồi chưa?)	claude-2026-09	ai-draft
+有點兒|有点儿[you3 dian3 r5]	hơi; có hơi (thường nói về điều không như ý) (vd. 今天有点儿冷: hôm nay hơi lạnh; 我有点儿累: tôi hơi mệt)/có một chút; có một ít (vd. 我还有点儿钱: tôi vẫn còn chút tiền)	claude-2026-09	ai-draft
+有一點兒|有一点儿[you3 yi1 dian3 r5]	hơi; có hơi (vd. 这件衣服有一点儿贵: cái áo này hơi đắt)/có một chút; có một ít (vd. 杯子里还有一点儿水: trong cốc còn một chút nước)	claude-2026-09	ai-draft
+有意思|有意思[you3 yi4 si5]	thú vị; hay; hấp dẫn (vd. 这本书很有意思: cuốn sách này rất hay)/vui; vui tính; hài hước (vd. 他这个人很有意思: anh ấy là người rất vui tính)/có ý nghĩa; đáng suy ngẫm/(khẩu ngữ, mẫu 对…有意思) có ý; có tình ý (với ai) (vd. 他对你有意思: anh ấy có ý với bạn đấy)	claude-2026-09	ai-draft
+又|又[you4]	lại; lại nữa (việc lặp lại, đã xảy ra) (vd. 他又来了: anh ấy lại đến rồi)/(mẫu 又…又…) vừa … vừa … (vd. 又便宜又好: vừa rẻ vừa tốt)/lại còn; và cũng (vd. 他是老师，又是作家: anh ấy là giáo viên, lại còn là nhà văn)/nhưng; mà lại (tỏ ý trái ngược) (vd. 想去又没时间: muốn đi mà lại không có thời gian)/(nhấn mạnh phủ định, phản vấn) có … đâu; nào có (vd. 我又不是故意的: tôi đâu có cố ý)	claude-2026-09	ai-draft
+魚|鱼[yu2]	cá; con cá (vd. 吃鱼: ăn cá)/(dùng trong tên một số động vật dưới nước không phải cá) (vd. 鲍鱼: bào ngư; 鳄鱼: cá sấu; 章鱼: bạch tuộc)/Lượng từ: 条 (tiáo), 尾 (wěi)	claude-2026-09	ai-draft
+語言|语言[yu3 yan2]	ngôn ngữ; tiếng nói (vd. 你会说几种语言?: bạn biết nói mấy thứ tiếng?)/Lượng từ: 门 (mén), 种 (zhǒng)	claude-2026-09	ai-draft
+原來|原来[yuan2 lai2]	thì ra; hoá ra (vd. 原来是你!: thì ra là bạn!)/vốn; vốn dĩ; lúc đầu; trước đây (vd. 他原来是老师: anh ấy vốn là giáo viên)/(đặt trước danh từ) ban đầu; cũ; trước kia (vd. 原来的地方: chỗ cũ)	claude-2026-09	ai-draft
+原因|原因[yuan2 yin1]	nguyên nhân; lý do; căn nguyên (vd. 什么原因?: lý do gì?)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+院|院[yuan4]	sân; sân trong (vd. 院里: trong sân)/viện; học viện; cơ quan (vd. 科学院: viện khoa học; 医院: bệnh viện; 电影院: rạp chiếu phim)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+院長|院长[yuan4 zhang3]	viện trưởng; giám đốc (bệnh viện, viện nghiên cứu…); người đứng đầu cơ quan có tên tận cùng bằng 院 (vd. 医院院长: giám đốc bệnh viện)/hiệu trưởng (trường đại học, học viện); trưởng khoa/chủ tịch hội đồng	claude-2026-09	ai-draft
+院子|院子[yuan4 zi5]	sân; sân nhà; sân trong (vd. 在院子里玩: chơi ngoài sân)/vườn; khu vườn (quanh nhà)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+願意|愿意[yuan4 yi4]	bằng lòng; đồng ý; sẵn lòng; tự nguyện (làm việc gì) (vd. 我愿意帮助你: tôi sẵn lòng giúp bạn)/muốn; mong muốn (vd. 我不愿意去: tôi không muốn đi)	claude-2026-09	ai-draft
+月份|月份[yue4 fen4]	tháng (trong năm) (vd. 五月份: tháng Năm; 几月份?: tháng mấy?)	claude-2026-09	ai-draft
+月亮|月亮[yue4 liang5]	mặt trăng; trăng (vd. 今天的月亮很圆: trăng hôm nay rất tròn)	claude-2026-09	ai-draft
+越|越[yue4]	(mẫu 越…越…) càng … càng … (vd. 越快越好: càng nhanh càng tốt)/vượt; vượt qua; băng qua (vd. 越过: vượt qua)/vượt quá; vượt (giới hạn, cấp bậc) (vd. 越级: vượt cấp)	claude-2026-09	ai-draft
+越來越|越来越[yue4 lai2 yue4]	ngày càng; càng ngày càng (vd. 天气越来越冷: thời tiết càng ngày càng lạnh)	claude-2026-09	ai-draft
+雲|云[yun2]	mây; đám mây (vd. 白云: mây trắng)/Lượng từ: 朵 (duǒ)	claude-2026-09	ai-draft
+運動|运动[yun4 dong4]	thể thao; môn thể thao (vd. 你喜欢什么运动?: bạn thích môn thể thao nào?)/tập thể dục; tập thể thao; vận động (vd. 每天运动一小时: mỗi ngày tập thể dục một tiếng)/chuyển động; di chuyển (vd. 运动的物体: vật chuyển động)/phong trào; cuộc vận động (vd. 五四运动: phong trào Ngũ Tứ)/Lượng từ: 场 (chǎng)	claude-2026-09	ai-draft
+咱|咱[zan2]	chúng ta; chúng mình (gồm cả người nói và người nghe) (vd. 咱俩: hai chúng ta)/(phương ngữ) tôi; tớ; mình	claude-2026-09	ai-draft
+咱們|咱们[zan2 men5]	chúng ta; chúng mình; mình (gồm cả người nói và người nghe) (vd. 咱们走吧: chúng ta đi thôi)/(phương ngữ) tôi; mình/(phương ngữ, giọng thân mật, dỗ dành) con; em; bạn (chỉ người nghe) (vd. 咱们不哭: mình ngoan không khóc nhé)	claude-2026-09	ai-draft
+髒|脏[zang1]	bẩn; dơ; dơ bẩn (vd. 衣服脏了: quần áo bẩn rồi)/(lời nói) tục; bẩn thỉu (vd. 说脏话: nói tục)/làm bẩn (cái gì) (vd. 别脏了你的手: đừng làm bẩn tay bạn)	claude-2026-09	ai-draft
+早餐|早餐[zao3 can1]	bữa sáng; bữa điểm tâm (vd. 吃早餐: ăn sáng)/Lượng từ: 份 (fèn), 顿 (dùn), 次 (cì)	claude-2026-09	ai-draft
+早晨|早晨[zao3 chen2]	buổi sáng; sáng sớm (vd. 早晨六点: sáu giờ sáng)	claude-2026-09	ai-draft
+早就|早就[zao3 jiu4]	đã … từ lâu; từ lâu đã; đã … từ sớm (vd. 我早就知道了: tôi biết từ lâu rồi)	claude-2026-09	ai-draft
+怎麼辦|怎么办[zen3 me5 ban4]	làm sao bây giờ; phải làm thế nào; tính sao đây (vd. 下雨了，怎么办?: trời mưa rồi, làm sao bây giờ?)	claude-2026-09	ai-draft
+怎麼樣|怎么样[zen3 me5 yang4]	thế nào; ra sao (hỏi tình trạng, ý kiến) (vd. 你身体怎么样?: sức khoẻ bạn thế nào?; 最近怎么样?: dạo này thế nào?)/… thì sao; … được không (hỏi ý kiến về một đề nghị) (vd. 我们去看电影，怎么样?: mình đi xem phim, được không?)	claude-2026-09	ai-draft
+怎樣|怎样[zen3 yang4]	thế nào; như thế nào; ra sao (hỏi cách thức, tình trạng) (vd. 怎样学好汉语?: làm thế nào để học tốt tiếng Trung?)/như thế nào; loại gì (hỏi tính chất) (vd. 他是怎样的人?: anh ấy là người như thế nào?)	claude-2026-09	ai-draft
+占|占[zhan4]	chiếm; chiếm lấy; chiếm giữ (vd. 占座位: giữ chỗ ngồi)/chiếm (tỷ lệ, thời gian, chỗ…) (vd. 女生占一半: nữ sinh chiếm một nửa; 占时间: tốn thời gian)	claude-2026-09	ai-draft
+站住|站住[zhan4 zhu4]	đứng lại; dừng lại (vd. 站住!: đứng lại!)/đứng vững (không ngã)/(nghĩa bóng) đứng vững; trụ vững; có chỗ đứng/(lý lẽ) đứng vững được; có cơ sở (vd. 这个说法站不住: lập luận này không vững)	claude-2026-09	ai-draft
+長|长[zhang3]	lớn lên; mọc; mọc ra (vd. 长大: lớn lên; 长牙: mọc răng; 她长得很漂亮: cô ấy trông rất xinh)/tăng; tăng thêm; phát triển (vd. 长知识: mở mang kiến thức)/trưởng; người đứng đầu (vd. 校长: hiệu trưởng; 班长: lớp trưởng)/lớn tuổi hơn; bậc trên (vd. 长辈: bậc bề trên)	claude-2026-09	ai-draft
+長大|长大[zhang3 da4]	lớn lên; trưởng thành (vd. 我在河内长大: tôi lớn lên ở Hà Nội)	claude-2026-09	ai-draft
+找出|找出[zhao3 chu1]	tìm ra; tìm thấy; lục ra (vd. 找出原因: tìm ra nguyên nhân; 找出错误: tìm ra lỗi)	claude-2026-09	ai-draft
+照顧|照顾[zhao4 gu5]	chăm sóc; trông nom; săn sóc (vd. 照顾老人: chăm sóc người già)/quan tâm; chiếu cố; để ý đến (vd. 照顾到各方面: quan tâm đến mọi mặt)	claude-2026-09	ai-draft
+照片|照片[zhao4 pian4]	ảnh; bức ảnh; tấm hình (vd. 一张照片: một tấm ảnh)/Lượng từ: 张 (zhāng), 幅 (fú)	claude-2026-09	ai-draft
+照相|照相[zhao4 xiang4]	chụp ảnh; chụp hình (vd. 我们一起照相吧: chúng ta cùng chụp ảnh nhé)	claude-2026-09	ai-draft
+這麼|这么[zhe4 me5]	như thế này; như vậy; thế này (chỉ cách thức) (vd. 这么做: làm như thế này)/(trước tính từ) … thế; … như vậy; … đến thế (chỉ mức độ) (vd. 这么贵: đắt thế; 这么多: nhiều thế)	claude-2026-09	ai-draft
+這時|这时[zhe4 shi2]	lúc này; lúc ấy; đúng lúc này (vd. 这时，电话响了: đúng lúc ấy, điện thoại reo)	claude-2026-09	ai-draft
+這樣|这样[zhe4 yang4]	như thế này; như vậy; thế này (vd. 就这样吧: cứ thế nhé; 这样做不对: làm như vậy không đúng)/(đặt trước danh từ) như thế này; kiểu này; loại này (vd. 这样的人: người như thế này)	claude-2026-09	ai-draft
+真正|真正[zhen1 zheng4]	thật sự; thực sự; đích thực; chân chính (vd. 真正的朋友: người bạn thực sự)/thật sự; quả thật (dùng như phó từ) (vd. 我真正明白了: tôi thật sự hiểu rồi)	claude-2026-09	ai-draft
+正常|正常[zheng4 chang2]	bình thường; thông thường (vd. 一切正常: mọi thứ đều bình thường; 正常上班: đi làm bình thường)	claude-2026-09	ai-draft
+正好|正好[zheng4 hao3]	vừa; vừa vặn; vừa đúng; vừa đủ (vd. 这双鞋我穿正好: đôi giày này tôi đi vừa; 正好十个: vừa đúng mười cái)/vừa lúc; đúng lúc (vd. 你来得正好: bạn đến đúng lúc lắm)/tình cờ; vừa hay (vd. 我正好也要去: tôi cũng vừa hay định đi)	claude-2026-09	ai-draft
+正確|正确[zheng4 que4]	đúng; đúng đắn; chính xác (vd. 正确答案: đáp án đúng)	claude-2026-09	ai-draft
+正是|正是[zheng4 shi4]	chính là; đúng là (vd. 这正是我想要的: đây chính là thứ tôi muốn)	claude-2026-09	ai-draft
+直接|直接[zhi2 jie1]	trực tiếp (vd. 直接联系: liên hệ trực tiếp)/thẳng; ngay (không qua trung gian, không dừng lại) (vd. 下课后直接回家: tan học về thẳng nhà)/thẳng thắn; thẳng thừng (khi nói năng) (vd. 他说话很直接: anh ấy nói chuyện rất thẳng)	claude-2026-09	ai-draft
+只|只[zhi3]	chỉ; chỉ có (vd. 我只喝水: tôi chỉ uống nước; 我只有一个妹妹: tôi chỉ có một em gái)	claude-2026-09	ai-draft
+只能|只能[zhi3 neng2]	chỉ có thể; chỉ còn cách; đành phải (vd. 没有车，我们只能走路去: không có xe, chúng ta đành đi bộ)	claude-2026-09	ai-draft
+只要|只要[zhi3 yao4]	chỉ cần; miễn là (thường đi với 就) (vd. 只要你努力，就能学好: chỉ cần bạn cố gắng là sẽ học tốt)	claude-2026-09	ai-draft
+紙|纸[zhi3]	giấy (vd. 一张纸: một tờ giấy)/(lượng từ) tờ; bản: dùng cho văn bản, thư từ, giấy tờ (vd. 一纸合同: một bản hợp đồng)/Lượng từ: 张 (zhāng), 沓 (dá)	claude-2026-09	ai-draft
+中餐|中餐[zhong1 can1]	món ăn Trung Quốc; đồ ăn Trung Quốc (vd. 中餐和西餐: món Trung và món Tây)/bữa trưa; cơm trưa/Lượng từ: 份 (fèn), 顿 (dùn)	claude-2026-09	ai-draft
+中級|中级[zhong1 ji2]	trung cấp; cấp trung; bậc trung (vd. 中级汉语: tiếng Trung trung cấp)	claude-2026-09	ai-draft
+中年|中年[zhong1 nian2]	tuổi trung niên (vd. 中年人: người trung niên)	claude-2026-09	ai-draft
+中小學|中小学[zhong1 xiao3 xue2]	tiểu học và trung học; các trường phổ thông (vd. 中小学老师: giáo viên phổ thông)	claude-2026-09	ai-draft
+中心|中心[zhong1 xin1]	trung tâm; giữa (vd. 城市中心: trung tâm thành phố; 购物中心: trung tâm mua sắm)/trọng tâm; cốt lõi; phần chính (vd. 中心思想: ý chính; tư tưởng chủ đạo)	claude-2026-09	ai-draft
+中醫|中医[zhong1 yi1]	Đông y; y học cổ truyền Trung Quốc (vd. 看中医: đi khám Đông y)/thầy thuốc Đông y; bác sĩ Đông y	claude-2026-09	ai-draft
+重點|重点[zhong4 dian3]	trọng điểm; điểm chính; điểm quan trọng; trọng tâm (vd. 这一课的重点: trọng tâm của bài này)/(đặt trước danh từ) trọng điểm; chủ chốt (vd. 重点大学: trường đại học trọng điểm)/tập trung; chú trọng (vào) (vd. 重点复习: tập trung ôn tập)	claude-2026-09	ai-draft
+重視|重视[zhong4 shi4]	coi trọng; chú trọng; xem trọng (vd. 重视教育: coi trọng giáo dục)	claude-2026-09	ai-draft
+週|周[zhou1]	tuần; tuần lễ (vd. 一周: một tuần; 上周: tuần trước)/hằng tuần (vd. 周报: tuần báo)	claude-2026-09	ai-draft
+週末|周末[zhou1 mo4]	cuối tuần (vd. 周末愉快!: cuối tuần vui vẻ!)	claude-2026-09	ai-draft
+週年|周年[zhou1 nian2]	tròn … năm; kỷ niệm … năm (tính từ một sự kiện) (vd. 结婚十周年: kỷ niệm tròn 10 năm ngày cưới; 一周年: tròn một năm)/(ngày, lễ) kỷ niệm hằng năm; thường niên (vd. 周年庆: lễ kỷ niệm thường niên)	claude-2026-09	ai-draft
+主人|主人[zhu3 ren2]	chủ nhà (người tiếp khách) (vd. 主人和客人: chủ nhà và khách)/chủ; người chủ; chủ nhân; chủ sở hữu (vd. 这只狗的主人: chủ của con chó này)	claude-2026-09	ai-draft
+主要|主要[zhu3 yao4]	chính; chủ yếu; quan trọng nhất (vd. 主要原因: nguyên nhân chính)/chủ yếu là; phần lớn (dùng như phó từ) (vd. 我主要是来学习的: tôi đến chủ yếu là để học)	claude-2026-09	ai-draft
+住房|住房[zhu4 fang2]	nhà ở; chỗ ở (vd. 住房问题: vấn đề nhà ở)	claude-2026-09	ai-draft
+住院|住院[zhu4 yuan4]	nằm viện; nhập viện; điều trị nội trú (vd. 他住院了: anh ấy phải nằm viện rồi)	claude-2026-09	ai-draft
+裝|装[zhuang1]	giả vờ; giả bộ; làm bộ (vd. 装病: giả ốm; 装睡: giả vờ ngủ)/đựng; cho vào; đóng gói; chất lên (vd. 把书装进包里: cho sách vào cặp; 装车: chất hàng lên xe)/lắp; lắp đặt; cài đặt (vd. 装空调: lắp điều hoà; 装软件: cài phần mềm)/quần áo; trang phục (vd. 西装: com lê; 服装: quần áo)/hoá trang; đóng vai (vd. 他在戏里装老人: trong vở kịch anh ấy đóng vai ông già)/trang trí; tô điểm	claude-2026-09	ai-draft
+準確|准确[zhun3 que4]	chính xác; đúng; chuẩn xác (vd. 发音准确: phát âm chính xác)	claude-2026-09	ai-draft
+自己|自己[zi4 ji3]	tự mình; bản thân; mình (vd. 我自己做: tôi tự làm; 照顾好自己: chăm sóc tốt bản thân)/(đặt trước danh từ) của mình; riêng (vd. 自己的房间: phòng riêng của mình)	claude-2026-09	ai-draft
+自行車|自行车[zi4 xing2 che1]	xe đạp (vd. 骑自行车: đi xe đạp)/Lượng từ: 辆 (liàng)	claude-2026-09	ai-draft
+自由|自由[zi4 you2]	tự do; sự tự do (vd. 言论自由: tự do ngôn luận)/tự do; thoải mái; không bị gò bó (vd. 自由活动: hoạt động tự do)	claude-2026-09	ai-draft
+字典|字典[zi4 dian3]	(khẩu ngữ) từ điển (nói chung) (vd. 查字典: tra từ điển)/tự điển; từ điển chữ Hán (giải nghĩa từng chữ, khác với 词典 giải nghĩa từ)/Lượng từ: 本 (běn)	claude-2026-09	ai-draft
+走過|走过[zou3 guo4]	đi qua; đi ngang qua; bước qua (vd. 他从我身边走过: anh ấy đi ngang qua bên tôi)	claude-2026-09	ai-draft
+走進|走进[zou3 jin4]	bước vào; đi vào (vd. 走进教室: bước vào lớp học)	claude-2026-09	ai-draft
+走開|走开[zou3 kai1]	rời đi; bỏ đi; đi khỏi (vd. 他走开了: anh ấy bỏ đi rồi)/(câu mệnh lệnh) đi đi; tránh ra; cút đi (vd. 走开!: tránh ra!)/tránh sang một bên; né ra	claude-2026-09	ai-draft
+租|租[zu1]	thuê; mướn (vd. 租房子: thuê nhà; 租车: thuê xe)/cho thuê (vd. 出租: cho thuê)/tiền thuê (vd. 房租: tiền thuê nhà)	claude-2026-09	ai-draft
+組|组[zu3]	nhóm; tổ; đội (vd. 我们组: nhóm chúng tôi; 学习小组: nhóm học tập)/tổ chức; lập; ghép lại (vd. 组词: ghép từ)/(lượng từ) bộ; nhóm; tổ: dùng cho tập hợp đồ vật, nhóm người, loạt (vd. 一组照片: một bộ ảnh)	claude-2026-09	ai-draft
+組成|组成[zu3 cheng2]	tạo thành; hợp thành; cấu thành (vd. 由三个部分组成: do ba phần hợp thành; gồm ba phần)/lập nên; lập thành (vd. 组成一个小组: lập thành một nhóm)	claude-2026-09	ai-draft
+組長|组长[zu3 zhang3]	tổ trưởng; nhóm trưởng; trưởng nhóm	claude-2026-09	ai-draft
+嘴|嘴[zui3]	miệng; mồm (vd. 张嘴: há miệng)/mỏ (chim)/vòi; miệng (của ấm, bình…) (vd. 壶嘴: vòi ấm)/Lượng từ: 张 (zhāng), 个 (gè)	claude-2026-09	ai-draft
+最近|最近[zui4 jin4]	gần đây; dạo này; thời gian gần đây (vd. 你最近怎么样?: dạo này bạn thế nào?)/sắp tới; tới đây (vd. 我最近要去北京: sắp tới tôi sẽ đi Bắc Kinh)/gần nhất (vd. 最近的银行: ngân hàng gần nhất)	claude-2026-09	ai-draft
+作家|作家[zuo4 jia1]	nhà văn; người viết văn; văn sĩ (vd. 他是有名的作家: ông ấy là nhà văn nổi tiếng)/Lượng từ: 个 (gè), 位 (wèi)	claude-2026-09	ai-draft
+作文|作文[zuo4 wen2]	bài văn; bài tập làm văn (của học sinh) (vd. 写作文: viết bài văn)/viết văn; làm văn/Lượng từ: 篇 (piān)	claude-2026-09	ai-draft
+作業|作业[zuo4 ye4]	bài tập; bài tập về nhà (vd. 做作业: làm bài tập)/công việc; nhiệm vụ; tác nghiệp (sản xuất, quân sự…) (vd. 高空作业: làm việc trên cao)/làm việc; vận hành; thao tác/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+作用|作用[zuo4 yong4]	tác dụng; vai trò; công dụng (vd. 起作用: có tác dụng; 发挥作用: phát huy vai trò)/tác động; ảnh hưởng; hiệu quả (vd. 这种药对我没有作用: thuốc này không có tác dụng với tôi)/tác động đến; ảnh hưởng đến (vd. 作用于: tác động lên)/ý đồ; mục đích (của lời nói, việc làm)	claude-2026-09	ai-draft
+座|座[zuo4]	(lượng từ) toà; ngôi; ngọn; cây: dùng cho vật lớn, cố định như nhà cửa, núi, cầu… (vd. 一座山: một ngọn núi; 一座桥: một cây cầu; 一座大楼: một toà nhà)/chỗ ngồi; ghế ngồi (vd. 让座: nhường chỗ)/bệ; đế; chân đế (vd. 底座: chân đế)/chòm sao; cung (hoàng đạo) (vd. 星座: chòm sao, cung hoàng đạo; 狮子座: cung Sư Tử)	claude-2026-09	ai-draft
+座位|座位[zuo4 wei4]	chỗ ngồi; ghế ngồi (vd. 这儿有座位吗?: ở đây có chỗ ngồi không?)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+做到|做到[zuo4 dao4]	làm được; đạt được; thực hiện được (vd. 说到做到: nói được làm được)	claude-2026-09	ai-draft
+做法|做法[zuo4 fa3]	cách làm; phương pháp; cách xử lý (vd. 你这种做法不对: cách làm này của bạn không đúng)/cách chế biến; công thức (nấu ăn) (vd. 这个菜的做法: cách làm món này)/Lượng từ: 个 (gè)	claude-2026-09	ai-draft
+做飯|做饭[zuo4 fan4]	nấu cơm; nấu ăn; làm cơm (vd. 妈妈在做饭: mẹ đang nấu cơm)	claude-2026-09	ai-draft
+與此同時|与此同时[yu3 ci3 tong2 shi2]	đồng thời; cùng lúc đó; trong khi đó (vd. 与此同时，他也在学汉语: đồng thời, anh ấy cũng đang học tiếng Trung)	claude-2026-09	ai-draft
+致力於|致力于[zhi4 li4 yu2]	dốc sức vào; nỗ lực vì; tận tâm với (việc gì) (vd. 致力于环境保护: dốc sức cho việc bảo vệ môi trường)	claude-2026-09	ai-draft
+泄露|泄露[xie4 lou4]	để lộ; làm lộ; tiết lộ (thông tin, bí mật) (vd. 泄露秘密: tiết lộ bí mật)	claude-2026-09	ai-draft
+不予|不予[bu4 yu3]	(văn viết) không (cho, chấp nhận, xem xét…) (vd. 不予考虑: không xem xét; 不予批准: không phê duyệt)	claude-2026-09	ai-draft
+這|这[zhei4]	(khẩu ngữ) này; đây (cách đọc zhèi của 这, hay gặp trước số từ và lượng từ, vd. 这个: cái này)	claude-2026-09	ai-draft
+一個|一个[yi1 ge5]	một; một cái; một người… (một + lượng từ 个, vd. 一个人: một người; 一个苹果: một quả táo)/cả; suốt (vd. 一个下午: cả buổi chiều; 一个暑假: suốt kỳ nghỉ hè)	claude-2026-09	ai-draft
+牠|它[ta1]	nó (đại từ chỉ con vật)	claude-2026-09	ai-draft
+每個|每个[mei3 ge5]	mỗi; mỗi một; từng (vd. 每个人: mỗi người)	claude-2026-09	ai-draft
+教授|教授[jiao1 shou4]	dạy; giảng dạy (một môn học) (vd. 教授汉语: dạy tiếng Trung)	claude-2026-09	ai-draft
+呀|呀[ya1]	a!; ôi! (thán từ, tỏ ý ngạc nhiên)/(tượng thanh) cót két; kẽo kẹt	claude-2026-09	ai-draft
+所有人|所有人[suo3 you3 ren2]	mọi người; tất cả mọi người/người sở hữu; chủ sở hữu	claude-2026-09	ai-draft
+並未|并未[bing4 wei4]	(nhấn mạnh việc không như người ta tưởng) thật ra không; vẫn chưa; hoàn toàn không (vd. 他并未离开: thật ra anh ấy chưa đi)	claude-2026-09	ai-draft
+一人|一人[yi1 ren2]	một người; một mình/(văn cổ) nhà vua	claude-2026-09	ai-draft
+買賣|买卖[mai3 mai5]	việc mua bán; buôn bán; giao dịch (vd. 做买卖: buôn bán)/cửa hàng; cửa hiệu	claude-2026-09	ai-draft
+一刻|一刻[yi1 ke4]	mười lăm phút; một khắc (vd. 三点一刻: ba giờ mười lăm)/một lát; một chốc; khoảnh khắc (vd. 一刻也不停: không ngừng lấy một chút)	claude-2026-09	ai-draft
+媳婦|媳妇[xi2 fu5]	(phương ngữ) vợ/(phương ngữ) người phụ nữ trẻ đã có chồng	claude-2026-09	ai-draft
+一員|一员[yi1 yuan2]	một thành viên (của tổ chức, tập thể) (vd. 我是这个家庭的一员: tôi là một thành viên của gia đình này)	claude-2026-09	ai-draft
+雇傭|雇佣[gu4 yong1]	thuê; thuê mướn (người làm) (vd. 雇佣工人: thuê công nhân)	claude-2026-09	ai-draft
+僱傭|雇佣[gu4 yong1]	thuê; thuê mướn (người làm) (vd. 雇佣工人: thuê công nhân)	claude-2026-09	ai-draft
+警員|警员[jing3 yuan2]	cảnh sát; nhân viên cảnh sát/cảnh viên (cấp bậc thấp nhất trong ngành cảnh sát ở Trung Quốc đại lục và Hồng Kông)	claude-2026-09	ai-draft
+蘋果|苹果[Ping2 guo3]	Apple (công ty công nghệ của Mỹ)	claude-2026-09	ai-draft
+微博|微博[Wei1 bo2]	Weibo (mạng xã hội của Trung Quốc)	claude-2026-09	ai-draft
+歐美|欧美[Ou1 Mei3]	Âu Mỹ; châu Âu và châu Mỹ; phương Tây	claude-2026-09	ai-draft
+基地|基地[Ji1 di4]	al-Qaeda (tổ chức khủng bố)	claude-2026-09	ai-draft
+人大|人大[ren2 da4]	Đại hội đại biểu nhân dân (cơ quan lập pháp các cấp ở Trung Quốc; viết tắt của 人民代表大会)	claude-2026-09	ai-draft

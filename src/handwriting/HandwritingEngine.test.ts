@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { checkStrokes } from '../strokes/strokeCheck'
-import { peekStrokeData } from '../strokes/strokeData'
+import { fixtureStrokeData as peekStrokeData } from '../test/fixtures/strokes'
 import { fakeCanvas, FakeBox, FakeDocument, fakeGlobals } from './fakeDom'
 import { HandwritingEngine, type StrokeCommit } from './HandwritingEngine'
 import type { Ink, Stroke } from './types'

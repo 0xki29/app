@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { goBackTo } from './history'
 
 /**
  * A tiny hash router: `#/path?query`. Hash routing because the site is static (GitHub Pages at any
@@ -15,7 +16,16 @@ export interface RouteDef<Id extends string = string> {
   pattern: string
 }
 
-export const ROUTES = [{ id: 'practice', pattern: '/' }] as const satisfies readonly RouteDef[]
+export const ROUTES = [
+  { id: 'today', pattern: '/' },
+  { id: 'search', pattern: '/tra-cuu' },
+  { id: 'entry', pattern: '/tu/:key' },
+  { id: 'pinyin', pattern: '/pinyin' },
+  { id: 'credits', pattern: '/nguon-du-lieu' },
+  { id: 'deck', pattern: '/so-on-tap' },
+  { id: 'session', pattern: '/on-tap' },
+  { id: 'practice', pattern: '/luyen/:hex' },
+] as const satisfies readonly RouteDef[]
 
 export type RouteId = (typeof ROUTES)[number]['id'] | 'not-found'
 
@@ -29,10 +39,12 @@ export interface Route {
   query: Record<string, string>
 }
 
+const HOME: RouteId = 'today'
+
 /** The route a location hash (`location.hash`, with or without `#`) points to. */
 export function matchRoute(hash: string, routes: readonly RouteDef[] = ROUTES): Route {
   const raw = hash.startsWith('#') ? hash.slice(1) : hash
-  if (!raw.startsWith('/')) return { id: 'practice', path: '/', params: {}, query: {} }
+  if (!raw.startsWith('/')) return { id: HOME, path: '/', params: {}, query: {} }
   const q = raw.indexOf('?')
   const path = normalize(q === -1 ? raw : raw.slice(0, q))
   const query = Object.fromEntries(new URLSearchParams(q === -1 ? '' : raw.slice(q + 1)))
@@ -47,6 +59,20 @@ export function matchRoute(hash: string, routes: readonly RouteDef[] = ROUTES): 
 export function hrefFor(path: string, query: Record<string, string> = {}): string {
   const qs = new URLSearchParams(query).toString()
   return `#${normalize(path)}${qs ? `?${qs}` : ''}`
+}
+
+/** Free practice of one character, by its code point in lowercase hex: 学 → `#/luyen/5b66`. */
+export function practiceHref(char: string): string {
+  return `#/luyen/${(char.codePointAt(0) ?? 0).toString(16)}`
+}
+
+/** The character a practice route names (`5b66` → 学); null unless it is one Han character. */
+export function charFromHex(hex: string): string | null {
+  if (!/^[0-9a-f]{4,6}$/.test(hex)) return null
+  const cp = parseInt(hex, 16)
+  if (cp > 0x10ffff) return null
+  const char = String.fromCodePoint(cp)
+  return /^\p{Script=Han}$/u.test(char) ? char : null
 }
 
 function normalize(path: string): string {
@@ -85,4 +111,27 @@ const getHash = () => window.location.hash
 export function useRoute(): Route {
   const hash = useSyncExternalStore(subscribe, getHash)
   return matchRoute(hash)
+}
+
+// ── Where "back" goes from a full-screen practice ────────────────────────────
+
+let returnTo = '#/'
+
+/** The shell notes every screen that is not a practice: leaving a practice returns there. */
+export function rememberReturn(hash: string): void {
+  returnTo = hash || '#/'
+}
+
+/** The last screen before a practice (the home screen when the practice was opened directly). */
+export function returnHref(): string {
+  return returnTo
+}
+
+/**
+ * Leaves a full-screen practice for the screen it was opened from: the browser's Back when that is
+ * the entry before (so the phone's Back button does not reopen the practice), else that screen in
+ * the practice's place.
+ */
+export function leavePractice(): void {
+  goBackTo(returnTo)
 }

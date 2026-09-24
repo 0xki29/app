@@ -1,0 +1,239 @@
+{
+  "lockVersion": 1,
+  "about": "Every input of the dictionary build, pinned by bytes and SHA-256 of the exact bytes (downloads are checksummed as received over HTTP, never a git checkout). Edit by pull request; the build refuses any mismatch. See scripts/dict/README.md.",
+  "userAgent": "chinese-notebook-data-build (+https://github.com/0xki29/app)",
+  "sources": [
+    {
+      "id": "cc-cedict",
+      "name": "CC-CEDICT",
+      "version": "2026-09-23T05:36:01Z",
+      "homepage": "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseFiles": ["CC-BY-SA-4.0.txt"],
+      "attribution": "CC-CEDICT, published by MDBG (https://www.mdbg.net/chinese/dictionary?page=cc-cedict). Referenced work: CEDICT — Copyright (C) 1997, 1998 Paul Andrew Denisowski.",
+      "notes": "Khung của từ điển: chữ giản thể, phồn thể, pinyin; nghĩa tiếng Anh chỉ hiện khi mục từ chưa có nghĩa tiếng Việt.",
+      "changes": "Duplicate lines merged; joined with CVDICT's Vietnamese senses; Hán Việt readings, HSK 3.0 levels and a popularity rank added; rows re-ordered by that rank; classifier notes and cross-references normalized; English-only cross-reference entries given Vietnamese by template; HSK words missing from CC-CEDICT added (data/overrides/extra-entries.tsv).",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (headwords, pinyin, English senses)",
+      "expect": { "entries": 125101 },
+      "files": [
+        {
+          "role": "entries",
+          "vendored": "data/sources/cedict_1_0_ts_utf-8_mdbg.txt",
+          "upstreamUrl": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+          "upstreamGzip": { "bytes": 3975772, "sha256": "fac0663725087369895f94ae8ed997a53d6c4f4a23af0d509b62772cebbf1e65" },
+          "why": "The MDBG URL always serves the latest export, so the pinned snapshot is kept in the repository, decompressed (CRLF, byte for byte as the export unpacks): git stores a refresh as a small delta, where a new .gz would add its whole 3.8 MB.",
+          "bytes": 9851585,
+          "sha256": "08d5f118e719753fe7c7461cf784a77a26753e944fcc687cd02dc9860d6fc88b"
+        }
+      ]
+    },
+    {
+      "id": "cvdict",
+      "name": "CVDICT — Từ điển Hán Việt CVDICT",
+      "version": "1.0.1 (commit c379d909, 2025-02-09)",
+      "homepage": "https://github.com/ph0ngp/CVDICT",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseFiles": ["CC-BY-SA-4.0.txt"],
+      "attribution": "CVDICT by Phong Phan (https://github.com/ph0ngp/CVDICT), a Vietnamese translation of CC-CEDICT (CEDICT — Copyright (C) 1997, 1998 Paul Andrew Denisowski).",
+      "notes": "Nghĩa tiếng Việt: phần lớn do mô hình ChatGPT-4o đã tinh chỉnh dịch từ CC-CEDICT và được tác giả rà soát, nên hiển thị là “bản dịch máy”.",
+      "changes": "Joined onto the current CC-CEDICT in five passes (exact key; pinyin case; tones; simplified form; main and variant forms that swapped places); NFC; hoà-style tone marks; classifier notes as “Lượng từ: 个 (gè)”; cross-references resolved to current keys; replaced by curated glosses where data/overrides/vi-gloss.tsv has one.",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (vi column, rows flagged mt)",
+      "expect": { "entries": 122597 },
+      "files": [
+        {
+          "role": "vietnamese",
+          "url": "https://raw.githubusercontent.com/ph0ngp/CVDICT/c379d909e308343a247e51619f7839a2060a271c/CVDICT.u8",
+          "cache": "CVDICT-c379d909.u8",
+          "bytes": 10803314,
+          "sha256": "4dde4b204193efa9c192d7f7daeab1bb579c8ccd7c41ed90d1b6caee22ba0948"
+        }
+      ]
+    },
+    {
+      "id": "hanviet-pinyin-words",
+      "name": "hanviet-pinyin-words",
+      "version": "2.1.7",
+      "homepage": "https://github.com/ph0ngp/hanviet-pinyin-words",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ph0ngp/hanviet-pinyin-words/blob/main/LICENSE",
+      "licenseFiles": ["MIT-hanviet-pinyin-words.txt"],
+      "attribution": "hanviet-pinyin-words — Copyright (c) 2024 Phong Phan (MIT), built from https://github.com/ph0ngp/hanviet-pinyin-wordlist.",
+      "notes": "Âm Hán Việt theo từng chữ phồn thể và pinyin. Tác giả tham khảo hvdic.thivien.net, Đặng Thế Kiệt, Trần Văn Chánh (1999), Nguyễn Quốc Hùng (1975), Thiều Chửu (1942) và CC-CEDICT; ở đây chỉ dùng âm đọc của từng chữ (dữ kiện), không lấy định nghĩa từ các sách đó.",
+      "changes": "Readings combined per word from the traditional form of each entry; spelling normalized (hoà-style tone marks; y after h, k, l, m, t).",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (hv and hvAlt columns, derived)",
+      "npm": {
+        "package": "hanviet-pinyin-words",
+        "version": "2.1.7",
+        "integrity": "sha512-TwqcNmQD+LsGkWuNp10BJvXpkA+0qr7Fiu5pHQwVsllLniQVb5xd1BjXBlTdqZ4UL6ZzREPD9fuo2flP9CWL3A=="
+      },
+      "files": [
+        {
+          "role": "readings",
+          "npm": "hanviet-pinyin-words/src/hanvietData.js",
+          "bytes": 256378,
+          "sha256": "2131eff4375fcd5033d0de3cc44babeebebd3c4236090826baf9e2aaef1b85ed"
+        },
+        {
+          "role": "license",
+          "npm": "hanviet-pinyin-words/LICENSE",
+          "bytes": 1061,
+          "sha256": "4c88b09e549ab516a6a7acb5b2091fb664dba39dd73e3530199c59783a819d25"
+        }
+      ]
+    },
+    {
+      "id": "unihan",
+      "name": "Unihan Database (Unicode 18.0.0)",
+      "version": "18.0.0",
+      "homepage": "https://www.unicode.org/reports/tr38/",
+      "license": "Unicode License V3",
+      "licenseUrl": "https://www.unicode.org/license.txt",
+      "licenseFiles": ["Unicode-License-V3.txt"],
+      "attribution": "Unicode Han Database (Unihan), Unicode 18.0.0 — Copyright © 1991-2026 Unicode, Inc.",
+      "notes": "kVietnamese chỉ là phương án cuối cho âm Hán Việt (đánh dấu độ tin cậy thấp: có thể là âm Nôm); kMandarin, kHanyuPinlu và các trường biến thể giúp chọn âm đọc và thứ tự các âm của chữ đa âm.",
+      "changes": "Not redistributed; readings derived from it are marked (flag hvlow).",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (a few hv syllables, flagged hvlow; row order)",
+      "files": [
+        {
+          "role": "unihan",
+          "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+          "cache": "Unihan-18.0.0.zip",
+          "bytes": 8340649,
+          "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e"
+        }
+      ]
+    },
+    {
+      "id": "wordfreq",
+      "name": "wordfreq",
+      "version": "3.1.1",
+      "homepage": "https://github.com/rspeer/wordfreq",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseFiles": ["CC-BY-SA-4.0.txt"],
+      "attribution": "wordfreq 3.1.1 by Robyn Speer (doi:10.5281/zenodo.7199437), data under CC BY-SA 4.0. Its Chinese list is built from Wikipedia; OPUS OpenSubtitles 2018 (data from OpenSubtitles.org); SUBTLEX-CH by Qing Cai and Marc Brysbaert (2010, doi:10.1371/journal.pone.0010729) — SUBTLEX is freely available data; NewsCrawl 2014 and GlobalVoices; Google Books Ngrams 2012 (http://books.google.com/ngrams); OSCAR web text; Twitter; and the word list of the Jieba segmenter.",
+      "notes": "Chỉ dùng tần suất từ để xếp hạng mục từ (thứ tự dòng và cột pop); danh sách từ của wordfreq không được phân phối.",
+      "changes": "Zipf frequencies turned into a 0–100 popularity score and the row order.",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (pop column and row order, derived)",
+      "files": [
+        {
+          "role": "wordfreq",
+          "url": "https://files.pythonhosted.org/packages/24/61/62835c475d69872d30689f284497853fe33fe1d6dd18f57346d13305861d/wordfreq-3.1.1-py3-none-any.whl",
+          "bytes": 56834549,
+          "sha256": "4b1c6ecffc6198be3396d5cf871c4423ca71c907c231348d352dd54d62b97473",
+          "extract": {
+            "member": "wordfreq/data/large_zh.msgpack.gz",
+            "cache": "wordfreq-3.1.1-large_zh.msgpack.gz",
+            "bytes": 1773909,
+            "sha256": "e079d7aaff1cfb92874850cb3ffbc7b611af939d9d671c1cbda932d968467cdd"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hsk30",
+      "name": "HSK 3.0 word and character lists (ivankra/hsk30)",
+      "version": "commit 4ff9e391 (2023-11-08)",
+      "homepage": "https://github.com/ivankra/hsk30",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ivankra/hsk30/blob/4ff9e3915ce87baaecd7ebe263085573a4ea3192/LICENSE",
+      "licenseFiles": ["MIT-hsk30.txt"],
+      "attribution": "ivankra/hsk30 — Copyright (c) 2023 Ivan Krasilnikov, Copyright (c) 2021 Shawky, Copyright (c) 2021 Pleco Inc. (MIT). The levels follow the Chinese Proficiency Grading Standards for International Chinese Language Education (GF 0025-2021), Ministry of Education of the PRC, 2021.",
+      "notes": "Cấp HSK 3.0 của từ (1–6 và 7–9) và danh sách 1.200 chữ tập viết (cấp 1: 300, cấp 2: 400, cấp 3: 500) dùng cho sổ ôn tập.",
+      "changes": "Level tags attached to the matching CC-CEDICT entries; the writing list copied into the manifest (hskWriting).",
+      "retrieved": "2026-09-24",
+      "shipped": "dict/v1/*.tsv (hsk column); dict/v1/manifest.json (hskWriting)",
+      "files": [
+        {
+          "role": "words",
+          "url": "https://raw.githubusercontent.com/ivankra/hsk30/4ff9e3915ce87baaecd7ebe263085573a4ea3192/hsk30.csv",
+          "cache": "hsk30-4ff9e391.csv",
+          "bytes": 948891,
+          "sha256": "8c2b73f74776240bcf154624730fc6fb2c42c254d5c5d0f88943878b8e575b9b"
+        },
+        {
+          "role": "chars",
+          "url": "https://raw.githubusercontent.com/ivankra/hsk30/4ff9e3915ce87baaecd7ebe263085573a4ea3192/hsk30-chars.csv",
+          "cache": "hsk30-chars-4ff9e391.csv",
+          "bytes": 108366,
+          "sha256": "8c5957108e6dafd120be10518a827a4d834ea3ce29acbfedeff1022cd7d05280"
+        },
+        {
+          "role": "license",
+          "url": "https://raw.githubusercontent.com/ivankra/hsk30/4ff9e3915ce87baaecd7ebe263085573a4ea3192/LICENSE",
+          "cache": "hsk30-LICENSE-4ff9e391.txt",
+          "bytes": 1129,
+          "sha256": "9cd70c000ea23c899e71b2cbe7c28e18c60937f6e74d1b344d2923f6bddae44a"
+        }
+      ]
+    },
+    {
+      "id": "hanzi-writer-data",
+      "name": "hanzi-writer-data (Make Me a Hanzi)",
+      "version": "2.0.1",
+      "homepage": "https://github.com/chanind/hanzi-writer-data",
+      "license": "Arphic Public License",
+      "licenseUrl": "https://github.com/chanind/hanzi-writer-data/blob/master/ARPHICPL.TXT",
+      "licenseFiles": ["ARPHICPL.TXT"],
+      "attribution": "Stroke data from hanzi-writer-data by David Chanin, derived from Make Me a Hanzi (https://github.com/skishore/makemeahanzi) by Shaunak Kishore, from fonts by Arphic Technology Co., Ltd. — Arphic Public License.",
+      "notes": "Nét chữ và thứ tự nét, giữ nguyên (chỉ đổi tên tệp theo mã Unicode). Thứ tự nét theo chuẩn Đại lục, kể cả với chữ phồn thể.",
+      "changes": "None: files copied byte for byte, renamed to their code point (strokes/v2.0.1/<hex>.json).",
+      "retrieved": "2026-09-24",
+      "shipped": "strokes/v2.0.1/*.json, strokes/v2.0.1/available.*.txt",
+      "npm": {
+        "package": "hanzi-writer-data",
+        "version": "2.0.1",
+        "integrity": "sha512-nbQwM+MaryGoq7pBMIZLCd3lFq03nXuJuwku1+6UbjL58uU+9OULVcMkoNvNuJSoIV7f1bbPRfD4D/LQa5S7qg=="
+      },
+      "files": [
+        {
+          "role": "strokes",
+          "npmDir": "hanzi-writer-data",
+          "count": 9574,
+          "treeSha256": "c40721e87ce89ca7f03181467b81b4d1872cd60b4234d1ca7810d16962ea3dd5"
+        },
+        {
+          "role": "license",
+          "npm": "hanzi-writer-data/ARPHICPL.TXT",
+          "bytes": 6900,
+          "sha256": "5590533436c70f10f2f524ee61456238c290175c6662fbe1c700b5f038a6d328"
+        }
+      ]
+    },
+    {
+      "id": "chinese-notebook-overrides",
+      "name": "Chinese Notebook — hiệu đính",
+      "version": "data/overrides",
+      "homepage": "https://github.com/0xki29/app/tree/main/data/overrides",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseFiles": ["CC-BY-SA-4.0.txt"],
+      "attribution": "Chinese Notebook contributors. Vietnamese glosses, Hán Việt corrections and added HSK entries drafted by Claude (AI), 2026-09, derived from CC-CEDICT and CVDICT.",
+      "notes": "Nghĩa tiếng Việt hiệu đính cho các từ HSK 1–2 và các mục từ HSK mà CC-CEDICT chưa có; âm Hán Việt hiệu đính theo từ và theo chữ (chữ có âm Việt hoá đứng đầu danh sách, từ phiên âm nước ngoài); các từ CC-CEDICT viết hoa nhưng là danh từ chung; các cặp ghép CVDICT sai. Tất cả là bản nháp do AI soạn (“hiệu đính bởi AI, chờ duyệt”, “AI đề xuất, chờ duyệt”); chỉ những dòng chủ dự án đã duyệt mới ghi “đã hiệu đính”.",
+      "changes": "Our own work, applied last over the sources above.",
+      "shipped": "dict/v1/*.tsv (rows flagged cur-ai or cur)",
+      "files": [
+        { "role": "vi-gloss", "local": "data/overrides/vi-gloss.tsv" },
+        { "role": "hanviet-word", "local": "data/overrides/hanviet-word.tsv" },
+        { "role": "hanviet-char", "local": "data/overrides/hanviet-char.tsv" },
+        { "role": "extra-entries", "local": "data/overrides/extra-entries.tsv" },
+        { "role": "join-deny", "local": "data/overrides/join-deny.tsv" },
+        { "role": "not-proper-noun", "local": "data/overrides/not-proper-noun.tsv" }
+      ]
+    }
+  ],
+  "licenseTexts": [
+    { "file": "CC-BY-SA-4.0.txt", "title": "Creative Commons Attribution-ShareAlike 4.0 International (legal code)", "from": "data/licenses/CC-BY-SA-4.0.txt" },
+    { "file": "Unicode-License-V3.txt", "title": "Unicode License V3", "from": "data/licenses/Unicode-License-V3.txt" },
+    { "file": "MIT-hanviet-pinyin-words.txt", "title": "MIT License — hanviet-pinyin-words", "from": "npm:hanviet-pinyin-words/LICENSE" },
+    { "file": "MIT-hsk30.txt", "title": "MIT License — ivankra/hsk30", "from": "cache:hsk30-LICENSE-4ff9e391.txt" },
+    { "file": "ARPHICPL.TXT", "title": "Arphic Public License", "from": "npm:hanzi-writer-data/ARPHICPL.TXT" }
+  ]
+}

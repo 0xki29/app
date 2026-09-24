@@ -5,7 +5,7 @@ import type { HandwritingScorer, ReferenceProvider } from './types'
 
 /**
  * The scoring backends used by the app; the UI only depends on the interfaces. The reference is
- * the bundled stroke data's glyph (the same outlines the learner sees), falling back to the
+ * the stroke data's glyph (the same outlines the learner sees), falling back to the
  * device-font glyph for characters without stroke data. An ML scorer would be swapped in here.
  */
 export const scorer: HandwritingScorer = new GeometryScorer()

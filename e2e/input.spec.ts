@@ -1,11 +1,11 @@
-import { expect, readScore, strokePoints, test, touchscreen, traceCharacter, writingBox } from './fixtures'
+import { expect, practiceUrl, readScore, strokePoints, test, touchscreen, traceCharacter, writingBox } from './fixtures'
 
-// Writing with real touch events in the browser (the input policy's unit tests use a fake DOM), on
-// the first character, 永 (5 strokes).
+// Writing with real touch events in the browser (the input policy's unit tests use a fake DOM), in
+// free practice of 永 (5 strokes).
 const FIRST = '永'
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('./')
+  await page.goto(practiceUrl(FIRST))
 })
 
 test('Tô theo: a character written with a finger scores like one written with the mouse', async ({ page }) => {

@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures'
+import { expect, practiceUrl, test } from './fixtures'
 
 // What the learner sees when the browser lets the app down. Each test breaks one browser API
 // before the app loads, and expects the one error the app logs for it.
@@ -14,7 +14,7 @@ test.describe('no 2D canvas for the writing box', () => {
         return this.classList.contains('hw-layer') ? null : original.apply(this, args)
       } as typeof original
     })
-    await page.goto('./')
+    await page.goto(practiceUrl('永'))
     await expect(page.getByRole('alert')).toContainText('Không vẽ được trong ô viết')
     await expect(page.getByRole('button', { name: 'Tải lại' })).toBeVisible()
     const trace = page.getByRole('tab', { name: 'Tô theo' })
@@ -33,7 +33,7 @@ test.describe('an error inside the app', () => {
         throw new Error('matchMedia broken on purpose')
       }
     })
-    await page.goto('./')
+    await page.goto(practiceUrl('永'))
     await expect(page.getByRole('alert')).toContainText('Đã xảy ra lỗi')
     await expect(page.getByRole('button', { name: 'Tải lại' })).toBeVisible()
   })

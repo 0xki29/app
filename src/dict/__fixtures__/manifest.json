@@ -1,0 +1,78 @@
+{
+ "format": 1,
+ "dataVersion": "fixture-1",
+ "columns": [
+  "simp",
+  "trad",
+  "pinyin",
+  "hv",
+  "hvAlt",
+  "vi",
+  "en",
+  "hsk",
+  "pop",
+  "flags"
+ ],
+ "shards": [
+  {
+   "file": "core.tsv",
+   "from": 0,
+   "to": 273,
+   "bytes": 48695,
+   "sha256": "91bd78da4f53d19edce131b66da5b89b8698b15f52198026eead1d6553122de2"
+  },
+  {
+   "file": "rest-1.tsv",
+   "from": 274,
+   "to": 391,
+   "bytes": 8805,
+   "sha256": "f986e7759806c97bff6d18c9480cbad3227a0110f25eff08853cef2d9203ac35"
+  }
+ ],
+ "strokes": {
+  "base": "strokes/v2.0.1/",
+  "available": "strokes/v2.0.1/available.txt"
+ },
+ "hskWriting": {
+  "1": [
+   "爱",
+   "八",
+   "爸",
+   "吧",
+   "白",
+   "百",
+   "半",
+   "帮",
+   "包",
+   "北",
+   "备",
+   "本"
+  ],
+  "2": [
+   "班",
+   "杯",
+   "床",
+   "弟",
+   "读"
+  ],
+  "3": [
+   "船",
+   "封",
+   "末",
+   "墙",
+   "晴"
+  ]
+ },
+ "sources": [
+  {
+   "id": "cc-cedict",
+   "name": "CC-CEDICT",
+   "version": "2026-09-23",
+   "url": "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "attribution": "MDBG; CEDICT © 1997, 1998 Paul Andrew Denisowski",
+   "notes": ""
+  }
+ ]
+}

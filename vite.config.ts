@@ -1,24 +1,37 @@
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import type { Plugin } from 'vite'
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
 /**
- * The bundled stroke data (src/data/strokes) is under the Arphic Public License, which asks that
- * copies carry the license: every build ships it, with the data's notice, under licenses/.
+ * The dictionary, stroke and license files are generated into public/ by `npm run data:build`
+ * (gitignored) and copied into dist/ as they are. The data's licenses ask that their notices travel
+ * with it, so a build that has the data but not its notices (public/licenses/, made by the same data
+ * build) fails. A build without the data (a fresh clone, the unit-test job) only warns: the app then
+ * says the dictionary is missing.
  */
-function strokeDataLicense(): Plugin {
-  const files = [
-    ['ARPHICPL.TXT', 'licenses/ARPHICPL.TXT'],
-    ['README.md', 'licenses/stroke-data.md'],
-  ] as const
+function dataLicenses(): Plugin {
+  const pub = (p: string) => new URL(`./public/${p}`, import.meta.url)
   return {
-    name: 'stroke-data-license',
+    name: 'data-licenses',
     apply: 'build',
-    generateBundle() {
-      for (const [from, fileName] of files) {
-        const source = readFileSync(new URL(`./src/data/strokes/${from}`, import.meta.url))
-        this.emitFile({ type: 'asset', fileName, source })
+    buildStart() {
+      const manifest = pub('dict/v1/manifest.json')
+      const hasDict = existsSync(manifest)
+      const hasStrokes = existsSync(pub('strokes'))
+      if (!hasDict && !hasStrokes) {
+        this.warn('public/ has no dictionary or stroke data: this build ships without it. Run `npm run data:build` first.')
+        return
+      }
+      const required = new Set(['licenses/THIRD_PARTY_NOTICES.md'])
+      if (hasStrokes) required.add('licenses/ARPHICPL.TXT')
+      if (hasDict) {
+        const { sources } = JSON.parse(readFileSync(manifest, 'utf8')) as { sources: { licenseFiles?: string[] }[] }
+        for (const s of sources) for (const f of s.licenseFiles ?? []) required.add(f)
+      }
+      const missing = [...required].filter((f) => !existsSync(pub(f)))
+      if (missing.length) {
+        this.error(`public/ has data without its license notices (${missing.join(', ')}). Run \`npm run data:build\`.`)
       }
     },
   }
@@ -27,12 +40,12 @@ function strokeDataLicense(): Plugin {
 export default defineConfig({
   // Relative asset URLs: the build works at any sub-path (GitHub Pages serves /<repo>/).
   base: './',
-  plugins: [react(), strokeDataLicense()],
+  plugins: [react(), dataLicenses()],
   // The bundled dependencies' license notices (React, scheduler, perfect-freehand: MIT), which the
-  // minified bundle does not keep, next to the stroke data's.
+  // minified bundle does not keep, next to the data's (public/licenses/).
   build: { license: { fileName: 'licenses/third-party.md' } },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'scripts/**/*.test.mjs'],
   },
 })

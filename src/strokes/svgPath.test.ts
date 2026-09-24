@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { TEST_CHARS } from '../data/testChars'
-import { getStrokeData } from './strokeData'
+import { TEST_CHARS } from '../test/fixtures/testChars'
+import { fixtureLoader as getStrokeData } from '../test/fixtures/strokes'
 import { FLATTEN_TOLERANCE, pathToPolygons } from './svgPath'
 import type { SourcePoint } from './types'
 

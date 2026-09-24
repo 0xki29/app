@@ -6,3 +6,8 @@ dist
 playwright-report
 test-results
 blob-report
+# Dictionary data build (npm run data:build): downloaded inputs and generated files
+.cache/
+public/dict/
+public/strokes/
+public/licenses/

@@ -1,5 +1,5 @@
 import type { Page } from '@playwright/test'
-import { expect, readScore, test, traceCharacter } from './fixtures'
+import { expect, practiceUrl, readScore, test, traceCharacter } from './fixtures'
 
 // The result panel on small screens (A11, F7): it never covers the writing box, its buttons show
 // whole, and the page does not scroll. The viewport is set here, so one project runs these.
@@ -14,7 +14,7 @@ for (const viewport of [
 
     test('the result fits beside or under the box, never over it', async ({ page }, testInfo) => {
       test.skip(testInfo.project.name !== 'portrait', 'the viewport is set by the test')
-      await page.goto('./')
+      await page.goto(practiceUrl(FIRST))
       await page.getByRole('tab', { name: 'Tô theo' }).click()
       // Every stroke backwards: the most issue lines, and "+N lỗi khác" to open.
       await traceCharacter(page, FIRST, { reversed: true })

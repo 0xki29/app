@@ -28,6 +28,14 @@
      contrast (--wrong already has it). The tokens above stay for ink, fills and large numbers. */
   --close-text: #9a4a0b;
   --correct-text: #166534;
+  /* Pinyin tone colors (1 red, 2 orange, 3 green, 4 blue, neutral gray), each ≥ 4.5:1 on --page:
+     the dictionary's and the practice prompt's. The tone mark itself says the tone too, so color
+     is never the only cue. */
+  --tone-1: #b8232a;
+  --tone-2: #9a4a0b;
+  --tone-3: #166534;
+  --tone-4: #1d4ed8;
+  --tone-5: #625b56;
 
   --gutter: 16px;
   /* Between the writing box and the screen's left/right edges. On touch screens the edges belong to
@@ -149,6 +157,22 @@ button[aria-disabled='true'] {
   opacity: 0.25;
 }
 
+/* The top bar's right end: the session's "3 / 12", or room that keeps the tabs centered. */
+.topbar__progress,
+.topbar__spacer {
+  flex: none;
+  min-width: 48px;
+}
+
+.topbar__progress {
+  padding: 0 4px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .modes {
   flex: 1;
   display: grid;
@@ -208,6 +232,33 @@ button[aria-disabled='true'] {
   font-size: 16px;
 }
 
+/* The word the character was learned in ("＿生 · học sinh" while recalling). */
+.prompt__context {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+
+.prompt__pending {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.tone-1 {
+  color: var(--tone-1);
+}
+.tone-2 {
+  color: var(--tone-2);
+}
+.tone-3 {
+  color: var(--tone-3);
+}
+.tone-4 {
+  color: var(--tone-4);
+}
+.tone-5 {
+  color: var(--tone-5);
+}
+
 .prompt__extra {
   min-height: 18px;
   margin: 2px 0 0;
@@ -241,6 +292,30 @@ button[aria-disabled='true'] {
 .chip[aria-pressed='true'] {
   background: var(--ink);
   color: var(--paper);
+}
+
+/* An action next to the prompt ("+ Ôn tập", "Không nhớ?"): a UI chip, not a debug one. */
+.chip--action,
+.chip--done {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-family: var(--ui-font);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chip--action {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  color: var(--accent);
+}
+
+.chip--done {
+  color: var(--correct-text);
+}
+
+.chip[aria-disabled='true'] {
+  opacity: 0.55;
 }
 
 /* ── Writing box ───────────────────────────────────────────────────────── */
@@ -362,6 +437,32 @@ button[aria-disabled='true'] {
 }
 
 /* The engine got no 2D canvas (HandwritingCanvas): the box says so instead of staying blank. */
+/* Stroke data on its way (HandwritingCanvas): a spinner where the reference will be, shown only
+   if the wait is noticeable. */
+.hw-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  animation: fade-in 200ms ease-out 150ms both;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .hw-error {
   position: absolute;
   inset: 0;
@@ -415,6 +516,21 @@ button[aria-disabled='true'] {
 .controls[data-hidden] {
   min-height: var(--tap);
   visibility: hidden;
+}
+
+/* Observe without an animation: why, or a retry — in the stroke controls' place and height. */
+.controls--notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  min-height: var(--tap);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--muted);
 }
 
 .btn {
@@ -477,6 +593,32 @@ button[aria-disabled='true'] {
 .btn--wide {
   width: 100%;
   min-height: 56px;
+}
+
+a.btn {
+  color: var(--ink);
+}
+
+a.btn--primary {
+  color: #fff;
+}
+
+.btn--danger {
+  color: var(--wrong);
+  border-color: color-mix(in srgb, var(--wrong) 40%, var(--border));
+  font-weight: 600;
+}
+
+.btn--small {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+:is(.btn, .chip, .appnav__item):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* ── Stroke order (Xem): stroke-data glyph and playback controls ───────── */
@@ -1005,6 +1147,12 @@ button[aria-disabled='true'] {
     transition: none;
   }
 
+  /* A still ring rather than a spinning one; toasts stay until replaced. */
+  .spinner,
+  .hw-loading {
+    animation: none;
+  }
+
   /* No fade-in to show that the result's buttons cannot be pressed yet (ResultPanel's guard):
      they are dimmed instead, until the guard lets them be pressed. */
   .result__body[data-guard] :is(.btn, .linkbtn) {
@@ -1047,13 +1195,216 @@ button[aria-disabled='true'] {
   left: 50%;
   z-index: 20;
   transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 2 * var(--gutter));
   padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: 20px;
   background: rgba(28, 25, 23, 0.92);
   color: #fff;
   font-size: 15px;
-  white-space: nowrap;
+  line-height: 1.35;
+  text-align: center;
   pointer-events: none;
+}
+
+/* A toast that fades out by itself (remounted, by key, for each message). */
+.toast--auto {
+  animation: toast-out 2400ms ease-in both;
+}
+
+@keyframes toast-out {
+  0%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* A session could not store a rating: said at the bottom, over the practice. */
+.session__warn {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom) + 8px);
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 2 * var(--gutter));
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--wrong);
+  color: #fff;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ── Confirmation dialog (src/app/ConfirmDialog.tsx) ───────────────────── */
+
+.dialog {
+  width: min(400px, calc(100vw - 2 * var(--gutter)));
+  padding: 20px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 16px 48px rgba(28, 25, 23, 0.25);
+}
+
+.dialog::backdrop {
+  background: rgba(28, 25, 23, 0.45);
+}
+
+.dialog__title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.dialog__text {
+  margin: 0 0 18px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.dialog__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── App shell: bottom navigation, plain pages (src/app/App.tsx) ───────── */
+
+/* The navigation's height, for screens to keep their last line above it (src/dict uses it too). */
+.app[data-nav] {
+  --app-nav-h: 60px;
+}
+
+.appnav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 160px));
+  justify-content: center;
+  height: calc(var(--app-nav-h) + env(safe-area-inset-bottom));
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  border-top: 1px solid var(--border);
+  background: var(--paper);
+}
+
+.appnav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 48px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.appnav__item[aria-current='page'] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.appnav__icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + 8px) calc(var(--gutter) + env(safe-area-inset-right))
+    calc(32px + env(safe-area-inset-bottom) + var(--app-nav-h, 0px)) calc(var(--gutter) + env(safe-area-inset-left));
+  line-height: 1.45;
+}
+
+.page a:where(:not(.btn)) {
+  color: var(--accent-press);
+  text-underline-offset: 2px;
+}
+
+.page__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0 6px;
+}
+
+.page__title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+/* A screen's heading takes focus when the screen opens (app/screen.ts): a ring for keyboard users only. */
+:is(.page__title, .error-page__title)[tabindex='-1']:focus {
+  outline: none;
+}
+
+:is(.page__title, .error-page__title)[tabindex='-1']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.page__subtitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.page p {
+  margin: 0 0 10px;
+}
+
+.page .page__muted {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.page__msg:empty {
+  display: none;
+}
+
+.page__msg {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 15px;
+}
+
+.page__msg--error {
+  color: var(--wrong);
+}
+
+.notice {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.notice--error {
+  border: 1px solid color-mix(in srgb, var(--wrong) 35%, var(--border));
+  color: var(--wrong);
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── Landscape phones: box left, everything else right ─────────────────── */
@@ -1084,7 +1435,7 @@ button[aria-disabled='true'] {
 
   /* The details opened take the column: the prompt keeps its first line, whole, rather than
      being clipped through a line of text. */
-  .workspace:has(.result__more) :is(.prompt__meaning, .prompt__extra) {
+  .workspace:has(.result__more) :is(.prompt__meaning, .prompt__context, .prompt__extra) {
     display: none;
   }
 
@@ -1098,6 +1449,11 @@ button[aria-disabled='true'] {
   /* The column can be as narrow as 280px: labels stay on one line. */
   .icon-btn {
     width: 40px;
+  }
+
+  .topbar__progress,
+  .topbar__spacer {
+    min-width: 40px;
   }
 
   .modes__tab {
@@ -1145,9 +1501,9 @@ button[aria-disabled='true'] {
   }
 }
 
-/* Below ~340px the note under the prompt gives way to the stroke-order controls. */
+/* Below ~340px the context word gives way to the controls, except in Recall where it is a clue. */
 @media (orientation: landscape) and (max-height: 340px) {
-  .prompt__note {
+  .workspace:not([data-mode='recall']) .prompt__context {
     display: none;
   }
 }

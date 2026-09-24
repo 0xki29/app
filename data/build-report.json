@@ -1,0 +1,536 @@
+{
+ "format": 1,
+ "cedict": {
+  "headerEntries": 125101,
+  "date": "2026-09-23T05:36:01Z",
+  "linesParsed": 125101,
+  "badLines": [],
+  "duplicateKeysMerged": 0,
+  "entries": 125101
+ },
+ "cvdict": {
+  "headerEntries": 122591,
+  "linesParsed": 122597,
+  "badLines": [],
+  "lineFixes": {
+   "cvdict-double-bracket": 1
+  }
+ },
+ "join": {
+  "cvdictEntries": 122597,
+  "cvdictDuplicateKeysMerged": 1,
+  "joinedExact": 115853,
+  "joinedCaseInsensitive": 2370,
+  "joinedToneless": 157,
+  "joinedSimplifiedToneless": 208,
+  "borrowedFromVariant": 50,
+  "joinedTotal": 118638,
+  "cedictRowsWithoutVietnamese": 6463,
+  "cvdictKeysNotInCedict": 6743,
+  "cvdictEntriesUnused": 4008,
+  "looseJoinsSkippedAsShared": [
+   "中土|中土[Zhong1 Tu3] ← 中土|中土[zhong1 tu3]",
+   "中土|中土[Zhong1 tu3] ← 中土|中土[zhong1 tu3]",
+   "分付|分付[Fen1 fu4] ← 分付|分付[fen1 fu4]",
+   "分付|分付[fen1 fu5] ← 分付|分付[fen1 fu4]",
+   "彝|彝[Yi2] ← 彞|彝[yi2]",
+   "彝|彝[yi2] ← 彞|彝[yi2]",
+   "沖壓|冲压[chong1 ya1] ← 沖壓|冲压[chong4 ya1]",
+   "衝壓|冲压[chong4 ya1] ← 沖壓|冲压[chong4 ya1]",
+   "金磚|金砖[Jin1 zhuan1] ← 金磚|金砖[Jin1 Zhuan1]",
+   "金磚|金砖[jin1 zhuan1] ← 金磚|金砖[Jin1 Zhuan1]"
+  ],
+  "looseJoinsDenied": [
+   "中油|中油[Zhong1 you2] ← 中油|中油[Zhong4 you2]",
+   "中農|中农[zhong1 nong2] ← 中農|中农[Zhong1 nong2]",
+   "嫚|嫚[man1] ← 嫚|嫚[Man4]",
+   "春日|春日[chun1 ri4] ← 春日|春日[Chun1 ri4]",
+   "樟木|樟木[zhang1 mu4] ← 樟木|樟木[Zhang1 mu4]",
+   "海斯|海斯[Hai3 si1] ← 海斯|海斯[hai3 si1]",
+   "滹|滹[hu1] ← 滹|滹[Hu1]",
+   "白麻子|白麻子[bai2 ma2 zi5] ← 白麻子|白麻子[bai2 ma2 zi3]",
+   "科克|科克[Ke1 ke4] ← 科克|科克[ke1 ke4]",
+   "累|累[lei2] ← 纍|累[Lei2]",
+   "終傅|终傅[zhong1 fu4] ← 終傅|终傅[zhong1 Fu4]",
+   "維根|维根[wei2 gen1] ← 維根|维根[Wei2 gen1]",
+   "虹橋|虹桥[hong2 qiao2] ← 虹橋|虹桥[Hong2 qiao2]",
+   "達令|达令[da2 ling4] ← 達令|达令[Da2 ling4]",
+   "鹽井|盐井[yan2 jing3] ← 鹽井|盐井[Yan2 jing3]",
+   "麗|丽[li2] ← 麗|丽[Li2]"
+  ],
+  "looseJoinsAcrossProperNounCase": [
+   "一中一台|一中一台[yi1 zhong1 yi1 tai2] ← 一中一台|一中一台[yi1 Zhong1 yi1 Tai2]",
+   "不萊梅|不莱梅[Bu4 lai2 mei2] ← 不萊梅|不莱梅[bu4 lai2 mei2]",
+   "主顯節|主显节[Zhu3 xian3 jie2] ← 主顯節|主显节[zhu3 xian3 jie2]",
+   "二簡|二简[Er4 jian3] ← 二簡|二简[er4 jian3]",
+   "五人墓碑記|五人墓碑记[Wu3 Ren2 Mu4 bei1 ji4] ← 五人墓碑記|五人墓碑记[wu3 ren2 mu4 bei1 ji4]",
+   "亳|亳[bo2] ← 亳|亳[Bo2]",
+   "以太網|以太网[yi3 tai4 wang3] ← 以太網|以太网[Yi3 tai4 wang3]",
+   "位元幣|位元币[wei4 yuan2 bi4] ← 位元幣|位元币[Wei4 yuan2 bi4]",
+   "佛牙|佛牙[fo2 ya2] ← 佛牙|佛牙[Fo2 ya2]",
+   "佛經|佛经[fo2 jing1] ← 佛經|佛经[Fo2 jing1]",
+   "佤|佤[Wa3] ← 佤|佤[wa3]",
+   "僳|僳[su4] ← 僳|僳[Su4]",
+   "克氏原螯蝦|克氏原螯虾[Ke4 shi4 yuan2 ao2 xia1] ← 克氏原螯蝦|克氏原螯虾[ke4 shi4 yuan2 ao2 xia1]",
+   "克流感|克流感[Ke4 liu2 gan3] ← 克流感|克流感[ke4 liu2 gan3]",
+   "克西|克西[ke4 xi1] ← 克西|克西[ke4 Xi1]",
+   "入聯|入联[ru4 Lian2] ← 入聯|入联[ru4 lian2]",
+   "全新紀|全新纪[Quan2 xin1 ji4] ← 全新紀|全新纪[quan2 xin1 ji4]",
+   "全球資訊網|全球资讯网[Quan2 qiu2 Zi1 xun4 wang3] ← 全球資訊網|全球资讯网[quan2 qiu2 zi1 xun4 wang3]",
+   "八一五|八一五[Ba1 yi1 wu3] ← 八一五|八一五[ba1 yi1 wu3]",
+   "六二五事變|六二五事变[Liu4 Er4 wu3 Shi4 bian4] ← 六二五事變|六二五事变[liu4 er4 wu3 shi4 bian4]",
+   "六方會談|六方会谈[Liu4 fang1 Hui4 tan2] ← 六方會談|六方会谈[liu4 fang1 hui4 tan2]",
+   "剁手節|剁手节[duo4 shou3 jie2] ← 剁手節|剁手节[Duo4 shou3 jie2]",
+   "北半球|北半球[bei3 ban4 qiu2] ← 北半球|北半球[Bei3 ban4 qiu2]",
+   "十字軍|十字军[Shi2 zi4 jun1] ← 十字軍|十字军[shi2 zi4 jun1]",
+   "十字軍東征|十字军东征[Shi2 zi4 jun1 Dong1 zheng1] ← 十字軍東征|十字军东征[shi2 zi4 jun1 dong1 zheng1]",
+   "南半球|南半球[nan2 ban4 qiu2] ← 南半球|南半球[Nan2 ban4 qiu2]",
+   "厄爾尼諾|厄尔尼诺[e4 er3 ni2 nuo4] ← 厄爾尼諾|厄尔尼诺[E4 er3 Ni2 nuo4]",
+   "台商|台商[tai2 shang1] ← 台商|台商[Tai2 shang1]",
+   "台股|台股[tai2 gu3] ← 台股|台股[Tai2 gu3]",
+   "吃豆人|吃豆人[Chi1 dou4 ren2] ← 吃豆人|吃豆人[chi1 dou4 ren2]",
+   "吳市吹簫|吴市吹箫[wu2 shi4 chui1 xiao1] ← 吳市吹簫|吴市吹箫[Wu2 shi4 chui1 xiao1]",
+   "唐氏症|唐氏症[tang2 shi4 zheng4] ← 唐氏症|唐氏症[Tang2 shi4 zheng4]",
+   "回回青|回回青[Hui2 hui2 qing1] ← 回回青|回回青[hui2 hui2 qing1]",
+   "回祿之災|回禄之灾[Hui2 lu4 zhi1 zai1] ← 回祿之災|回禄之灾[hui2 lu4 zhi1 zai1]",
+   "國情咨文|国情咨文[guo2 qing2 zi1 wen2] ← 國情咨文|国情咨文[Guo2 qing2 Zi1 wen2]",
+   "埃米爾|埃米尔[ai1 mi3 er3] ← 埃米爾|埃米尔[Ai1 mi3 er3]",
+   "大紫荊勳章|大紫荆勋章[Da4 Zi3 jing1 Xun1 zhang1] ← 大紫荊勳章|大紫荆勋章[da4 zi3 jing1 xun1 zhang1]",
+   "天權|天权[Tian1 quan2] ← 天權|天权[tian1 quan2]",
+   "天璇|天璇[Tian1 xuan2] ← 天璇|天璇[tian1 xuan2]",
+   "天璣|天玑[Tian1 ji1] ← 天璣|天玑[tian1 ji1]",
+   "嵊|嵊[sheng4] ← 嵊|嵊[Sheng4]",
+   "巴金森氏症|巴金森氏症[ba1 jin1 sen1 shi4 zheng4] ← 巴金森氏症|巴金森氏症[Ba1 jin1 sen1 shi4 zheng4]",
+   "布朗運動|布朗运动[Bu4 lang3 yun4 dong4] ← 布朗運動|布朗运动[bu4 lang3 yun4 dong4]",
+   "布魯氏菌病|布鲁氏菌病[bu4 lu3 shi4 jun1 bing4] ← 布魯氏菌病|布鲁氏菌病[Bu4 lu3 shi4 jun1 bing4]",
+   "帕金森病|帕金森病[pa4 jin1 sen1 bing4] ← 帕金森病|帕金森病[Pa4 jin1 sen1 bing4]",
+   "席夢思|席梦思[xi2 meng4 si1] ← 席夢思|席梦思[Xi2 meng4 si1]",
+   "意大利麵|意大利面[yi4 da4 li4 mian4] ← 意大利麵|意大利面[Yi4 da4 li4 mian4]",
+   "搖光|摇光[Yao2 guang1] ← 搖光|摇光[yao2 guang1]",
+   "教皇|教皇[jiao4 huang2] ← 教皇|教皇[Jiao4 huang2]",
+   "數碼港|数码港[Shu4 ma3 gang3] ← 數碼港|数码港[shu4 ma3 gang3]",
+   "日元|日元[ri4 yuan2] ← 日元|日元[Ri4 yuan2]",
+   "日圓|日圆[ri4 yuan2] ← 日圓|日圆[Ri4 yuan2]",
+   "明實錄|明实录[Ming2 Shi2 lu4] ← 明實錄|明实录[ming2 shi2 lu4]",
+   "杞梓之林|杞梓之林[qi3 zi3 zhi1 lin2] ← 杞梓之林|杞梓之林[Qi3 zi3 zhi1 lin2]",
+   "樂昌之鏡|乐昌之镜[Le4 chang1 zhi1 jing4] ← 樂昌之鏡|乐昌之镜[le4 chang1 zhi1 jing4]",
+   "樂昌分鏡|乐昌分镜[Le4 chang1 fen1 jing4] ← 樂昌分鏡|乐昌分镜[le4 chang1 fen1 jing4]",
+   "橢圓形辦公室|椭圆形办公室[Tuo3 yuan2 xing2 Ban4 gong1 shi4] ← 橢圓形辦公室|椭圆形办公室[tuo3 yuan2 xing2 ban4 gong1 shi4]",
+   "歐元|欧元[ou1 yuan2] ← 歐元|欧元[Ou1 yuan2]",
+   "正教真詮|正教真诠[Zheng4 jiao4 Zhen1 quan2] ← 正教真詮|正教真诠[zheng4 jiao4 zhen1 quan2]",
+   "比特幣|比特币[bi3 te4 bi4] ← 比特幣|比特币[Bi3 te4 bi4]",
+   "江湖醫生|江湖医生[jiang1 hu2 yi1 sheng1] ← 江湖醫生|江湖医生[Jiang1 hu2 yi1 sheng1]",
+   "法國號|法国号[fa3 guo2 hao4] ← 法國號|法国号[Fa3 guo2 hao4]",
+   "法輪|法轮[fa3 lun2] ← 法輪|法轮[Fa3 lun2]",
+   "法輪常轉|法轮常转[fa3 lun2 chang2 zhuan4] ← 法輪常轉|法轮常转[Fa3 lun2 chang2 zhuan4]",
+   "海上奇書|海上奇书[Hai3 shang4 Qi2 shu1] ← 海上奇書|海上奇书[hai3 shang4 qi2 shu1]",
+   "海南鰁|海南鳈[hai3 nan2 quan2] ← 海南鰁|海南鳈[Hai3 nan2 quan2]",
+   "海豹部隊|海豹部队[Hai3 bao4 bu4 dui4] ← 海豹部隊|海豹部队[hai3 bao4 bu4 dui4]",
+   "浸禮教|浸礼教[Jin4 li3 jiao4] ← 浸禮教|浸礼教[jin4 li3 jiao4]",
+   "渤|渤[bo2] ← 渤|渤[Bo2]",
+   "港元|港元[gang3 yuan2] ← 港元|港元[Gang3 yuan2]",
+   "瀛臺|瀛台[Ying2 tai2] ← 瀛臺|瀛台[ying2 tai2]",
+   "火神|火神[huo3 shen2] ← 火神|火神[Huo3 shen2]",
+   "烏節路|乌节路[Wu1 jie2 Lu4] ← 烏節路|乌节路[wu1 jie2 lu4]",
+   "爛橘子|烂橘子[Lan4 ju2 zi5] ← 爛橘子|烂橘子[lan4 ju2 zi5]",
+   "牟|牟[mu4] ← 牟|牟[Mu4]",
+   "特敏福|特敏福[Te4 min3 fu2] ← 特敏福|特敏福[te4 min3 fu2]",
+   "玉衡|玉衡[Yu4 heng2] ← 玉衡|玉衡[yu4 heng2]",
+   "環秀山莊|环秀山庄[Huan2 xiu4 Shan1 zhuang1] ← 環秀山莊|环秀山庄[huan2 xiu4 shan1 zhuang1]",
+   "神風特攻隊|神风特攻队[Shen2 feng1 Te4 gong1 dui4] ← 神風特攻隊|神风特攻队[shen2 feng1 te4 gong1 dui4]",
+   "禪門五宗|禅门五宗[Chan2 men2 wu3 zong1] ← 禪門五宗|禅门五宗[chan2 men2 wu3 zong1]",
+   "緬元|缅元[mian3 yuan2] ← 緬元|缅元[Mian3 yuan2]",
+   "美元|美元[mei3 yuan2] ← 美元|美元[Mei3 yuan2]",
+   "美刀|美刀[mei3 dao1] ← 美刀|美刀[Mei3 dao1]",
+   "美圓|美圆[mei3 yuan2] ← 美圓|美圆[Mei3 yuan2]",
+   "美神|美神[mei3 shen2] ← 美神|美神[Mei3 shen2]",
+   "美金|美金[mei3 jin1] ← 美金|美金[Mei3 jin1]",
+   "聯邦緊急措施署|联邦紧急措施署[Lian2 bang1 Jin3 ji2 Cuo4 shi1 shu3] ← 聯邦緊急措施署|联邦紧急措施署[lian2 bang1 jin3 ji2 cuo4 shi1 shu3]",
+   "芍|芍[que4] ← 芍|芍[Que4]",
+   "英法|英法[Ying1 Fa3] ← 英法|英法[ying1 fa3]",
+   "茌|茌[chi2] ← 茌|茌[Chi2]",
+   "菩薩|菩萨[pu2 sa4] ← 菩薩|菩萨[Pu2 sa4]",
+   "計都|计都[Ji4 du1] ← 計都|计都[ji4 du1]",
+   "詩禮|诗礼[shi1 li3] ← 詩禮|诗礼[Shi1 Li3]",
+   "賈第蟲|贾第虫[jia3 di4 chong2] ← 賈第蟲|贾第虫[Jia3 di4 chong2]",
+   "賈第蟲病|贾第虫病[jia3 di4 chong2 bing4] ← 賈第蟲病|贾第虫病[Jia3 di4 chong2 bing4]",
+   "賽馬會|赛马会[sai4 ma3 hui4] ← 賽馬會|赛马会[Sai4 ma3 hui4]",
+   "贔屭|赑屃[bi4 xi4] ← 贔屭|赑屃[Bi4 xi4]",
+   "達菲|达菲[Da2 fei1] ← 達菲|达菲[da2 fei1]",
+   "邡|邡[fang1] ← 邡|邡[Fang1]",
+   "邱比特|邱比特[Qiu1 bi3 te4] ← 邱比特|邱比特[qiu1 bi3 te4]",
+   "鄄|鄄[juan4] ← 鄄|鄄[Juan4]",
+   "鄲|郸[dan1] ← 鄲|郸[Dan1]",
+   "銀河星雲|银河星云[Yin2 he2 xing1 yun2] ← 銀河星雲|银河星云[yin2 he2 xing1 yun2]",
+   "錫劇|锡剧[xi1 ju4] ← 錫劇|锡剧[Xi1 ju4]",
+   "鐵氟龍|铁氟龙[tie3 fu2 long2] ← 鐵氟龍|铁氟龙[Tie3 fu2 long2]",
+   "長陽縣|长阳县[Chang2 yang2 Xian4] ← 長陽縣|长阳县[chang2 yang2 xian4]",
+   "阿爾泰紫菀|阿尔泰紫菀[A1 er3 tai4 zi3 wan3] ← 阿爾泰紫菀|阿尔泰紫菀[a1 er3 tai4 zi3 wan3]",
+   "阿爾茨海默氏病|阿尔茨海默氏病[a1 er3 ci2 hai3 mo4 shi4 bing4] ← 阿爾茨海默氏病|阿尔茨海默氏病[A1 er3 ci2 hai3 mo4 shi4 bing4]",
+   "阿爾茨海默氏症|阿尔茨海默氏症[a1 er3 ci2 hai3 mo4 shi4 zheng4] ← 阿爾茨海默氏症|阿尔茨海默氏症[A1 er3 ci2 hai3 mo4 shi4 zheng4]",
+   "阿爾茨海默病|阿尔茨海默病[a1 er3 ci2 hai3 mo4 bing4] ← 阿爾茨海默病|阿尔茨海默病[A1 er3 ci2 hai3 mo4 bing4]",
+   "阿爾茨海默症|阿尔茨海默症[a1 er3 ci2 hai3 mo4 zheng4] ← 阿爾茨海默症|阿尔茨海默症[A1 er3 ci2 hai3 mo4 zheng4]",
+   "阿茨海默症|阿茨海默症[a1 ci2 hai3 mo4 zheng4] ← 阿茨海默症|阿茨海默症[A1 ci2 hai3 mo4 zheng4]",
+   "阿茲海默症|阿兹海默症[a1 zi1 hai3 mo4 zheng4] ← 阿茲海默症|阿兹海默症[A1 zi1 hai3 mo4 zheng4]",
+   "陳紹|陈绍[chen2 shao4] ← 陳紹|陈绍[chen2 Shao4]",
+   "非物質文化遺產|非物质文化遗产[fei1 wu4 zhi4 wen2 hua4 yi2 chan3] ← 非物質文化遺產|非物质文化遗产[Fei1 wu4 zhi4 Wen2 hua4 Yi2 chan3]",
+   "韓元|韩元[han2 yuan2] ← 韓元|韩元[Han2 yuan2]",
+   "韓圓|韩圆[han2 yuan2] ← 韓圓|韩圆[Han2 yuan2]",
+   "韓流|韩流[han2 liu2] ← 韓流|韩流[Han2 liu2]",
+   "馬天尼|马天尼[ma3 tian1 ni2] ← 馬天尼|马天尼[Ma3 tian1 ni2]",
+   "馬赫數|马赫数[ma3 he4 shu4] ← 馬赫數|马赫数[Ma3 he4 shu4]",
+   "鬥地主|斗地主[dou4 di4 zhu3] ← 鬥地主|斗地主[Dou4 Di4 zhu3]"
+  ]
+ },
+ "overrides": {
+  "viGloss": {
+   "rows": 1291,
+   "applied": 1291,
+   "resolvedLoosely": [],
+   "unresolved": []
+  },
+  "hanvietWord": {
+   "rows": 228,
+   "applied": 228,
+   "resolvedLoosely": [],
+   "unresolved": []
+  },
+  "hanvietChar": {
+   "rows": 62
+  },
+  "extraEntries": {
+   "rows": 25,
+   "added": 25,
+   "nowInCedict": []
+  },
+  "joinDeny": {
+   "rows": 16,
+   "unresolved": []
+  },
+  "notProperNoun": {
+   "rows": 23,
+   "applied": 23,
+   "unresolved": []
+  }
+ },
+ "rows": 125126,
+ "vi": {
+  "rowsWithVietnamese": 119441,
+  "fromCvdict": 117371,
+  "curatedAi": 1316,
+  "curatedReviewed": 0,
+  "fromTemplate": 754,
+  "englishFallback": 5685,
+  "cvdictSameAsEnglish": 1194,
+  "crossReferences": {
+   "resolved": 14723,
+   "unresolved": 773,
+   "unresolvedExamples": [
+    "00後|00后[ling2 ling2 hou4]",
+    "我的[wo3 de5]",
+    "我的姐[wo3 de5 jie3]",
+    "鞀|鼗[tao2]",
+    "一倡三歎|一倡三叹[yi1 chang4 san1 tan4]",
+    "十年怕井绳[yi1 zhao1 bei4 she2 yao3 , shi2 nian2 pa4 jing3 sheng2]",
+    "有一面之緣|有一面之缘[you3 yi1 mian4 zhi1 yuan2]",
+    "昌都地區|昌都地区[Chang1 du1 di4 qu1]",
+    "昌都地區|昌都地区[Chang1 du1 di4 qu1]",
+    "小方[xiao3 fang1]",
+    "緩方|缓方[huan3 fang1]",
+    "急方[ji2 fang1]",
+    "奇方[ji1 fang1]",
+    "偶方[ou3 fang1]",
+    "重方[chong2 fang1]",
+    "摸不着头脑[zhang4 er4 he2 shang5 , mo1 bu5 zhao2 tou2 nao3]",
+    "赛过一个诸葛亮[san1 ge4 chou4 pi2 jiang5 , sai4 guo4 yi1 ge4 Zhu1 ge3 Liang4]",
+    "走为上策[san1 shi2 liu4 ji4 , zou3 wei2 shang4 ce4]",
+    "價原|价原[Jia4 yuan2]",
+    "三級甲等|三级甲等[san1 ji2 jia3 deng3]",
+    "人生觀|人生观[ren2 sheng1 guan1]",
+    "個|个[ge5]",
+    "旅遊不便險|旅游不便险[lu:3 you2 bu4 bian4 xian3]",
+    "不知道[bu4 zhi1 dao4]",
+    "照V不誤|照V不误[zhao4 xx5 bu4 wu4]",
+    "這錢買排骨它不香嗎|这钱买排骨它不香吗[zhe4 qian2 mai3 pai2 gu3 ta1 bu4 xiang1 ma5]",
+    "只怕有心人[tian1 xia4 wu2 nan2 shi4 , zhi3 pa4 you3 xin1 ren2]",
+    "中纖板|中纤板[zhong1 xian1 ban3]",
+    "中國概念股|中国概念股[Zhong1 guo2 gai4 nian4 gu3]",
+    "台灣中油|台湾中油[Tai2 wan1 Zhong1 you2]",
+    "中國遠洋運輸|中国远洋运输[Zhong1 guo2 Yuan3 yang2 Yun4 shu1]",
+    "山南地區|山南地区[Shan1 nan2 di4 qu1]",
+    "我之所以討厭他|我之所以讨厌他[wo3 zhi1 suo3 yi3 tao3 yan4 ta1]",
+    "乙型流感[yi3 xing2 liu2 gan3]",
+    "乙女遊戲|乙女游戏[yi3 nu : 3 you2 xi4]",
+    "九價HPV疫苗|九价HPV疫苗[jiu3 jia4 HPV yi4 miao2]",
+    "寶親王|宝亲王[Bao3 Qin1 wang2]",
+    "弘曆|弘历[Hong2 li4]",
+    "事業編制|事业编制[shi4 ye4 bian1 zhi4]",
+    "海東地區|海东地区[Hai3 dong1 di4 qu1]"
+   ]
+  }
+ },
+ "hanviet": {
+  "allHanRows": 124333,
+  "allHanRowsWithReading": 122583,
+  "coverage": 0.98592,
+  "rowsFromOverride": 36,
+  "loanwordRows": 192,
+  "rowsFromAlgorithm": 123063,
+  "rowsLowConfidence": 285,
+  "rowsLowConfidenceUnihan": 166,
+  "rowsWithCharacterTableReading": 2852,
+  "wordOverridesTheAlgorithmNowMatches": [],
+  "rowsWithHanButNoReading": 1790,
+  "rowsWithAlternates": 11334,
+  "characterResolutions": {
+   "exact": 138277,
+   "any": 177696,
+   "none": 1779,
+   "variant-any": 124,
+   "unihan": 178,
+   "variant-exact": 55,
+   "char-table": 2934,
+   "alt": 1198,
+   "other-reading": 121,
+   "toneless": 108,
+   "variant-toneless": 1,
+   "variant-alt": 4
+  },
+  "gold": {
+   "algorithm": 44,
+   "shipped": 46,
+   "of": 46,
+   "misses": [
+    {
+     "word": "调查",
+     "want": "điều tra",
+     "algorithm": "điệu tra",
+     "algorithmOk": false,
+     "shipped": "điều tra",
+     "shippedOk": true
+    },
+    {
+     "word": "将军",
+     "want": "tướng quân",
+     "algorithm": "tương quân",
+     "algorithmOk": false,
+     "shipped": "tướng quân",
+     "shippedOk": true
+    }
+   ]
+  }
+ },
+ "hsk": {
+  "wordsPerLevel": {
+   "1": 500,
+   "2": 772,
+   "3": 973,
+   "4": 1000,
+   "5": 1071,
+   "6": 1140,
+   "7": 5636
+  },
+  "wordsMatched": 11092,
+  "wordsMissing": [],
+  "tagsMovedFromVariantEntries": [
+   "複習|复习[fu4 xi2] → 復習|复习[fu4 xi2]",
+   "電視臺|电视台[dian4 shi4 tai2] → 電視台|电视台[dian4 shi4 tai2]",
+   "公佈|公布[gong1 bu4] → 公布|公布[gong1 bu4]",
+   "抽煙|抽烟[chou1 yan1] → 抽菸|抽烟[chou1 yan1]",
+   "噁心|恶心[e3 xin1] → 惡心|恶心[e3 xin1]",
+   "伙伴|伙伴[huo3 ban4] → 夥伴|伙伴[huo3 ban4]",
+   "鮮艷|鲜艳[xian1 yan4] → 鮮豔|鲜艳[xian1 yan4]",
+   "紮實|扎实[zha1 shi5] → 扎實|扎实[zha1 shi5]",
+   "咨詢|咨询[zi1 xun2] → 諮詢|咨询[zi1 xun2]",
+   "痴獃|痴呆[chi1 dai1] → 痴呆|痴呆[chi1 dai1]",
+   "動盪|动荡[dong4 dang4] → 動蕩|动荡[dong4 dang4]",
+   "泛濫|泛滥[fan4 lan4] → 氾濫|泛滥[fan4 lan4]",
+   "譁然|哗然[hua2 ran2] → 嘩然|哗然[hua2 ran2]",
+   "傢伙|家伙[jia1 huo5] → 家伙|家伙[jia1 huo5]",
+   "艱巨|艰巨[jian1 ju4] → 艱鉅|艰巨[jian1 ju4]",
+   "侷限|局限[ju2 xian4] → 局限|局限[ju2 xian4]",
+   "品嘗|品尝[pin3 chang2] → 品嚐|品尝[pin3 chang2]",
+   "奇跡|奇迹[qi2 ji4] → 奇蹟|奇迹[qi2 ji4]"
+  ],
+  "curatedRowsThatFollowedTheTag": [
+   "vi-gloss 複習|复习[fu4 xi2] → 復習|复习[fu4 xi2]"
+  ],
+  "tagsLeftToTheMainForm": [
+   "裏|里[li3] → 裡|里[li3]",
+   "台|台[tai2] → 臺|台[tai2]",
+   "瞭解|了解[liao3 jie3] → 了解|了解[liao3 jie3]",
+   "發佈|发布[fa1 bu4] → 發布|发布[fa1 bu4]",
+   "盪漾|荡漾[dang4 yang4] → 蕩漾|荡漾[dang4 yang4]",
+   "馬後砲|马后炮[ma3 hou4 pao4] → 馬後炮|马后炮[ma3 hou4 pao4]",
+   "余|余[yu2] → 餘|余[yu2]"
+  ],
+  "tagsMovedFromProperNounToCommonWord": [
+   "標致|标致[Biao1 zhi4] → 標致|标致[biao1 zhi5]"
+  ],
+  "rowsTagged": 11046,
+  "rowsTaggedPerLevel": {
+   "1": 512,
+   "2": 756,
+   "3": 958,
+   "4": 992,
+   "5": 1064,
+   "6": 1134,
+   "7": 5630
+  },
+  "writingList": {
+   "1": 300,
+   "2": 400,
+   "3": 500
+  },
+  "writingCharsWithoutStrokes": [],
+  "writingOrderFirst20": "的是一在不人有了我国这为中个大会们他来和",
+  "level1Context": 228
+ },
+ "rank": {
+  "rowsWithWordfreq": 88799,
+  "secondaryPenalty": {
+   "properNounBesideCommon": 754,
+   "variantOfSameForm": 1041
+  },
+  "top20": "的[de5] 是[shi4] 在[zai4] 了[le5] 我[wo3] 和[he2] 有[you3] 不[bu4] 人[ren2] 也[ye3] 你[ni3] 他[ta1] 这[zhe4] 中[zhong1] 年[nian2] 对[dui4] 就[jiu4] 都[dou1] 上[shang4] 说[shuo1]"
+ },
+ "flags": {
+  "pn": 20297,
+  "var": 3211,
+  "usedin": 4943,
+  "mt": 117371,
+  "cur-ai": 1316,
+  "cur": 0,
+  "en": 5685,
+  "hvlow": 285,
+  "hvnom": 166,
+  "hvcur-ai": 3080,
+  "hvcur": 0,
+  "nostroke": 5677,
+  "added": 25
+ },
+ "strokes": {
+  "files": 9574,
+  "entriesMissingStrokes": 5677,
+  "bytes": 32244361,
+  "available": {
+   "file": "available.e3d33c51.txt",
+   "bytes": 28722,
+   "gzipBytes": 19833
+  }
+ },
+ "gates": [
+  {
+   "id": "checksums",
+   "ok": true,
+   "detail": "every pinned input matched; stroke files 9574/9574, tree ok"
+  },
+  {
+   "id": "overrides-resolve",
+   "ok": true,
+   "detail": "vi-gloss unresolved 0, hanviet-word 0, join-deny 0 , not-proper-noun 0"
+  },
+  {
+   "id": "overrides-shape",
+   "ok": true,
+   "detail": "0 curated readings that are not Vietnamese syllables "
+  },
+  {
+   "id": "entry-count",
+   "ok": true,
+   "detail": "125126 rows vs 125101 CC-CEDICT entries expected (0.02% drift); CVDICT 122597 vs 122597 (0.00%); limit ±2%"
+  },
+  {
+   "id": "cedict-parse",
+   "ok": true,
+   "detail": "125101 lines parsed of the 125101 its header announces, 0 bad"
+  },
+  {
+   "id": "cvdict-fixes",
+   "ok": true,
+   "detail": "line fixes applied: {\"cvdict-double-bracket\":1}; unparsed lines 0"
+  },
+  {
+   "id": "hv-vernacular",
+   "ok": true,
+   "detail": "0 rows ship a vernacular form hanviet-char.tsv rules out "
+  },
+  {
+   "id": "nfc",
+   "ok": true,
+   "detail": "0 rows not NFC "
+  },
+  {
+   "id": "meaning",
+   "ok": true,
+   "detail": "0 rows with neither vi nor en "
+  },
+  {
+   "id": "syllables",
+   "ok": true,
+   "detail": "0 all-Han rows whose pinyin/Hán Việt syllables ≠ characters "
+  },
+  {
+   "id": "hv-coverage",
+   "ok": true,
+   "detail": "122583/124333 all-Han rows have a Hán Việt reading (98.59%, minimum 98.5%)"
+  },
+  {
+   "id": "gold",
+   "ok": true,
+   "detail": "algorithm 44/46 (minimum 44), shipped 46/46 (all)"
+  },
+  {
+   "id": "hsk-l1",
+   "ok": true,
+   "detail": "0 HSK 3.0 level-1 words without an entry "
+  },
+  {
+   "id": "hsk12-curated",
+   "ok": true,
+   "detail": "0 HSK 1–2 rows without a curated gloss "
+  },
+  {
+   "id": "notices",
+   "ok": true,
+   "detail": "8 sources, 5 license texts"
+  }
+ ],
+ "dataVersion": "20260923-25105ef7",
+ "shards": [
+  {
+   "file": "core.8df8cc95.tsv",
+   "rows": 30000,
+   "bytes": 3100518,
+   "gzipBytes": 1307938
+  },
+  {
+   "file": "rest-1.b9109261.tsv",
+   "rows": 25000,
+   "bytes": 2600095,
+   "gzipBytes": 1170987
+  },
+  {
+   "file": "rest-2.8bb23c51.tsv",
+   "rows": 25000,
+   "bytes": 2763575,
+   "gzipBytes": 1243819
+  },
+  {
+   "file": "rest-3.0431d9d8.tsv",
+   "rows": 25000,
+   "bytes": 2359670,
+   "gzipBytes": 1004446
+  },
+  {
+   "file": "rest-4.61586c41.tsv",
+   "rows": 20126,
+   "bytes": 2824529,
+   "gzipBytes": 1114703
+  }
+ ],
+ "shardTotals": {
+  "bytes": 13648387,
+  "gzipBytes": 5841893
+ }
+}

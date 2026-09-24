@@ -1,0 +1,29 @@
+# Entries CC-CEDICT capitalizes that Vietnamese treats as common nouns: no "Tên riêng" badge, no capital
+# on every Hán Việt syllable (a curated reading in hanviet-word.tsv may still write "Hán ngữ").
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Drafted by Claude (AI), 2026-09. status "ai-draft" = AI-drafted, awaiting human review; "reviewed" = checked by the owner.
+# Format: UTF-8 (NFC), LF, tab-separated; "#" comments; header row.
+key	reason	source	status
+中文|中文[Zhong1 wen2]	tên ngôn ngữ	claude-2026-09	ai-draft
+漢語|汉语[Han4 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+英語|英语[Ying1 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+英文|英文[Ying1 wen2]	tên ngôn ngữ	claude-2026-09	ai-draft
+華語|华语[Hua2 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+日語|日语[Ri4 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+法語|法语[Fa3 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+俄語|俄语[E2 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+西班牙語|西班牙语[Xi1 ban1 ya2 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+阿拉伯語|阿拉伯语[A1 la1 bo2 yu3]	tên ngôn ngữ	claude-2026-09	ai-draft
+星期日|星期日[Xing1 qi1 ri4]	ngày trong tuần (Chủ nhật): tiếng Anh viết hoa, tiếng Việt coi là danh từ chung	claude-2026-09	ai-draft
+星期天|星期天[Xing1 qi1 tian1]	ngày trong tuần (Chủ nhật)	claude-2026-09	ai-draft
+西方|西方[Xi1 fang1]	danh từ chung: phương Tây	claude-2026-09	ai-draft
+互聯網|互联网[Hu4 lian2 wang3]	danh từ chung: mạng Internet	claude-2026-09	ai-draft
+攝氏度|摄氏度[She4 shi4 du4]	danh từ chung: độ C	claude-2026-09	ai-draft
+臘月|腊月[La4 yue4]	danh từ chung: tháng Chạp	claude-2026-09	ai-draft
+除夕|除夕[Chu2 xi1]	danh từ chung: đêm giao thừa	claude-2026-09	ai-draft
+華人|华人[Hua2 ren2]	danh từ chung: người Hoa	claude-2026-09	ai-draft
+華僑|华侨[Hua2 qiao2]	danh từ chung: Hoa kiều	claude-2026-09	ai-draft
+華裔|华裔[Hua2 yi4]	danh từ chung: người gốc Hoa	claude-2026-09	ai-draft
+京劇|京剧[Jing1 ju4]	danh từ chung: một loại hình kịch (kinh kịch)	claude-2026-09	ai-draft
+英鎊|英镑[Ying1 bang4]	danh từ chung: đơn vị tiền (bảng Anh)	claude-2026-09	ai-draft
+中國畫|中国画[Zhong1 guo2 hua4]	danh từ chung: tranh Trung Quốc	claude-2026-09	ai-draft

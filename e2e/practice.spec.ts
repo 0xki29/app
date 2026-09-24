@@ -1,10 +1,10 @@
-import { expect, readScore, test, traceCharacter, writingBox } from './fixtures'
+import { expect, practiceUrl, readScore, test, traceCharacter, writingBox } from './fixtures'
 
-// Regression tests for the practice flow, on the first character, 永 (5 strokes).
+// Regression tests for the practice flow, in free practice of 永 (5 strokes).
 const FIRST = '永'
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('./')
+  await page.goto(practiceUrl(FIRST))
 })
 
 test('the headline does not praise strokes written backwards', async ({ page }) => {
@@ -81,8 +81,8 @@ test('Nhớ lại: a second tap right after "Chấm điểm" does not rate, even
     'true',
   )
   await readScore(page)
+  // Not rated: the rating is still asked for, on the same recall.
   await expect(page.getByRole('group', { name: 'Tự đánh giá' })).toBeVisible()
-  await expect(page.getByText(/^1 \/ \d+$/)).toBeVisible()
   await expect(page.getByRole('tab', { name: 'Nhớ lại' })).toHaveAttribute('aria-selected', 'true')
 })
 
@@ -116,14 +116,19 @@ test('tapping the active tab while writing keeps the ink (F1)', async ({ page })
   await expect(page.getByRole('button', { name: 'Chấm điểm' })).toBeEnabled()
 })
 
-test('Nhớ lại: the answer seen stays noted through another character and back (F3)', async ({ page }) => {
-  await page.getByRole('tab', { name: 'Nhớ lại' }).click()
+test('Nhớ lại: the answer seen stays noted through another tab and back, until rated (F3)', async ({ page }) => {
+  const recall = page.getByRole('tab', { name: 'Nhớ lại' })
+  await recall.click()
   await traceCharacter(page, FIRST)
   await page.getByRole('button', { name: 'Chấm điểm' }).click()
   await readScore(page)
-  await page.getByRole('button', { name: 'Chữ sau' }).click()
-  await expect(page.getByText(/^2 \/ \d+$/)).toBeVisible()
-  await page.getByRole('button', { name: 'Chữ trước' }).click()
-  await expect(page.getByText(/^1 \/ \d+$/)).toBeVisible()
+  // Locked once the answer is shown: tapping it again says why and changes nothing.
+  await recall.click()
+  await expect(page.locator('.toast')).toHaveText('Đã hiện mẫu: hãy tự đánh giá')
+  await expect(page.getByRole('group', { name: 'Tự đánh giá' })).toBeVisible()
+  // Leaving and coming back is allowed, but the prompt remembers the answer was seen.
+  await page.getByRole('tab', { name: 'Xem' }).click()
+  await recall.click()
   await expect(page.getByText('Viết chữ này từ trí nhớ · bạn vừa xem mẫu')).toBeVisible()
+  await expect(page.getByRole('img', { name: 'Ô viết chữ', exact: true })).toBeVisible()
 })

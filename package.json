@@ -14,16 +14,23 @@
     "typecheck": "node node_modules/@typescript/native/bin/tsc && node node_modules/@typescript/native/bin/tsc -p e2e",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:e2e": "npm run build && playwright test",
-    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+    "test:e2e": "npm run data:ensure && npm run build && playwright test",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "data:fetch": "node scripts/dict/fetch.mjs",
+    "data:build": "node scripts/dict/fetch.mjs && node scripts/dict/build.mjs",
+    "data:ensure": "node scripts/dict/ensure.mjs",
+    "data:check": "node scripts/dict/fetch.mjs && node scripts/dict/build.mjs --check"
   },
   "dependencies": {
+    "idb": "^8.0.3",
     "perfect-freehand": "^1.2.3",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@msgpack/msgpack": "^3.1.3",
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.20.4",
     "@types/react": "^19.3.0",
@@ -32,6 +39,10 @@
     "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^10.11.0",
     "eslint-plugin-react-hooks": "^7.1.1",
+    "fake-indexeddb": "^6.2.5",
+    "fflate": "^0.8.3",
+    "hanviet-pinyin-words": "^2.1.7",
+    "hanzi-writer-data": "^2.0.1",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.70.1",
     "vite": "^8.3.0",

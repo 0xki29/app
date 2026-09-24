@@ -1,0 +1,313 @@
+U+382F	kMandarin	yǐ
+U+4E2D	kHanyuPinlu	zhōng(4875) zhòng(66)
+U+4E2D	kMandarin	zhōng
+U+4E2D	kVietnamese	trung
+U+4E86	kHanyuPinlu	le(30101) liǎo(654) liào(19)
+U+4E86	kMandarin	le
+U+4E86	kVietnamese	liễu
+U+4EAB	kHanyuPinlu	xiǎng(76)
+U+4EAB	kMandarin	xiǎng
+U+4EAB	kVietnamese	hưởng
+U+4EBA	kHanyuPinlu	rén(16866) ren(280)
+U+4EBA	kMandarin	rén
+U+4EBA	kVietnamese	nhân
+U+4EBB	kMandarin	rén
+U+4EC0	kHanyuPinlu	shén(4045) shen(17)
+U+4EC0	kMandarin	shén
+U+4EC0	kVietnamese	thập
+U+4EE5	kHanyuPinlu	yǐ(6111)
+U+4EE5	kMandarin	yǐ
+U+4F86	kHanyuPinlu	lái(14549)
+U+4F86	kMandarin	lái
+U+4F86	kVietnamese	lai
+U+50B3	kHanyuPinlu	chuán(704) zhuàn(12)
+U+50B3	kMandarin	chuán
+U+50B3	kVietnamese	truyền
+U+51AB	kMandarin	bīng
+U+51B0	kHanyuPinlu	bīng(167)
+U+51B0	kMandarin	bīng
+U+51B0	kVietnamese	băng
+U+5206	kHanyuPinlu	fēn(2405) fèn(559) fen(532)
+U+5206	kMandarin	fēn
+U+5206	kVietnamese	phân
+U+52A0	kHanyuPinlu	jiā(1861)
+U+52A0	kMandarin	jiā
+U+52A0	kVietnamese	gia
+U+53C3	kHanyuPinlu	cān(525) shēn(25)
+U+53C3	kMandarin	cān
+U+53C3	kVietnamese	tham
+U+53C5	kMandarin	cān
+U+53CD	kHanyuPinlu	fǎn(2114)
+U+53CD	kMandarin	fǎn
+U+53CD	kVietnamese	phản
+U+53D7	kHanyuPinlu	shòu(1082)
+U+53D7	kMandarin	shòu
+U+53D7	kVietnamese	thụ
+U+548A	kMandarin	hé
+U+548C	kHanyuPinlu	hé(9513) huo(38) he(24) hè(9)
+U+548C	kMandarin	hé
+U+548C	kVietnamese	hoà
+U+56EF	kMandarin	guó
+U+570B	kHanyuPinlu	guó(6416)
+U+570B	kMandarin	guó
+U+570B	kVietnamese	quốc
+U+57CE	kHanyuPinlu	chéng(592)
+U+57CE	kMandarin	chéng
+U+57CE	kVietnamese	thành
+U+5905	kMandarin	jiàng
+U+591A	kHanyuPinlu	duō(5568)
+U+591A	kMandarin	duō
+U+591A	kVietnamese	đa
+U+5927	kHanyuPinlu	dà(11596) dài(177)
+U+5927	kMandarin	dà
+U+5927	kVietnamese	đại
+U+597D	kHanyuPinlu	hǎo(6060) hāo(142) hào(115)
+U+597D	kMandarin	hǎo
+U+597D	kVietnamese	háo
+U+5B78	kHanyuPinlu	xué(5640)
+U+5B78	kMandarin	xué
+U+5B78	kVietnamese	học
+U+5C06	kHanyuPinlu	jiāng(1194) jiàng(42)
+U+5C06	kMandarin	jiāng
+U+5C07	kHanyuPinlu	jiāng(1194) jiàng(42)
+U+5C07	kMandarin	jiāng
+U+5C07	kVietnamese	tướng
+U+5C11	kHanyuPinlu	shǎo(1187) shao(362) shào(323)
+U+5C11	kMandarin	shǎo
+U+5C11	kVietnamese	thiểu
+U+5E55	kHanyuPinlu	mù(137)
+U+5E55	kMandarin	mù
+U+5E59	kMandarin	mù
+U+5E72	kHanyuPinlu	gàn(1464) gān(482)
+U+5E72	kMandarin	gàn
+U+5E72	kVietnamese	can
+U+5E73	kHanyuPinlu	píng(1484)
+U+5E73	kMandarin	píng
+U+5E73	kVietnamese	bình
+U+5E74	kHanyuPinlu	nián(5553)
+U+5E74	kMandarin	nián
+U+5E74	kVietnamese	nên
+U+5E79	kMandarin	gàn
+U+5E85	kMandarin	mó
+U+5FEB	kHanyuPinlu	kuài(1536) kuai(77)
+U+5FEB	kMandarin	kuài
+U+5FEB	kVietnamese	khoái
+U+6176	kHanyuPinlu	qìng(51)
+U+6176	kMandarin	qìng
+U+6176	kVietnamese	khánh
+U+61C9	kHanyuPinlu	yīng(1045) yìng(400) ying(213)
+U+61C9	kMandarin	yīng
+U+61C9	kVietnamese	ứng
+U+6295	kHanyuPinlu	tóu(264)
+U+6295	kMandarin	tóu
+U+6295	kVietnamese	đầu
+U+6355	kHanyuPinlu	bǔ(103)
+U+6355	kMandarin	bǔ
+U+6355	kVietnamese	bõ
+U+6578	kHanyuPinlu	shù(1079) shǔ(91) shu(14)
+U+6578	kMandarin	shù
+U+6578	kVietnamese	số
+U+6588	kMandarin	xué
+U+6641	kMandarin	cháo
+U+66FE	kHanyuPinlu	céng(387)
+U+66FE	kMandarin	céng
+U+66FE	kVietnamese	tằng
+U+671D	kHanyuPinlu	cháo(296) zhāo(10)
+U+671D	kMandarin	cháo
+U+671D	kVietnamese	triều
+U+6761	kHanyuPinlu	tiáo(1643)
+U+6761	kMandarin	tiáo
+U+6765	kHanyuPinlu	lái(14549)
+U+6765	kMandarin	lái
+U+67E5	kHanyuPinlu	chá(470)
+U+67E5	kMandarin	chá
+U+67E5	kVietnamese	tra
+U+67FB	kMandarin	zhā
+U+6821	kHanyuPinlu	xiào(428)
+U+6821	kMandarin	xiào
+U+6821	kVietnamese	chò giâu hiệu
+U+689D	kHanyuPinlu	tiáo(1643)
+U+689D	kMandarin	tiáo
+U+689D	kVietnamese	điều
+U+6A02	kHanyuPinlu	lè(283) yuè(54)
+U+6A02	kMandarin	lè
+U+6A02	kVietnamese	lạc
+U+6BD2	kHanyuPinlu	dú(188)
+U+6BD2	kMandarin	dú
+U+6BD2	kVietnamese	độc
+U+6C37	kMandarin	bīng
+U+70BA	kHanyuPinlu	wèi(3962) wéi(2433)
+U+70BA	kMandarin	wèi
+U+7232	kMandarin	wèi
+U+7232	kVietnamese	vay
+U+751F	kHanyuPinlu	shēng(4790) sheng(1071)
+U+751F	kMandarin	shēng
+U+751F	kVietnamese	sinh
+U+7761	kHanyuPinlu	shuì(672)
+U+7761	kMandarin	shuì
+U+77AD	kHanyuPinlu	liǎo(326) liào(19)
+U+77AD	kMandarin	liào liǎo
+U+77AD	kVietnamese	lẹo
+U+7BB1	kHanyuPinlu	xiāng(133)
+U+7BB1	kMandarin	xiāng
+U+7BB1	kVietnamese	rương
+U+7CF6	kHanyuPinlu	tiào(18)
+U+7CF6	kMandarin	tiào
+U+7D93	kHanyuPinlu	jīng(2854) jing(1342)
+U+7D93	kMandarin	jīng
+U+7D93	kVietnamese	kinh
+U+8005	kHanyuPinlu	zhě(1454)
+U+8005	kMandarin	zhě
+U+85CF	kHanyuPinlu	cáng(156)
+U+85CF	kMandarin	cáng
+U+884C	kHanyuPinlu	xíng(2943) háng(218)
+U+884C	kMandarin	xíng
+U+884C	kVietnamese	hàng
+U+8907	kHanyuPinlu	fù(558)
+U+8907	kMandarin	fù
+U+897F	kHanyuPinlu	xi(902) xī(738)
+U+897F	kMandarin	xī
+U+897F	kVietnamese	tây
+U+8981	kHanyuPinlu	yào(8645) yāo(456)
+U+8981	kMandarin	yào
+U+8981	kVietnamese	yếu
+U+898C	kMandarin	guān
+U+8990	kMandarin	jué
+U+89BA	kHanyuPinlu	jué(1032) jiào(179)
+U+89BA	kMandarin	jué
+U+89BA	kVietnamese	giác
+U+89C0	kHanyuPinlu	guān(1031)
+U+89C0	kMandarin	guān
+U+89C0	kVietnamese	quan
+U+89E3	kHanyuPinlu	jiě(1857)
+U+89E3	kMandarin	jiě
+U+89E3	kVietnamese	giải
+U+89E7	kMandarin	jiě
+U+8AAA	kHanyuPinlu	shuō(10245)
+U+8AAA	kMandarin	shuō
+U+8AAC	kMandarin	shuō
+U+8AAC	kVietnamese	thuyết
+U+8ABF	kHanyuPinlu	diào(390) tiáo(213)
+U+8ABF	kMandarin	diào
+U+8ABF	kVietnamese	điều
+U+8B1D	kHanyuPinlu	xiè(192) xie(97)
+U+8B1D	kMandarin	xiè
+U+8B1D	kVietnamese	tạ
+U+8B80	kHanyuPinlu	dú(432)
+U+8B80	kMandarin	dú
+U+8B80	kVietnamese	độc
+U+8ECD	kHanyuPinlu	jūn(1842)
+U+8ECD	kMandarin	jūn
+U+8ECD	kVietnamese	quân
+U+8FE8	kMandarin	dài
+U+902E	kHanyuPinlu	dǎi(20) dài(20)
+U+902E	kMandarin	dǎi
+U+90E8	kHanyuPinlu	bù(2783)
+U+90E8	kMandarin	bù
+U+90E8	kVietnamese	bộ
+U+91CD	kHanyuPinlu	zhòng(1823) chóng(329)
+U+91CD	kMandarin	zhòng
+U+91CD	kVietnamese	trọng
+U+9280	kHanyuPinlu	yín(243)
+U+9280	kMandarin	yín
+U+9280	kVietnamese	ngân
+U+9418	kHanyuPinlu	zhōng(410)
+U+9418	kMandarin	zhōng
+U+9418	kVietnamese	chuông
+U+9577	kHanyuPinlu	zhǎng(1879) cháng(1179)
+U+9577	kMandarin	zhǎng
+U+9577	kVietnamese	trường
+U+958B	kHanyuPinlu	kāi(3483)
+U+958B	kMandarin	kāi
+U+958B	kVietnamese	khai
+U+964D	kHanyuPinlu	jiàng(243) xiáng(75)
+U+964D	kMandarin	jiàng
+U+964D	kVietnamese	giáng
+U+97F3	kHanyuPinlu	yīn(639)
+U+97F3	kMandarin	yīn
+U+97F3	kVietnamese	âm
+U+982D	kHanyuPinlu	tóu(3058) tou(715)
+U+982D	kMandarin	tóu
+U+982D	kVietnamese	đầu
+U+9AEE	kMandarin	fà fǎ
+U+9BAE	kHanyuPinlu	xiān(182) xian(66)
+U+9BAE	kMandarin	xiān
+U+9BAE	kVietnamese	tiên
+U+9C7B	kMandarin	xiān
+U+9EAA	kMandarin	miàn
+U+9EAB	kMandarin	miàn
+U+9EB5	kMandarin	miàn
+U+9EBC	kHanyuPinlu	me(3394)
+U+9EBC	kMandarin	me
+U+9EBD	kMandarin	mó
+U+9EBD	kVietnamese	mô
+U+9FA2	kMandarin	hé
+U+2456D	kMandarin	jiāng
+U+26007	kMandarin	jīng
+U+382F	kSemanticVariant	U+4EE5<kFenn
+U+38B4	kSemanticVariant	U+897F<kKangXi:TZ
+U+4E86	kTraditionalVariant	U+4E86 U+77AD
+U+4EBA	kSemanticVariant	U+4EBB<kMatthews
+U+4EBB	kSemanticVariant	U+4EBA<kMatthews
+U+4EE5	kSemanticVariant	U+382F<kFenn
+U+4F86	kSemanticVariant	U+6765<kMeyerWempe
+U+51AB	kSemanticVariant	U+6C37<kMatthews U+51B0<kMatthews
+U+51B0	kSemanticVariant	U+51AB<kMatthews U+6C37<kLau,kMatthews U+23C9D<kKangXi:T
+U+53C3	kSemanticVariant	U+53C5<kMatthews
+U+53C5	kSemanticVariant	U+53C3<kMatthews
+U+548A	kSemanticVariant	U+548C<kLau,kMatthews U+9FA2<kLau,kMatthews
+U+548C	kSemanticVariant	U+548A<kLau,kMatthews U+9FA2<kLau,kMatthews
+U+56EF	kSemanticVariant	U+570B<kMeyerWempe
+U+570B	kSemanticVariant	U+56EF<kMeyerWempe
+U+5905	kSemanticVariant	U+964D<kMatthews
+U+5B78	kSemanticVariant	U+6588<kLau,kMatthews,kMeyerWempe
+U+5C06	kSemanticVariant	U+2456D<kFenn
+U+5C06	kTraditionalVariant	U+5C07
+U+5C07	kSemanticVariant	U+2456D
+U+5E55	kSemanticVariant	U+5E59<kLau,kMatthews,kMeyerWempe
+U+5E59	kSemanticVariant	U+5E55<kLau,kMatthews,kMeyerWempe
+U+5E72	kSemanticVariant	U+2CEAD
+U+5E72	kTraditionalVariant	U+4E7E U+5E72 U+5E79
+U+5E79	kSemanticVariant	U+2CEAD
+U+5E85	kSemanticVariant	U+9EBD<kFenn U+9EBC<kMatthews
+U+6588	kSemanticVariant	U+5B78<kLau,kMatthews,kMeyerWempe
+U+6641	kSemanticVariant	U+671D<kMatthews
+U+671D	kSemanticVariant	U+6641<kMatthews
+U+6761	kSemanticVariant	U+689D<kMeyerWempe
+U+6761	kTraditionalVariant	U+689D
+U+6765	kSemanticVariant	U+4F86<kMeyerWempe
+U+6765	kTraditionalVariant	U+4F86
+U+67E5	kSemanticVariant	U+67FB<kMatthews
+U+67FB	kSemanticVariant	U+67E5<kMatthews
+U+689D	kSemanticVariant	U+6761<kMeyerWempe U+7CF6<kLau
+U+6C37	kSemanticVariant	U+51AB<kMatthews U+51B0<kLau,kMatthews
+U+70BA	kSemanticVariant	U+7232<kHKGlyph
+U+7232	kSemanticVariant	U+70BA<kHKGlyph
+U+77AD	kTraditionalVariant	U+77AD
+U+7CF6	kSemanticVariant	U+689D<kLau
+U+7D93	kSemanticVariant	U+26007<kHanYu
+U+897F	kSemanticVariant	U+38B4<kKangXi:T U+209E7<kKangXi:T
+U+898C	kSemanticVariant	U+89C0<kMatthews
+U+8990	kSemanticVariant	U+89BA<kMatthews
+U+89BA	kSemanticVariant	U+8990<kMatthews
+U+89C0	kSemanticVariant	U+898C<kMatthews
+U+89E3	kSemanticVariant	U+89E7<kLau,kMatthews
+U+89E7	kSemanticVariant	U+89E3<kLau,kMatthews
+U+8AAA	kZVariant	U+8AAC
+U+8AAC	kZVariant	U+8AAA
+U+8FE8	kSemanticVariant	U+902E<kLau,kMatthews
+U+902E	kSemanticVariant	U+8FE8<kLau,kMatthews
+U+964D	kSemanticVariant	U+5905<kMatthews
+U+9BAE	kSemanticVariant	U+9C7B<kMatthews
+U+9C7B	kSemanticVariant	U+9BAE<kMatthews
+U+9EAA	kSemanticVariant	U+9EB5<kMeyerWempe
+U+9EAB	kSemanticVariant	U+9EB5<kMatthews
+U+9EB5	kSemanticVariant	U+9EAA<kMeyerWempe U+9EAB<kMatthews
+U+9EBC	kSemanticVariant	U+5E85<kMatthews U+9EBD<kHKGlyph,kLau
+U+9EBD	kSemanticVariant	U+5E85<kFenn U+9EBC<kHKGlyph,kLau
+U+9FA2	kSemanticVariant	U+548A<kLau,kMatthews U+548C<kLau,kMatthews
+U+209E7	kSemanticVariant	U+897F<kKangXi:TZ
+U+23C9D	kSemanticVariant	U+51B0<kKangXi:TZ
+U+2456D	kSemanticVariant	U+5C06<kFenn U+5C07
+U+26007	kSemanticVariant	U+7D93<kHanYu
+U+2CEAD	kSemanticVariant	U+5E72 U+5E79

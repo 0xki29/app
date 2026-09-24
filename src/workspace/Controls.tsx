@@ -3,6 +3,7 @@ import type { HandwritingEngine } from '../handwriting/HandwritingEngine'
 import { useEngineState } from '../handwriting/useEngineState'
 import { useCommitCounter } from '../debug/renderStats'
 import type { StrokeAnimator } from '../strokes/StrokeAnimator'
+import type { StrokeStatus } from '../strokes/strokeData'
 import type { Mode } from './attempt'
 import { StrokeControls } from './StrokeControls'
 
@@ -17,8 +18,13 @@ interface Props {
    */
   primaryGuardUntil: number
   animator: StrokeAnimator
-  /** The character has stroke data: observe shows the stroke-order controls. */
-  strokeGuide: boolean
+  /**
+   * The character's stroke data. Observe shows the stroke-order controls while it loads (disabled
+   * until it is in) and once it is there; in their place, why there is no animation ('none') or a
+   * retry ('error').
+   */
+  strokeStatus: StrokeStatus
+  onRetryStrokes: () => void
 }
 
 /**
@@ -30,7 +36,7 @@ interface Props {
  * replaces these controls puts its buttons at the bottom, so the second tap of a double tap on
  * "Chấm điểm" lands on the result's text — never on "Tiếp tục" or a rating.
  */
-export function Controls({ engine, mode, scoring, onPrimary, primaryGuardUntil, animator, strokeGuide }: Props) {
+export function Controls({ engine, mode, scoring, onPrimary, primaryGuardUntil, animator, strokeStatus, onRetryStrokes }: Props) {
   useCommitCounter('Controls')
   const { canUndo, strokeCount } = useEngineState(engine)
   const primaryRef = useRef<HTMLButtonElement>(null)
@@ -52,7 +58,11 @@ export function Controls({ engine, mode, scoring, onPrimary, primaryGuardUntil, 
   if (mode === 'observe') {
     return (
       <>
-        {strokeGuide ? <StrokeControls animator={animator} /> : <div className="controls" data-hidden />}
+        {strokeStatus === 'ready' || strokeStatus === 'loading' ? (
+          <StrokeControls animator={animator} />
+        ) : (
+          <StrokeDataNotice status={strokeStatus} onRetry={onRetryStrokes} />
+        )}
         <button ref={primaryRef} type="button" className="btn btn--primary btn--wide" onClick={onPrimary}>
           Tô theo chữ mẫu →
         </button>
@@ -76,9 +86,22 @@ export function Controls({ engine, mode, scoring, onPrimary, primaryGuardUntil, 
           <span aria-hidden="true">↶</span> Hoàn tác
         </button>
         <button type="button" className="btn" onClick={() => engine.clear()} disabled={strokeCount === 0 || scoring}>
-          <span aria-hidden="true">✕</span> Xóa
+          <span aria-hidden="true">✕</span> Xoá
         </button>
       </div>
     </>
+  )
+}
+
+/** Observe without an animation: the character has no stroke data, or it could not be fetched. */
+function StrokeDataNotice({ status, onRetry }: { status: 'none' | 'error'; onRetry: () => void }) {
+  if (status === 'none') return <p className="controls controls--notice">Chưa có dữ liệu nét cho chữ này: chỉ xem được mặt chữ.</p>
+  return (
+    <div className="controls controls--notice" role="alert">
+      <span>Không tải được thứ tự nét.</span>
+      <button type="button" className="linkbtn" onClick={onRetry}>
+        Thử lại
+      </button>
+    </div>
   )
 }

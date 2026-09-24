@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { extendStart, MEDIAN_STROKE_WIDTH, medianPath } from './medianPath'
+import { FIXTURE_STROKE_FILES } from '../test/fixtures/strokes'
 import { parseStrokeData } from './strokeData'
 import type { SourcePoint } from './types'
 
-const bundled = import.meta.glob<unknown>('../data/strokes/*.json', { eager: true, import: 'default' })
+const bundled = FIXTURE_STROKE_FILES
 
 /** Points along an outline (absolute M/L/Q/C/Z only, as in the dataset), curves sampled finely. */
 function outlinePoints(d: string): SourcePoint[] {

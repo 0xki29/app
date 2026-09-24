@@ -1,0 +1,47 @@
+# simp	trad	cedict_pinyin	expected_hanviet (| = accepted alternative)	what it tests
+银行	銀行	yin2 hang2	ngân hàng	行 háng
+行人	行人	xing2 ren2	hành nhân	行 xíng
+行为	行為	xing2 wei2	hành vi	行 xíng + 为 wéi
+长城	長城	Chang2 cheng2	trường thành	长 cháng
+校长	校長	xiao4 zhang3	hiệu trưởng	长 zhǎng
+长大	長大	zhang3 da4	trưởng đại	长 zhǎng
+重要	重要	zhong4 yao4	trọng yếu	重 zhòng
+重复	重複	chong2 fu4	trùng phức	重 chóng + 复→複 (not 復)
+重庆	重慶	Chong2 qing4	trùng khánh	重 chóng, proper noun
+音乐	音樂	yin1 yue4	âm nhạc	乐 yuè
+快乐	快樂	kuai4 le4	khoái lạc	乐 lè
+乐观	樂觀	le4 guan1	lạc quan	乐 lè
+了解	了解	liao3 jie3	liễu giải	了 liǎo
+为什么	為什麼	wei4 shen2 me5	vị thập ma|vị thậm ma	为 wèi; 什 shén; neutral 么
+以为	以為	yi3 wei2	dĩ vi	为 wéi
+部分	部分	bu4 fen5	bộ phận	neutral tone on 分 (fèn)
+分钟	分鐘	fen1 zhong1	phân chung	分 fēn; 钟→鐘 (not 鍾)
+数学	數學	shu4 xue2	số học	数 shù
+调查	調查	diao4 cha2	điều tra	conventional reading ≠ pinyin rule (diào→điệu)
+将来	將來	jiang1 lai2	tương lai	将 jiāng
+将军	將軍	jiang1 jun1	tướng quân	conventional reading ≠ pinyin rule (jiāng→tương)
+传说	傳說	chuan2 shuo1	truyền thuyết	传 chuán
+好学	好學	hao4 xue2	hiếu học	好 hào
+中毒	中毒	zhong4 du2	trúng độc	中 zhòng
+多少	多少	duo1 shao5	đa thiểu	neutral tone on 少 (shǎo)
+少年	少年	shao4 nian2	thiếu niên	少 shào
+朝鲜	朝鮮	Chao2 xian3	triều tiên	鲜 xiǎn but conventional tiên
+投降	投降	tou2 xiang2	đầu hàng	降 xiáng
+参加	參加	can1 jia1	tham gia	参 cān
+人参	人參	ren2 shen1	nhân sâm	参 shēn
+西藏	西藏	Xi1 zang4	tây tạng	藏 zàng
+反应	反應	fan3 ying4	phản ứng	应 yìng
+干部	幹部	gan4 bu4	cán bộ	干→幹
+头发	頭髮	tou2 fa5	đầu phát	发→髮, neutral tone
+面条	麵條	mian4 tiao2	miến điều	面→麵 (not 面 diện)
+睡觉	睡覺	shui4 jiao4	thụy giác|thụy giáo	觉 jiào
+中国	中國	Zhong1 guo2	trung quốc	baseline
+学生	學生	xue2 sheng5	học sinh	baseline, neutral tone
+谢谢	謝謝	xie4 xie5	tạ tạ	baseline, neutral tone
+和平	和平	he2 ping2	hòa bình	baseline, hoà/hòa spelling
+读者	讀者	du2 zhe3	độc giả	讀 độc, not the vernacular đọc (hanviet-char.tsv)
+开幕	開幕	kai1 mu4	khai mạc	幕 mạc, not màn
+享受	享受	xiang3 shou4	hưởng thụ	受 thụ, not thọ
+冰箱	冰箱	bing1 xiang1	băng tương	箱 tương, not rương
+曾经	曾經	ceng2 jing1	tằng kinh	曾 céng tằng, not từng
+逮捕	逮捕	dai4 bu3	đãi bổ	捕 bổ, not bắt

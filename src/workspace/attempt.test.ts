@@ -7,7 +7,6 @@ import {
   currentResult,
   INITIAL_PRACTICE,
   isRecallLocked,
-  nextIndex,
   practiceReducer,
   referenceView,
   showsCharacter,
@@ -143,10 +142,10 @@ describe('practiceReducer: rewrite', () => {
 })
 
 describe('practiceReducer: recall', () => {
-  it('with stroke data, shows the answer and the marks at once', () => {
+  it('with stroke data, shows the answer and the marks at once; a clean recall is not a peek (DECK-1)', () => {
     const revealed = scoreWith(at(3, 'recall'), withCheck)
     expect(revealed.phase).toBe('revealed')
-    expect(revealed.peeked).toBe(true)
+    expect(revealed.peeked).toBe(false)
     expect(referenceView(revealed)).toBe('review')
     expect(showsCharacter(revealed)).toBe(true)
   })
@@ -158,7 +157,7 @@ describe('practiceReducer: recall', () => {
     expect(showsCharacter(scored)).toBe(false)
     const revealed = practiceReducer(scored, { type: 'reveal' })
     expect(revealed.phase).toBe('revealed')
-    expect(revealed.peeked).toBe(true)
+    expect(revealed.peeked).toBe(false)
     expect(referenceView(revealed)).toBe('reveal')
   })
 
@@ -186,8 +185,10 @@ describe('practiceReducer: recall', () => {
     expect(next.peeked).toBe(false)
     const back = practiceReducer(next, { type: 'go', index: 3, mode: 'recall' })
     expect(back).toMatchObject({ index: 3, mode: 'recall', phase: 'writing', peeked: true })
-    // Rated: on to the next character in observe, and this one's recall starts afresh next time.
+    // Recalled again after the peek: that attempt, and so its rating, stays peeked.
     const again = scoreWith(back, withCheck)
+    expect(again).toMatchObject({ phase: 'revealed', peeked: true })
+    // Rated: on to the next character in observe, and this one's recall starts afresh next time.
     const rated = practiceReducer(again, { type: 'rate', index: 4 })
     expect(rated).toMatchObject({ index: 4, mode: 'observe', phase: 'writing', peeked: false })
     expect(rated.attemptId).toBe(again.attemptId + 1)
@@ -213,12 +214,5 @@ describe('practiceReducer: recall', () => {
     expect(showsCharacter(at(1, 'trace'))).toBe(true)
     expect(referenceView(at(1, 'trace'))).toBe('trace')
     expect(referenceView(at(1, 'observe'))).toBe('observe')
-  })
-})
-
-describe('nextIndex', () => {
-  it('moves on, and back to the first after the last', () => {
-    expect(nextIndex(0, 5)).toEqual({ index: 1, wrapped: false })
-    expect(nextIndex(4, 5)).toEqual({ index: 0, wrapped: true })
   })
 })

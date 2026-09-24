@@ -1,0 +1,2 @@
+# Fixture bytes are checksummed (manifest.json): never convert line endings.
+* -text

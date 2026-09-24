@@ -5,7 +5,7 @@ import { StrokeDataReferenceProvider } from '../handwriting/scoring/StrokeDataRe
 import type { ReferenceProvider, ScoringMode } from '../handwriting/scoring/types'
 import type { Ink } from '../handwriting/types'
 import { checkStrokes, type StrokeCheck } from '../strokes/strokeCheck'
-import { peekStrokeData } from '../strokes/strokeData'
+import { fixtureLoader, fixtureStrokeData as peekStrokeData } from '../test/fixtures/strokes'
 import { sourceToBox } from '../strokes/transform'
 import {
   deriveHeadline,
@@ -154,7 +154,7 @@ describe('A3 end to end: 永 written with every stroke reversed', () => {
           .map((p, i) => ({ ...p, t: i * 8, p: 0.5 })),
       })),
     }
-    const reference = await new StrokeDataReferenceProvider(noFallback).getReference('永', 'zh-Hans', 5)
+    const reference = await new StrokeDataReferenceProvider(noFallback, fixtureLoader).getReference('永', 'zh-Hans', 5)
     const result = await new GeometryScorer().score(ink, reference, mode)
     const s = summarizeStrokes(checkStrokes(ink, data, mode))
     const h = deriveHeadline(result, s)

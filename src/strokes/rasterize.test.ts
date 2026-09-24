@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { TEST_CHARS } from '../data/testChars'
+import { TEST_CHARS } from '../test/fixtures/testChars'
 import { GRID_SIZE } from '../handwriting/scoring/config'
 import { rasterizePoints, resample } from '../handwriting/scoring/geometry'
 import { rasterizeOutlines } from './rasterize'
-import { getStrokeData } from './strokeData'
+import { fixtureLoader as getStrokeData } from '../test/fixtures/strokes'
 import { sourceToBox } from './transform'
 import type { StrokeData } from './types'
 

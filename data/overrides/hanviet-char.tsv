@@ -1,0 +1,75 @@
+# Character-level Hán Việt corrections: which reading a character has, by traditional form and pinyin
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Drafted by Claude (AI), 2026-09. status "ai-draft" = AI-drafted, awaiting human review ("hiệu đính bởi AI, chờ duyệt");
+# "reviewed" = checked by the project owner ("đã hiệu đính") — only the owner sets it. Changes: CHANGELOG.md.
+# Format: UTF-8 (NFC), LF, tab-separated. Lines starting with "#" are comments.
+# char: the traditional form (the build reads Hán Việt from it). pinyin: CC-CEDICT numbered, lowercase, or "*" for every reading.
+# hanviet: the readings to use instead of hanviet-pinyin-words', "|"-separated, the first one shipped, the others searchable
+# alternates. vernacular: forms that must never ship as this character's reading ("|"-separated, "-" for none) — the build's
+# hv-vernacular gate checks every row, curated word readings included.
+# Found by a scan of the word list's first candidates: characters whose shipped reading is a word of their own Vietnamese gloss
+# (冷 lạnh "lạnh") with no compound confirming it as Sino-Vietnamese, and every character of an HSK word the list gives several
+# readings for; then checked by hand. Unihan kVietnamese cannot be the check: it lists the same vernacular forms.
+char	pinyin	hanviet	vernacular	reason	source	status
+受	shou4	thụ	-	âm Hán Việt thông dụng là thụ (thụ động, cảm thụ, hưởng thụ, tiếp thụ); danh sách chỉ có thọ, âm cổ còn trong vài từ nhà Phật (thọ giới)	claude-2026-09	ai-draft
+冷	*	lãnh	lạnh	lạnh là từ thuần Việt gốc Hán; âm Hán Việt là lãnh (lãnh đạm, lãnh tĩnh)	claude-2026-09	ai-draft
+油	*	du	dầu	dầu là từ thuần Việt gốc Hán; âm Hán Việt là du (thạch du, du hoạ)	claude-2026-09	ai-draft
+讀	du2	độc	đọc	đọc là âm Việt hoá; âm Hán Việt là độc (độc giả, độc thư)	claude-2026-09	ai-draft
+幕	mu4	mạc	màn	màn là từ thuần Việt gốc Hán; âm Hán Việt là mạc (khai mạc, bế mạc, nội mạc)	claude-2026-09	ai-draft
+種	zhong4	chủng	trồng	trồng là nghĩa tiếng Việt, không phải âm; 種 đọc zhòng (trồng) là chủng (chủng thực, canh chủng)	claude-2026-09	ai-draft
+卷	juan3	quyển	cuộn	cuộn là từ thuần Việt gốc Hán; âm Hán Việt của 卷 là quyển	claude-2026-09	ai-draft
+捲	juan3	quyển	cuốn	cuốn là từ thuần Việt gốc Hán; âm Hán Việt của 捲 là quyển (quyển nhập)	claude-2026-09	ai-draft
+更	geng4	cánh	càng	càng là từ thuần Việt gốc Hán; 更 đọc gèng là cánh (gēng là canh)	claude-2026-09	ai-draft
+曾	ceng2	tằng	từng	từng là từ thuần Việt gốc Hán; âm Hán Việt là tằng (tằng kinh, vị tằng)	claude-2026-09	ai-draft
+戴	dai4	đái	đội	đội là nghĩa tiếng Việt, không phải âm; âm Hán Việt là đái (ái đái, đái mạo)	claude-2026-09	ai-draft
+摸	mo1	mô|mạc	mò	mò là từ thuần Việt gốc Hán; âm Hán Việt là mô (mô sách), mạc	claude-2026-09	ai-draft
+箱	xiang1	tương|sương	rương	rương là từ thuần Việt gốc Hán; âm Hán Việt là tương (băng tương), cũng đọc sương	claude-2026-09	ai-draft
+笨	ben4	bổn	đần	đần là nghĩa tiếng Việt, không phải âm; âm Hán Việt là bổn (bổn chuyết)	claude-2026-09	ai-draft
+尺	chi3	xích	thước	thước là nghĩa tiếng Việt, không phải âm; âm Hán Việt là xích (xích thốn)	claude-2026-09	ai-draft
+爹	die1	đa	tía	tía là từ thuần Việt (miền Nam); âm Hán Việt là đa	claude-2026-09	ai-draft
+几	ji1	kỷ	cơ	几 (cái bàn nhỏ, trà kỷ) đọc kỷ; cơ là âm của 幾	claude-2026-09	ai-draft
+切	qie1	thiết	tiếp	切 đọc qiē (cắt) là thiết (thiết đoạn, thiết cát)	claude-2026-09	ai-draft
+捕	bu3	bổ	bắt	bắt là nghĩa tiếng Việt, không phải âm; âm Hán Việt là bổ (đãi bổ, bổ ngư)	claude-2026-09	ai-draft
+跌	die1	điệt	trượt	trượt là nghĩa tiếng Việt, không phải âm; âm Hán Việt là điệt (hạ điệt)	claude-2026-09	ai-draft
+茄	qie2	già	cà	cà là từ thuần Việt gốc Hán; 茄 đọc qié là già (phiên già)	claude-2026-09	ai-draft
+噴	pen1	phún	phun	phun là từ thuần Việt gốc Hán; âm Hán Việt là phún (phún xạ)	claude-2026-09	ai-draft
+割	*	cát	cắt	cắt là từ thuần Việt gốc Hán; âm Hán Việt là cát (thiết cát, cát nhượng)	claude-2026-09	ai-draft
+喝	he1	hát	húp	húp là âm Nôm; âm Hán Việt của 喝 là hát	claude-2026-09	ai-draft
+喝	he4	hát	hét	hét là từ thuần Việt; 喝 đọc hè (quát) là hát (hát thái)	claude-2026-09	ai-draft
+媽	*	ma	má	má là âm Nôm hoặc khẩu ngữ; âm Hán Việt của 媽 là ma	claude-2026-09	ai-draft
+哭	*	khốc	khóc	khóc là từ thuần Việt gốc Hán; âm Hán Việt là khốc (thống khốc)	claude-2026-09	ai-draft
+爬	pa2	bà	bò	bò là nghĩa tiếng Việt, không phải âm; âm Hán Việt là bà (bà trùng: loài bò sát)	claude-2026-09	ai-draft
+餅	*	bính	bánh	bánh là từ thuần Việt gốc Hán; âm Hán Việt là bính (nguyệt bính)	claude-2026-09	ai-draft
+桶	tong3	dũng	thùng	thùng là từ thuần Việt gốc Hán; âm Hán Việt là dũng	claude-2026-09	ai-draft
+爐	lu2	lô|lư	lò	lò là từ thuần Việt gốc Hán; âm Hán Việt là lô (vi ba lô), cũng đọc lư (hương lư)	claude-2026-09	ai-draft
+絲	si1	ty	tơ	tơ là từ thuần Việt gốc Hán; âm Hán Việt là ti/ty (ty hào)	claude-2026-09	ai-draft
+鋸	ju4	cứ	cưa	cưa là từ thuần Việt gốc Hán; âm Hán Việt là cứ	claude-2026-09	ai-draft
+煎	jian1	tiên	chiên	chiên là từ thuần Việt gốc Hán; âm Hán Việt là tiên (tiên dược)	claude-2026-09	ai-draft
+扛	kang2	giang	gánh	gánh là nghĩa tiếng Việt, không phải âm; âm Hán Việt là giang	claude-2026-09	ai-draft
+扛	gang1	giang	khiêng	khiêng là từ thuần Việt gốc Hán; âm Hán Việt là giang	claude-2026-09	ai-draft
+繩	sheng2	thằng	thừng	thừng là từ thuần Việt gốc Hán; âm Hán Việt là thằng (chuẩn thằng)	claude-2026-09	ai-draft
+狹	*	hiệp	hẹp	hẹp là từ thuần Việt gốc Hán; âm Hán Việt là hiệp (hiệp nghĩa, hiệp trách)	claude-2026-09	ai-draft
+縛	fu4	phược	buộc	buộc là từ thuần Việt gốc Hán; âm Hán Việt là phược (thúc phược)	claude-2026-09	ai-draft
+霉	mei2	mai	mốc	mốc là nghĩa tiếng Việt, không phải âm; âm Hán Việt là mai (mai vũ)	claude-2026-09	ai-draft
+椰	ye1	da	dừa	dừa là từ thuần Việt gốc Hán; âm Hán Việt là da (da tử)	claude-2026-09	ai-draft
+撐	cheng1	xanh	chống	chống là nghĩa tiếng Việt, không phải âm; âm Hán Việt là xanh (chi xanh)	claude-2026-09	ai-draft
+腔	qiang1	xoang|khang	khoang	khoang là từ thuần Việt gốc Hán; âm Hán Việt là xoang (khẩu xoang), cũng đọc khang	claude-2026-09	ai-draft
+馱	tuo2	đà	thồ	thồ là từ thuần Việt gốc Hán; âm Hán Việt là đà	claude-2026-09	ai-draft
+扶	fu2	phù	-	âm Hán Việt thông dụng là phù (phù trì, phù trợ); phò là âm Việt hoá	claude-2026-09	ai-draft
+呆	dai1	ngai	ngốc	ngốc là nghĩa tiếng Việt, không phải âm; âm Hán Việt là ngai (si ngai)	claude-2026-09	ai-draft
+鑽	zuan1	toàn	khoan	khoan là nghĩa tiếng Việt, không phải âm; 鑽 đọc zuān là toàn (toàn nghiên)	claude-2026-09	ai-draft
+鑽	zuan4	toản	khoan	khoan là nghĩa tiếng Việt, không phải âm; 鑽 đọc zuàn là toản (toản thạch: kim cương)	claude-2026-09	ai-draft
+創	chuang1	sang	thương	創 đọc chuāng (vết thương) là sang (sang thương); thương là âm của 傷	claude-2026-09	ai-draft
+獎	*	tưởng	thưởng	âm Hán Việt của 獎 là tưởng (tưởng lệ, bao tưởng); thưởng là âm của 賞	claude-2026-09	ai-draft
+兔	tu4	thố	thỏ	thỏ là từ thuần Việt gốc Hán; âm Hán Việt là thố (ngọc thố)	claude-2026-09	ai-draft
+籠	long2	lung	lồng	lồng là từ thuần Việt gốc Hán; âm Hán Việt là lung (đăng lung)	claude-2026-09	ai-draft
+框	*	khuông	khung	khung là từ thuần Việt gốc Hán; âm Hán Việt là khuông (khuông giá)	claude-2026-09	ai-draft
+訝	*	nhạ	ngạc	âm Hán Việt của 訝 là nhạ (kinh nhạ); ngạc là âm của 愕	claude-2026-09	ai-draft
+揣	chuai1	suỷ	suy	âm Hán Việt của 揣 là suỷ (suỷ trắc); suy là âm của 推	claude-2026-09	ai-draft
+揣	chuai3	suỷ	suy	âm Hán Việt của 揣 là suỷ (suỷ trắc); suy là âm của 推	claude-2026-09	ai-draft
+餃	jiao3	giảo	cảo	âm Hán Việt của 餃 là giảo; cảo là âm mượn qua tiếng Quảng Đông (sủi cảo, há cảo)	claude-2026-09	ai-draft
+監	jian1	giám|giam	-	監 trong giám sát, giám đốc, giám thị, tổng giám đọc giám; giam (giam cầm) là âm thứ hai	claude-2026-09	ai-draft
+奧	ao4	áo	-	âm Hán Việt của 奧 là áo (áo diệu, thâm áo; nước Áo 奧地利)	claude-2026-09	ai-draft
+這	zhei4	giá	-	這 đọc zhèi (khẩu ngữ của zhè) có cùng âm Hán Việt giá	claude-2026-09	ai-draft
+過	guo5	quá	-	trợ từ 过 phát triển từ nghĩa "vượt qua" (guò), đọc quá như 过去 quá khứ; 經過 kinh qua, 通過 thông qua là từ đã định hình (hanviet-word.tsv)	claude-2026-09	ai-draft
+覺	jiao4	giác|giáo	-	睡覺 quen đọc thuỵ giác; giáo (âm của nghĩa tỉnh ngủ theo Thiều Chửu) giữ làm âm tra cứu	claude-2026-09	ai-draft

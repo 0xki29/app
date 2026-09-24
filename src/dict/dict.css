@@ -1,0 +1,1056 @@
+/* Dictionary screens (src/dict): search, entry, pinyin guide, credits. Mobile first (320–430 px),
+   on the app's tokens (src/styles.css, loaded first), the pinyin tone colors --tone-1…5 included:
+   the practice prompt uses the same ones. */
+
+:root {
+  --dict-link: #8a3324;
+  --dict-kai: 'KaiTi', 'STKaiti', 'Kaiti SC', 'Kaiti TC', 'BiauKai', 'DFKai-SB', serif;
+  --dict-zh-hans: 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --dict-zh-hant: 'Noto Sans TC', 'Source Han Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+.dict {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: env(safe-area-inset-top) calc(var(--gutter) + env(safe-area-inset-right))
+    calc(32px + env(safe-area-inset-bottom) + var(--app-nav-h, 0px)) calc(var(--gutter) + env(safe-area-inset-left));
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.dict :lang(zh-Hans) {
+  font-family: var(--dict-zh-hans);
+}
+
+.dict :lang(zh-Hant) {
+  font-family: var(--dict-zh-hant);
+}
+
+.dict a {
+  color: var(--dict-link);
+  text-underline-offset: 2px;
+}
+
+.dict :is(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.dict :is(h1, h2, h3)[tabindex='-1']:focus {
+  outline: none;
+}
+
+.dict :is(h1, h2, h3)[tabindex='-1']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.dict p {
+  margin: 0 0 10px;
+}
+
+/* ── Tones ─────────────────────────────────────────────────────────────── */
+
+.dict-t1 {
+  color: var(--tone-1);
+}
+.dict-t2 {
+  color: var(--tone-2);
+}
+.dict-t3 {
+  color: var(--tone-3);
+}
+.dict-t4 {
+  color: var(--tone-4);
+}
+.dict-t5 {
+  color: var(--tone-5);
+}
+
+.dict-py {
+  font-weight: 500;
+}
+
+/* ── Top bar, notices ──────────────────────────────────────────────────── */
+
+.dict-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 56px;
+}
+
+.dict-top__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.dict-top__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 10px 0 2px;
+  margin-left: -6px;
+  border-radius: 12px;
+  color: var(--ink) !important;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dict-notice {
+  margin: 8px 0 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.dict-notice p {
+  margin: 0;
+}
+
+.dict-notice--error {
+  border-color: color-mix(in srgb, var(--wrong) 40%, var(--border));
+}
+
+.dict-notice--quiet {
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-notice__dev {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-notice__retry {
+  margin-top: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+}
+
+.dict-notice__line {
+  font-size: 15px;
+}
+
+.dict-progress {
+  width: 100%;
+  height: 6px;
+  margin-top: 8px;
+  accent-color: var(--accent);
+}
+
+.dict-link-btn {
+  min-height: 44px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: var(--dict-link);
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Search ────────────────────────────────────────────────────────────── */
+
+/* The box stays at the top while results scroll under it. */
+.dict-box {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0 calc(-1 * var(--gutter)) 4px;
+  padding: 6px var(--gutter) 10px;
+  background: var(--page);
+}
+
+.dict-box__input {
+  width: 100%;
+  height: 50px;
+  padding: 0 48px 0 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  /* 16px or more: iOS does not zoom into the field. */
+  font: 400 18px var(--ui-font);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.dict-box__input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.dict-box__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.dict-box__clear {
+  position: absolute;
+  top: 9px;
+  right: calc(var(--gutter) + 3px);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 12px;
+  background: none;
+  color: var(--muted);
+}
+
+.dict-welcome {
+  margin-top: 8px;
+  color: var(--ink);
+}
+
+.dict-welcome__label {
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.dict-welcome__examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-example {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 16px;
+}
+
+.dict-welcome__links {
+  font-size: 15px;
+}
+
+.dict-results {
+  transition: opacity 120ms ease-out;
+}
+
+/* Results of the previous query while the new ones come. */
+.dict-results--stale {
+  opacity: 0.6;
+}
+
+.dict-group {
+  margin-bottom: 14px;
+}
+
+.dict-group__title {
+  margin: 12px 0 2px;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--muted);
+}
+
+.dict-group__count {
+  font-weight: 400;
+}
+
+.dict-group__more {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dict-hits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-hit {
+  display: grid;
+  gap: 1px;
+  min-height: 56px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+
+.dict-hit:active {
+  background: var(--surface-press);
+}
+
+/* Headword, pinyin, Hán Việt and level on one line (wrapping as needed), the meaning under it. */
+.dict-hit__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+}
+
+.dict-hit__simp {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.dict-hit__trad {
+  font-size: 17px;
+  color: var(--muted);
+}
+
+.dict-hit__py {
+  font-size: 15px;
+}
+
+.dict-hit__hv {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.dict-hit .dict-badge {
+  align-self: center;
+}
+
+.dict-hit__meaning {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.dict-hit__tag {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dict-more {
+  margin-top: 2px;
+}
+
+.dict-empty {
+  margin: 16px 0;
+  color: var(--muted);
+}
+
+.dict-empty__title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+/* ── Badges, chips ─────────────────────────────────────────────────────── */
+
+.dict-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.dict-badge--hsk {
+  border-color: color-mix(in srgb, var(--tone-4) 30%, var(--border));
+  color: var(--tone-4);
+}
+
+.dict-chip {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.dict-chip--mt {
+  background: #f6e7cf;
+  color: #7a3e06;
+}
+
+.dict-chip--ai {
+  background: #e3e8f7;
+  color: #243f8f;
+}
+
+.dict-chip--ok {
+  background: #dcefe1;
+  color: #14532d;
+}
+
+.dict-chip--none {
+  background: #ebe6de;
+  color: #4c4540;
+}
+
+.dict-label {
+  margin-right: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Entry ─────────────────────────────────────────────────────────────── */
+
+.dict-head {
+  margin: 4px 0 18px;
+}
+
+.dict-head__word {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin: 0;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.dict-head__word :lang(zh-Hans),
+.dict-head__word :lang(zh-Hant) {
+  font-family: var(--dict-kai);
+}
+
+.dict-head__trad {
+  font-size: 30px;
+  color: var(--muted);
+}
+
+.dict-head__script {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dict-head__py {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 6px 0;
+}
+
+.dict-pylink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 24px;
+  text-decoration: underline dotted color-mix(in srgb, var(--muted) 60%, transparent);
+  text-underline-offset: 6px;
+}
+
+.dict-head__hv {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.dict-hv--low {
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
+.dict-hv__note,
+.dict-hv__alt,
+.dict-hv--none {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.dict-hv--loan {
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.dict-head__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 0;
+}
+
+/* The button sits next to what it reads; its hint (no voice) wraps onto a line of its own. */
+.dict-listen {
+  display: contents;
+}
+
+.dict-listen__btn {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.dict-listen__btn[aria-disabled='true'] {
+  opacity: 0.4;
+}
+
+.dict-head__voice {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dict-listen__hint {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dict-sec {
+  margin: 0 0 22px;
+}
+
+.dict-sec__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-bottom: 6px;
+}
+
+.dict-sec__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.dict-sec__head .dict-sec__title {
+  margin: 0;
+}
+
+.dict-senses {
+  margin: 0 0 4px;
+  padding-left: 1.6em;
+  font-size: 17px;
+}
+
+.dict-senses li {
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+
+.dict-senses li::marker {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+/* Usage notes and examples in parentheses: present, but quieter than the meaning. */
+.dict-note {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.dict-classifier {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.dict-sense__label {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.dict-sense__py {
+  color: var(--muted);
+}
+
+.dict-ref {
+  white-space: nowrap;
+}
+
+.dict-ref__py {
+  font-size: 0.9em;
+}
+
+.dict-ref__trad {
+  color: var(--muted);
+}
+
+.dict-source {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* A small link, a full-size tap target: the padding reaches 44 px, the negative margin keeps the line. */
+.dict-source__report {
+  display: inline-block;
+  padding: 12px 6px;
+  margin: -12px -6px;
+}
+
+.dict-others {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-others__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+  min-height: 48px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink) !important;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dict-others__hv {
+  color: var(--muted);
+}
+
+.dict-others__meaning {
+  flex-basis: 100%;
+  font-size: 15px;
+}
+
+.dict-add {
+  margin: 4px 0 0;
+}
+
+/* Already in the deck: a statement, not a disabled-looking button. */
+.dict-add__btn--done,
+.dict-add__btn--done[aria-disabled='true'] {
+  opacity: 1;
+  background: transparent;
+  color: var(--correct-text);
+  border-color: color-mix(in srgb, var(--correct) 35%, var(--border));
+}
+
+.dict-add__reason,
+.dict-add__what,
+.dict-add__done {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-add__msg {
+  min-height: 1.45em;
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: var(--correct-text);
+}
+
+.dict-add__msg--error {
+  color: var(--wrong);
+}
+
+.dict-chars {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-char {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.dict-char__body {
+  min-width: 0;
+  flex: 1;
+}
+
+.dict-char__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+
+a.dict-char__head {
+  min-height: 44px;
+}
+
+.dict-char__han {
+  font-size: 34px;
+  line-height: 1.2;
+  font-family: var(--dict-kai) !important;
+}
+
+.dict-char__read {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  font-size: 17px;
+}
+
+.dict-char__hv {
+  color: var(--muted);
+}
+
+.dict-char__meaning {
+  margin: 2px 0 8px;
+  font-size: 15px;
+}
+
+.dict-char__practice {
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 15px;
+}
+
+.dict-char__nostroke,
+.dict-char__trad {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-char__practice--trad {
+  margin-top: 6px;
+}
+
+.dict-foot {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Stroke-order preview (StrokePreview): a small writing box. */
+.dict-stroke {
+  position: relative;
+  flex: none;
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  border: 1px solid var(--grid-edge);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.dict-stroke__grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dict-stroke__grid path {
+  stroke: var(--grid);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  vector-effect: non-scaling-stroke;
+}
+
+.dict-stroke__glyph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dict-stroke__placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 64px;
+  font-family: var(--dict-kai) !important;
+  opacity: 0.18;
+}
+
+.dict-stroke__error {
+  position: absolute;
+  inset: auto 4px 4px;
+  font-size: 11px;
+  color: var(--wrong);
+}
+
+/* ── Pinyin guide ──────────────────────────────────────────────────────── */
+
+.dict-lead {
+  font-size: 16px;
+}
+
+.dict-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.dict-toc a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* The guide's parts fold: the heading holds the button (PinyinGuideScreen). */
+.dict-guide__all {
+  margin: -10px 0 8px;
+}
+
+.dict-part {
+  margin: 0 0 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dict-part__title {
+  margin: 0;
+}
+
+.dict-part__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+}
+
+.dict-part__chevron {
+  flex: none;
+  color: var(--muted);
+  transition: transform 150ms ease;
+}
+
+.dict-part__toggle[aria-expanded='true'] .dict-part__chevron {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dict-part__chevron {
+    transition: none;
+  }
+}
+
+.dict-part__body {
+  padding: 2px 0 16px;
+}
+
+.dict-tones {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-tone {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.dict-tone p {
+  margin: 4px 0 8px;
+}
+
+.dict-tone__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dict-tone__name {
+  margin: 0;
+  font-size: 18px;
+}
+
+.dict-tone__pitch {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-contour {
+  flex: none;
+  width: 64px;
+  height: 42px;
+}
+
+.dict-contour__grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.dict-contour__line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dict-tip {
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--surface);
+}
+
+.dict-sub {
+  margin: 18px 0 6px;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.dict-sound {
+  margin: 0 0 12px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
+
+.dict-sound__name {
+  margin: 0 0 2px;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.dict-sound__text {
+  margin: 0 0 4px;
+}
+
+.dict-exs {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-ex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 10px;
+  min-height: 48px;
+}
+
+.dict-ex__han {
+  font-size: 22px;
+}
+
+.dict-ex__py {
+  font-size: 17px;
+}
+
+.dict-ex__vi {
+  flex: 1 1 8em;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-rules {
+  padding-left: 1.2em;
+}
+
+.dict-rules li {
+  margin-bottom: 10px;
+}
+
+/* ── Credits ───────────────────────────────────────────────────────────── */
+
+.dict-trust {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.dict-sources {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.dict-source-item {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.dict-source-item p {
+  margin: 4px 0 0;
+}
+
+.dict-source-item__name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.dict-source-item__ver {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.dict-source-item__attr,
+.dict-source-item__changes {
+  color: var(--muted);
+}
+
+.dict-files {
+  padding-left: 1.2em;
+  font-size: 15px;
+}
+
+.dict-files__size {
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dict-results {
+    transition: none;
+  }
+}

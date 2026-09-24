@@ -1,0 +1,159 @@
+/**
+ * The dictionary's public types (the shared contract), plus the generated data's manifest.
+ * See README "Dictionary" for the data format and where each field comes from.
+ */
+
+/** One dictionary entry (one row of the data; one CC-CEDICT line after merging duplicates). */
+export interface DictEntry {
+  /** Stable CC-CEDICT key "trad|simp[numbered pinyin]", e.g. "學生|学生[xue2 sheng5]". */
+  key: string
+  simp: string
+  /** The traditional form — the same as `simp` when the two do not differ (never ''). */
+  trad: string
+  /** CC-CEDICT numbered pinyin, e.g. "xue2 sheng5" (see pinyin.ts for display). */
+  pinyin: string
+  /** Âm Hán Việt of the word, syllables space-separated; '-' = loanword (no meaningful reading); '' = unknown. */
+  hv: string
+  /** Other full readings (e.g. North/South doublets); searchable. */
+  hvAlt: string[]
+  /** Vietnamese senses, most important first. */
+  vi: string[]
+  /** English senses — only when there is no Vietnamese (flag 'en'). */
+  en: string[]
+  /** HSK 3.0 level 1..7 (7 = levels 7–9), or null. */
+  hsk: number | null
+  /** 0..100, for ranking. */
+  pop: number
+  /** See DictFlag. */
+  flags: string[]
+}
+
+/**
+ * pn proper noun · var variant form · usedin "used in"/see-also entry · mt Vietnamese is machine
+ * translation (CVDICT) · cur-ai curated by AI, awaiting review · cur reviewed by a human · en English
+ * shown (no Vietnamese) · hvlow low-confidence Hán Việt · hvnom …from Unihan kVietnamese, may be a
+ * Nôm reading · hvcur-ai / hvcur Hán Việt set by curation (AI draft / reviewed) · nostroke some
+ * character lacks stroke data · added an entry CC-CEDICT lacks, written by curation.
+ */
+export type DictFlag = 'pn' | 'var' | 'usedin' | 'mt' | 'cur-ai' | 'cur' | 'en' | 'hvlow' | 'hvnom' | 'hvcur-ai' | 'hvcur' | 'nostroke' | 'added'
+
+export interface CharInfo {
+  char: string
+  /** How `char` is used: only as a simplified form, only as a traditional form, or as both. */
+  script: 'simplified' | 'traditional' | 'both'
+  /** The form in the other script (the most common one), or null when it has none. */
+  counterpart: string | null
+  /** Every other-script form, most common first (干 → 乾, 幹). */
+  counterparts: string[]
+  /** Single-character entries for this character (as simplified or traditional), best first. */
+  entries: DictEntry[]
+  hasStrokes: boolean
+  /** Only the core of the dictionary was searched (the rest is still loading): a rare reading may be missing. */
+  partial: boolean
+}
+
+export type DictState = 'idle' | 'loading-core' | 'ready-core' | 'loading-rest' | 'ready' | 'error' | 'no-data'
+
+export interface DictStatus {
+  state: DictState
+  /** 0..1 within the current loading step. */
+  progress: number
+  /** Vietnamese, for 'error' and 'no-data'. */
+  error?: string
+  dataVersion?: string
+  /** Bytes of the step being downloaded (uncompressed, as the manifest counts them). */
+  loadedBytes?: number
+  totalBytes?: number
+  /** Downloaded; the search index is being built. */
+  building?: boolean
+  /** Started from the snapshot saved on this device (no download). */
+  fromSnapshot?: boolean
+}
+
+/** What a hit matched on. The search screen groups short Latin queries by it. */
+export type MatchKind = 'hanzi' | 'pinyin' | 'hanviet' | 'meaning'
+
+export interface SearchHit {
+  entry: DictEntry
+  score: number
+  kind: MatchKind
+  /** Meaning hits: index of the sense that matched, in `entry.vi` (or `entry.en` when lang is 'en'). */
+  sense: number
+  /** Meaning hits: the language of the sense that matched. */
+  lang?: 'vi' | 'en'
+}
+
+export interface SearchGroup {
+  kind: MatchKind
+  /** Best first, at most the group limit. */
+  hits: SearchHit[]
+  /** All hits of this kind before the limit. */
+  total: number
+}
+
+/**
+ * The answer to `dictionary.search(q)`.
+ * - hits: every kind merged, one per entry (its best match), best first.
+ * - groups: for a one-word Latin query that matched in more than one way ("an": pinyin ān/àn,
+ *   Hán Việt an/án, meaning ăn), the hits per kind in the order the screen shows them; else null.
+ * - partial: only the core (most common ~30k entries) was searched; the rest is still loading.
+ * - stale: a newer search was made before this one was answered — ignore it.
+ */
+export interface SearchResult {
+  query: string
+  hits: SearchHit[]
+  groups: SearchGroup[] | null
+  partial: boolean
+  stale: boolean
+  /** Time spent searching in the worker. */
+  ms: number
+}
+
+export interface DataSource {
+  id: string
+  name: string
+  version: string
+  url: string
+  license: string
+  licenseUrl: string
+  attribution: string
+  notes: string
+  /** What was changed (CC BY-SA asks to say so), when the build states it. */
+  changes?: string
+  /** License texts shipped under public/licenses/, relative to the site. */
+  licenseFiles?: string[]
+}
+
+export interface ShardInfo {
+  file: string
+  from: number
+  to: number
+  bytes: number
+  sha256: string
+}
+
+/** public/dict/v1/manifest.json (generated by `npm run data:build`). */
+export interface Manifest {
+  format: 1
+  dataVersion: string
+  columns: string[]
+  shards: ShardInfo[]
+  strokes: { base: string; available: string }
+  hskWriting: Record<string, string[]>
+  /** Level-1 writing characters → the word a quick-added card is learned in: [entry key, its first meaning, the word is a proper noun]. */
+  hskContext?: Record<string, [string, string, boolean?]>
+  sources: DataSource[]
+}
+
+/** What the credits page and the stroke/HSK helpers need, without loading the entries. */
+export interface DictMeta {
+  dataVersion: string
+  sources: DataSource[]
+  /** Absolute URLs of the plain data files (CC BY-SA: downloadable as they are). */
+  files: { name: string; url: string; bytes: number }[]
+  /** Absolute URL of public/licenses/. */
+  licensesUrl: string
+}
+
+/** The columns this client reads, in order (manifest.columns must match). */
+export const COLUMNS = ['simp', 'trad', 'pinyin', 'hv', 'hvAlt', 'vi', 'en', 'hsk', 'pop', 'flags'] as const

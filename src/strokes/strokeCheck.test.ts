@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { TEST_CHARS } from '../data/testChars'
+import { TEST_CHARS } from '../test/fixtures/testChars'
 import type { Ink, Stroke } from '../handwriting/types'
 import { summarizeStrokes } from '../workspace/strokeFeedback'
 import { checkStrokes, type StrokeCheck } from './strokeCheck'
-import { peekStrokeData } from './strokeData'
+import { fixtureStrokeData as peekStrokeData } from '../test/fixtures/strokes'
 import { sourceToBox } from './transform'
 import type { StrokeData } from './types'
 

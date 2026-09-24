@@ -17,6 +17,11 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: ci,
   retries: ci ? 1 : 0,
+  // Every test starts from an empty profile, so the dictionary downloads and indexes its core each
+  // time (≈ 2 s of worker CPU): two workers at most on CI, and assertions that wait for it get time
+  // on a slow or busy runner (the default 5 s made them flaky under load).
+  workers: ci ? 2 : undefined,
+  expect: { timeout: 10_000 },
   reporter: ci ? [['github'], ['html', { open: 'never' }]] : 'list',
   use: {
     baseURL: `http://127.0.0.1:${port}/`,

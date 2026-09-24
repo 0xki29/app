@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { expect, test as base, type Page } from '@playwright/test'
 import { sourceToBox } from '../src/strokes/transform'
 
@@ -26,11 +26,34 @@ export const test = base.extend<{ expectedErrors: RegExp[]; pageErrors: string[]
 
 export { expect }
 
-/** A bundled character's stroke medians (centerlines in writing direction), in dataset units. */
+/**
+ * A character's stroke medians (centerlines in writing direction), in dataset units: from the stroke
+ * files the data build put in public/ (the very files the app fetches), else from the test fixtures
+ * (the five prototype characters, same bytes).
+ */
 function medians(char: string): [number, number][][] {
   const hex = char.codePointAt(0)!.toString(16)
-  const file = new URL(`../src/data/strokes/${hex}.json`, import.meta.url)
+  const built = new URL(`../public/strokes/v2.0.1/${hex}.json`, import.meta.url)
+  const file = existsSync(built) ? built : new URL(`../src/test/fixtures/strokes/${hex}.json`, import.meta.url)
   return (JSON.parse(readFileSync(file, 'utf8')) as { medians: [number, number][][] }).medians
+}
+
+/** Free practice of a character (all three tabs, no session): 永 → `./#/luyen/6c38`. */
+export function practiceUrl(char: string): string {
+  return `./#/luyen/${char.codePointAt(0)!.toString(16)}`
+}
+
+/** A dictionary entry by its key ("學生|学生[xue2 sheng5]"). */
+export function entryUrl(key: string): string {
+  return `./#/tu/${encodeURIComponent(key)}`
+}
+
+/**
+ * Waits until the dock's buttons take taps again: after a rating or "Tiếp tục" the new primary
+ * button ignores taps for 500 ms (data-guard), and so do a new result's buttons (inert).
+ */
+export async function dockReady(page: Page): Promise<void> {
+  await expect(page.locator('.dock .btn[data-guard], .result__body[data-guard]')).toHaveCount(0)
 }
 
 export interface TraceOptions {

@@ -1,0 +1,219 @@
+/* Review deck screens (src/deck): Hôm nay, Sổ ôn tập, the session's summary. On the app's tokens
+   and its .page layout (src/styles.css); mobile first. */
+
+/* ── Hôm nay ───────────────────────────────────────────────────────────── */
+
+.today__plan,
+.today__empty {
+  margin: 8px 0 20px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--paper);
+}
+
+.today__counts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.today__count {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.today__count dt {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.today__count dd {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.today__done {
+  font-size: 17px;
+}
+
+.today__actions {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+/* ── Sổ ôn tập ─────────────────────────────────────────────────────────── */
+
+.deck__empty {
+  margin: 16px 0;
+}
+
+.deck-list {
+  margin: 8px 0 16px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.deck-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.page a.deck-card__char {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'KaiTi', 'STKaiti', 'Kaiti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
+  font-size: 34px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.deck-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.page .deck-card__context,
+.page .deck-card__due {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page .deck-card__due {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.deck-state {
+  font-weight: 600;
+}
+
+.deck-state--new {
+  color: var(--muted);
+}
+
+.deck-state--learning,
+.deck-state--relearning {
+  color: var(--close-text);
+}
+
+.deck-state--review {
+  color: var(--correct-text);
+}
+
+.deck-card__remove {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+}
+
+.deck-card__remove:active {
+  background: var(--surface-press);
+}
+
+.deck-card__confirm {
+  flex: none;
+  display: flex;
+  gap: 8px;
+}
+
+.deck__section {
+  margin: 24px 0;
+}
+
+.deck__setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.deck__select {
+  min-height: 44px;
+  min-width: 88px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.deck__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── Session summary ───────────────────────────────────────────────────── */
+
+.session-summary__lead {
+  font-size: 17px;
+}
+
+.session-summary__counts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 12px 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.session-summary__count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px;
+  border-radius: 14px;
+  background: var(--surface);
+  font-size: 15px;
+}
+
+.session-summary__num {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.session-summary__count[data-v='correct'] .session-summary__num {
+  color: var(--correct-text);
+}
+
+.session-summary__count[data-v='close'] .session-summary__num {
+  color: var(--close-text);
+}
+
+.session-summary__count[data-v='wrong'] .session-summary__num {
+  color: var(--wrong);
+}

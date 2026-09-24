@@ -31,6 +31,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # The dictionary, stroke and license files under public/ (gitignored) are built from inputs
+      # pinned in scripts/dict/sources.lock.json; downloads are cached until the lock changes.
+      - uses: actions/cache@v6
+        with:
+          path: .cache/dict-src
+          key: dict-src-${{ hashFiles('scripts/dict/sources.lock.json') }}
+      - name: Dictionary data (fetch, verify, build, validation gates)
+        run: npm run data:build
       - run: npm run lint
       - name: Typecheck
         # `tsc` must be TypeScript 7 (@typescript/native); `typescript` is the 6.x API for linting.
@@ -40,6 +48,15 @@ jobs:
           npm run typecheck
       - run: npm test
       - run: npm run build
+      # The site is only useful with its data: fail here rather than deploy an app without a
+      # dictionary or stroke files (a build without data only warns). Sizes go to the log.
+      - name: dist/ has the data and its notices
+        run: |
+          for f in dist/dict/v1/manifest.json dist/licenses/THIRD_PARTY_NOTICES.md dist/licenses/ARPHICPL.TXT dist/strokes/v2.0.1/6c38.json; do
+            test -s "$f" || { echo "::error::$f is missing from dist/"; exit 1; }
+          done
+          du -sh --apparent-size dist dist/*
+          echo "files: $(find dist -type f | wc -l)"
       - name: E2E (installed Google Chrome, preview of the dist/ just built)
         run: npx playwright test
       - uses: actions/upload-artifact@v7
@@ -48,6 +65,7 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+      # dist/ holds the app and, copied from public/, the data built above (dict, strokes, licenses).
       - uses: actions/upload-pages-artifact@v5
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
@@ -65,6 +83,11 @@ jobs:
           node-version: '22.13'
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v6
+        with:
+          path: .cache/dict-src
+          key: dict-src-${{ hashFiles('scripts/dict/sources.lock.json') }}
+      - run: npm run data:build
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test

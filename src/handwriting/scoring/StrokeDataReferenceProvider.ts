@@ -8,10 +8,18 @@ export const STROKE_DATA_SOURCE = 'stroke data (Make Me a Hanzi)'
 
 export type StrokeDataLoader = (character: string) => Promise<StrokeData | null>
 
+/** How long scoring waits for a character's stroke file before it scores against the font glyph. */
+export const REFERENCE_WAIT_MS = 8000
+
+const LATE = Symbol('late')
+
 /**
- * Reference from the bundled stroke data: the glyph mask is filled from the same outlines, through
- * the same transform, as the glyph the learner sees (src/strokes), so the score is measured against
- * exactly what is on screen. Characters without stroke data go to `fallback` (the device font).
+ * Reference from the character's stroke data (fetched per character, strokeData.ts): the glyph mask
+ * is filled from the same outlines, through the same transform, as the glyph the learner sees
+ * (src/strokes), so the score is measured against exactly what is on screen. Characters without
+ * stroke data go to `fallback` (the device font), and so does a score asked for while the file is
+ * still not in after `waitMs` (a stalled connection): the learner gets a result, not "Đang chấm…"
+ * for good; the file, once in, serves the next attempt.
  *
  * `ReferenceCharacter.strokes` is deliberately left unset. It would switch GeometryScorer to its
  * "full" path (a round-pen raster of the medians plus index-paired per-stroke lengths), which has
@@ -24,10 +32,12 @@ export class StrokeDataReferenceProvider implements ReferenceProvider {
   private readonly warned = new Set<string>()
   private readonly fallback: ReferenceProvider
   private readonly load: StrokeDataLoader
+  private readonly waitMs: number
 
-  constructor(fallback: ReferenceProvider, load: StrokeDataLoader = getStrokeData) {
+  constructor(fallback: ReferenceProvider, load: StrokeDataLoader = getStrokeData, waitMs = REFERENCE_WAIT_MS) {
     this.fallback = fallback
     this.load = load
+    this.waitMs = waitMs
   }
 
   async getReference(character: string, lang: string, strokeCount?: number): Promise<ReferenceCharacter> {
@@ -36,14 +46,21 @@ export class StrokeDataReferenceProvider implements ReferenceProvider {
       pending = loadReference(this.load, character)
       this.cache.set(character, pending)
     }
-    let ref: ReferenceCharacter | null
+    let ref: ReferenceCharacter | null | typeof LATE
+    let timer: ReturnType<typeof setTimeout> | undefined
     try {
-      ref = await pending
+      ref = await Promise.race([pending, new Promise<typeof LATE>((resolve) => (timer = setTimeout(() => resolve(LATE), this.waitMs)))])
     } catch (err) {
-      // The bundled data cannot fail to load, but a loader may: forget the failure so the next
-      // call asks the loader again, and score this attempt against the font rather than failing it.
+      // The stroke file may fail to download (offline, a server error): forget the failure so the
+      // next call asks the loader again, and score this attempt against the font rather than failing it.
       if (this.cache.get(character) === pending) this.cache.delete(character)
       console.warn(`[scoring] stroke data for ${character} failed to load; using the font glyph`, err)
+      return this.fallback.getReference(character, lang, strokeCount)
+    } finally {
+      clearTimeout(timer)
+    }
+    if (ref === LATE) {
+      console.warn(`[scoring] stroke data for ${character} not in after ${this.waitMs} ms; using the font glyph`)
       return this.fallback.getReference(character, lang, strokeCount)
     }
     if (!ref) return this.fallback.getReference(character, lang, strokeCount)

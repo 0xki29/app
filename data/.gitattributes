@@ -1,0 +1,7 @@
+# Byte-exact inputs: the build checks their SHA-256, so git must never convert them.
+sources/** -text
+# Curated and golden files are read as LF text (the build also accepts CRLF).
+*.tsv text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+licenses/*.txt text eol=lf

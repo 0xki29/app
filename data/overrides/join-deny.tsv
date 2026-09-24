@@ -1,0 +1,22 @@
+# CC-CEDICT entries that must not take a loosely matched CVDICT translation (join passes 2–4, scripts/dict/lib/join.mjs)
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Each was checked against its CC-CEDICT English: the CVDICT entry it would take translates another word
+# (a proper noun for a common word or back, a "used in" entry given a full sense). Without it the row shows
+# its English, labelled "chưa có bản dịch". Format: UTF-8 (NFC), LF, tab-separated; "#" comments; header row.
+key	reason
+累|累[lei2]	"used in 累累" would take the surname entry 纍 Lei2 (họ Lei)
+麗|丽[li2]	"used in place names (高麗, 麗水)" would take 麗 Li2 "Hàn Quốc"
+嫚|嫚[man1]	"(dialect) girl" would take the surname entry Man4
+春日|春日[chun1 ri4]	"springtime" would take a town in Taiwan (Xuân Nhựt)
+樟木|樟木[zhang1 mu4]	"camphorwood" would take the town Zhangmu (Dram)
+滹|滹[hu1]	"used in 滹沱河" would take a surname sense
+維根|维根[wei2 gen1]	"vegan" would take Wigan, a town in England
+虹橋|虹桥[hong2 qiao2]	"arched bridge" would take Hongqiao (airport, district)
+鹽井|盐井[yan2 jing3]	"salt well" would take the place name Yanjing
+白麻子|白麻子[bai2 ma2 zi5]	"pockmark" would take "hạt cây cần sa" (hemp seed)
+中農|中农[zhong1 nong2]	"middle peasant" would take "nông nghiệp Trung Quốc"
+中油|中油[Zhong1 you2]	CPC Corporation (Taiwan) would take CNPC (mainland China)
+科克|科克[Ke1 ke4]	Cork, the Irish city, would take "nút chai" (a cork)
+海斯|海斯[Hai3 si1]	the name Hayes would take a computer sense
+終傅|终傅[zhong1 fu4]	extreme unction would take "lễ tang" (a funeral)
+達令|达令[da2 ling4]	"darling" would take a personal name

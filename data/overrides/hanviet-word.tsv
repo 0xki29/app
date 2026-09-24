@@ -1,0 +1,239 @@
+# Word-level Hán Việt corrections: readings pinyin does not predict, casing, and phonetic loanwords
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Derived from CC-CEDICT (https://cc-cedict.org, CC BY-SA 4.0) and CVDICT (Vietnamese translation of CC-CEDICT, CC BY-SA 4.0).
+# Drafted by Claude (AI), 2026-09. status "ai-draft" = AI-drafted, awaiting human review ("hiệu đính bởi AI, chờ duyệt");
+# "reviewed" = checked by the project owner ("đã hiệu đính") — only the owner sets it. Changes: CHANGELOG.md.
+# Format: UTF-8 (NFC), LF, tab-separated. Lines starting with "#" are comments.
+# Only words whose algorithmic Hán Việt reading was corrected; hanviet "-" = loanword, no Hán Việt reading.
+# Character readings (a vernacular form listed first, 讀 đọc → độc) belong in hanviet-char.tsv: fix a character there, not word by word.
+# A reading may list searchable alternates after "|". A capital the curator writes is kept (Hán ngữ).
+# 228 rows: 18 conventional readings, 18 casing and set readings, 192 phonetic loanwords (hv "-"; reviewed from the CC-CEDICT "(loanword)" rows: the HSK ones and every multi-character one with pop ≥ 28).
+key	hanviet	reason	source	status
+教|教[jiao1]	giáo	nghĩa "dạy" đọc là giáo (giáo viên, giáo dục); âm giao chỉ dùng cho nghĩa cổ "khiến, sai khiến" (Thiều Chửu)	claude-2026-09	ai-draft
+〇|〇[ling2]	linh	đang thiếu âm; 〇 là cách viết số không, đọc như 零 (linh)	claude-2026-09	ai-draft
+小姐|小姐[xiao3 jie5]	tiểu thư	小姐 quen đọc là tiểu thư (姐 âm thư); tiểu tỷ không dùng cho từ này	claude-2026-09	ai-draft
+不好意思|不好意思[bu4 hao3 yi4 si5]	bất hảo ý tứ	思 trong 意思 đọc tứ; thống nhất với 意思 ý tứ, 有意思 hữu ý tứ	claude-2026-09	ai-draft
+答應|答应[da1 ying5]	đáp ứng	應 nghĩa đáp lại đọc ứng (yìng); ưng là âm của 應 nghĩa nên, đáng (yīng); từ Hán Việt quen dùng là đáp ứng	claude-2026-09	ai-draft
+好處|好处[hao3 chu5]	hảo xứ	處 ở đây là danh từ (chù: chỗ, điểm), đọc xứ; xử là âm của nghĩa động từ chǔ (xử lý); thống nhất với 坏处 hoại xứ	claude-2026-09	ai-draft
+經過|经过[jing1 guo4]	kinh qua	từ Hán Việt đã định hình trong tiếng Việt là "kinh qua" (trải qua), 過 đọc bình thanh qua; "kinh quá" là đọc máy móc theo âm quá của guò; thống nhất với 通過 thông qua	claude-2026-09	ai-draft
+便宜|便宜[pian2 yi5]	biền nghi	便 đọc pián (便宜 giá rẻ, 便便) có âm Hán Việt là biền; tiện là âm của biàn (方便 phương tiện, 随便 tuỳ tiện). "Tiện nghi" là từ Hán Việt của 便宜 biànyí (thuận tiện), khác từ	claude-2026-09	ai-draft
+通過|通过[tong1 guo4]	thông qua	từ Hán Việt đã định hình trong tiếng Việt là "thông qua" (Quốc hội thông qua luật; thông qua bạn bè), 過 đọc bình thanh qua; "thông quá" là đọc máy móc theo âm quá của guò, không ai dùng	claude-2026-09	ai-draft
+一部分|一部分[yi1 bu4 fen5]	nhất bộ phận	分 đọc fèn (phần, bộ phận) là phận; từ Hán Việt quen dùng là bộ phận (部分), thống nhất với 部分 bộ phận, 大部分 đại bộ phận	claude-2026-09	ai-draft
+意思|意思[yi4 si5]	ý tứ	思 nghĩa ý nghĩ, tâm tư (danh từ) đọc tứ; từ Hán Việt quen dùng là ý tứ (như văn tứ 文思)	claude-2026-09	ai-draft
+有意思|有意思[you3 yi4 si5]	hữu ý tứ	思 trong 意思 đọc tứ; từ Hán Việt quen dùng là ý tứ, thống nhất với 意思 ý tứ	claude-2026-09	ai-draft
+調查|调查[diao4 cha2]	điều tra	âm quen dùng của 調 trong từ này là điều (điều tra, điều hoà); điệu là âm theo pinyin diào	claude-2026-09	ai-draft
+將軍|将军[jiang1 jun1]	tướng quân	將 nghĩa vị tướng đọc tướng; tương là âm của 將 nghĩa sắp, sẽ (tương lai)	claude-2026-09	ai-draft
+使者|使者[shi3 zhe3]	sứ giả	使 nghĩa người đi sứ đọc sứ (sứ giả, đại sứ); sử là âm của 使 nghĩa sai khiến	claude-2026-09	ai-draft
+司令|司令[si1 ling4]	tư lệnh	từ Hán Việt đã định hình là tư lệnh (司 tư: coi giữ)	claude-2026-09	ai-draft
+容易|容易[rong2 yi4]	dung dị	易 nghĩa dễ đọc dị (dung dị, giản dị); dịch là âm của 易 nghĩa đổi (giao dịch)	claude-2026-09	ai-draft
+印刷|印刷[yin4 shua1]	ấn loát	từ Hán Việt đã định hình là ấn loát (刷 loát)	claude-2026-09	ai-draft
+中文|中文[Zhong1 wen2]	Trung văn	tên một ngôn ngữ là danh từ chung trong tiếng Việt: chỉ viết hoa phần tên riêng (Trung văn, như Anh văn)	claude-2026-09	ai-draft
+漢語|汉语[Han4 yu3]	Hán ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Hán ngữ)	claude-2026-09	ai-draft
+英語|英语[Ying1 yu3]	Anh ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Anh ngữ)	claude-2026-09	ai-draft
+英文|英文[Ying1 wen2]	Anh văn	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Anh văn)	claude-2026-09	ai-draft
+華語|华语[Hua2 yu3]	Hoa ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Hoa ngữ)	claude-2026-09	ai-draft
+日語|日语[Ri4 yu3]	Nhật ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Nhật ngữ)	claude-2026-09	ai-draft
+法語|法语[Fa3 yu3]	Pháp ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Pháp ngữ)	claude-2026-09	ai-draft
+俄語|俄语[E2 yu3]	Nga ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng (Nga ngữ)	claude-2026-09	ai-draft
+西班牙語|西班牙语[Xi1 ban1 ya2 yu3]	Tây Ban Nha ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+阿拉伯語|阿拉伯语[A1 la1 bo2 yu3]	A Lạp Bá ngữ	tên ngôn ngữ: chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+華人|华人[Hua2 ren2]	Hoa nhân	danh từ chung (người Hoa): chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+華僑|华侨[Hua2 qiao2]	Hoa kiều	danh từ chung, tiếng Việt viết Hoa kiều	claude-2026-09	ai-draft
+華裔|华裔[Hua2 yi4]	Hoa duệ	danh từ chung (người gốc Hoa): chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+英鎊|英镑[Ying1 bang4]	Anh bảng	danh từ chung (bảng Anh): chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+中國畫|中国画[Zhong1 guo2 hua4]	Trung Quốc hoạ	danh từ chung (tranh Trung Quốc): chỉ viết hoa phần tên riêng	claude-2026-09	ai-draft
+比丘|比丘[bi3 qiu1]	tỳ kheo	từ nhà Phật đã định hình trong tiếng Việt là tỳ kheo (bhikṣu); đọc máy móc là tỷ khâu	claude-2026-09	ai-draft
+比丘尼|比丘尼[bi3 qiu1 ni2]	tỳ kheo ni	từ nhà Phật đã định hình trong tiếng Việt là tỳ kheo ni (bhikṣuṇī)	claude-2026-09	ai-draft
+可汗|可汗[ke4 han2]	khả hãn	tước hiệu Khan, tiếng Việt quen đọc khả hãn (可 kè theo âm cổ)	claude-2026-09	ai-draft
+咖啡|咖啡[ka1 fei1]	-	từ phiên âm (coffee): đọc theo Hán Việt (ca phê) không có nghĩa	claude-2026-09	ai-draft
+啤酒|啤酒[pi2 jiu3]	-	từ phiên âm (beer (啤 ghi âm, 酒 là nghĩa)): đọc theo Hán Việt (bia tửu) không có nghĩa	claude-2026-09	ai-draft
+沙發|沙发[sha1 fa1]	-	từ phiên âm (sofa): đọc theo Hán Việt (sa phát) không có nghĩa	claude-2026-09	ai-draft
+巴士|巴士[ba1 shi4]	-	từ phiên âm (bus): đọc theo Hán Việt (ba sĩ) không có nghĩa	claude-2026-09	ai-draft
+巧克力|巧克力[qiao3 ke4 li4]	-	từ phiên âm (chocolate): đọc theo Hán Việt (xảo khắc lực) không có nghĩa	claude-2026-09	ai-draft
+模特兒|模特儿[mo2 te4 r5]	-	từ phiên âm (model): đọc theo Hán Việt (mô đặc nhi) không có nghĩa	claude-2026-09	ai-draft
+模特|模特[mo2 te4]	-	từ phiên âm (model): đọc theo Hán Việt (mô đặc) không có nghĩa	claude-2026-09	ai-draft
+邏輯|逻辑[luo2 ji5]	-	từ phiên âm (logic): đọc theo Hán Việt (la tập) không có nghĩa	claude-2026-09	ai-draft
+博客|博客[bo2 ke4]	-	từ phiên âm (blog): đọc theo Hán Việt (bác khách) không có nghĩa	claude-2026-09	ai-draft
+幽默|幽默[you1 mo4]	-	từ phiên âm (humour): đọc theo Hán Việt (u mặc) không có nghĩa	claude-2026-09	ai-draft
+摩托|摩托[mo2 tuo1]	-	từ phiên âm (motor): đọc theo Hán Việt (ma thác) không có nghĩa	claude-2026-09	ai-draft
+三明治|三明治[san1 ming2 zhi4]	-	từ phiên âm (sandwich): đọc theo Hán Việt (tam minh trị) không có nghĩa	claude-2026-09	ai-draft
+坦克|坦克[tan3 ke4]	-	từ phiên âm (tank): đọc theo Hán Việt (thản khắc) không có nghĩa	claude-2026-09	ai-draft
+基因|基因[ji1 yin1]	-	từ phiên âm (gene): đọc theo Hán Việt (cơ nhân) không có nghĩa	claude-2026-09	ai-draft
+引擎|引擎[yin3 qing2]	-	từ phiên âm (engine): đọc theo Hán Việt (dẫn kình) không có nghĩa	claude-2026-09	ai-draft
+卡通|卡通[ka3 tong1]	-	từ phiên âm (cartoon): đọc theo Hán Việt (ca thông) không có nghĩa	claude-2026-09	ai-draft
+艾滋病|艾滋病[ai4 zi1 bing4]	-	từ phiên âm (AIDS (病 là nghĩa)): đọc theo Hán Việt (ngải tư bệnh) không có nghĩa	claude-2026-09	ai-draft
+吉他|吉他[ji2 ta1]	-	từ phiên âm (guitar): đọc theo Hán Việt (cát tha) không có nghĩa	claude-2026-09	ai-draft
+黑客|黑客[hei1 ke4]	-	từ phiên âm (hacker): đọc theo Hán Việt (hắc khách) không có nghĩa	claude-2026-09	ai-draft
+嘉年華|嘉年华[jia1 nian2 hua2]	-	từ phiên âm (carnival): đọc theo Hán Việt (gia niên hoa) không có nghĩa	claude-2026-09	ai-draft
+撲克|扑克[pu1 ke4]	-	từ phiên âm (poker): đọc theo Hán Việt (phác khắc) không có nghĩa	claude-2026-09	ai-draft
+沙龍|沙龙[sha1 long2]	-	từ phiên âm (salon): đọc theo Hán Việt (sa long) không có nghĩa	claude-2026-09	ai-draft
+克隆|克隆[ke4 long2]	-	từ phiên âm (clone): đọc theo Hán Việt (khắc long) không có nghĩa	claude-2026-09	ai-draft
+芭蕾|芭蕾[ba1 lei3]	-	từ phiên âm (ballet): đọc theo Hán Việt (ba lôi) không có nghĩa	claude-2026-09	ai-draft
+休克|休克[xiu1 ke4]	-	từ phiên âm (shock): đọc theo Hán Việt (hưu khắc) không có nghĩa	claude-2026-09	ai-draft
+尼龍|尼龙[ni2 long2]	-	từ phiên âm (nylon): đọc theo Hán Việt (ni long) không có nghĩa	claude-2026-09	ai-draft
+桑拿|桑拿[sang1 na2]	-	từ phiên âm (sauna): đọc theo Hán Việt (tang nã) không có nghĩa	claude-2026-09	ai-draft
+芝士|芝士[zhi1 shi4]	-	từ phiên âm (cheese): đọc theo Hán Việt (chi sĩ) không có nghĩa	claude-2026-09	ai-draft
+蘇丹|苏丹[su1 dan1]	-	từ phiên âm (sultan): đọc theo Hán Việt (tô đan) không có nghĩa	claude-2026-09	ai-draft
+法西斯|法西斯[fa3 xi1 si1]	-	từ phiên âm (fascist): đọc theo Hán Việt (pháp tây tư) không có nghĩa	claude-2026-09	ai-draft
+派對|派对[pai4 dui4]	-	từ phiên âm (party): đọc theo Hán Việt (phái đối) không có nghĩa	claude-2026-09	ai-draft
+漢堡|汉堡[han4 bao3]	-	từ phiên âm (hamburger): đọc theo Hán Việt (hán bảo) không có nghĩa	claude-2026-09	ai-draft
+迷你|迷你[mi2 ni3]	-	từ phiên âm (mini): đọc theo Hán Việt (mê nễ) không có nghĩa	claude-2026-09	ai-draft
+雷達|雷达[lei2 da2]	-	từ phiên âm (radar): đọc theo Hán Việt (lôi đạt) không có nghĩa	claude-2026-09	ai-draft
+麥克|麦克[mai4 ke4]	-	từ phiên âm (mic): đọc theo Hán Việt (mạch khắc) không có nghĩa	claude-2026-09	ai-draft
+麥克風|麦克风[mai4 ke4 feng1]	-	từ phiên âm (microphone): đọc theo Hán Việt (mạch khắc phong) không có nghĩa	claude-2026-09	ai-draft
+克拉|克拉[ke4 la1]	-	từ phiên âm (carat): đọc theo Hán Việt (khắc lạp) không có nghĩa	claude-2026-09	ai-draft
+摩托車|摩托车[mo2 tuo1 che1]	-	từ phiên âm (motorcycle (车 là nghĩa)): đọc theo Hán Việt (ma thác xa) không có nghĩa	claude-2026-09	ai-draft
+比特|比特[bi3 te4]	-	từ phiên âm (bit): đọc theo Hán Việt (tỷ đặc) không có nghĩa	claude-2026-09	ai-draft
+波特|波特[bo1 te4]	-	từ phiên âm (baud): đọc theo Hán Việt (ba đặc) không có nghĩa	claude-2026-09	ai-draft
+瓦斯|瓦斯[wa3 si1]	-	từ phiên âm (gas): đọc theo Hán Việt (ngoã tư) không có nghĩa	claude-2026-09	ai-draft
+盧比|卢比[lu2 bi3]	-	từ phiên âm (rupee): đọc theo Hán Việt (lô tỷ) không có nghĩa	claude-2026-09	ai-draft
+盧布|卢布[lu2 bu4]	-	từ phiên âm (ruble): đọc theo Hán Việt (lô bố) không có nghĩa	claude-2026-09	ai-draft
+高爾夫|高尔夫[gao1 er3 fu1]	-	từ phiên âm (golf): đọc theo Hán Việt (cao nhĩ phu) không có nghĩa	claude-2026-09	ai-draft
+可可|可可[ke3 ke3]	-	từ phiên âm (cocoa): đọc theo Hán Việt (khả khả) không có nghĩa	claude-2026-09	ai-draft
+媽咪|妈咪[ma1 mi5]	-	từ phiên âm (mommy): đọc theo Hán Việt (ma my) không có nghĩa	claude-2026-09	ai-draft
+法蘭|法兰[fa3 lan2]	-	từ phiên âm (flange): đọc theo Hán Việt (pháp lan) không có nghĩa	claude-2026-09	ai-draft
+芒果|芒果[mang2 guo3]	-	từ phiên âm (mango (果 là nghĩa)): đọc theo Hán Việt (mang quả) không có nghĩa	claude-2026-09	ai-draft
+馬拉松|马拉松[ma3 la1 song1]	-	từ phiên âm (marathon): đọc theo Hán Việt (mã lạp tùng) không có nghĩa	claude-2026-09	ai-draft
+布魯斯|布鲁斯[bu4 lu3 si1]	-	từ phiên âm (blues): đọc theo Hán Việt (bố lỗ tư) không có nghĩa	claude-2026-09	ai-draft
+披薩|披萨[pi1 sa4]	-	từ phiên âm (pizza): đọc theo Hán Việt (phi tát) không có nghĩa	claude-2026-09	ai-draft
+比薩|比萨[bi3 sa4]	-	từ phiên âm (pizza): đọc theo Hán Việt (tỷ tát) không có nghĩa	claude-2026-09	ai-draft
+比薩餅|比萨饼[bi3 sa4 bing3]	-	từ phiên âm (pizza): đọc theo Hán Việt (tỷ tát bính) không có nghĩa	claude-2026-09	ai-draft
+比基尼|比基尼[bi3 ji1 ni2]	-	từ phiên âm (bikini): đọc theo Hán Việt (tỷ cơ ni) không có nghĩa	claude-2026-09	ai-draft
+烏托邦|乌托邦[wu1 tuo1 bang1]	-	từ phiên âm (utopia): đọc theo Hán Việt (ô thác bang) không có nghĩa	claude-2026-09	ai-draft
+蕾絲|蕾丝[lei3 si1]	-	từ phiên âm (lace): đọc theo Hán Việt (lôi ty) không có nghĩa	claude-2026-09	ai-draft
+香檳|香槟[xiang1 bin1]	-	từ phiên âm (champagne): đọc theo Hán Việt (hương tân) không có nghĩa	claude-2026-09	ai-draft
+香檳酒|香槟酒[xiang1 bin1 jiu3]	-	từ phiên âm (champagne): đọc theo Hán Việt (hương tân tửu) không có nghĩa	claude-2026-09	ai-draft
+加里|加里[jia1 li3]	-	từ phiên âm (kalium): đọc theo Hán Việt (gia lý) không có nghĩa	claude-2026-09	ai-draft
+拉德|拉德[la1 de2]	-	từ phiên âm (rad): đọc theo Hán Việt (lạp đức) không có nghĩa	claude-2026-09	ai-draft
+拷貝|拷贝[kao3 bei4]	-	từ phiên âm (copy): đọc theo Hán Việt (khảo bối) không có nghĩa	claude-2026-09	ai-draft
+沙拉|沙拉[sha1 la1]	-	từ phiên âm (salad): đọc theo Hán Việt (sa lạp) không có nghĩa	claude-2026-09	ai-draft
+阿門|阿门[a1 men2]	-	từ phiên âm (amen): đọc theo Hán Việt (a môn) không có nghĩa	claude-2026-09	ai-draft
+以太|以太[yi3 tai4]	-	từ phiên âm (ether): đọc theo Hán Việt (dĩ thái) không có nghĩa	claude-2026-09	ai-draft
+圖騰|图腾[tu2 teng2]	-	từ phiên âm (totem): đọc theo Hán Việt (đồ đằng) không có nghĩa	claude-2026-09	ai-draft
+培根|培根[pei2 gen1]	-	từ phiên âm (bacon): đọc theo Hán Việt (bồi căn) không có nghĩa	claude-2026-09	ai-draft
+布丁|布丁[bu4 ding1]	-	từ phiên âm (pudding): đọc theo Hán Việt (bố đinh) không có nghĩa	claude-2026-09	ai-draft
+普羅|普罗[pu3 luo2]	-	từ phiên âm (proletariat): đọc theo Hán Việt (phổ la) không có nghĩa	claude-2026-09	ai-draft
+瓦特|瓦特[wa3 te4]	-	từ phiên âm (watt): đọc theo Hán Việt (ngoã đặc) không có nghĩa	claude-2026-09	ai-draft
+百家樂|百家乐[bai3 jia1 le4]	-	từ phiên âm (baccarat): đọc theo Hán Việt (bách gia lạc) không có nghĩa	claude-2026-09	ai-draft
+的士|的士[di1 shi4]	-	từ phiên âm (taxi): đọc theo Hán Việt (đích sĩ) không có nghĩa	claude-2026-09	ai-draft
+脫口秀|脱口秀[tuo1 kou3 xiu4]	-	từ phiên âm (talk show): đọc theo Hán Việt (thoát khẩu tú) không có nghĩa	claude-2026-09	ai-draft
+芭蕾舞|芭蕾舞[ba1 lei3 wu3]	-	từ phiên âm (ballet): đọc theo Hán Việt (ba lôi vũ) không có nghĩa	claude-2026-09	ai-draft
+荷爾蒙|荷尔蒙[he2 er3 meng2]	-	từ phiên âm (hormone): đọc theo Hán Việt (hà nhĩ mông) không có nghĩa	claude-2026-09	ai-draft
+蘇打|苏打[su1 da2]	-	từ phiên âm (soda): đọc theo Hán Việt (tô tá) không có nghĩa	claude-2026-09	ai-draft
+馬賽克|马赛克[ma3 sai4 ke4]	-	từ phiên âm (mosaic): đọc theo Hán Việt (mã tái khắc) không có nghĩa	claude-2026-09	ai-draft
+駭客|骇客[hai4 ke4]	-	từ phiên âm (hacker): đọc theo Hán Việt (hãi khách) không có nghĩa	claude-2026-09	ai-draft
+哈尼|哈尼[ha1 ni2]	-	từ phiên âm (honey): đọc theo Hán Việt (ha ni) không có nghĩa	claude-2026-09	ai-draft
+威士忌|威士忌[wei1 shi4 ji4]	-	từ phiên âm (whisky): đọc theo Hán Việt (uy sĩ kỵ) không có nghĩa	claude-2026-09	ai-draft
+德比|德比[de2 bi3]	-	từ phiên âm (derby): đọc theo Hán Việt (đức tỷ) không có nghĩa	claude-2026-09	ai-draft
+拉比|拉比[la1 bi3]	-	từ phiên âm (rabbi): đọc theo Hán Việt (lạp tỷ) không có nghĩa	claude-2026-09	ai-draft
+拉里|拉里[la1 li3]	-	từ phiên âm (lari): đọc theo Hán Việt (lạp lý) không có nghĩa	claude-2026-09	ai-draft
+拜拜|拜拜[bai2 bai2]	-	từ phiên âm (bye-bye): đọc theo Hán Việt (bái bái) không có nghĩa	claude-2026-09	ai-draft
+歇斯底里|歇斯底里[xie1 si1 di3 li3]	-	từ phiên âm (hysteria): đọc theo Hán Việt (hiết tư để lý) không có nghĩa	claude-2026-09	ai-draft
+比索|比索[bi3 suo3]	-	từ phiên âm (peso): đọc theo Hán Việt (tỷ sách) không có nghĩa	claude-2026-09	ai-draft
+海洛因|海洛因[hai3 luo4 yin1]	-	từ phiên âm (heroin): đọc theo Hán Việt (hải lạc nhân) không có nghĩa	claude-2026-09	ai-draft
+路亞|路亚[lu4 ya4]	-	từ phiên âm (lure): đọc theo Hán Việt (lộ á) không có nghĩa	claude-2026-09	ai-draft
+馬達|马达[ma3 da2]	-	từ phiên âm (motor): đọc theo Hán Việt (mã đạt) không có nghĩa	claude-2026-09	ai-draft
+伏特|伏特[fu2 te4]	-	từ phiên âm (volt): đọc theo Hán Việt (phục đặc) không có nghĩa	claude-2026-09	ai-draft
+伏特加|伏特加[fu2 te4 jia1]	-	từ phiên âm (vodka): đọc theo Hán Việt (phục đặc gia) không có nghĩa	claude-2026-09	ai-draft
+先令|先令[xian1 ling4]	-	từ phiên âm (shilling): đọc theo Hán Việt (tiên lệnh) không có nghĩa	claude-2026-09	ai-draft
+吉普車|吉普车[ji2 pu3 che1]	-	từ phiên âm (jeep): đọc theo Hán Việt (cát phổ xa) không có nghĩa	claude-2026-09	ai-draft
+咖啡因|咖啡因[ka1 fei1 yin1]	-	từ phiên âm (caffeine): đọc theo Hán Việt (ca phê nhân) không có nghĩa	claude-2026-09	ai-draft
+咖喱|咖喱[ga1 li2]	-	từ phiên âm (curry): đọc theo Hán Việt (ca ly) không có nghĩa	claude-2026-09	ai-draft
+咖哩|咖哩[ka1 li3]	-	từ phiên âm (curry): đọc theo Hán Việt (ca lý) không có nghĩa	claude-2026-09	ai-draft
+嘻哈|嘻哈[xi1 ha1]	-	từ phiên âm (hip-hop): đọc theo Hán Việt (hy ha) không có nghĩa	claude-2026-09	ai-draft
+夾克|夹克[jia1 ke4]	-	từ phiên âm (jacket): đọc theo Hán Việt (giáp khắc) không có nghĩa	claude-2026-09	ai-draft
+尼特|尼特[ni2 te4]	-	từ phiên âm (nit): đọc theo Hán Việt (ni đặc) không có nghĩa	claude-2026-09	ai-draft
+按揭|按揭[an4 jie1]	-	từ phiên âm (mortgage (qua tiếng Quảng Đông)): đọc theo Hán Việt (án yết) không có nghĩa	claude-2026-09	ai-draft
+朋克|朋克[peng2 ke4]	-	từ phiên âm (punk): đọc theo Hán Việt (bằng khắc) không có nghĩa	claude-2026-09	ai-draft
+木乃伊|木乃伊[mu4 nai3 yi1]	-	từ phiên âm (mummy): đọc theo Hán Việt (mộc nãi y) không có nghĩa	claude-2026-09	ai-draft
+法拉|法拉[fa3 la1]	-	từ phiên âm (farad): đọc theo Hán Việt (pháp lạp) không có nghĩa	claude-2026-09	ai-draft
+法老|法老[fa3 lao3]	-	từ phiên âm (pharaoh): đọc theo Hán Việt (pháp lão) không có nghĩa	claude-2026-09	ai-draft
+盎司|盎司[ang4 si1]	-	từ phiên âm (ounce): đọc theo Hán Việt (áng ty) không có nghĩa	claude-2026-09	ai-draft
+維他命|维他命[wei2 ta1 ming4]	-	từ phiên âm (vitamin): đọc theo Hán Việt (duy tha mệnh) không có nghĩa	claude-2026-09	ai-draft
+貝斯|贝斯[bei4 si1]	-	từ phiên âm (bass): đọc theo Hán Việt (bối tư) không có nghĩa	claude-2026-09	ai-draft
+里拉|里拉[li3 la1]	-	từ phiên âm (lira): đọc theo Hán Việt (lý lạp) không có nghĩa	claude-2026-09	ai-draft
+雪茄|雪茄[xue3 jia1]	-	từ phiên âm (cigar): đọc theo Hán Việt (tuyết gia) không có nghĩa	claude-2026-09	ai-draft
+雷射|雷射[lei2 she4]	-	từ phiên âm (laser): đọc theo Hán Việt (lôi xạ) không có nghĩa	claude-2026-09	ai-draft
+霸凌|霸凌[ba4 ling2]	-	từ phiên âm (bullying): đọc theo Hán Việt (bá lăng) không có nghĩa	claude-2026-09	ai-draft
+保齡球|保龄球[bao3 ling2 qiu2]	-	từ phiên âm (bowling): đọc theo Hán Việt (bảo linh cầu) không có nghĩa	claude-2026-09	ai-draft
+倫巴|伦巴[lun2 ba1]	-	từ phiên âm (rumba): đọc theo Hán Việt (luân ba) không có nghĩa	claude-2026-09	ai-draft
+卡路里|卡路里[ka3 lu4 li3]	-	từ phiên âm (calorie): đọc theo Hán Việt (ca lộ lý) không có nghĩa	claude-2026-09	ai-draft
+安培|安培[an1 pei2]	-	từ phiên âm (ampere): đọc theo Hán Việt (an bồi) không có nghĩa	claude-2026-09	ai-draft
+拓撲|拓扑[tuo4 pu1]	-	từ phiên âm (topology): đọc theo Hán Việt (thác phác) không có nghĩa	claude-2026-09	ai-draft
+探戈|探戈[tan4 ge1]	-	từ phiên âm (tango): đọc theo Hán Việt (thám qua) không có nghĩa	claude-2026-09	ai-draft
+摩登|摩登[mo2 deng1]	-	từ phiên âm (modern): đọc theo Hán Việt (ma đăng) không có nghĩa	claude-2026-09	ai-draft
+沙丁魚|沙丁鱼[sha1 ding1 yu2]	-	từ phiên âm (sardine): đọc theo Hán Việt (sa đinh ngư) không có nghĩa	claude-2026-09	ai-draft
+爵士樂|爵士乐[jue2 shi4 yue4]	-	từ phiên âm (jazz): đọc theo Hán Việt (tước sĩ nhạc) không có nghĩa	claude-2026-09	ai-draft
+萊姆|莱姆[lai2 mu3]	-	từ phiên âm (lime): đọc theo Hán Việt (lai mẫu) không có nghĩa	claude-2026-09	ai-draft
+伊瑪目|伊玛目[yi1 ma3 mu4]	-	từ phiên âm (imam): đọc theo Hán Việt (y mã mục) không có nghĩa	claude-2026-09	ai-draft
+便士|便士[bian4 shi4]	-	từ phiên âm (penny): đọc theo Hán Việt (tiện sĩ) không có nghĩa	claude-2026-09	ai-draft
+克朗|克朗[ke4 lang3]	-	từ phiên âm (krone): đọc theo Hán Việt (khắc lãng) không có nghĩa	claude-2026-09	ai-draft
+嗎啡|吗啡[ma3 fei1]	-	từ phiên âm (morphine): đọc theo Hán Việt (ma phê) không có nghĩa	claude-2026-09	ai-draft
+埃米爾|埃米尔[ai1 mi3 er3]	-	từ phiên âm (emir): đọc theo Hán Việt (ai mễ nhĩ) không có nghĩa	claude-2026-09	ai-draft
+巴洛克|巴洛克[ba1 luo4 ke4]	-	từ phiên âm (baroque): đọc theo Hán Việt (ba lạc khắc) không có nghĩa	claude-2026-09	ai-draft
+愛滋|爱滋[ai4 zi1]	-	từ phiên âm (AIDS): đọc theo Hán Việt (ái tư) không có nghĩa	claude-2026-09	ai-draft
+艾滋|艾滋[ai4 zi1]	-	từ phiên âm (AIDS): đọc theo Hán Việt (ngải tư) không có nghĩa	claude-2026-09	ai-draft
+播客|播客[bo1 ke4]	-	từ phiên âm (podcast): đọc theo Hán Việt (bá khách) không có nghĩa	claude-2026-09	ai-draft
+杯葛|杯葛[bei1 ge2]	-	từ phiên âm (boycott): đọc theo Hán Việt (bôi cát) không có nghĩa	claude-2026-09	ai-draft
+正太|正太[zheng4 tai4]	-	từ phiên âm (shota): đọc theo Hán Việt (chính thái) không có nghĩa	claude-2026-09	ai-draft
+淋巴|淋巴[lin2 ba1]	-	từ phiên âm (lymph): đọc theo Hán Việt (lâm ba) không có nghĩa	claude-2026-09	ai-draft
+羅曼史|罗曼史[luo2 man4 shi3]	-	từ phiên âm (romance): đọc theo Hán Việt (la mạn sử) không có nghĩa	claude-2026-09	ai-draft
+起司|起司[qi3 si1]	-	từ phiên âm (cheese): đọc theo Hán Việt (khởi ty) không có nghĩa	claude-2026-09	ai-draft
+迷思|迷思[mi2 si1]	-	từ phiên âm (myth): đọc theo Hán Việt (mê tư) không có nghĩa	claude-2026-09	ai-draft
+雷鬼|雷鬼[lei2 gui3]	-	từ phiên âm (reggae): đọc theo Hán Việt (lôi quỷ) không có nghĩa	claude-2026-09	ai-draft
+麻豆|麻豆[ma2 dou4]	-	từ phiên âm (model): đọc theo Hán Việt (ma đậu) không có nghĩa	claude-2026-09	ai-draft
+作秀|作秀[zuo4 xiu4]	-	từ phiên âm (show): đọc theo Hán Việt (tác tú) không có nghĩa	claude-2026-09	ai-draft
+加農炮|加农炮[jia1 nong2 pao4]	-	từ phiên âm (cannon): đọc theo Hán Việt (gia nông pháo) không có nghĩa	claude-2026-09	ai-draft
+卡賓槍|卡宾枪[ka3 bin1 qiang1]	-	từ phiên âm (carbine): đọc theo Hán Việt (ca tân thương) không có nghĩa	claude-2026-09	ai-draft
+古拉格|古拉格[gu3 la1 ge2]	-	từ phiên âm (gulag): đọc theo Hán Việt (cổ lạp cách) không có nghĩa	claude-2026-09	ai-draft
+可卡因|可卡因[ke3 ka3 yin1]	-	từ phiên âm (cocaine): đọc theo Hán Việt (khả ca nhân) không có nghĩa	claude-2026-09	ai-draft
+哈羅|哈罗[ha1 luo2]	-	từ phiên âm (hello): đọc theo Hán Việt (ha la) không có nghĩa	claude-2026-09	ai-draft
+尼古丁|尼古丁[ni2 gu3 ding1]	-	từ phiên âm (nicotine): đọc theo Hán Việt (ni cổ đinh) không có nghĩa	claude-2026-09	ai-draft
+朱古力|朱古力[zhu1 gu3 li4]	-	từ phiên âm (chocolate): đọc theo Hán Việt (chu cổ lực) không có nghĩa	claude-2026-09	ai-draft
+焦耳|焦耳[jiao1 er3]	-	từ phiên âm (joule): đọc theo Hán Việt (tiêu nhĩ) không có nghĩa	claude-2026-09	ai-draft
+爾格|尔格[er3 ge2]	-	từ phiên âm (erg): đọc theo Hán Việt (nhĩ cách) không có nghĩa	claude-2026-09	ai-draft
+福林|福林[fu2 lin2]	-	từ phiên âm (forint): đọc theo Hán Việt (phúc lâm) không có nghĩa	claude-2026-09	ai-draft
+羅拉|罗拉[luo2 la1]	-	từ phiên âm (roller): đọc theo Hán Việt (la lạp) không có nghĩa	claude-2026-09	ai-draft
+考拉|考拉[kao3 la1]	-	từ phiên âm (koala): đọc theo Hán Việt (khảo lạp) không có nghĩa	claude-2026-09	ai-draft
+芬尼|芬尼[fen1 ni2]	-	từ phiên âm (pfennig): đọc theo Hán Việt (phân ni) không có nghĩa	claude-2026-09	ai-draft
+蘭姆|兰姆[lan2 mu3]	-	từ phiên âm (rum): đọc theo Hán Việt (lan mẫu) không có nghĩa	claude-2026-09	ai-draft
+賓果|宾果[bin1 guo3]	-	từ phiên âm (bingo): đọc theo Hán Việt (tân quả) không có nghĩa	claude-2026-09	ai-draft
+賽博|赛博[sai4 bo2]	-	từ phiên âm (cyber): đọc theo Hán Việt (tái bác) không có nghĩa	claude-2026-09	ai-draft
+三文魚|三文鱼[san1 wen2 yu2]	-	từ phiên âm (salmon): đọc theo Hán Việt (tam văn ngư) không có nghĩa	claude-2026-09	ai-draft
+加侖|加仑[jia1 lun2]	-	từ phiên âm (gallon): đọc theo Hán Việt (gia luân) không có nghĩa	claude-2026-09	ai-draft
+吐司|吐司[tu3 si1]	-	từ phiên âm (toast): đọc theo Hán Việt (thổ ty) không có nghĩa	claude-2026-09	ai-draft
+哥特|哥特[ge1 te4]	-	từ phiên âm (Goth): đọc theo Hán Việt (ca đặc) không có nghĩa	claude-2026-09	ai-draft
+夸克|夸克[kua1 ke4]	-	từ phiên âm (quark): đọc theo Hán Việt (khoa khắc) không có nghĩa	claude-2026-09	ai-draft
+嬉皮|嬉皮[xi1 pi2]	-	từ phiên âm (hippie): đọc theo Hán Việt (hy bì) không có nghĩa	claude-2026-09	ai-draft
+安非他命|安非他命[an1 fei1 ta1 ming4]	-	từ phiên âm (amphetamine): đọc theo Hán Việt (an phi tha mệnh) không có nghĩa	claude-2026-09	ai-draft
+居里|居里[ju1 li3]	-	từ phiên âm (curie): đọc theo Hán Việt (cư lý) không có nghĩa	claude-2026-09	ai-draft
+康乃馨|康乃馨[kang1 nai3 xin1]	-	từ phiên âm (carnation): đọc theo Hán Việt (khang nãi hinh) không có nghĩa	claude-2026-09	ai-draft
+引得|引得[yin3 de2]	-	từ phiên âm (index): đọc theo Hán Việt (dẫn đắc) không có nghĩa	claude-2026-09	ai-draft
+泰迪熊|泰迪熊[tai4 di2 xiong2]	-	từ phiên âm (teddy bear): đọc theo Hán Việt (thái địch hùng) không có nghĩa	claude-2026-09	ai-draft
+白蘭地|白兰地[bai2 lan2 di4]	-	từ phiên âm (brandy): đọc theo Hán Việt (bạch lan địa) không có nghĩa	claude-2026-09	ai-draft
+皮卡|皮卡[pi2 ka3]	-	từ phiên âm (pickup): đọc theo Hán Việt (bì ca) không có nghĩa	claude-2026-09	ai-draft
+薩滿|萨满[sa4 man3]	-	từ phiên âm (shaman): đọc theo Hán Việt (tát mãn) không có nghĩa	claude-2026-09	ai-draft
+阿訇|阿訇[a1 hong1]	-	từ phiên âm (akhoond): đọc theo Hán Việt (a hoanh) không có nghĩa	claude-2026-09	ai-draft
+龐克|庞克[pang2 ke4]	-	từ phiên âm (punk): đọc theo Hán Việt (bàng khắc) không có nghĩa	claude-2026-09	ai-draft
+丁克|丁克[ding1 ke4]	-	từ phiên âm (DINK): đọc theo Hán Việt (đinh khắc) không có nghĩa	claude-2026-09	ai-draft
+伽馬|伽马[ga1 ma3]	-	từ phiên âm (gamma): đọc theo Hán Việt (già mã) không có nghĩa	claude-2026-09	ai-draft
+卡農|卡农[ka3 nong2]	-	từ phiên âm (canon): đọc theo Hán Việt (ca nông) không có nghĩa	claude-2026-09	ai-draft
+哥布林|哥布林[ge1 bu4 lin2]	-	từ phiên âm (goblin): đọc theo Hán Việt (ca bố lâm) không có nghĩa	claude-2026-09	ai-draft
+喀斯特|喀斯特[ka1 si1 te4]	-	từ phiên âm (karst): đọc theo Hán Việt (ca tư đặc) không có nghĩa	claude-2026-09	ai-draft
+恤衫|恤衫[xu4 shan1]	-	từ phiên âm (shirt): đọc theo Hán Việt (tuất sam) không có nghĩa	claude-2026-09	ai-draft
+托拉斯|托拉斯[tuo1 la1 si1]	-	từ phiên âm (trust): đọc theo Hán Việt (thác lạp tư) không có nghĩa	claude-2026-09	ai-draft
+拉力賽|拉力赛[la1 li4 sai4]	-	từ phiên âm (rally): đọc theo Hán Việt (lạp lực tái) không có nghĩa	claude-2026-09	ai-draft
+摩卡|摩卡[mo2 ka3]	-	từ phiên âm (mocha): đọc theo Hán Việt (ma ca) không có nghĩa	claude-2026-09	ai-draft
+曲奇|曲奇[qu1 qi2]	-	từ phiên âm (cookie): đọc theo Hán Việt (khúc kỳ) không có nghĩa	claude-2026-09	ai-draft
+桑巴|桑巴[sang1 ba1]	-	từ phiên âm (samba): đọc theo Hán Việt (tang ba) không có nghĩa	claude-2026-09	ai-draft
+沙林|沙林[sha1 lin2]	-	từ phiên âm (sarin): đọc theo Hán Việt (sa lâm) không có nghĩa	claude-2026-09	ai-draft
+波霸|波霸[bo1 ba4]	-	từ phiên âm (boba): đọc theo Hán Việt (ba bá) không có nghĩa	claude-2026-09	ai-draft
+漢堡包|汉堡包[han4 bao3 bao1]	-	từ phiên âm (hamburger): đọc theo Hán Việt (hán bảo bao) không có nghĩa	claude-2026-09	ai-draft
+華爾茲|华尔兹[hua2 er3 zi1]	-	từ phiên âm (waltz): đọc theo Hán Việt (hoa nhĩ tư) không có nghĩa	claude-2026-09	ai-draft
+菲力|菲力[fei1 li4]	-	từ phiên âm (fillet): đọc theo Hán Việt (phi lực) không có nghĩa	claude-2026-09	ai-draft
+蒙太奇|蒙太奇[meng2 tai4 qi2]	-	từ phiên âm (montage): đọc theo Hán Việt (mông thái kỳ) không có nghĩa	claude-2026-09	ai-draft
+貝雷帽|贝雷帽[bei4 lei2 mao4]	-	từ phiên âm (beret): đọc theo Hán Việt (bối lôi mạo) không có nghĩa	claude-2026-09	ai-draft
+迪斯科|迪斯科[di2 si1 ke1]	-	từ phiên âm (disco): đọc theo Hán Việt (địch tư khoa) không có nghĩa	claude-2026-09	ai-draft
+阿司匹林|阿司匹林[a1 si1 pi3 lin2]	-	từ phiên âm (aspirin): đọc theo Hán Việt (a ty thất lâm) không có nghĩa	claude-2026-09	ai-draft
+海波|海波[hai3 bo1]	-	từ phiên âm (hypo): đọc theo Hán Việt (hải ba) không có nghĩa	claude-2026-09	ai-draft
+庫倫|库伦[ku4 lun2]	-	từ phiên âm (kulun (tiếng Mông Cổ)): đọc theo Hán Việt (khố luân) không có nghĩa	claude-2026-09	ai-draft

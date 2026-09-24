@@ -1,0 +1,34 @@
+# HSK 3.0 words that CC-CEDICT has no entry for, added as dictionary entries of their own.
+# License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Drafted by Claude (AI), 2026-09. status "ai-draft" = AI-drafted, awaiting human review ("hiệu đính bởi AI, chờ duyệt");
+# "reviewed" = checked by the project owner ("đã hiệu đính") — only the owner sets it. Changes: CHANGELOG.md.
+# Format: UTF-8 (NFC), LF, tab-separated. Lines starting with "#" are comments.
+# key: "trad|simp[numbered pinyin]" in CC-CEDICT style (neutral tone 5); vi as in vi-gloss.tsv. The pinyin must equal the
+# HSK list's (ignoring tones) so the build can tag the level. If CC-CEDICT later adds the word, the build uses its entry
+# and applies this row's vi as an ordinary gloss override (reported in build-report.json); then move the row to vi-gloss.tsv.
+key	vi	source	status
+車上|车上[che1 shang5]	trên xe (vd. 车上有很多人: trên xe có nhiều người)	claude-2026-09	ai-draft
+不太|不太[bu4 tai4]	không … lắm; không quá (vd. 不太好: không tốt lắm; 不太远: không xa lắm)	claude-2026-09	ai-draft
+不一會兒|不一会儿[bu4 yi1 hui4 r5]	chẳng mấy chốc; một lát sau; chỉ một lúc sau (vd. 不一会儿他就来了: chẳng mấy chốc anh ấy đã đến)	claude-2026-09	ai-draft
+見過|见过[jian4 guo5]	đã (từng) gặp; đã (từng) thấy (vd. 我见过他: tôi đã gặp anh ấy)	claude-2026-09	ai-draft
+送到|送到[song4 dao4]	đưa đến; giao đến; gửi tới (vd. 把孩子送到学校: đưa con đến trường)	claude-2026-09	ai-draft
+放到|放到[fang4 dao4]	đặt vào; để lên; cho vào (chỗ nào) (vd. 放到桌子上: để lên bàn)	claude-2026-09	ai-draft
+能不能|能不能[neng2 bu5 neng2]	có thể … không?; … được không? (hỏi khả năng hoặc nhờ vả, vd. 你能不能帮我?: bạn giúp tôi được không?)	claude-2026-09	ai-draft
+眼裡|眼里[yan3 li5]	trong mắt; theo cách nhìn (của ai) (vd. 在我眼里: trong mắt tôi)	claude-2026-09	ai-draft
+有勁兒|有劲儿[you3 jin4 r5]	có sức; khoẻ; hăng hái/hay; thú vị; hấp dẫn (vd. 这本书真有劲儿: cuốn sách này hay thật)	claude-2026-09	ai-draft
+城裡|城里[cheng2 li3]	trong thành phố; trong thành; nội thành (vd. 住在城里: sống ở thành phố)	claude-2026-09	ai-draft
+很難說|很难说[hen3 nan2 shuo1]	khó nói; khó mà biết được (vd. 明天会不会下雨很难说: mai có mưa hay không thì khó nói)	claude-2026-09	ai-draft
+一番|一番[yi1 fan1]	một phen; một lượt; một hồi (vd. 考虑一番: suy nghĩ một hồi)/một kiểu; một loại (vd. 别有一番风味: có một hương vị riêng)	claude-2026-09	ai-draft
+指著|指着[zhi3 zhe5]	chỉ vào; trỏ vào (vd. 他指着地图说: anh ấy chỉ vào bản đồ và nói)	claude-2026-09	ai-draft
+不利於|不利于[bu4 li4 yu2]	bất lợi cho; không có lợi cho (vd. 不利于健康: không tốt cho sức khoẻ)	claude-2026-09	ai-draft
+不肯|不肯[bu4 ken3]	không chịu; không muốn (vd. 他不肯去: anh ấy không chịu đi)	claude-2026-09	ai-draft
+不難|不难[bu4 nan2]	không khó (vd. 不难看出: không khó để nhận ra)	claude-2026-09	ai-draft
+不如說|不如说[bu4 ru2 shuo1]	nói đúng hơn là; chi bằng nói (vd. 与其说是朋友，不如说是家人: nói là bạn bè thì chưa đủ, đúng hơn là người nhà)	claude-2026-09	ai-draft
+趁著|趁着[chen4 zhe5]	nhân lúc; thừa lúc; tranh thủ lúc (vd. 趁着天还没黑: nhân lúc trời chưa tối)	claude-2026-09	ai-draft
+定為|定为[ding4 wei2]	định là; xác định là; xếp là (vd. 被定为国家级文物: được xếp hạng cổ vật (hiện vật) cấp quốc gia)	claude-2026-09	ai-draft
+飛往|飞往[fei1 wang3]	bay đến; bay tới (nơi nào) (vd. 飞往北京的航班: chuyến bay đi Bắc Kinh)	claude-2026-09	ai-draft
+公益性|公益性[gong1 yi4 xing4]	tính công ích; mang tính công ích; vì lợi ích chung (vd. 公益性活动: hoạt động công ích)	claude-2026-09	ai-draft
+懷著|怀着[huai2 zhe5]	mang (tình cảm, ý nghĩ…); ôm ấp; với (tâm trạng…) (vd. 怀着希望: mang theo hy vọng)	claude-2026-09	ai-draft
+難以想象|难以想象[nan2 yi3 xiang3 xiang4]	khó tưởng tượng; không thể tưởng tượng nổi	claude-2026-09	ai-draft
+說起來|说起来[shuo1 qi3 lai5]	nói ra thì; nói đến; kể ra (vd. 说起来容易，做起来难: nói thì dễ, làm mới khó)	claude-2026-09	ai-draft
+著眼於|着眼于[zhuo2 yan3 yu2]	nhắm vào; chú trọng vào; xuất phát từ (vd. 着眼于未来: hướng tới tương lai)	claude-2026-09	ai-draft

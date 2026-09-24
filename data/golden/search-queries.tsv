@@ -1,0 +1,34 @@
+# Golden search queries: what the learner types → the entry that must come first (the one Enter opens).
+# Checked by scripts/dict/test/golden-search.test.mjs on the built shards in public/dict/v1/ (npm test after
+# npm run data:build, as CI runs it). expected: a simplified form, or a whole key "trad|simp[pinyin]".
+# Format: UTF-8, LF, tab-separated; "#" comments; header row.
+query	expected	what it tests
+学生	學生|学生[xue2 sheng5]	hanzi, simplified
+學生	學生|学生[xue2 sheng5]	hanzi, traditional
+学生。	學生|学生[xue2 sheng5]	punctuation dropped
+学sheng	學|学[xue2]	mixed input: the hanzi searched
+ｘｕｅｓｈｅｎｇ	學生|学生[xue2 sheng5]	full-width Latin (NFKC)
+xuesheng	學生|学生[xue2 sheng5]	pinyin without tones
+xue2sheng1	學生|学生[xue2 sheng5]	tone digits, neutral tone stands in
+xuéshēng	學生|学生[xue2 sheng5]	tone marks
+hoc sinh	學生|学生[xue2 sheng5]	Hán Việt / meaning without diacritics
+cảm ơn	謝謝|谢谢[xie4 xie5]	meaning with diacritics
+xin chao	你好	a Vietnamese phrase without diacritics before the pinyin xīn cháo
+bac si	醫生|医生[yi1 sheng1]	a Vietnamese phrase before the Hán Việt reading bác sĩ (博士)
+con lợn	豬|猪[zhu1]	a leading classifier is optional
+cái bút	筆|笔[bi3]	a leading classifier is optional
+mèo	貓|猫[mao1]	typed diacritics: mẹo is another word
+người	人	a pattern gloss ("người …" of 的) is not the word
+uống	喝	a gloss a note narrows ("uống (thuốc)" of 吃) is not the word
+đẹp	美	a pattern gloss ("… đẹp" of 好) is not the word
+huong thu	享受	Hán Việt from the character table (受 thụ)
+doc gia	讀者|读者[du2 zhe3]	Hán Việt from the character table (讀 độc)
+thuy giac	睡覺|睡觉[shui4 jiao4]	Hán Việt from the character table (覺 jiào giác)
+ye	也|也[ye3]	a surname row does not pass the common word
+台	臺|台[tai2]	the HSK row is the main form, not the classical variant
+zhongguo	中國|中国[Zhong1 guo2]	pinyin of a proper noun
+ăn	吃	the meaning ăn
+Hàn Quốc	韓國|韩国[Han2 guo2]	a label narrows a gloss: "(miệt thị) Hàn Quốc" of 棒国 is not the word
+di4	第	a rare reading of 的 does not pass the HSK words read dì
+yao1	腰	a reading kHanyuPinlu does not list (约 yāo) sinks below the HSK word
+xiexie	謝謝|谢谢[xie4 xie5]	pinyin without tones, a neutral tone in the word

@@ -1,4 +1,7 @@
-/** Prototype-only data for the handwriting workspace. This is not the content system. */
+/**
+ * Test fixtures: the five characters the stroke, scoring and review tests run on (their stroke data
+ * is in ./strokes/). Not app data: the app gets characters from the review deck and the dictionary.
+ */
 export interface TestChar {
   char: string
   /** Script of `char`. 'both' = the same glyph in simplified and traditional. */
@@ -60,13 +63,3 @@ export const TEST_CHARS: readonly TestChar[] = [
     note: '谢谢 xièxie = cảm ơn',
   },
 ]
-
-/** BCP 47 tag so CJK fonts pick the right regional glyphs. */
-export function langOf(c: TestChar): string {
-  return c.script === 'traditional' ? 'zh-Hant' : 'zh-Hans'
-}
-
-export function scriptLabel(c: TestChar): string | null {
-  if (!c.counterpart) return null
-  return c.script === 'traditional' ? `Phồn thể · giản thể ${c.counterpart}` : `Giản thể · phồn thể ${c.counterpart}`
-}

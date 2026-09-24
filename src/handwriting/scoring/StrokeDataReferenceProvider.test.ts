@@ -1,7 +1,7 @@
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest'
-import { TEST_CHARS } from '../../data/testChars'
+import { TEST_CHARS } from '../../test/fixtures/testChars'
 import { rasterizeOutlines } from '../../strokes/rasterize'
-import { getStrokeData } from '../../strokes/strokeData'
+import { fixtureLoader as getStrokeData } from '../../test/fixtures/strokes'
 import { sourceToBox } from '../../strokes/transform'
 import type { StrokeData } from '../../strokes/types'
 import type { Ink } from '../types'
@@ -42,7 +42,7 @@ afterEach(() => {
 describe('StrokeDataReferenceProvider', () => {
   it('builds the glyph from the stroke outlines, with the data’s stroke count', async () => {
     const fallback = fakeFallback()
-    const ref = await new StrokeDataReferenceProvider(fallback).getReference('永', 'zh-Hans', 5)
+    const ref = await new StrokeDataReferenceProvider(fallback, getStrokeData).getReference('永', 'zh-Hans', 5)
     const data = (await getStrokeData('永'))!
     expect(ref.character).toBe('永')
     expect(ref.strokeCount).toBe(5)
@@ -56,7 +56,7 @@ describe('StrokeDataReferenceProvider', () => {
   })
 
   it('the score says where the reference comes from: stroke data, its count, order not scored yet', async () => {
-    const ref = await new StrokeDataReferenceProvider(fakeFallback()).getReference('永', 'zh-Hans', 5)
+    const ref = await new StrokeDataReferenceProvider(fakeFallback(), getStrokeData).getReference('永', 'zh-Hans', 5)
     const r = scoreGeometry(tracedInk(DATA.get('永')!), ref, 'trace')
     expect(r.referenceSource).toBe(`${STROKE_DATA_SOURCE} + stroke count (stroke data)`)
     expect(r.breakdown.strokeOrder).toBeNull()
@@ -74,7 +74,7 @@ describe('StrokeDataReferenceProvider', () => {
 
   it('uses the fallback for characters without stroke data', async () => {
     const fallback = fakeFallback()
-    const ref = await new StrokeDataReferenceProvider(fallback).getReference('王', 'zh-Hans', 4)
+    const ref = await new StrokeDataReferenceProvider(fallback, getStrokeData).getReference('王', 'zh-Hans', 4)
     expect(ref.glyph?.source).toBe(FALLBACK_SOURCE)
     expect(ref.strokeCount).toBe(4)
     expect(fallback.getReference).toHaveBeenCalledWith('王', 'zh-Hans', 4)
@@ -105,6 +105,18 @@ describe('StrokeDataReferenceProvider', () => {
     expect(second.glyph?.source).toBe(STROKE_DATA_SOURCE)
     expect(load).toHaveBeenCalledTimes(2)
     expect(fallback.getReference).toHaveBeenCalledTimes(1)
+  })
+
+  it('scores against the font glyph when the file is not in after the wait, and uses it once it is (PERF-1)', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
+    let arrive!: (d: StrokeData) => void
+    const load = vi.fn(() => new Promise<StrokeData | null>((r) => (arrive = r)))
+    const provider = new StrokeDataReferenceProvider(fakeFallback(), load, 20)
+    expect((await provider.getReference('X', 'zh-Hans', 1)).glyph?.source).toBe(FALLBACK_SOURCE)
+    expect(warn).toHaveBeenCalledTimes(1)
+    arrive(TRIANGLE)
+    expect((await provider.getReference('X', 'zh-Hans', 1)).glyph?.source).toBe(STROKE_DATA_SOURCE)
+    expect(load).toHaveBeenCalledTimes(1)
   })
 
   it('a synchronous loader error is handled like a failed load', async () => {
@@ -152,7 +164,7 @@ function tracedInk(data: StrokeData, dx = 0, dy = 0): Ink {
 }
 
 describe('stroke-data reference: end-to-end alignment with the scorer', () => {
-  const provider = new StrokeDataReferenceProvider(fakeFallback())
+  const provider = new StrokeDataReferenceProvider(fakeFallback(), getStrokeData)
 
   // Measured (trace / recall): 永 98/98 · 你 98/98 · 学 98/98 · 國 97/98 · 謝 97/97.
   it.each(TEST_CHARS.map((c) => [c.char, c.strokeCount] as const))(
